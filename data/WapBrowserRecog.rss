@@ -1,0 +1,37 @@
+/*
+============================================================================
+ Name        : WapBrowserRecog.rss
+ Author      : 浮生若茶
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ECom registration resource for the recognizer on S60 3rd Ed.
+============================================================================
+*/
+
+#include <RegistryInfo.rh>
+
+RESOURCE REGISTRY_INFO r_registry
+	{
+	dll_uid = 0x0b718bea;
+	interfaces =
+		{
+		INTERFACE_INFO
+			{
+			/**
+			 * Recognizers implement interface uid 0x101F7D87.
+			 */
+			interface_uid = 0x101f7d87;
+			implementations =
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x0b718bea;
+					version_no = 1;
+					display_name = "WapBrowserRecog";
+					default_data = "";
+					opaque_data = "";
+					}
+				};
+			}
+		};
+	}

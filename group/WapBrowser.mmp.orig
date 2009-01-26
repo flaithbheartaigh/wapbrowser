@@ -1,0 +1,56 @@
+/*
+============================================================================
+ Name        : WapBrowser.rss
+ Author      : 浮生若茶
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Project specification file for WapBrowser
+============================================================================
+*/
+TARGET                                  WapBrowser.exe 
+TARGETTYPE                              exe 
+UID                                     0x0 0xed86d796 
+SECUREID                                0xed86d796 
+EPOCSTACKSIZE                           0x5000 
+SOURCEPATH                              ..\data 
+START RESOURCE WapBrowser.rss 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+END  
+
+START RESOURCE WapBrowser_reg.rss 
+  TARGETPATH                              \private\10003a3f\apps 
+END  
+
+
+SOURCEPATH                              ..\src 
+SOURCE                                  WebClientEngine.cpp 
+SOURCE                                  PageBuilder.cpp 
+SOURCE                                  WmlParser.cpp 
+SOURCE                                  tinyxmlerror.cpp 
+SOURCE                                  tinyxml.cpp 
+SOURCE                                  tinystr.cpp 
+SOURCE                                  tinyxmlparser.cpp 
+SOURCE                                  WapBrowser.cpp 
+SOURCE                                  WapBrowserApplication.cpp 
+SOURCE                                  WapBrowserAppView.cpp 
+SOURCE                                  WapBrowserAppUi.cpp 
+SOURCE                                  WapBrowserDocument.cpp 
+
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include\libc 
+SYSTEMINCLUDE                           \epoc32\include 
+/* [+] */ LIBRARY                       gdi.lib 
+LIBRARY                                 charconv.lib 
+LIBRARY                                 estlib.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 apparc.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikcore.lib 
+LIBRARY                                 avkon.lib 
+LIBRARY                                 commonengine.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 estor.lib 
+LANG                                    SC 
+VENDORID                                0 
+CAPABILITY                              ReadUserData 

@@ -1,0 +1,7 @@
+ 
+/* This file has been generated, DO NOT MODIFY. */
+enum TMifCoco_reg
+	{
+	EMbmCoco_regQgn_menu = 16384,
+	EMbmCoco_regLastElement
+	};

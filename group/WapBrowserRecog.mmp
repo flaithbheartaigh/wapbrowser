@@ -1,0 +1,33 @@
+/*
+============================================================================
+ Name        : WapBrowserRecog.mmp
+ Author      : 浮生若茶
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for WapBrowserRecog.
+============================================================================
+*/
+
+TARGET        WapBrowserRecog.dll
+TARGETTYPE    plugin
+UID           0x10009d8d 0x0b718bea
+SECUREID      0x0b718bea
+VENDORID      0
+CAPABILITY    Protserv
+
+/**
+ * The recognizer resource must be named as below, otherwise it will not be
+ * registered. Specifically it should not be named using the UID3 of the dll.
+ */
+START RESOURCE ..\data\WapBrowserRecog.rss
+UID		0x101F747D
+TARGETPATH \resource\plugins
+END
+
+SYSTEMINCLUDE \epoc32\include \epoc32\include\ecom
+USERINCLUDE   ..\inc
+
+SOURCEPATH    ..\src
+SOURCE        WapBrowserRecog.cpp
+
+LIBRARY       euser.lib apmime.lib efsrv.lib

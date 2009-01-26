@@ -1,0 +1,21 @@
+/*
+============================================================================
+ Name        : CoCo.hrh
+ Author      : 浮生若茶
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Enumerations used in the application UI
+============================================================================
+*/
+
+#ifndef __COCO_HRH__
+#define __COCO_HRH__
+
+// CoCo enumerate command codes
+enum TCoCoIds
+    {
+    ECoCoCommand1 = 1, // start value must not be 0
+    ECoCoCommand2
+    };
+
+#endif // __COCO_HRH__

@@ -1,0 +1,50 @@
+/*
+============================================================================
+ Name        : WapBrowser.rss
+ Author      : 浮生若茶
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Project specification file for WapBrowser
+============================================================================
+*/
+
+TARGET  WapBrowser.app
+TARGETTYPE  app
+UID  0x100039CE 0x04bd3744 
+TARGETPATH \system\apps\WapBrowser
+
+SOURCEPATH ..\data
+RESOURCE WapBrowser.rss
+RESOURCE WapBrowser_caption.rss
+
+
+SOURCEPATH                              ..\src 
+SOURCE                                  WebClientEngine.cpp 
+SOURCE                                  PageBuilder.cpp 
+SOURCE                                  WmlParser.cpp 
+SOURCE                                  tinyxmlerror.cpp 
+SOURCE                                  tinyxml.cpp 
+SOURCE                                  tinystr.cpp 
+SOURCE                                  tinyxmlparser.cpp 
+SOURCE                                  WapBrowser.cpp 
+SOURCE                                  WapBrowserApplication.cpp 
+SOURCE                                  WapBrowserAppView.cpp 
+SOURCE                                  WapBrowserAppUi.cpp 
+SOURCE                                  WapBrowserDocument.cpp 
+
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include\libc 
+SYSTEMINCLUDE                           \epoc32\include 
+LIBRARY                       			gdi.lib 
+LIBRARY                                 charconv.lib 
+LIBRARY                                 estlib.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 apparc.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikcore.lib 
+LIBRARY                                 avkon.lib 
+LIBRARY                                 commonengine.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 estor.lib 
+LANG                                    SC 
+VENDORID                                0 

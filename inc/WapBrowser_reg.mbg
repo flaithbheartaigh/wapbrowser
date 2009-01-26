@@ -1,0 +1,7 @@
+ 
+/* This file has been generated, DO NOT MODIFY. */
+enum TMifWapbrowser_reg
+	{
+	EMbmWapbrowser_regQgn_menu = 16384,
+	EMbmWapbrowser_regLastElement
+	};

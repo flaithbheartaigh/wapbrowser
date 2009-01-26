@@ -1,0 +1,20 @@
+; WapBrowserRecog.pkg
+;
+;Language - standard language definitions
+&EN
+
+;Standard SIS file header
+#{"WapBrowser"},(0x0b718bea),1,0,0
+
+;Localised Vendor name
+%{"Vendor Name-EN"}
+
+;Unique Vendor name
+:"Vendor Name"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Files to install
+"..\..\..\epoc32\release\gcce\urel\WapBrowserRecog.dll"             - "!:\sys\bin\WapBrowserRecog.dll"
+"..\..\..\epoc32\data\z\resource\apps\WapBrowserRecog.rsc"          - "!:\resource\plugins\WapBrowserRecog.rsc"
