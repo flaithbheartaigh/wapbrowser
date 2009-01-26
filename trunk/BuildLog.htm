@@ -1,0 +1,193 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=gb2312">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: WapBrowser, Configuration: Deb_S60_31_WINSCW|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\BAT000001.bat" with contents
+[
+@echo off
+RCMake.exe "D:\projects\Symbian\WapBrowser\WapBrowser.vcproj" S60_31 WINSCW UDEB
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing Pre-Build Event..."
+exit 1
+:VCEnd
+]
+Creating command line "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\BAT000001.bat"
+Creating temporary file "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\BAT000002.bat" with contents
+[
+@echo off
+RCmake.exe "D:\projects\Symbian\WapBrowser\WapBrowser.vcproj" S60_31 WINSCW UDEB
+
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing Custom Build Step"
+exit 1
+:VCEnd
+]
+Creating command line "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\BAT000002.bat"
+Creating temporary file "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\BAT000003.bat" with contents
+[
+@echo off
+RCmake.exe "D:\projects\Symbian\WapBrowser\WapBrowser.vcproj" S60_31 WINSCW UDEB
+
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing Custom Build Step"
+exit 1
+:VCEnd
+]
+Creating command line "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\BAT000003.bat"
+Creating temporary file "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\RSP000004.rsp" with contents
+[
+/Od /I "D:\projects\Symbian\WapBrowser\inc" /I "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" /I "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include" /D "__SYMBIAN32__" /D "__SERIES60_31__" /D "__SERIES60_3X__" /D "__SUPPORT_CPP_EXCEPTIONS__" /D "__EXE__" /D "__WINSCW__" /D "__WINS__" /D "__CW32__" /D "_DEBUG" /D "_UNICODE" /X /GF /FD /MLd /Zp4 /Fo"Deb_S60_31_WINSCW/" /Fd"Deb_S60_31_WINSCW/vc70.pdb" /c /Zi /TP  /QIfist /NDSProjectFile "D:\projects\Symbian\WapBrowser\WapBrowser.vcproj" /NDSSDKShortName S60_31
+.\group\wapbrowser.uid.cpp
+.\src\WmlParser.cpp
+.\src\WebClientEngine.cpp
+.\src\WapBrowserdocument.cpp
+.\src\WapBrowserappview.cpp
+.\src\WapBrowserappui.cpp
+.\src\WapBrowserapplication.cpp
+.\src\WapBrowser.cpp
+.\src\tinyxmlparser.cpp
+.\src\tinyxmlerror.cpp
+.\src\tinyxml.cpp
+.\src\tinystr.cpp
+.\src\PageBuilder.cpp
+]
+Creating command line "cl.exe @d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\RSP000004.rsp /nologo"
+Creating temporary file "d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\RSP000005.rsp" with contents
+[
+/OUT:"d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb\WapBrowser.exe" /NOLOGO /LIBPATH:"d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb" /NODEFAULTLIB /INCLUDE:"?_E32Bootstrap@@YGXXZ" /DEBUG /ASSEMBLYDEBUG /PDB:"./WapBrowser.pdb" /SUBSYSTEM:WINDOWS /ENTRY:"__E32Bootstrap"  /NDSProjectFile "D:\projects\Symbian\WapBrowser\WapBrowser.vcproj" /NDSSDKShortName S60_31 gdi.lib charconv.lib estlib.lib euser.lib apparc.lib cone.lib eikcore.lib avkon.lib commonengine.lib efsrv.lib estor.lib eexe.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib
+.\Deb_S60_31_WINSCW\PageBuilder.obj
+.\Deb_S60_31_WINSCW\tinystr.obj
+.\Deb_S60_31_WINSCW\tinyxml.obj
+.\Deb_S60_31_WINSCW\tinyxmlerror.obj
+.\Deb_S60_31_WINSCW\tinyxmlparser.obj
+.\Deb_S60_31_WINSCW\WapBrowser.obj
+.\Deb_S60_31_WINSCW\WapBrowserapplication.obj
+.\Deb_S60_31_WINSCW\WapBrowserappui.obj
+.\Deb_S60_31_WINSCW\WapBrowserappview.obj
+.\Deb_S60_31_WINSCW\WapBrowserdocument.obj
+.\Deb_S60_31_WINSCW\WebClientEngine.obj
+.\Deb_S60_31_WINSCW\WmlParser.obj
+.\Deb_S60_31_WINSCW\wapbrowser.uid.obj
+]
+Creating command line "link.exe @d:\projects\Symbian\WapBrowser\Deb_S60_31_WINSCW\RSP000005.rsp"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Performing Pre-Build Event...
+* Current build configuration: WINSCW UDEB
+Converting multi-icons...
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* d:\Symbian\9.2\S60_3rd_FP1\\epoc32\tools\mifconv.exe \Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\resource\apps\WapBrowser_reg.mif /hD:\projects\Symbian\WapBrowser\inc\WapBrowser_reg.mbg /FD:\projects\Symbian\WapBrowser\data\WapBrowser_reg.miflist
+MifConv version 1.11 build (39).
+Reading source list file: D:\projects\Symbian\WapBrowser\data\WapBrowser_reg.miflist
+Checking: ..\gfx\qgn_menu.svg
+Choosing...
+Convert files...
+.
+Loading mif icons...
+Loading file: \Symbian\9.2\S60_3rd_FP1\epoc32\winscw\c\system\temp\s7m0.tmp\.._gfx_qgn_menu.svgb
+Writing mif: \Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\resource\apps\WapBrowser_reg.mif
+Writing mbg: D:\projects\Symbian\WapBrowser\inc\WapBrowser_reg.mbg
+Compiling resources...
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* d:\Symbian\9.2\S60_3rd_FP1\\epoc32\gcc\bin\cpp.exe -undef -C -I D:\projects\Symbian\WapBrowser\inc -I d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc -I d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include -I d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\include -I d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -DLANGUAGE_SC -D_UNICODE -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__WINSCW__ -D__WINS__ -D__CW32__ D:\projects\Symbian\WapBrowser\data\WapBrowser.rss -o D:\projects\Symbian\WapBrowser\data\WapBrowser.rss.I
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* d:\Symbian\9.2\S60_3rd_FP1\\epoc32\tools\rcomp.exe -u -od:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\resource\apps\WapBrowser.rSC -hD:\projects\Symbian\WapBrowser\inc\WapBrowser.rsg.new -sD:\projects\Symbian\WapBrowser\data\WapBrowser.rss.I -iD:\projects\Symbian\WapBrowser\data\WapBrowser.rss
+D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss(70): warning: (047) the STRUCT that this resource is based on contains a STRUCT[] data member which has not been used in this resource, the missing element is: 'view_list'
+d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.rh(220): warning: (045) the following label is used but has not been declared: R_AVKON_LIST_HEADING_PANE
+d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.rh(683): warning: (045) the following label is used but has not been declared: R_AVKON_SOFTKEYS_OK_CANCEL__OK
+d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.rh(693): warning: (045) the following label is used but has not been declared: R_AVKON_SOFTKEYS_OK_CANCEL__MARK
+d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.rh(823): warning: (045) the following label is used but has not been declared: R_AKN_SELECTION_LIST_DIALOG
+* Deleting file D:\projects\Symbian\WapBrowser\inc\WapBrowser.rsg.new
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* d:\Symbian\9.2\S60_3rd_FP1\\epoc32\gcc\bin\cpp.exe -undef -C -I D:\projects\Symbian\WapBrowser\inc -I d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc -I d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include -I d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\include -I d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -DLANGUAGE_SC -D_UNICODE -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__WINSCW__ -D__WINS__ -D__CW32__ D:\projects\Symbian\WapBrowser\data\WapBrowser_reg.rss -o D:\projects\Symbian\WapBrowser\data\WapBrowser_reg.rss.I
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* d:\Symbian\9.2\S60_3rd_FP1\\epoc32\tools\rcomp.exe -u -od:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\private\10003a3f\apps\WapBrowser_reg.rSC -hD:\projects\Symbian\WapBrowser\inc\WapBrowser_reg.rsg.new -sD:\projects\Symbian\WapBrowser\data\WapBrowser_reg.rss.I -iD:\projects\Symbian\WapBrowser\data\WapBrowser_reg.rss
+D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser_reg.rss(20): warning: (047) the STRUCT that this resource is based on contains a STRUCT[] data member which has not been used in this resource, the missing element is: 'datatype_list'
+D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser_reg.rss(20): warning: (047) the STRUCT that this resource is based on contains a STRUCT[] data member which has not been used in this resource, the missing element is: 'file_ownership_list'
+D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser_reg.rss(20): warning: (047) the STRUCT that this resource is based on contains a STRUCT[] data member which has not been used in this resource, the missing element is: 'service_list'
+* Deleting file D:\projects\Symbian\WapBrowser\inc\WapBrowser_reg.rsg.new
+Performing Custom Build Step
+* Current build configuration: WINSCW UDEB
+Converting multi-icons...
+File \Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\resource\apps\WapBrowser_reg.mif up-to-date, not rebuilt.
+Compiling resources...
+File d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\resource\apps\WapBrowser.rSC up-to-date, not rebuilt.
+File d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\private\10003a3f\apps\WapBrowser_reg.rSC up-to-date, not rebuilt.
+Performing Custom Build Step
+* Current build configuration: WINSCW UDEB
+Converting multi-icons...
+File \Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\resource\apps\WapBrowser_reg.mif up-to-date, not rebuilt.
+Compiling resources...
+File d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\resource\apps\WapBrowser.rSC up-to-date, not rebuilt.
+File d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\UDEB\z\private\10003a3f\apps\WapBrowser_reg.rSC up-to-date, not rebuilt.
+Compiling...
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\group\wapbrowser.uid.cpp -o "Deb_S60_31_WINSCW\wapbrowser.uid.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\WmlParser.cpp -o "Deb_S60_31_WINSCW\WmlParser.o"
+src\WmlParser.cpp(163): warning: possible unwanted assignment
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\WebClientEngine.cpp -o "Deb_S60_31_WINSCW\WebClientEngine.o"
+src\WebClientEngine.cpp(179): warning: variable / argument 'aError' is not used in function
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\WapBrowserdocument.cpp -o "Deb_S60_31_WINSCW\WapBrowserdocument.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\WapBrowserappview.cpp -o "Deb_S60_31_WINSCW\WapBrowserappview.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\WapBrowserappui.cpp -o "Deb_S60_31_WINSCW\WapBrowserappui.o"
+src\WapBrowserappui.cpp(81): warning: variable / argument 'aEventDescription' is not used in function
+src\WapBrowserappui.cpp(86): warning: variable / argument 'aHeaderData' is not used in function
+src\WapBrowserappui.cpp(91): warning: variable / argument 'aBodyData' is not used in function
+src\WapBrowserappui.cpp(91): warning: variable / argument 'isLast' is not used in function
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\WapBrowserapplication.cpp -o "Deb_S60_31_WINSCW\WapBrowserapplication.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\WapBrowser.cpp -o "Deb_S60_31_WINSCW\WapBrowser.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\tinyxmlparser.cpp -o "Deb_S60_31_WINSCW\tinyxmlparser.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\tinyxmlerror.cpp -o "Deb_S60_31_WINSCW\tinyxmlerror.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\tinyxml.cpp -o "Deb_S60_31_WINSCW\tinyxml.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\tinystr.cpp -o "Deb_S60_31_WINSCW\tinystr.o"
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwccsym2.exe -g -O0 -inline off -sym codeview_new -wchar_t off -align 4 -warnings on -w nohidevirtual,nounusedexpr -msgstyle gcc -enum int -str pool -exc ms -nostdinc -d _DEBUG -d _UNICODE -d  "__SYMBIAN32__" -d  "__SERIES60_31__" -d  "__SERIES60_3X__" -d  "__SUPPORT_CPP_EXCEPTIONS__" -d  "__EXE__" -d  "__WINSCW__" -d  "__WINS__" -d  "__CW32__" -d  "_DEBUG" -d  "_UNICODE" -cwd source -i- -i "D:\projects\Symbian\WapBrowser\inc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc" -i "d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include"  -i d:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant -include symbian_os_v9.2.hrh -c .\src\PageBuilder.cpp -o "Deb_S60_31_WINSCW\PageBuilder.o"
+Linking...
+/OUT:"d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb\WapBrowser.exe" /NOLOGO /LIBPATH:"d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb" /NODEFAULTLIB /INCLUDE:"?_E32Bootstrap@@YGXXZ" /DEBUG /ASSEMBLYDEBUG /PDB:"./WapBrowser.pdb" /SUBSYSTEM:WINDOWS /ENTRY:"__E32Bootstrap"  /NDSProjectFile "D:\projects\Symbian\WapBrowser\WapBrowser.vcproj" /NDSSDKShortName S60_31 gdi.lib charconv.lib estlib.lib euser.lib apparc.lib cone.lib eikcore.lib avkon.lib commonengine.lib efsrv.lib estor.lib eexe.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib
+.\Deb_S60_31_WINSCW\PageBuilder.obj
+.\Deb_S60_31_WINSCW\tinystr.obj
+.\Deb_S60_31_WINSCW\tinyxml.obj
+.\Deb_S60_31_WINSCW\tinyxmlerror.obj
+.\Deb_S60_31_WINSCW\tinyxmlparser.obj
+.\Deb_S60_31_WINSCW\WapBrowser.obj
+.\Deb_S60_31_WINSCW\WapBrowserapplication.obj
+.\Deb_S60_31_WINSCW\WapBrowserappui.obj
+.\Deb_S60_31_WINSCW\WapBrowserappview.obj
+.\Deb_S60_31_WINSCW\WapBrowserdocument.obj
+.\Deb_S60_31_WINSCW\WebClientEngine.obj
+.\Deb_S60_31_WINSCW\WmlParser.obj
+.\Deb_S60_31_WINSCW\wapbrowser.uid.obj
+epocroot = \Symbian\9.2\S60_3rd_FP1\
+* mwldsym2.exe -msgstyle gcc -heapreserve=32768 -stdlib "d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb\EEXE.LIB" -m "?_E32Bootstrap@@YGXXZ" -subsystem windows -g d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\gdi.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\charconv.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\estlib.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\euser.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\apparc.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\cone.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\eikcore.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\avkon.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\commonengine.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\efsrv.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\estor.lib d:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\eexe.lib -o "d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb\WapBrowser.exe" -noimplib -l .\Deb_S60_31_WINSCW -search PageBuilder.o tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o WapBrowser.o WapBrowserapplication.o WapBrowserappui.o WapBrowserappview.o WapBrowserdocument.o WebClientEngine.o WmlParser.o wapbrowser.uid.o
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\projects\Symbian\WapBrowser\\BuildLog.htm"
+WapBrowser - 0 error(s), 14 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

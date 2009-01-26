@@ -1,0 +1,18 @@
+/*
+============================================================================
+ Name        : WapBrowser.hrh
+ Author      : 浮生若茶
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Enumerations used in the application UI
+============================================================================
+*/
+#ifndef __WAPBROWSER_HRH__
+#define __WAPBROWSER_HRH__
+// WapBrowser enumerate command codes
+enum TWapBrowserIds
+    {
+    EWapBrowserCommand1 = 1, // start value must not be 0
+    EWapBrowserCommand2
+    };
+#endif // __WAPBROWSER_HRH__
