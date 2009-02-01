@@ -21,6 +21,7 @@ Description : Main application UI class (controller)
 #include "WmlParser.h"
 #include "PageBuilder.h"
 #include "WebClientEngine.h"
+#include "Page.h"
 
 
 void CWapBrowserAppUi::ConstructL()
@@ -59,8 +60,11 @@ void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 				CPageBuilder* pageBuilder = CPageBuilder::NewLC();
 				CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
 				CleanupStack::PopAndDestroy();	//parser
-				CleanupStack::Pop();			//pageBuilder
-				iAppView->ShowPage(pageBuilder);
+
+// 				CleanupStack::Pop();			//pageBuilder
+// 				iAppView->ShowPage(new CPage(pageBuilder,iAppView->Rect()));
+				iAppView->ShowPage(pageBuilder->Page());
+				CleanupStack::PopAndDestroy();	//pageBuilder
 			}
 			break;
 		default:
