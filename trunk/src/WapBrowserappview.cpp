@@ -10,6 +10,7 @@
 #include "Define.h"
 #include "WapBrowserAppView.h"
 #include "PageBuilder.h"
+#include "Page.h"
 
 CWapBrowserAppView* CWapBrowserAppView::NewL( const TRect& aRect )
 {
@@ -49,6 +50,13 @@ void CWapBrowserAppView::Draw( const TRect& /*aRect*/ ) const
 	TRect drawRect( Rect());
 	gc.Clear( drawRect );
 
+	if(iPage)
+	{
+		iPage->Draw(gc);
+	}
+	return;
+
+
 	if(iPageBuilder)
 	{
 		TPoint point = drawRect.iTl;
@@ -58,12 +66,15 @@ void CWapBrowserAppView::Draw( const TRect& /*aRect*/ ) const
 		gc.UseFont(CCoeEnv::Static()->NormalFont());
 		for ( int i = 0 ; i < iPageBuilder->ElementAmount() ; i++)
 		{
+//////////////////////////////////////////////////////////////////////////
+//范围控制
 			TBool inRegion = point.iY < drawRect.iBr.iY + KTextHeight;
 			if(!inRegion)	//已经跑出屏幕下方，直接返回，不再绘制
 			{
 				return;
 			}
 			inRegion &= point.iY /*- KTextHeight*/ > drawRect.iTl.iY /*- KTextHeight*/;
+//////////////////////////////////////////////////////////////////////////
 /*
 			if()	
 			{
@@ -71,13 +82,13 @@ void CWapBrowserAppView::Draw( const TRect& /*aRect*/ ) const
 			}
 */
 
-			const CElement& element = iPageBuilder->Element(i);
+			const CWidget& element = iPageBuilder->Element(i);
 
 			switch(element.Type())
 			{
-			case CElement::EText:
+			case CWidget::EText:
 				{
-					const TDesC& text = ((CTextElement&)element).Text();
+					const TDesC& text = ((CTextWidget&)element).Text();
 
 					int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
 					if(inRegion)
@@ -106,9 +117,9 @@ void CWapBrowserAppView::Draw( const TRect& /*aRect*/ ) const
 				}
 				break;
 
-			case CElement::EPicture:
+			case CWidget::EPicture:
 				{
-					const TDesC& text = ((CPictureElement&)element).Alt();
+					const TDesC& text = ((CPictureWidget&)element).Alt();
 
 					int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
 					if(inRegion)
@@ -128,7 +139,7 @@ void CWapBrowserAppView::Draw( const TRect& /*aRect*/ ) const
 				//point.iX += gc.
 				break;
 
-			case CElement::EBr:
+			case CWidget::EBr:
 				point.iX = 0;
 				point.iY += KTextHeight;
 				break;
@@ -148,6 +159,7 @@ void CWapBrowserAppView::SizeChanged()
 
 TKeyResponse CWapBrowserAppView::OfferKeyEventL(const TKeyEvent& aKeyEvent,TEventCode aType)
 {
+	//TBool result = 
 	TKeyResponse response = EKeyWasNotConsumed;
 	if(EEventKey == aType)
 	{
@@ -187,5 +199,11 @@ TKeyResponse CWapBrowserAppView::OfferKeyEventL(const TKeyEvent& aKeyEvent,TEven
 void CWapBrowserAppView::ShowPage(CPageBuilder* aPageBuilder)
 {
 	iPageBuilder = aPageBuilder;
+	DrawNow();
+}
+
+void CWapBrowserAppView::ShowPage(CPage* aPage)
+{
+	iPage = aPage;
 	DrawNow();
 }
