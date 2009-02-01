@@ -17,6 +17,9 @@
 #include <coecntrl.h>
 #include <coemain.h>
 
+
+#define KDefaultFont CCoeEnv::Static()->NormalFont()
+
 class MWebClientObserver
 {
 public:
