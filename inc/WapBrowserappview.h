@@ -11,6 +11,7 @@
 #define __WAPBROWSERAPPVIEW_H__
 
 class CPageBuilder;
+class CPage;
 
 class CWapBrowserAppView : public CCoeControl
 {
@@ -30,8 +31,10 @@ public:  // Functions from base classes
 
 public:
 	void ShowPage(CPageBuilder* aPageBuilder);
+	void ShowPage(CPage* aPage);
 
 private:
+	CPage* iPage;
 	CPageBuilder* iPageBuilder;
 	int startYPos;
 };
