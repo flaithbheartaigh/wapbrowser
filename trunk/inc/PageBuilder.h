@@ -19,6 +19,8 @@
 #include "Widgets.h"
 // CLASS DECLARATION
 
+class CPage;
+
 //////////////////////////////////////////////////////////////////////////
 //CPageBuilder
 //////////////////////////////////////////////////////////////////////////
@@ -75,9 +77,16 @@ public:
 		return *element;
 	}
 
+public:
+	CPage* Page();
+
+private:
+	void AddWidget(CWidget* aWidget);
+
 private:
 	RPointerArray<CWidget> iElementArray;
 	HBufC* iRootLink;
+	CPage* iPage;
 };
 
 #endif // PAGEBUILDER_H

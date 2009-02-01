@@ -39,11 +39,45 @@ public:
 	TType Type() const;
 
 public:
-	//virtual void Draw(CGraphicsContext& aGc) const = 0;
+	//virtual void Draw() {};
+
+public:
+	virtual void Draw(CGraphicsContext& /*aGc*/) const{};
+	virtual void Move(TPoint& aPoint) = 0;
+
+	void SetTextHeight(int aTextHeight) const
+	{
+		iTextHeight = aTextHeight;
+	}
+	mutable int iTextHeight;
+
+	void SetInRegion(TBool aInRegion)
+	{
+		inRegion = aInRegion;
+	}
+	TBool inRegion;
+	void SetPoint(const TPoint& aPoint)
+	{
+		point = aPoint;
+	}
+
+	TPoint point;
+
+/*
+	void SetSize(const TSize& aSize)
+	{
+		iSize = aSize;
+	}
+	TSize Size()
+	{
+		return iSize;
+	}
+*/
 
 public:
 	HBufC* iLink;
 	TType iType;
+	TSize iSize;
 };
 
 /*
@@ -56,6 +90,9 @@ class CBrWidget : public CWidget
 {
 public:
 	CBrWidget();
+
+public:
+	virtual void Move(TPoint& aPoint);
 };
 /*
 //////////////////////////////////////////////////////////////////////////
@@ -69,8 +106,35 @@ public:
 	~CTextWidget();
 	const TDesC& Text() const;
 
+public:
+	void Draw(/* const CWidget&element, */TBool ainRegion, CGraphicsContext &aGc, TPoint &apoint ) const;
+
+	virtual void Move(TPoint& aPoint);
+/*
+	void SetInRegion(TBool aInRegion)
+	{
+		inRegion = aInRegion;
+	}
+	TBool inRegion;
+	void SetPoint(const TPoint& aPoint)
+	{
+		point = aPoint;
+	}
+
+	void MovePoint(TPoint& aPoint)
+	{
+
+	}
+	TSize Size()
+	{
+
+	}
+	TPoint point;
+*/
+
 private:
 	HBufC* iText;
+	int width;
 };
 
 /*
@@ -93,6 +157,10 @@ public:
 	const CFbsBitmap* Bitmap() const;
 	const TSize& Size() const;
 
+public:
+	void Draw(/* const CWidget&element, */TBool inRegion, TPoint &point, CGraphicsContext &aGc ) const;
+	virtual void Move(TPoint& aPoint);
+
 private:
 	HBufC* iPictureLink;
 	HBufC* iParentLink;
@@ -100,6 +168,7 @@ private:
 	HBufC* iAlt;
 	CFbsBitmap* iBitmap;
 	TSize iSize;
+	int width;
 };
 
 #endif // WIDGETS_H

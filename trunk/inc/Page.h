@@ -14,25 +14,49 @@
 #include <e32base.h>
 
 class CPageBuilder;
+class CWidget;
 
 class CPage : public CBase
 {
 public: // Constructors and destructor
+	CPage();
 	~CPage();
-// 	static CPage* NewL();
-// 	static CPage* NewLC();
-
-//private:
-	CPage(CPageBuilder* aPageBuilder,const TRect& aRect);
 	void ConstructL();
 
 public:
 	void Draw(CGraphicsContext& aGc) const;
+
 	TBool KeyEvent(int aKeyCode);
 
-	//void SetRect(const CRect& aRect);
+	void SetRect(const TRect& aRect);
+
+
+	void AddWidget(CWidget* aWidget);
 
 private:
+	//以下两个函数考虑修改为迭代器
+/*
+	int ElementAmount() const
+	{
+		return iWidgetArray.Count();
+	}
+*/
+
+/*
+	const CWidget& Element(int aIndex) const
+	{
+		ASSERT(aIndex >= 0 && aIndex < ElementAmount());
+		CWidget* element = iWidgetArray[aIndex];
+		return *element;
+	}
+*/
+
+	void DrawText( const CWidget& element, TBool inRegion, CGraphicsContext &aGc, TPoint &point ) const; 
+	void DrawPicture( const CWidget& element, TBool inRegion, TPoint &point, CGraphicsContext &aGc ) const;
+
+private:
+	RPointerArray<CWidget> iWidgetArray;
+
 	CPageBuilder* iPageBuilder;
 	int iStartYPos;
 
