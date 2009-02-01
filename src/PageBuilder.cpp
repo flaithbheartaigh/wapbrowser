@@ -60,14 +60,14 @@ void CPageBuilder::AddText(const TDesC& aText,const TDesC& aLink)
 //////////////////////////////////////////////////////////////////////////
 void CPageBuilder::AddBr()
 {
-	iElementArray.Append(new CBrElement);
+	iElementArray.Append(new CBrWidget);
 }
 
 void CPageBuilder::AddPicture(const char* aName,const char* aAlt,const char* aLink)
 {
 	ASSERT(aName);
 	ASSERT(aAlt);
-	CPictureElement* element = new CPictureElement;//(TPtrC8((const TUint*)alt),TPtrC8((const TUint*)alt));
+	CPictureWidget* element = new CPictureWidget;//(TPtrC8((const TUint*)alt),TPtrC8((const TUint*)alt));
 
 	//TPtrC8 ptr((const TUint8*)aName);
 	HBufC* name = HBufC::NewLC(strlen(aName) + 1);
@@ -103,7 +103,7 @@ void CPageBuilder::AddText(const char* aText,const char* aLink)
 	TPtrC8 ptr((const TUint8*)aText);
 	HBufC* text = CnvUtfConverter::ConvertToUnicodeFromUtf8L(ptr);
 	CleanupStack::PushL(text);
-	CTextElement* element = new CTextElement(*text);
+	CTextWidget* element = new CTextWidget(*text);
 	CleanupStack::PopAndDestroy();	//text
 
 	if(aLink)
