@@ -24,6 +24,8 @@ END
 
 
 SOURCEPATH                              ..\src 
+/* [+] */ SOURCE                        Page.cpp 
+SOURCE                                  Widgets.cpp 
 SOURCE                                  WebClientEngine.cpp 
 SOURCE                                  PageBuilder.cpp 
 SOURCE                                  WmlParser.cpp 
@@ -38,9 +40,10 @@ SOURCE                                  WapBrowserAppUi.cpp
 SOURCE                                  WapBrowserDocument.cpp 
 
 USERINCLUDE                             ..\inc 
+USERINCLUDE                             ..\..\WapBrowser\inc 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
-/* [+] */ LIBRARY                       gdi.lib 
+LIBRARY                                 gdi.lib 
 LIBRARY                                 charconv.lib 
 LIBRARY                                 estlib.lib 
 LIBRARY                                 euser.lib 
