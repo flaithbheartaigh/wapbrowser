@@ -20,6 +20,9 @@ Global
 		{8C3EB134-FA8F-4CC3-82E1-58C6B66ED9FD}.Release.ActiveCfg = Release|Win32
 		{8C3EB134-FA8F-4CC3-82E1-58C6B66ED9FD}.Release.Build.0 = Release|Win32
 	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		WapBrowser.vsd = WapBrowser.vsd
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
 	GlobalSection(ExtensibilityAddIns) = postSolution
