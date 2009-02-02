@@ -30,11 +30,11 @@ class CPageBuilder
 {
 public: // Constructors and destructor
 	~CPageBuilder();
-	static CPageBuilder* NewL();
-	static CPageBuilder* NewLC();
+	static CPageBuilder* NewL(const TRect& aRect);
+	static CPageBuilder* NewLC(const TRect& aRect);
 
 private:
-	CPageBuilder();
+	CPageBuilder(const TRect& aRect);
 	void ConstructL();
 
 public://From MPageBuilder
@@ -78,15 +78,17 @@ public:
 	}
 
 public:
-	CPage* Page();
+	CPage* FetchPage();
 
 private:
 	void AddWidget(CWidget* aWidget);
+	CPage* Page();
 
 private:
 	RPointerArray<CWidget> iElementArray;
 	HBufC* iRootLink;
 	CPage* iPage;
+	TRect iRect;
 };
 
 #endif // PAGEBUILDER_H

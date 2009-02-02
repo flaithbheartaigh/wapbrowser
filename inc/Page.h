@@ -15,6 +15,7 @@
 
 class CPageBuilder;
 class CWidget;
+class CWidgetGroup;
 
 class CPage : public CBase
 {
@@ -32,37 +33,32 @@ public:
 
 
 	void AddWidget(CWidget* aWidget);
+	void Br();
+
+	void Layout();
 
 private:
-	//以下两个函数考虑修改为迭代器
-/*
-	int ElementAmount() const
-	{
-		return iWidgetArray.Count();
-	}
-*/
+	void AddGroup();
 
-/*
-	const CWidget& Element(int aIndex) const
-	{
-		ASSERT(aIndex >= 0 && aIndex < ElementAmount());
-		CWidget* element = iWidgetArray[aIndex];
-		return *element;
-	}
-*/
-
-	void DrawText( const CWidget& element, TBool inRegion, CGraphicsContext &aGc, TPoint &point ) const; 
-	void DrawPicture( const CWidget& element, TBool inRegion, TPoint &point, CGraphicsContext &aGc ) const;
+	CWidgetGroup* CurWidgetGroup() const;
 
 private:
-	RPointerArray<CWidget> iWidgetArray;
+	RPointerArray<CWidgetGroup> iWidgetGroupArray;
 
-	CPageBuilder* iPageBuilder;
-	int iStartYPos;
+	//RPointerArray<CWidget> iWidgetArray;
 
+	CWidgetGroup* iWidgetGroup;
 
 	int iTextHeight;
 	TRect iRect;
+
+	int iFocusIndex;		//焦点项的索引
+	int iStartIndex;		//绘制的开始索引,闭区间
+	int iEndIndex;			//绘制的结束索引,开区间
+
+	TBool iLayout;			//是否已经调用了Layout();
+
+	int iTotalHeight;
 };
 
 #endif // PAGE_H

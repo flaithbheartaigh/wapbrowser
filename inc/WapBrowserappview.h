@@ -10,7 +10,7 @@
 #ifndef __WAPBROWSERAPPVIEW_H__
 #define __WAPBROWSERAPPVIEW_H__
 
-class CPageBuilder;
+//class CPageBuilder;
 class CPage;
 
 class CWapBrowserAppView : public CCoeControl
@@ -25,18 +25,15 @@ private: // Constructors
 	CWapBrowserAppView();
 
 public:  // Functions from base classes
-	void Draw( const TRect& aRect ) const;
+	virtual void Draw( const TRect& aRect ) const;
 	virtual void SizeChanged();
 	virtual TKeyResponse OfferKeyEventL(const TKeyEvent& aKeyEvent,TEventCode aType);
 
 public:
-	void ShowPage(CPageBuilder* aPageBuilder);
 	void ShowPage(CPage* aPage);
 
 private:
 	CPage* iPage;
-	CPageBuilder* iPageBuilder;
-	int startYPos;
 };
 #endif // __WAPBROWSERAPPVIEW_H__
 // End of File
