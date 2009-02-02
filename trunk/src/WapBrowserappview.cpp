@@ -40,119 +40,22 @@ CWapBrowserAppView::CWapBrowserAppView()
 
 CWapBrowserAppView::~CWapBrowserAppView()
 {
+	delete iPage;
 }
-
 
 void CWapBrowserAppView::Draw( const TRect& /*aRect*/ ) const
 {
 	static const int KTextHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
 	CWindowGc& gc = SystemGc();
 	TRect drawRect( Rect());
+	gc.SetBrushStyle(CGraphicsContext::ESolidBrush);
+	gc.SetBrushColor(KRgbGray);
 	gc.Clear( drawRect );
 
 	if(iPage)
 	{
 		iPage->Draw(gc);
-	}
-/*
-	
-		return;
-	
-	
-		if(iPageBuilder)
-		{
-			TPoint point = drawRect.iTl;
-			point.iY += KTextHeight;
-			point.iY -= startYPos*KTextHeight;
-	
-			gc.UseFont(CCoeEnv::Static()->NormalFont());
-			for ( int i = 0 ; i < iPageBuilder->ElementAmount() ; i++)
-			{
-	//////////////////////////////////////////////////////////////////////////
-	//范围控制
-				TBool inRegion = point.iY < drawRect.iBr.iY + KTextHeight;
-				if(!inRegion)	//已经跑出屏幕下方，直接返回，不再绘制
-				{
-					return;
-				}
-				inRegion &= point.iY / *- KTextHeight* / > drawRect.iTl.iY / *- KTextHeight* /;
-	//////////////////////////////////////////////////////////////////////////
-	/ *
-				if()	
-				{
-	
-				}
-	* /
-	
-				const CWidget& element = iPageBuilder->Element(i);
-	
-				switch(element.Type())
-				{
-				case CWidget::EText:
-					{
-						const TDesC& text = ((CTextWidget&)element).Text();
-	
-						int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-						if(inRegion)
-						{
-							//TRect rect(point,TSize(width,textHeight));
-							//gc.DrawRect(rect);
-	
-							if(element.Link().Length())		//带链接
-							{
-								gc.SetPenColor(KRgbBlue);
-	
-								//TODO：添加焦点的显示
-								TPoint point1 = point;
-								TPoint point2 = point1;
-								point2.iX += width;
-								gc.SetPenColor(KRgbBlue);
-								gc.DrawLine(point1,point2);
-							}
-							else							//不带链接
-							{
-								gc.SetPenColor(KRgbBlack);
-							}
-							gc.DrawText(text,point);
-						}
-						point.iX += width;
-					}
-					break;
-	
-				case CWidget::EPicture:
-					{
-						const TDesC& text = ((CPictureWidget&)element).Alt();
-	
-						int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-						if(inRegion)
-						{
-							TRect rect(point,TSize(width,KTextHeight));
-							rect.Move(TPoint(0,-KTextHeight));
-	
-							gc.SetPenColor(KRgbYellow);
-							gc.DrawRect(rect);
-	
-							gc.SetPenColor(KRgbBlue);
-							gc.DrawText(text,point);
-						}
-	
-						point.iX += width;
-					}
-					//point.iX += gc.
-					break;
-	
-				case CWidget::EBr:
-					point.iX = 0;
-					point.iY += KTextHeight;
-					break;
-	
-				default:
-					ASSERT(FALSE);
-					break;
-				}
-			}
-		}*/
-	
+	}	
 }
 
 void CWapBrowserAppView::SizeChanged()
@@ -165,52 +68,22 @@ TKeyResponse CWapBrowserAppView::OfferKeyEventL(const TKeyEvent& aKeyEvent,TEven
 	TKeyResponse response = EKeyWasNotConsumed;
 	if(EEventKey == aType)
 	{
-		if(iPage->KeyEvent(aKeyEvent.iCode))
+		if(iPage && iPage->KeyEvent(aKeyEvent.iCode))
 		{
 			response = EKeyWasConsumed;
 			DrawNow();
 		}
-
-/*
-		response =  EKeyWasConsumed;
-		switch(aKeyEvent.iCode)
-		{
-		case EKeyDevice0:
-			break;
-
-		case EKeyUpArrow:
-			if(startYPos > 0)
-			{
-				startYPos--;
-			}
-			break;
-
-		case EKeyDownArrow:
-			if(1)
-			{
-				startYPos++;
-			}
-			break;
-
-		default:
-			response = EKeyWasNotConsumed;
-			break;
-		}
-*/
-
 	}
 	return response;
 }
 
-void CWapBrowserAppView::ShowPage(CPageBuilder* aPageBuilder)
-{
-	iPageBuilder = aPageBuilder;
-	DrawNow();
-}
-
 void CWapBrowserAppView::ShowPage(CPage* aPage)
 {
-	iPage = aPage;
-	iPage->SetRect(Rect());
-	DrawNow();
+	if(aPage)
+	{
+		delete iPage; 
+		iPage = aPage;
+		iPage->SetRect(Rect());
+		DrawNow();
+	}
 }

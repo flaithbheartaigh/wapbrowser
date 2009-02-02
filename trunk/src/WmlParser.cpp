@@ -25,6 +25,8 @@
 RPointerArray<HBufC> BufArray;
 void TRACE(const char* str)
 {
+	return;
+
 	//HBufC* textResource = StringLoader::LoadLC( R_HEWB_COMMAND1_TEXT );
 
 	TPtrC8 ptr((const TUint8*)str);
@@ -84,10 +86,15 @@ CWmlParser* CWmlParser::NewL(MPageBuilder& aPageBuilder)
 void CWmlParser::ConstructL(MPageBuilder& aPageBuilder)
 {
 	TiXmlDocument doc("C:\\default.xml");
+	//doc.LoadFile("C:\\default.xml");
 	doc.LoadFile();
+
+	//doc.Clear();
+	//return;
 
 	if(TiXmlElement* root = doc.RootElement())	//wml tag
 	{
+		//delete root;
 		if(TiXmlElement* card = root->FirstChildElement("card"))	//card tag
 		{
 			const char* id = card->Attribute("id");					//id attribute
@@ -168,23 +175,4 @@ void CWmlParser::ConstructL(MPageBuilder& aPageBuilder)
 		}
 		//delete root;
 	}
-
-
-/*
-	HBufC* buf = HBufC::NewLC(1000);
-	buf->Des().Append(*BufArray[0]);
-	buf->Des().Append(*BufArray[1]);
-	buf->Des().Append(*BufArray[2]);
-	buf->Des().Append(*BufArray[3]);
-	CAknInformationNote* informationNote = new ( ELeave ) CAknInformationNote;
-	informationNote->ExecuteLD(*buf);
-	CleanupStack::PopAndDestroy();
-*/
-
-// 	TiXmlNode::FirstChild();
-// 
-// 	TiXmlNode::NextSibling();
-	//doc.LoadFile("test.xml");
-
 }
-//$(TargetPath)

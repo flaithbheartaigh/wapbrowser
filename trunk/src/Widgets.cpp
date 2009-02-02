@@ -15,22 +15,6 @@
 CWidget
 //////////////////////////////////////////////////////////////////////////
 */
-//public:
-/*
-(
-enum CWidget::TType		//TODO:改为多态
-{
-	EText,
-	EPicture,
-	EBr
-};)
-*/
-
-//public:
-CWidget::CWidget(TType aType)
-	: iType(aType)
-{
-}
 CWidget::~CWidget()
 {
 	delete iLink;
@@ -55,28 +39,6 @@ const TDesC& CWidget::Link() const
 	}
 	return KNullDesC;
 }
-
-CWidget::TType CWidget::Type() const
-{
-	return iType;
-}
-
-/*
-//////////////////////////////////////////////////////////////////////////
-CBrWidget
-//////////////////////////////////////////////////////////////////////////
-*/
-//public:
-CBrWidget::CBrWidget()
-	: CWidget(EBr)
-{
-}
-
-void CBrWidget::Move(TPoint& aPoint)
-{
-	aPoint.iX = 0;
-	aPoint.iY += KDefaultFont->HeightInPixels();
-}
 /*
 //////////////////////////////////////////////////////////////////////////
 CTextWidget
@@ -84,7 +46,7 @@ CTextWidget
 */
 //public:
 CTextWidget::CTextWidget(const TDesC& aDes)
-	: CWidget(EText)
+	//: CWidget(EText)
 {
 	ASSERT(aDes.Length());
 	iText = aDes.Alloc();
@@ -111,33 +73,32 @@ const TDesC& CTextWidget::Text() const
 //////////////////////////////////////////////////////////////////////////
 //
 //////////////////////////////////////////////////////////////////////////
-void CTextWidget::Draw( /*const CWidget&element, */TBool ainRegion, CGraphicsContext &aGc, TPoint &apoint ) const
+//void CTextWidget::Draw( /*const CWidget&element, */TBool ainRegion, CGraphicsContext &aGc, TPoint &apoint ) const
+
+void CTextWidget::Draw(CGraphicsContext &aGc) const
 {
 	const TDesC& text = /*((CTextWidget&)element).*/Text();
 
 	int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-	if(inRegion)
+	//TRect rect(point,TSize(width,textHeight));
+	//gc.DrawRect(rect);
+
+	if(/*element.*/Link().Length())		//带链接
 	{
-		//TRect rect(point,TSize(width,textHeight));
-		//gc.DrawRect(rect);
+		aGc.SetPenColor(KRgbBlue);
 
-		if(/*element.*/Link().Length())		//带链接
-		{
-			aGc.SetPenColor(KRgbBlue);
-
-			//TODO：添加焦点的显示
-			TPoint point1 = point;
-			TPoint point2 = point1;
-			point2.iX += width;
-			aGc.SetPenColor(KRgbBlue);
-			aGc.DrawLine(point1,point2);
-		}
-		else							//不带链接
-		{
-			aGc.SetPenColor(KRgbBlack);
-		}
-		aGc.DrawText(text,point);
+		//TODO：添加焦点的显示
+		TPoint point1 = point;
+		TPoint point2 = point1;
+		point2.iX += width;
+		aGc.SetPenColor(KRgbBlue);
+		aGc.DrawLine(point1,point2);
 	}
+	else							//不带链接
+	{
+		aGc.SetPenColor(KRgbBlack);
+	}
+	aGc.DrawText(text,point);
 }
 
 void CTextWidget::Move(TPoint& aPoint)
@@ -147,6 +108,14 @@ void CTextWidget::Move(TPoint& aPoint)
 		aPoint.iX += KDefaultFont->MeasureText(*iText);
 	}
 	//point.iX += width;
+}
+
+TSize CTextWidget::Size() const
+{
+	TSize size;
+	size.iWidth = CCoeEnv::Static()->NormalFont()->MeasureText(Text());
+	size.iHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
+	return size;
 }
 /*
 //////////////////////////////////////////////////////////////////////////
@@ -158,7 +127,7 @@ CPictureWidget
 //public:
 	//CPictureWidget(const TDesC& aDes,const TDesC& aLink)
 CPictureWidget::CPictureWidget()
-	: CWidget(EPicture)
+	//: CWidget(EPicture)
 {
 }
 
@@ -221,31 +190,23 @@ const CFbsBitmap* CPictureWidget::Bitmap() const
 	return iBitmap;
 }
 
-const TSize& CPictureWidget::Size() const
-{
-	return iSize;
-}
 //////////////////////////////////////////////////////////////////////////
 //
 //////////////////////////////////////////////////////////////////////////
-void CPictureWidget::Draw( /*const CWidget&element, */TBool ainRegion, TPoint &apoint, CGraphicsContext &aGc ) const
+void CPictureWidget::Draw(CGraphicsContext &aGc) const
 {
 	const TDesC& text = /*((CPictureWidget&)element).*/Alt();
 
 	int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-	if(inRegion)
-	{
-		TRect rect(point,TSize(width,iTextHeight));
-		rect.Move(TPoint(0,-iTextHeight));
 
-		aGc.SetPenColor(KRgbYellow);
-		aGc.DrawRect(rect);
+	TRect rect(point,TSize(width,iTextHeight));
+	rect.Move(TPoint(0,-iTextHeight));
 
-		aGc.SetPenColor(KRgbBlue);
-		aGc.DrawText(text,point);
-	}
+	aGc.SetPenColor(KRgbYellow);
+	aGc.DrawRect(rect);
 
-//	point.iX += width;
+	aGc.SetPenColor(KRgbBlue);
+	aGc.DrawText(text,point);
 }
 
 void CPictureWidget::Move(TPoint& aPoint)
@@ -253,3 +214,10 @@ void CPictureWidget::Move(TPoint& aPoint)
 	aPoint.iX += width;
 }
 
+TSize CPictureWidget::Size() const
+{
+	TSize size;
+	size.iWidth = CCoeEnv::Static()->NormalFont()->MeasureText(Alt());
+	size.iHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
+	return size;
+}

@@ -14,7 +14,8 @@
 #include "PageBuilder.h"
 #include "Page.h"
 
-CPageBuilder::CPageBuilder()
+CPageBuilder::CPageBuilder(const TRect& aRect)
+	: iRect(aRect)
 {
 	// No implementation required
 }
@@ -22,20 +23,22 @@ CPageBuilder::CPageBuilder()
 
 CPageBuilder::~CPageBuilder()
 {
+	delete iPage;
+	delete iRootLink;
 	iElementArray.ResetAndDestroy();
 }
 
-CPageBuilder* CPageBuilder::NewLC()
+CPageBuilder* CPageBuilder::NewLC(const TRect& aRect)
 {
-	CPageBuilder* self = new (ELeave)CPageBuilder();
+	CPageBuilder* self = new (ELeave)CPageBuilder(aRect);
 	CleanupStack::PushL(self);
 	self->ConstructL();
 	return self;
 }
 
-CPageBuilder* CPageBuilder::NewL()
+CPageBuilder* CPageBuilder::NewL(const TRect& aRect)
 {
-	CPageBuilder* self=CPageBuilder::NewLC();
+	CPageBuilder* self=CPageBuilder::NewLC(aRect);
 	CleanupStack::Pop(); // self;
 	return self;
 }
@@ -44,33 +47,21 @@ void CPageBuilder::ConstructL()
 {
 
 }
-
-/*
-void CPageBuilder::AddPicture(const TDesC& aParentLink,const TDesC& aName,const TDesC& aLink)
-{
-
-}
-
-void CPageBuilder::AddText(const TDesC& aText,const TDesC& aLink)
-{
-
-}
-*/
 //////////////////////////////////////////////////////////////////////////
 //From MPageBuilder
 //////////////////////////////////////////////////////////////////////////
-
-//#define KSystemGc CCoeEnv::Static()->SystemGc()
-
 void CPageBuilder::AddBr()
 {
-	CBrWidget* w = new CBrWidget;
+	//CBrWidget* w = new CBrWidget;
 	//w->SetSize(TSize(0,KDefaultFont->HeightInPixels()));
-	AddWidget(w );
+	//AddWidget(new CBrWidget);
+
+	Page()->Br();
 }
 
 void CPageBuilder::AddPicture(const char* aName,const char* aAlt,const char* aLink)
 {
+	//return;
 	ASSERT(aName);
 	ASSERT(aAlt);
 	CPictureWidget* w = new CPictureWidget;//(TPtrC8((const TUint*)alt),TPtrC8((const TUint*)alt));
@@ -104,6 +95,7 @@ void CPageBuilder::AddPicture(const char* aName,const char* aAlt,const char* aLi
 
 void CPageBuilder::AddText(const char* aText,const char* aLink)
 {
+	//return;
 	ASSERT(aText);
 	//HBufC* text = HBufC::NewLC(strlen(aText) + 1);
 	//text->Des().Copy(TPtrC8((const TUint8*)aText));
@@ -141,19 +133,32 @@ void CPageBuilder::SetRootLink(const char* aLink)
 //////////////////////////////////////////////////////////////////////////
 //public
 //////////////////////////////////////////////////////////////////////////
-CPage* CPageBuilder::Page()
+CPage* CPageBuilder::FetchPage()
 {
-	if(NULL == iPage)
+	if(iPage)
 	{
-		iPage = new CPage;
+		CPage* page = iPage;
+		page->Layout();
+		iPage = NULL;
+		return page;
 	}
-	return iPage;
+	return NULL;
 }
 //////////////////////////////////////////////////////////////////////////
 //private
 //////////////////////////////////////////////////////////////////////////
 void CPageBuilder::AddWidget(CWidget* aWidget)
 {
-	//iElementArray.Append(element);
 	Page()->AddWidget(aWidget);
+	//iElementArray.Append(element);
+}
+
+CPage* CPageBuilder::Page()
+{
+	if(NULL == iPage)
+	{
+		iPage = new CPage;
+		iPage->SetRect(iRect);
+	}
+	return iPage;
 }
