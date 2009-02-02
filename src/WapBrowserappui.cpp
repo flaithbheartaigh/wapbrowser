@@ -43,8 +43,6 @@ CWapBrowserAppUi::~CWapBrowserAppUi()
 		delete iAppView;
 		iAppView = NULL;
 	}
-
-
 }
 
 void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
@@ -55,15 +53,13 @@ void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 		case EAknSoftkeyExit:
 			Exit();
 			break;
+
 		case EWapBrowserCommand1:
 			{
-				CPageBuilder* pageBuilder = CPageBuilder::NewLC();
+				CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
 				CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
 				CleanupStack::PopAndDestroy();	//parser
-
-// 				CleanupStack::Pop();			//pageBuilder
-// 				iAppView->ShowPage(new CPage(pageBuilder,iAppView->Rect()));
-				iAppView->ShowPage(pageBuilder->Page());
+				iAppView->ShowPage(pageBuilder->FetchPage());
 				CleanupStack::PopAndDestroy();	//pageBuilder
 			}
 			break;

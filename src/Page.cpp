@@ -12,13 +12,137 @@
 #include "PageBuilder.h"
 #include "Widgets.h"
 
+/*
+//////////////////////////////////////////////////////////////////////////
+CWidgetGroup
+//////////////////////////////////////////////////////////////////////////
+*/
+class CWidgetGroup : public CBase
+{
+public:
+	CWidgetGroup()
+		: iFocusIndex(-1)
+	{
+		iTextHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
+	}
+
+	~CWidgetGroup()
+	{
+		iWidgetArray.ResetAndDestroy();
+	}
+
+	void AddWidget(CWidget* aWidget)
+	{
+		if(-1 == iFocusIndex && aWidget->Link().Length() > 0)
+		{
+			iFocusIndex = iWidgetArray.Count();			 
+		}
+		iWidgetArray.Append(aWidget);
+	}
+
+	CWidget* FocusWidget() const
+	{
+		if(iFocusIndex >= 0 && iFocusIndex < iWidgetArray.Count())
+		{
+			return iWidgetArray[iFocusIndex];
+		}
+		return NULL;
+	}
+
+	void Draw(CGraphicsContext& aGc) const
+	{
+		TPoint point = iPoint;
+		for ( int i = 0 ; i < iWidgetArray.Count() ; i++)
+		{
+			CWidget* widget = iWidgetArray[i];
+
+			widget->SetPoint(point);
+			widget->SetTextHeight(iTextHeight);
+
+			if(iFocus && i == iFocusIndex)
+			{
+				aGc.SetBrushColor(CGraphicsContext::ESolidBrush);
+				aGc.SetBrushColor(KRgbYellow);
+				TRect rect(point - TPoint(0,iTextHeight),widget->Size());
+				aGc.DrawRect(rect);
+				aGc.SetBrushColor(CGraphicsContext::ENullBrush);
+			}
+
+			widget->Draw(aGc);
+			widget->Move(point);
+		}
+	}
+
+	void Left()		//向左移动焦点
+	{
+		for (int i = iFocusIndex - 1 ; i >= 0 ; i--)
+		{
+			CWidget* widget = iWidgetArray[i];
+			if(widget->Link().Length() > 0)
+			{
+				iFocusIndex = i;
+			}
+		}
+	}
+
+	void Right()		//向右移动焦点
+	{
+		for (int i = iFocusIndex + 1 ; i < iWidgetArray.Count() ; i++)
+		{
+			CWidget* widget = iWidgetArray[i];
+			if(widget->Link().Length() > 0)
+			{
+				iFocusIndex = i;
+			}
+		}
+	}
+
+	TBool HasFocus()	//是否有焦点项
+	{
+		return -1 != iFocusIndex;
+	}
+
+	void SetPoint(const TPoint& aPoint)
+	{
+		iPoint = aPoint;
+	}
+
+	TBool SetFocus(TBool aFocus)
+	{
+		if(-1 != iFocusIndex)
+		{
+			iFocus = aFocus;
+		}
+		return EFalse;
+	}
+
+	int Height()
+	{
+		return iTextHeight;	//TODO:高度不一定是相同的
+	}
+
+private:
+	RPointerArray<CWidget> iWidgetArray;
+	TPoint iPoint;
+	int iFocusIndex;
+	int iTextHeight;
+	TBool iFocus;
+};
+/*
+//////////////////////////////////////////////////////////////////////////
+CPage
+//////////////////////////////////////////////////////////////////////////
+*/
 CPage::CPage()
+	: iFocusIndex(-1)
 {
 	iTextHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
 }
 
 CPage::~CPage()
 {
+	ASSERT(NULL == iWidgetGroup);
+	iWidgetGroupArray.ResetAndDestroy();
 }
 
 void CPage::ConstructL()
@@ -28,72 +152,25 @@ void CPage::ConstructL()
 
 void CPage::Draw(CGraphicsContext& aGc) const
 {
+	ASSERT(iLayout);
+
 	TPoint point = iRect.iTl;
 	point.iY += iTextHeight;
-	point.iY -= iStartYPos*iTextHeight;
 
 	aGc.UseFont(CCoeEnv::Static()->NormalFont());
 
-	for ( int i = 0 ; i < iWidgetArray.Count() ; i++)
+	for (int i = iStartIndex ; i < iEndIndex && i < iWidgetGroupArray.Count() ; i++)
 	{
-		//////////////////////////////////////////////////////////////////////////
-		//范围控制
-		TBool inRegion = point.iY < iRect.iBr.iY + iTextHeight;
-		if(!inRegion)	//已经跑出屏幕下方，直接返回，不再绘制
-		{
-			return;
-		}
-		inRegion &= point.iY /*- KTextHeight*/ > iRect.iTl.iY /*- KTextHeight*/;
-		//////////////////////////////////////////////////////////////////////////
-
-		CWidget* widget = iWidgetArray[i];
-
-		widget->SetPoint(point);
-		widget->SetInRegion(inRegion);
-		widget->SetTextHeight(iTextHeight);
-		switch(widget->Type())
-		{
-		case CWidget::EText:
-			//DrawText(*widget,inRegion,aGc,point);
-			{
-				CTextWidget* w = (CTextWidget*)widget;
-				w->Draw(inRegion, aGc, point);
-			}
-			
-			break;
-
-		case CWidget::EPicture:
-			//DrawPicture(*widget,inRegion,point,aGc);
-			{
-				CPictureWidget* w = (CPictureWidget*)widget;
-				//w->SetTextHeight(iTextHeight);
-				w->Draw(inRegion, point, aGc);
-			}
-
-			break;
-
-		case CWidget::EBr:
-// 			point.iX = 0;
-// 			point.iY += iTextHeight;
-			break;
-
-		default:
-			ASSERT(FALSE);
-			break;
-		}
-
-
-		widget->Move(point);
-// 		point.iX += widget->Size().iWidth;
-// 		point.iY += widget->Size().iHeight;
-// 
-// 		widget
-
+		CWidgetGroup* wg = iWidgetGroupArray[i];
+		wg->SetPoint(point);
+		wg->Draw(aGc);
+		point.iY += iTextHeight;
 	}
 }
 
 TBool CPage::KeyEvent(int aKeyCode)
 {
+	ASSERT(iLayout);
 	TBool result = ETrue;
 	switch(aKeyCode)
 	{
@@ -101,22 +178,82 @@ TBool CPage::KeyEvent(int aKeyCode)
 		break;
 
 	case EKeyLeftArrow:
+		if(CurWidgetGroup())
+		{
+			CurWidgetGroup()->Left();
+		}
 		break;
 
 	case EKeyRightArrow:
+		if(CurWidgetGroup())
+		{
+			CurWidgetGroup()->Right();
+		}
 		break;
 
 	case EKeyUpArrow:
-		if(iStartYPos > 0)
+		//TODO:目录无法适应多种控制方式
 		{
-			iStartYPos--;
+			TBool focusChanged = EFalse;
+			ASSERT(iEndIndex <= iWidgetGroupArray.Count());
+			if(iFocusIndex > iStartIndex)
+			{
+				//TODO:查找算法应该换成更快捷的库算法
+				for (int i = iFocusIndex - 1 ; i >= iStartIndex ; i--)
+				{
+					CWidgetGroup* wg = iWidgetGroupArray[i];
+					if(wg->HasFocus())
+					{
+						focusChanged = ETrue;
+						iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
+						iFocusIndex = i;
+						iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
+						break;
+					}
+				}
+			}
+			if(!focusChanged)
+			{
+				if(iStartIndex > 0)
+				{
+					//TODO:等量增减不适合元素大小不同的情况
+					iStartIndex--;
+					iEndIndex--;
+				}
+			}
 		}
 		break;
 
 	case EKeyDownArrow:
-		if(1)
+		//if(iFocusIndex < iEndIndex)
 		{
-			iStartYPos++;
+			TBool focusChanged = EFalse;
+			if(iFocusIndex < iEndIndex)
+			{
+				ASSERT(iEndIndex <= iWidgetGroupArray.Count());
+				//TODO:查找算法应该换成更快捷的库算法
+				for (int i = iFocusIndex + 1 ; i < iEndIndex ; i++)
+				{
+					CWidgetGroup* wg = iWidgetGroupArray[i];
+					if(wg->HasFocus())
+					{
+						focusChanged = ETrue;
+						iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
+						iFocusIndex = i;
+						iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
+						break;
+					}
+				}
+			}
+			if(!focusChanged)
+			{
+				if(iEndIndex <= iWidgetGroupArray.Count())	//TODO:<=会导致越界，但<会导致最后一行画不全
+				{
+					//TODO:等量增减不适合元素大小不同的情况
+					iStartIndex++;
+					iEndIndex++;
+				}
+			}
 		}
 		break;
 
@@ -134,59 +271,60 @@ void CPage::SetRect(const TRect& aRect)
 
 void CPage::AddWidget(CWidget* aWidget)
 {
-	iWidgetArray.Append(aWidget);
+	if(NULL == iWidgetGroup)
+	{
+		iWidgetGroup = new CWidgetGroup;
+	}
+	iWidgetGroup->AddWidget(aWidget);
 }
-/*
+
+void CPage::Br()
+{
+	AddGroup();
+}
+
+void CPage::Layout()
+{
+	ASSERT(!iLayout);
+	AddGroup();
+
+	//TODO:计算布局
+	iLayout = ETrue;
+}
 //////////////////////////////////////////////////////////////////////////
 //private
 //////////////////////////////////////////////////////////////////////////
-void CPage::DrawText( const CWidget&element, TBool inRegion, CGraphicsContext &aGc, TPoint &point ) const
+void CPage::AddGroup()
 {
-	const TDesC& text = ((CTextWidget&)element).Text();
-
-	int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-	if(inRegion)
+	if(iWidgetGroup)
 	{
-		//TRect rect(point,TSize(width,textHeight));
-		//gc.DrawRect(rect);
-
-		if(element.Link().Length())		//带链接
+		if(-1 == iFocusIndex && iWidgetGroup->HasFocus())
 		{
-			aGc.SetPenColor(KRgbBlue);
-
-			//TODO：添加焦点的显示
-			TPoint point1 = point;
-			TPoint point2 = point1;
-			point2.iX += width;
-			aGc.SetPenColor(KRgbBlue);
-			aGc.DrawLine(point1,point2);
+			iWidgetGroup->SetFocus(ETrue);
+			iFocusIndex = iWidgetGroupArray.Count();
 		}
-		else							//不带链接
+		if(-1 == iStartIndex)
 		{
-			aGc.SetPenColor(KRgbBlack);
+			iStartIndex = iWidgetGroupArray.Count();
 		}
-		aGc.DrawText(text,point);
+		iTotalHeight += iWidgetGroup->Height();
+
+		iWidgetGroupArray.Append(iWidgetGroup);
+		iWidgetGroup = NULL;
+
+		if(iTotalHeight < iRect.Height())
+		{
+			iEndIndex = iWidgetGroupArray.Count() + 1;		//TODO:这里iEndIndex有可能超出iWidgetGroupArray.Count()
+		}
 	}
-	point.iX += width;
 }
 
-void CPage::DrawPicture( const CWidget&element, TBool inRegion, TPoint &point, CGraphicsContext &aGc ) const
+CWidgetGroup* CPage::CurWidgetGroup() const
 {
-	const TDesC& text = ((CPictureWidget&)element).Alt();
-
-	int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-	if(inRegion)
+	if(iFocusIndex >= 0 && iFocusIndex < iWidgetGroupArray.Count())
 	{
-		TRect rect(point,TSize(width,iTextHeight));
-		rect.Move(TPoint(0,-iTextHeight));
-
-		aGc.SetPenColor(KRgbYellow);
-		aGc.DrawRect(rect);
-
-		aGc.SetPenColor(KRgbBlue);
-		aGc.DrawText(text,point);
+		CWidgetGroup* wg = iWidgetGroupArray[iFocusIndex];
+		return wg;
 	}
-
-	point.iX += width;
-	}
-	*/
+	return NULL;
+}
