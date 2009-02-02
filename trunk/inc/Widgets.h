@@ -23,6 +23,7 @@ CWidget
 */
 class CWidget : public CBase //元素基类
 {
+/*
 public:
 	enum TType		//TODO:改为多态
 	{
@@ -30,20 +31,25 @@ public:
 		EPicture,
 		EBr
 	};
+*/
+
 public:
-	CWidget(TType aType);
-	~CWidget();
+	//CWidget(TType aType);
+	CWidget(){};
+	virtual ~CWidget();
 	void SetLink(const TDesC& aLink);
 	TBool IsLink();
 	const TDesC& Link() const;
-	TType Type() const;
+//	TType Type() const;
 
 public:
 	//virtual void Draw() {};
 
 public:
-	virtual void Draw(CGraphicsContext& /*aGc*/) const{};
+	virtual void Draw(CGraphicsContext& /*aGc*/) const = 0;
 	virtual void Move(TPoint& aPoint) = 0;
+	virtual TSize Size() const = 0;
+
 
 	void SetTextHeight(int aTextHeight) const
 	{
@@ -51,11 +57,6 @@ public:
 	}
 	mutable int iTextHeight;
 
-	void SetInRegion(TBool aInRegion)
-	{
-		inRegion = aInRegion;
-	}
-	TBool inRegion;
 	void SetPoint(const TPoint& aPoint)
 	{
 		point = aPoint;
@@ -63,20 +64,8 @@ public:
 
 	TPoint point;
 
-/*
-	void SetSize(const TSize& aSize)
-	{
-		iSize = aSize;
-	}
-	TSize Size()
-	{
-		return iSize;
-	}
-*/
-
 public:
 	HBufC* iLink;
-	TType iType;
 	TSize iSize;
 };
 
@@ -86,6 +75,7 @@ CBrWidget
 //////////////////////////////////////////////////////////////////////////
 */
 
+/*
 class CBrWidget : public CWidget
 {
 public:
@@ -94,6 +84,8 @@ public:
 public:
 	virtual void Move(TPoint& aPoint);
 };
+*/
+
 /*
 //////////////////////////////////////////////////////////////////////////
 CTextWidget
@@ -107,30 +99,9 @@ public:
 	const TDesC& Text() const;
 
 public:
-	void Draw(/* const CWidget&element, */TBool ainRegion, CGraphicsContext &aGc, TPoint &apoint ) const;
-
+	virtual void Draw(CGraphicsContext &aGc) const;
 	virtual void Move(TPoint& aPoint);
-/*
-	void SetInRegion(TBool aInRegion)
-	{
-		inRegion = aInRegion;
-	}
-	TBool inRegion;
-	void SetPoint(const TPoint& aPoint)
-	{
-		point = aPoint;
-	}
-
-	void MovePoint(TPoint& aPoint)
-	{
-
-	}
-	TSize Size()
-	{
-
-	}
-	TPoint point;
-*/
+	virtual TSize Size() const;
 
 private:
 	HBufC* iText;
@@ -145,7 +116,6 @@ CPictureWidget
 class CPictureWidget : public CWidget
 {
 public:
-	//CPictureWidget(const TDesC& aDes,const TDesC& aLink)
 	CPictureWidget();
 	~CPictureWidget();
 	void SetPictureLink(const TDesC& aParentLink);
@@ -155,11 +125,12 @@ public:
 	const TDesC& Link() const;
 	void MakePictureLink();
 	const CFbsBitmap* Bitmap() const;
-	const TSize& Size() const;
+	//const TSize& Size() const;
 
 public:
-	void Draw(/* const CWidget&element, */TBool inRegion, TPoint &point, CGraphicsContext &aGc ) const;
+	virtual void Draw(CGraphicsContext &aGc) const;
 	virtual void Move(TPoint& aPoint);
+	virtual TSize Size() const;
 
 private:
 	HBufC* iPictureLink;
