@@ -24,7 +24,11 @@ END
 
 
 SOURCEPATH                              ..\src 
-/* [+] */ SOURCE                        Page.cpp 
+SOURCE                                  UtilityTools.cpp 
+SOURCE                                  TimeOut.cpp 
+SOURCE                                  HTTPEngine.cpp 
+SOURCE                                  ScrollBar.cpp 
+SOURCE                                  Page.cpp 
 SOURCE                                  Widgets.cpp 
 SOURCE                                  WebClientEngine.cpp 
 SOURCE                                  PageBuilder.cpp 
@@ -39,10 +43,17 @@ SOURCE                                  WapBrowserAppView.cpp
 SOURCE                                  WapBrowserAppUi.cpp 
 SOURCE                                  WapBrowserDocument.cpp 
 
+SYSTEMINCLUDE                           \epoc32\include\ecom 
 USERINCLUDE                             ..\inc 
 USERINCLUDE                             ..\..\WapBrowser\inc 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
+// [-]    LIBRARY                       favouritesengine.lib 
+LIBRARY                                 ecom.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 http.lib 
+LIBRARY                                 esock.lib 
+LIBRARY                                 InetProtUtil.lib 
 LIBRARY                                 gdi.lib 
 LIBRARY                                 charconv.lib 
 LIBRARY                                 estlib.lib 

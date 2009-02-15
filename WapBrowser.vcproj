@@ -74,13 +74,14 @@
 		</Configuration>
 		<Configuration
 			Name="Deb_S60_31_WINSCW|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1">
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/QIfist /NDSProjectFile &quot;$(ProjectPath)&quot; /NDSSDKShortName S60_31"
 				Optimization="0"
-				AdditionalIncludeDirectories="D:\projects\Symbian\WapBrowser\inc;d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc;d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include;d:\projects\Symbian\WapBrowser_svn\inc;"
+				AdditionalIncludeDirectories="D:\projects\Symbian\WapBrowser\inc;d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\libc;d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include;d:\projects\Symbian\WapBrowser_svn\inc;d:\Symbian\9.2\S60_3rd_FP1\\epoc32\include\ecom"
 				PreprocessorDefinitions="__SYMBIAN32__;__SERIES60_31__;__SERIES60_3X__;__SUPPORT_CPP_EXCEPTIONS__;__EXE__;__WINSCW__;__WINS__;__CW32__;_DEBUG;_UNICODE;"
 				IgnoreStandardIncludePath="TRUE"
 				StringPooling="TRUE"
@@ -97,7 +98,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions=" /NDSProjectFile &quot;$(ProjectPath)&quot; /NDSSDKShortName S60_31"
-				AdditionalDependencies="gdi.lib charconv.lib estlib.lib euser.lib apparc.lib cone.lib eikcore.lib avkon.lib commonengine.lib efsrv.lib estor.lib eexe.lib "
+				AdditionalDependencies="gdi.lib charconv.lib estlib.lib euser.lib apparc.lib cone.lib eikcore.lib avkon.lib commonengine.lib efsrv.lib estor.lib eexe.lib InetProtUtil.lib esock.lib http.lib bafl.lib ecom.lib"
 				OutputFile="d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb\WapBrowser.exe"
 				AdditionalLibraryDirectories="d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb"
 				IgnoreAllDefaultLibraries="TRUE"
@@ -144,10 +145,19 @@
 		<Filter
 			Name="src">
 			<File
+				RelativePath=".\src\HTTPEngine.cpp">
+			</File>
+			<File
 				RelativePath=".\src\Page.cpp">
 			</File>
 			<File
 				RelativePath=".\src\PageBuilder.cpp">
+			</File>
+			<File
+				RelativePath=".\src\ScrollBar.cpp">
+			</File>
+			<File
+				RelativePath=".\src\TimeOut.cpp">
 			</File>
 			<File
 				RelativePath=".\src\tinystr.cpp">
@@ -160,6 +170,9 @@
 			</File>
 			<File
 				RelativePath=".\src\tinyxmlparser.cpp">
+			</File>
+			<File
+				RelativePath=".\src\UtilityTools.cpp">
 			</File>
 			<File
 				RelativePath=".\src\WapBrowser.cpp">

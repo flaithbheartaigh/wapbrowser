@@ -16,6 +16,7 @@
 class CPageBuilder;
 class CWidget;
 class CWidgetGroup;
+class CScrollBar;
 
 class CPage : public CBase
 {
@@ -59,6 +60,8 @@ private:
 	TBool iLayout;			//是否已经调用了Layout();
 
 	int iTotalHeight;
+
+	CScrollBar* iScrollBar;
 };
 
 #endif // PAGE_H
