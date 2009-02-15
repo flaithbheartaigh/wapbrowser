@@ -14,15 +14,18 @@ Description : 两个滚动条类
 
 #ifndef	__SCROLLBAR_H__
 #define __SCROLLBAR_H__
-
-#include "Control.h"
-#include "PreDefine.h"
+// 
+// #include "Control.h"
+// #include "PreDefine.h"
+#include "Define.h"
 
 class MScrollbarObserver;
 //////////////////////////////////////////////////////////////////////////
 //CScrollbar
 //////////////////////////////////////////////////////////////////////////
-class CScrollBar : public CControl  
+class CScrollBar 
+	: public CBase
+	//: public CControl  
 {
 public:
 	enum TControlMode
@@ -37,7 +40,8 @@ public:
 	static	CScrollBar*	CreateDefaultScrollbarL();
 
 public://From CControl
-	virtual void	Draw(CGraphic& aGraphic)const;
+	//virtual void	Draw(CGraphic& aGraphic)const;
+	virtual void	Draw(CGraphicsContext& aGraphic)const;
 	virtual TBool	KeyEventL(TInt aKeyCode);
 	virtual TBool	HandleCommandL(TInt aCommand);
 	virtual void	SizeChanged(const TRect& aScreenRect);

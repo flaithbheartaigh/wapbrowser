@@ -20,6 +20,28 @@
 
 #define KDefaultFont CCoeEnv::Static()->NormalFont()
 
+#define KKeyCodeUp			EKeyUpArrow
+#define KKeyCodeDown		EKeyDownArrow
+#define KKeyCodeLeft		EKeyLeftArrow
+#define KKeyCodeRight		EKeyRightArrow
+
+#define KLeftSoftKey		EKeyDevice0
+#define KRightSoftKey		EKeyDevice1
+#define KOKKey				EKeyDevice3
+
+#define KKeyCodeHome		'1'
+#define KKeyCodeEnd			'4'
+#define KKeyCodePageUp		'2'
+#define KKeyCodePageDown	'5'
+
+
+#define KScrollBackgroundColor TRgb(68,80,103)
+#define KScrollSpaceColor TRgb(16,188,255)
+
+
+#define SCREEN_WIDTH (176)
+#define SCREEN_HEIGHT (208)
+
 class MWebClientObserver
 {
 public:
@@ -78,7 +100,7 @@ namespace Utils
 		TFileName buf;
 		buf.Zero();
 		buf.Copy(ptr8);
-		UtilityTools::WriteLogsL(buf);
+		//UtilityTools::WriteLogsL(buf);
 		User::Panic(buf,line);
 	}
 #define ASSERT(a)	if(a == 0)	\
@@ -92,6 +114,43 @@ namespace Utils
 }
 
 using namespace Utils;
+
+class CCommand
+{
+public:
+	virtual void Execute() = 0;
+};
+/*
+
+class CGetCommand : public CCommand
+{
+public:
+	CGetCommand(CWapBrowserAppUi& aWapBrowserAppUi)
+		: iWapBrowserAppUi(aWapBrowserAppUi)
+	{
+	}
+	~CGetCommand()
+	{
+		delete iUri;
+	};
+
+	void SetUri(const TDesC8& aUri)
+	{
+		iUri = aUri.Alloc();
+	}
+
+	virtual void Execute()
+	{
+		iWapBrowserAppUi.IssueHTTPGetL(*iUri);
+	}
+	// 	void SetProvider(CWapBrowserAppUi& aWapBrowserAppUi)
+	// 	{
+	// 	}
+private:
+	CWapBrowserAppUi& iWapBrowserAppUi;
+	HBufC8* iUri;
+};
+*/
 
 #endif // DEFINE_H
 

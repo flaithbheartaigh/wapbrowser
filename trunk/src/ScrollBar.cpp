@@ -2,17 +2,18 @@
 //
 //////////////////////////////////////////////////////////////////////
 #include "ScrollBar.h"
+
 #include "ScrollbarObserver.h"
-#include "ScreenLayout.h"
-#include "Graphic.h"
-#include "TypeDefine.h"
-#include "CoCoPreDefine.h"
+// #include "ScreenLayout.h"
+// #include "Graphic.h"
+
 //////////////////////////////////////////////////////////////////////
 //CScrollBar
 //////////////////////////////////////////////////////////////////////
-CScrollBar::CScrollBar() : CControl(EScrollBar)
-						 , iIsShow(ETrue)
-						 , iControlMode(EPageControl)
+CScrollBar::CScrollBar()
+	//: CControl(EScrollBar)
+	: iIsShow(ETrue)
+	, iControlMode(EPageControl)
 {
 }
 
@@ -30,11 +31,12 @@ CScrollBar* CScrollBar::CreateDefaultScrollbarL()
 //////////////////////////////////////////////////////////////////////////
 //
 //////////////////////////////////////////////////////////////////////////
-void CScrollBar::Draw(CGraphic& gc)const
+//void CScrollBar::Draw(CGraphic& gc)const
+void CScrollBar::Draw(CGraphicsContext& gc)const
 {
 	if(!iIsShow)return;
 
-	UtilityTools::WriteLogsL(_L("CScrollBar::Draw"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::Draw"));
 	AsserClass();
 
 	if(iGrads > 0)		// 所有内容能够显示在一屏幕内时,不用画滚动浮标
@@ -53,7 +55,7 @@ void CScrollBar::Draw(CGraphic& gc)const
 		gc.SetPenStyle(CBitmapContext::ESolidPen);
 		gc.SetBrushStyle(CBitmapContext::ENullBrush);
 	}
-	UtilityTools::WriteLogsL(_L("CScrollBar::Draw End"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::Draw End"));
 }
 
 TBool CScrollBar::KeyEventL(TInt aKeyCode)
@@ -77,12 +79,12 @@ TBool CScrollBar::KeyEventL(TInt aKeyCode)
 	return keyResult;
 }
 
-TBool CScrollBar::HandleCommandL(TInt aCommand)
+TBool CScrollBar::HandleCommandL(TInt /*aCommand*/)
 {
 	return EFalse;
 }
 
-void CScrollBar::SizeChanged(const TRect& aScreenRect)
+void CScrollBar::SizeChanged(const TRect& /*aScreenRect*/)
 {
 }
 //////////////////////////////////////////////////////////////////////////
@@ -180,7 +182,7 @@ void CScrollBar::Layout()
 
 TBool CScrollBar::Up()
 {
-	UtilityTools::WriteLogsL(_L("CScrollBar::Up"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::Up"));
 	TBool result = EFalse;
 	if(iIndex > 0)
 	{
@@ -192,13 +194,13 @@ TBool CScrollBar::Up()
 	{
 		iObserver->ScrollBarIndexChanged(iIndex);
 	}
-	UtilityTools::WriteLogsL(_L("CScrollBar::Up End"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::Up End"));
 	return result;
 }
 
 TBool CScrollBar::Down()
 {
-	UtilityTools::WriteLogsL(_L("CScrollBar::Down"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::Down"));
 	TBool result = EFalse;
 	if(iGrads != 0)
 	{
@@ -213,13 +215,13 @@ TBool CScrollBar::Down()
 	{
 		iObserver->ScrollBarIndexChanged(iIndex);
 	}
-	UtilityTools::WriteLogsL(_L("CScrollBar::Down End"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::Down End"));
 	return result;
 }
 
 TBool CScrollBar::Home()
 {
-	UtilityTools::WriteLogsL(_L("CScrollBar::"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::"));
 	TBool result = EFalse;
 	if(iIndex != 0)
 	{
@@ -236,7 +238,7 @@ TBool CScrollBar::Home()
 
 TBool CScrollBar::End()
 {
-	UtilityTools::WriteLogsL(_L("CScrollBar::"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::"));
 	TBool result = EFalse;
 	if(iIndex != iGrads)
 	{
@@ -253,7 +255,7 @@ TBool CScrollBar::End()
 
 TBool CScrollBar::PageUp()
 {
-	UtilityTools::WriteLogsL(_L("CScrollBar::"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::"));
 	TBool result = EFalse;
 	if(iIndex != 0)
 	{
@@ -271,7 +273,7 @@ TBool CScrollBar::PageUp()
 
 TBool CScrollBar::PageDown()
 {
-	UtilityTools::WriteLogsL(_L("CScrollBar::"));
+	//UtilityTools::WriteLogsL(_L("CScrollBar::"));
 	TBool result = EFalse;
 	if(iIndex != iGrads)
 	{

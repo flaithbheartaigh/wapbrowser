@@ -118,6 +118,9 @@
 #define KRgb1		TRgb(153,190,47)
 #define KRgb2		TRgb(255,245,0)
 
+#define KScrollBackgroundColor TRgb(68,80,103)
+#define KScrollSpaceColor TRgb(16,188,255)
+
 
 #define KNaviPaneTextPoint	TPoint(4,38)
 #define KNaviPaneSize		TSize(169, 20)

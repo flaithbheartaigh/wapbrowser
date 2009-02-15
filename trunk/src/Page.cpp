@@ -11,6 +11,7 @@
 #include "Page.h"
 #include "PageBuilder.h"
 #include "Widgets.h"
+#include "ScrollBar.h"
 
 /*
 //////////////////////////////////////////////////////////////////////////
@@ -81,6 +82,7 @@ public:
 			if(widget->Link().Length() > 0)
 			{
 				iFocusIndex = i;
+				break;
 			}
 		}
 	}
@@ -93,6 +95,7 @@ public:
 			if(widget->Link().Length() > 0)
 			{
 				iFocusIndex = i;
+				break;
 			}
 		}
 	}
@@ -143,6 +146,7 @@ CPage::~CPage()
 {
 	ASSERT(NULL == iWidgetGroup);
 	iWidgetGroupArray.ResetAndDestroy();
+	delete iScrollBar;
 }
 
 void CPage::ConstructL()
@@ -166,6 +170,8 @@ void CPage::Draw(CGraphicsContext& aGc) const
 		wg->Draw(aGc);
 		point.iY += iTextHeight;
 	}
+	ASSERT(iScrollBar);
+	iScrollBar->Draw(aGc);
 }
 
 TBool CPage::KeyEvent(int aKeyCode)
@@ -219,6 +225,7 @@ TBool CPage::KeyEvent(int aKeyCode)
 					//TODO:等量增减不适合元素大小不同的情况
 					iStartIndex--;
 					iEndIndex--;
+					iScrollBar->Up();
 				}
 			}
 		}
@@ -228,11 +235,11 @@ TBool CPage::KeyEvent(int aKeyCode)
 		//if(iFocusIndex < iEndIndex)
 		{
 			TBool focusChanged = EFalse;
-			if(iFocusIndex < iEndIndex)
+			if(iFocusIndex < iEndIndex - 1)
 			{
 				ASSERT(iEndIndex <= iWidgetGroupArray.Count());
 				//TODO:查找算法应该换成更快捷的库算法
-				for (int i = iFocusIndex + 1 ; i < iEndIndex ; i++)
+				for (int i = iFocusIndex + 1 ; i < iEndIndex && i < iWidgetGroupArray.Count() ; i++)
 				{
 					CWidgetGroup* wg = iWidgetGroupArray[i];
 					if(wg->HasFocus())
@@ -252,6 +259,7 @@ TBool CPage::KeyEvent(int aKeyCode)
 					//TODO:等量增减不适合元素大小不同的情况
 					iStartIndex++;
 					iEndIndex++;
+					iScrollBar->Down();
 				}
 			}
 		}
@@ -290,6 +298,25 @@ void CPage::Layout()
 
 	//TODO:计算布局
 	iLayout = ETrue;
+
+	if(NULL == iScrollBar)
+	{
+		iScrollBar = new CScrollBar;
+		iScrollBar->SetSize(iRect.Width(),iRect.Height());
+		iScrollBar->SetScrollWidth(5);
+		iScrollBar->SetBeginPostion(TPoint(iRect.Width()-10,0));
+		iScrollBar->SetVerticalSpace(iRect.Height());
+		iScrollBar->SetBackgroundColor(KScrollBackgroundColor);
+		iScrollBar->SetCursorColor(KScrollSpaceColor);
+	}
+	//iScrollBar->SetMaxLinePerPage(iRect.Height());		//TODO:
+	//iScrollBar->SetMaxLinePerPage(10);		//TODO:
+	//iScrollBar->SetTotalLineNum(iTotalHeight);
+
+ 	iScrollBar->SetMaxLinePerPage(10);		//TODO:这个值应该通过计算得到
+ 	iScrollBar->SetTotalLineNum(iWidgetGroupArray.Count());
+
+	iScrollBar->Layout();
 }
 //////////////////////////////////////////////////////////////////////////
 //private

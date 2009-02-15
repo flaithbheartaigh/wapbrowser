@@ -6,6 +6,10 @@
   <pkgFile>sis\WapBrowser.pkg</pkgFile>
   <pkgUpdate>true</pkgUpdate>
   <pkgGeneration>true</pkgGeneration>
+  <projectProperty name="copyright" label="Copyright notice" value="Your copyright notice" description="Your copyright notice" type="input" pattern="FreeText" role="None" persistedAs="file.copyright" />
+  <projectProperty name="author" label="Author" value="浮生若茶" description="Name of the author" type="input" pattern="FreeText" role="None" persistedAs="file.author" />
+  <projectProperty name="incDir" label="Header Directory" value="inc" description="Directory for the header file" type="input" pattern="Filename" role="Directory" persistedAs="directory.inc" />
+  <projectProperty name="srcDir" label="Source Directory" value="src" description="Directory for the source file" type="input" pattern="Filename" role="Directory" persistedAs="directory.src" />
   <projectProperty name="vendorName" label="Vendor Name" value="Vendor Name" type="input" pattern="FreeText" role="None" persistedAs="vendorName" />
   <projectProperty name="uid3" label="Application UID" value="0xed86d796" description="Application UID. Development time UIDs between 0x00000000 - 0x0fffffff. Release UIDs provided by Symbian." type="input" pattern="UID" role="UID" persistedAs="project.uid3" />
   <projectProperty name="basename" label="Base Name" value="WapBrowser" description="Base name for files and classes" type="input" pattern="VariableName" role="ProjectName" persistedAs="project.basename" />

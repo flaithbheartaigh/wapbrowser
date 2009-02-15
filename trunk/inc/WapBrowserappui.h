@@ -12,13 +12,17 @@
 // INCLUDES
 #include <aknappui.h>
 #include "Define.h"
+#include "HttpObserver.h"
 
 class CWapBrowserAppView;
 class CWebClientEngine;
+class CHTTPEngine;
+
 // CLASS DECLARATION
 class CWapBrowserAppUi 
 	: public CAknAppUi
 	, public MWebClientObserver
+	, public MClientObserver
 	{
 	public: // Constructors and destructor
 		void ConstructL();
@@ -33,12 +37,37 @@ class CWapBrowserAppUi
 		virtual void ClientHeaderReceived(const TDesC& aHeaderData);
 		virtual void ClientBodyReceived(const TDesC8& aBodyData,const TBool& isLast);
 
+	public://From MClientObserver
+		virtual void ClientEvent(const TDesC& aEventDescription,TInt aIndex);
+		virtual void ClientBodyReceived(const TDesC8& aBodyData,TInt aIndex);
+
 	public:
 		void IssueHTTPGetL(const TDesC8& aUri);
+
+	private:
+		void Parse();
+		void ParseData(HBufC8* aBuf);
+		void RequestPage();
+		void RequestConfig();
+		void ParserConfig(HBufC8* aBuf);
+
+		CHTTPEngine& HTTPEngine();
+
+	private:
+		enum TRequestType
+		{
+			ERequestNull,
+			ERequestPage,
+			ERequestConfig
+		};
 
 	private: // Data
 		CWapBrowserAppView* iAppView;
 		CWebClientEngine* iWebClientEngine;
+		CHTTPEngine* iHTTPEngine;
+		HBufC8* iReceiveData8;
+
+		int iRequestType;
 	};
 
 #endif // __WAPBROWSERAPPUI_H__

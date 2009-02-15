@@ -275,7 +275,7 @@ void CHTTPEngine::IssueHTTPGetL(const TDesC8& aUri,const TDesC8& aRange)
 		//20070917张晖增加判断超时
 		if (iThreadIndex==100)
 		{
-		::WriteLogsTemp(_L("HTTPGet Begin"));
+//		::WriteLogsTemp(_L("HTTPGet Begin"));
 		}
 
 		iTimer.Begin (KBeyondTime);
@@ -430,7 +430,7 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,
 			//20070917张晖增加判断超时
 				if (iThreadIndex==100)
 				{
-					::WriteLogsTemp(_L("EGotResponseHeaders Begin"));
+//					::WriteLogsTemp(_L("EGotResponseHeaders Begin"));
 				}
 
 			iTimer.Begin (KBeyondTime);
@@ -499,7 +499,7 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,
 			//20070917张晖增加判断超时
 				if (iThreadIndex==100)
 				{
-			::WriteLogsTemp(_L("EGotResponseBodyData Begin"));
+//			::WriteLogsTemp(_L("EGotResponseBodyData Begin"));
 				}
 
 			iTimer.Begin (KBeyondTime);
@@ -545,7 +545,7 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,
 			// No further action here needed.
 				if (iThreadIndex==100)
 				{
-			::WriteLogsTemp(_L("EResponseComplete Begin"));
+//			::WriteLogsTemp(_L("EResponseComplete Begin"));
 				}
 
 			_LIT(KTransactionComplete, "Transaction Complete");
@@ -558,7 +558,7 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,
 			// Transaction can be closed now. It's not needed anymore.
 				if (iThreadIndex==100)
 				{
-			::WriteLogsTemp(_L("ESucceeded Begin"));
+//			::WriteLogsTemp(_L("ESucceeded Begin"));
 				}
 
 			aTransaction.Close();
@@ -574,7 +574,7 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,
 			{
 				if (iThreadIndex==100)
 				{
-			::WriteLogsTemp(_L("EFailed Begin"));
+//			::WriteLogsTemp(_L("EFailed Begin"));
 				}
 
 			aTransaction.Close();
@@ -597,8 +597,8 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,
 			{
 				if (iThreadIndex==100)
 				{
-			::WriteLogsTemp(_L("default Begin"));
-			::WriteLogsTemp(_L("default Error:%d"),aEvent.iStatus);
+//			::WriteLogsTemp(_L("default Begin"));
+//			::WriteLogsTemp(_L("default Error:%d"),aEvent.iStatus);
 				}
 
 			TBuf<KInfotextBufferSize> text;
@@ -655,7 +655,7 @@ TInt CHTTPEngine::MHFRunError(TInt aError,
 	// Just notify about the error and return KErrNone.
 		if (iThreadIndex==100)
 		{
-	::WriteLogsTemp(_L("MHFRunError-1"));
+//	::WriteLogsTemp(_L("MHFRunError-1"));
 		}
 
 	TBuf<KInfotextBufferSize>	text;
@@ -665,7 +665,7 @@ TInt CHTTPEngine::MHFRunError(TInt aError,
 
 	if (iThreadIndex==100)
 	{
-	::WriteLogsTemp(_L("MHFRunError-2"));
+//	::WriteLogsTemp(_L("MHFRunError-2"));
 	}
 	return KErrNone;
 	}
@@ -762,12 +762,12 @@ void CHTTPEngine::SetupConnectionL(TRequestStatus* aStatus,TInt aIap)
     iConnectionSetupDone = ETrue;
 	
 
-	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL1"));
+//	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL1"));
     //open socket server and start the connection
     User::LeaveIfError(iSocketServ.Connect());
-	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL2"));
+//	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL2"));
     User::LeaveIfError(iConnection.Open(iSocketServ));
-    //::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL3"));
+//    //::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL3"));
 	// Now we have the iap Id. Use it to connect for the connection.
 	// Create a connection preference variable.
 	TCommDbConnPref connectPref;
@@ -792,7 +792,7 @@ void CHTTPEngine::SetupConnectionL(TRequestStatus* aStatus,TInt aIap)
     connInfo.SetPropertyL ( strPool.StringF(HTTP::EHttpSocketConnection,
         RHTTPSession::GetTable() ), 
         THTTPHdrVal (REINTERPRET_CAST(TInt, &(iConnection))) );
-	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL end"));
+//	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL end"));
     }
 
 	// ----------------------------------------------------------------------------
@@ -808,11 +808,11 @@ void CHTTPEngine::SetupConnectionL(TInt aIap)
     //iConnectionSetupDone = ETrue;
 
 	 //open socket server and start the connection
-	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F1"));
+//	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F1"));
     User::LeaveIfError(iSocketServ.Connect());
-	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F2"));
+//	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F2"));
     User::LeaveIfError(iConnection.Open(iSocketServ));
-	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F3"));
+//	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F3"));
 	// Now we have the iap Id. Use it to connect for the connection.
 	// Create a connection preference variable.
 	TCommDbConnPref connectPref;
@@ -837,7 +837,7 @@ void CHTTPEngine::SetupConnectionL(TInt aIap)
     connInfo.SetPropertyL ( strPool.StringF(HTTP::EHttpSocketConnection,
         RHTTPSession::GetTable() ), 
         THTTPHdrVal (REINTERPRET_CAST(TInt, &(iConnection))) );
-	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F_end"));
+//	//::WriteLogsTemp(_L("CHTTPEngine::SetupConnectionL_F_end"));
     }
 
 // end of file
@@ -897,14 +897,14 @@ TBool CHTTPEngine::GetCredentialsL(const TUriC8& aURI,
 	{
 		if (iThreadIndex==100)
 		{
-			::WriteLogsTemp(_L("TimeSlice Begin"));
+//			::WriteLogsTemp(_L("TimeSlice Begin"));
 		}
 
 		if(iRunning && iTimer.Check())
 		{
 			if (iThreadIndex==100)
 			{
-				::WriteLogsTemp(_L("TimeSlice -999"));
+//				::WriteLogsTemp(_L("TimeSlice -999"));
 			}
 			CancelTransaction();
 

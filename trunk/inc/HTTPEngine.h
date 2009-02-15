@@ -16,7 +16,8 @@
 #include <http\mhttptransactioncallback.h>
 #include <http\mhttpauthenticationcallback.h>
 #include <es_sock.h>
-#include <HttpObserver.h>
+
+#include "HttpObserver.h"
 #include "TimeOut.h"
 /*
 * Forward declarations
@@ -28,10 +29,11 @@ class MClientObserver;
 /*
 * Provides simple interface to HTTP Client API.
 */
-class CHTTPEngine :	public CBase,
-						public MHTTPTransactionCallback,
-						public MHTTPDataSupplier,
-						public MHTTPAuthenticationCallback
+class CHTTPEngine 
+	: public CBase
+	, public MHTTPTransactionCallback
+	, public MHTTPDataSupplier
+	, public MHTTPAuthenticationCallback
 	{
 public:
 	void SetupConnectionL(TRequestStatus* aStatus,TInt aIap);
@@ -400,11 +402,11 @@ private:
 	
 	TBool 					iConnectionSetupDone;
 
-	TInt iThreadIndex;
+	TInt					iThreadIndex;
 
-	TInt iNetStatus;
-	TInt iTotalSize;
-	TInt iSendSize;
+	TInt					iNetStatus;
+	TInt					iTotalSize;
+	TInt					iSendSize;
 	};
 
 #endif // __CLIENTENGINE_H__

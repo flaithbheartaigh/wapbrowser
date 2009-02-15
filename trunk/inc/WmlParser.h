@@ -15,7 +15,12 @@
 #include <e32base.h>
 // CLASS DECLARATION
 
+#include "tinyxml.h"
+
 class MPageBuilder;
+
+// class TiXmlDocument;
+// class TiXmlNode;
 
 class CWmlParser : public CBase
 {
@@ -25,11 +30,20 @@ public: // Constructors and destructor
 	static CWmlParser* NewLC(MPageBuilder& aPageBuilder);
 
 private:
-	CWmlParser();
-	void ConstructL(MPageBuilder& aPageBuilder);
+	CWmlParser(MPageBuilder& aPageBuilder);
+	void ConstructL();
+
+public:
+	void ParseFile(const char* aFileName);
+	void ParseData(const char* p);
+	void Parse(TiXmlDocument& doc);
+
+	
+	void ParseInput(TiXmlNode* node);
 
 private:
-
+	MPageBuilder& iPageBuilder;
+	const char* iFileName;
 };
 
 #endif // WMLPARSER_H
