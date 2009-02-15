@@ -37,6 +37,8 @@ void TRACE(const char* str)
 
 	buf = CnvUtfConverter::ConvertToUnicodeFromUtf8L(ptr);
 	BufArray.Append(buf);
+
+
 // 	RDebug::Print(*buf);
 // 	delete buf;
 // 	
@@ -106,12 +108,8 @@ void CWmlParser::ParseData(const char* p)
 
 void CWmlParser::Parse(TiXmlDocument& doc)
 {
-	//doc.Clear();
-	//return;
-
 	if(TiXmlElement* root = doc.RootElement())	//wml tag
 	{
-		//delete root;
 		if(TiXmlElement* card = root->FirstChildElement("card"))	//card tag
 		{
 			const char* id = card->Attribute("id");					//id attribute
@@ -125,7 +123,6 @@ void CWmlParser::Parse(TiXmlDocument& doc)
 				
 				TiXmlNode* childNode = p->FirstChild();
 				do 
-				//while (TiXmlElement* child = p->NextSiblingElement());
 				{
 					if(childNode->Type() == TiXmlNode::TEXT)
 					{
@@ -181,6 +178,11 @@ void CWmlParser::Parse(TiXmlDocument& doc)
 							const char* alt = child->Attribute("alt");
 							iPageBuilder.AddPicture(src,alt);
 						}
+						else if(strcmp(value,"input") == 0)
+						{
+							//ParseInput(child);
+						}
+						//archor在这里被忽略
 					}
 
 					//if(
@@ -194,67 +196,23 @@ void CWmlParser::Parse(TiXmlDocument& doc)
 	}
 }
 
-void CWmlParser::ParseInput(TiXmlNode* node)
+void CWmlParser::ParseInput(TiXmlElement* element)
 {
-	if(node->Type() == TiXmlNode::ELEMENT)
+	ASSERT(strcmp(element->Value(),"input") == 0);
+
+	const char* name		= element->Attribute("name");
+	const char* type		= element->Attribute("type");
+	const char* tabindex	= element->Attribute("tabindex");
+	const char* value		= element->Attribute("value");
+	const char* size		= element->Attribute("size");
+
+	while (element = element->NextSiblingElement())
 	{
-		TiXmlElement* element = node->ToElement();
 		const char* elementName = element->Value();
-		if(strcmp(elementName,"input") == 0)
+		if(strcmp(elementName,"anchor") == 0)
 		{
-			const char* name		= element->Attribute("name");
-			const char* type		= element->Attribute("type");
-			const char* tabindex	= element->Attribute("tabindex");
-			const char* value		= element->Attribute("value");
-			const char* size		= element->Attribute("size");
+			ParseAnchor(element);
 		}
-	}
-	while (TiXmlNode* nextSibling = node->NextSibling())
-	{
-		if(nextSibling->Type() == TiXmlNode::ELEMENT)
-		{
-			TiXmlElement* element = nextSibling->ToElement();
-			const char* elementName = element->Value();
-			if(strcmp(elementName,"anchor") == 0)
-			{
-				if(TiXmlElement* goElement = element->FirstChildElement("go"))
-				{
-					TiXmlElement*postfieldElement = goElement->FirstChildElement("postfield");
-					const char* name	= postfieldElement->Attribute("name");
-					const char* value	= postfieldElement->Attribute("value");
-
-					//<postfield name="bid" value="2"/>
-					//<postfield name="keyword" value="$keyword"/>
-
-					const char* go = goElement->FirstChildElement("go");
-					const char* ;
-					const char* ;
-					const char* go = goElement->FirstChildElement("go");;
-					const char* go = goElement->FirstChildElement("go");;
-				}
-
-
-/*
-				else if(nextSibling->Type() == TiXmlNode::TEXT)
-				{
-					const char* text = nextSibling->Value();
-					iPageBuilder.AddText(text,href);
-				}
-*/
-
-			}
-			else
-			{
-				break;
-			}
-		}
-/*
-		else if(nextSibling->Type() == TiXmlNode::TEXT)
-		{
-			const char* text = nextSibling->Value();
-			iPageBuilder.AddText(text,href);
-		}*/
-
 		else
 		{
 			break;
@@ -262,37 +220,33 @@ void CWmlParser::ParseInput(TiXmlNode* node)
 	}
 }
 
-/*
-<br/>
-<input name="keyword" type="text" tabindex="1" value="" size="5"/>
-<anchor>
-<go href="cocosearch.do" method="post">
-<postfield name="bid" value="2"/>
-<postfield name="keyword" value="$keyword"/>
-</go>搜音乐</anchor> 
-<anchor>
-<go href="cocosearch.do" method="post">
-<postfield name="bid" value="5"/>
-<postfield name="keyword" value="$keyword"/>
-</go>软件</anchor> 
-<anchor>
-<go href="cocosearch.do" method="post">
-<postfield name="bid" value="3"/>
-<postfield name="keyword" value="$keyword"/>
-</go>游戏</anchor> 
-<anchor>
-<go href="cocosearch.do" method="post">
-<postfield name="bid" value="1"/>
-<postfield name="keyword" value="$keyword"/>
-</go>图片</anchor>
-<anchor>
-<go href="cocosearch.do" method="post">
-<postfield name="bid" value="7"/>
-<postfield name="keyword" value="$keyword"/>
-</go>主题</anchor>
-<anchor>
-<go href="cocosearch.do" method="post">
-<postfield name="bid" value="4"/>
-<postfield name="keyword" value="$keyword"/>
-</go>视频</anchor>
-*/
+void CWmlParser::ParseAnchor(TiXmlElement* element)
+{
+	ASSERT(strcmp(element->Value(),"anchor") == 0);
+
+	if(TiXmlElement* goElement = element->FirstChildElement("go"))
+	{
+		const char* href	= goElement->Attribute("href");
+		const char* method	= goElement->Attribute("method");
+
+		if(TiXmlElement*postfieldElement = goElement->FirstChildElement("postfield"))
+		{
+			const char* name	= postfieldElement->Attribute("name");
+			const char* value	= postfieldElement->Attribute("value");
+
+			if(postfieldElement = postfieldElement->NextSiblingElement())
+			{
+				const char* name	= postfieldElement->Attribute("name");
+				const char* value	= postfieldElement->Attribute("value");
+			}
+		}
+
+		TiXmlNode* node = goElement->NextSibling();
+		if(node->Type() == TiXmlNode::TEXT)
+		{
+			const char* text = node->Value();
+			TRACE(text);
+			iPageBuilder.AddText(text);
+		}
+	}
+}

@@ -37,9 +37,11 @@ public:
 	//CWidget(TType aType);
 	CWidget(){};
 	virtual ~CWidget();
-	void SetLink(const TDesC& aLink);
 	TBool IsLink();
-	const TDesC& Link() const;
+// 	void SetLink(const TDesC& aLink);
+// 	const TDesC& Link() const;
+	void SetLink(const TDesC8& aLink);
+	const TDesC8& Link() const;
 //	TType Type() const;
 
 public:
@@ -65,7 +67,8 @@ public:
 	TPoint point;
 
 public:
-	HBufC* iLink;
+	//HBufC* iLink;
+	HBufC8* iLink;
 	TSize iSize;
 };
 

@@ -15,10 +15,12 @@ enum TWapBrowserPanics
     EWapBrowserUi = 1
     // add further panics here
     };
+/*
 inline void Panic(TWapBrowserPanics aReason)
     {
     _LIT(applicationName,"WapBrowser");
     User::Panic(applicationName, aReason);
     }
+*/
 
 #endif // __WAPBROWSER_PAN__

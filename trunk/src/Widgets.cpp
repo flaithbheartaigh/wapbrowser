@@ -20,14 +20,16 @@ CWidget::~CWidget()
 	delete iLink;
 }
 
-void CWidget::SetLink(const TDesC& aLink)
-{
-	iLink = aLink.Alloc();
-}
 
 TBool CWidget::IsLink()
 {
 	return iLink && iLink->Length() > 0;
+}
+
+/*
+void CWidget::SetLink(const TDesC& aLink)
+{
+	iLink = aLink.Alloc();
 }
 
 const TDesC& CWidget::Link() const
@@ -39,6 +41,22 @@ const TDesC& CWidget::Link() const
 	}
 	return KNullDesC;
 }
+*/
+void CWidget::SetLink(const TDesC8& aLink)
+{
+	iLink = aLink.Alloc();
+}
+
+const TDesC8& CWidget::Link() const
+{
+	//ASSERT(iLink);		//TODO：断言不起作用，待查
+	if(iLink)
+	{
+		return *iLink;
+	}
+	return KNullDesC8;
+}
+
 /*
 //////////////////////////////////////////////////////////////////////////
 CTextWidget

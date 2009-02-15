@@ -12,6 +12,7 @@
 #include "PageBuilder.h"
 #include "Widgets.h"
 #include "ScrollBar.h"
+#include "WapBrowserappui.h"
 
 /*
 //////////////////////////////////////////////////////////////////////////
@@ -74,6 +75,15 @@ public:
 		}
 	}
 
+	void Execute()
+	{
+		const TDesC8& link = FocusWidget()->Link();
+		if(link.Length())
+		{
+			CWapBrowserAppUi::Static()->RequestPage(link);
+		}
+	}
+
 	void Left()		//向左移动焦点
 	{
 		for (int i = iFocusIndex - 1 ; i >= 0 ; i--)
@@ -131,6 +141,7 @@ private:
 	int iTextHeight;
 	TBool iFocus;
 };
+
 /*
 //////////////////////////////////////////////////////////////////////////
 CPage
@@ -180,89 +191,24 @@ TBool CPage::KeyEvent(int aKeyCode)
 	TBool result = ETrue;
 	switch(aKeyCode)
 	{
-	case EKeyDevice0:
+	case EKeyDevice3:
+		Execute();
 		break;
 
 	case EKeyLeftArrow:
-		if(CurWidgetGroup())
-		{
-			CurWidgetGroup()->Left();
-		}
+		Left();
 		break;
 
 	case EKeyRightArrow:
-		if(CurWidgetGroup())
-		{
-			CurWidgetGroup()->Right();
-		}
+		Right();
 		break;
 
 	case EKeyUpArrow:
-		//TODO:目录无法适应多种控制方式
-		{
-			TBool focusChanged = EFalse;
-			ASSERT(iEndIndex <= iWidgetGroupArray.Count());
-			if(iFocusIndex > iStartIndex)
-			{
-				//TODO:查找算法应该换成更快捷的库算法
-				for (int i = iFocusIndex - 1 ; i >= iStartIndex ; i--)
-				{
-					CWidgetGroup* wg = iWidgetGroupArray[i];
-					if(wg->HasFocus())
-					{
-						focusChanged = ETrue;
-						iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
-						iFocusIndex = i;
-						iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
-						break;
-					}
-				}
-			}
-			if(!focusChanged)
-			{
-				if(iStartIndex > 0)
-				{
-					//TODO:等量增减不适合元素大小不同的情况
-					iStartIndex--;
-					iEndIndex--;
-					iScrollBar->Up();
-				}
-			}
-		}
+		Up();
 		break;
 
 	case EKeyDownArrow:
-		//if(iFocusIndex < iEndIndex)
-		{
-			TBool focusChanged = EFalse;
-			if(iFocusIndex < iEndIndex - 1)
-			{
-				ASSERT(iEndIndex <= iWidgetGroupArray.Count());
-				//TODO:查找算法应该换成更快捷的库算法
-				for (int i = iFocusIndex + 1 ; i < iEndIndex && i < iWidgetGroupArray.Count() ; i++)
-				{
-					CWidgetGroup* wg = iWidgetGroupArray[i];
-					if(wg->HasFocus())
-					{
-						focusChanged = ETrue;
-						iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
-						iFocusIndex = i;
-						iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
-						break;
-					}
-				}
-			}
-			if(!focusChanged)
-			{
-				if(iEndIndex <= iWidgetGroupArray.Count())	//TODO:<=会导致越界，但<会导致最后一行画不全
-				{
-					//TODO:等量增减不适合元素大小不同的情况
-					iStartIndex++;
-					iEndIndex++;
-					iScrollBar->Down();
-				}
-			}
-		}
+		Down();
 		break;
 
 	default:
@@ -354,4 +300,99 @@ CWidgetGroup* CPage::CurWidgetGroup() const
 		return wg;
 	}
 	return NULL;
+}
+
+void CPage::Execute()
+{
+	if(CurWidgetGroup())
+	{
+		CurWidgetGroup()->Execute();
+	}
+}
+
+void CPage::Up()
+{
+	//TODO:目录无法适应多种控制方式
+	{
+		TBool focusChanged = EFalse;
+		ASSERT(iEndIndex <= iWidgetGroupArray.Count());
+		if(iFocusIndex > iStartIndex)
+		{
+			//TODO:查找算法应该换成更快捷的库算法
+			for (int i = iFocusIndex - 1 ; i >= iStartIndex ; i--)
+			{
+				CWidgetGroup* wg = iWidgetGroupArray[i];
+				if(wg->HasFocus())
+				{
+					focusChanged = ETrue;
+					iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
+					iFocusIndex = i;
+					iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
+					break;
+				}
+			}
+		}
+		if(!focusChanged)
+		{
+			if(iStartIndex > 0)
+			{
+				//TODO:等量增减不适合元素大小不同的情况
+				iStartIndex--;
+				iEndIndex--;
+				iScrollBar->Up();
+			}
+		}
+	}
+
+}
+
+void CPage::Down()
+{
+	//if(iFocusIndex < iEndIndex)
+	{
+		TBool focusChanged = EFalse;
+		if(iFocusIndex < iEndIndex - 1)
+		{
+			ASSERT(iEndIndex <= iWidgetGroupArray.Count());
+			//TODO:查找算法应该换成更快捷的库算法
+			for (int i = iFocusIndex + 1 ; i < iEndIndex && i < iWidgetGroupArray.Count() ; i++)
+			{
+				CWidgetGroup* wg = iWidgetGroupArray[i];
+				if(wg->HasFocus())
+				{
+					focusChanged = ETrue;
+					iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
+					iFocusIndex = i;
+					iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
+					break;
+				}
+			}
+		}
+		if(!focusChanged)
+		{
+			if(iEndIndex <= iWidgetGroupArray.Count())	//TODO:<=会导致越界，但<会导致最后一行画不全
+			{
+				//TODO:等量增减不适合元素大小不同的情况
+				iStartIndex++;
+				iEndIndex++;
+				iScrollBar->Down();
+			}
+		}
+	}
+}
+
+void CPage::Left()
+{
+	if(CurWidgetGroup())
+	{
+		CurWidgetGroup()->Left();
+	}
+}
+
+void CPage::Right()
+{
+	if(CurWidgetGroup())
+	{
+		CurWidgetGroup()->Right();
+	}
 }

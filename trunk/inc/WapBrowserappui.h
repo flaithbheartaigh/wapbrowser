@@ -10,7 +10,6 @@
 #ifndef __WAPBROWSERAPPUI_H__
 #define __WAPBROWSERAPPUI_H__
 // INCLUDES
-#include <aknappui.h>
 #include "Define.h"
 #include "HttpObserver.h"
 
@@ -43,6 +42,9 @@ class CWapBrowserAppUi
 
 	public:
 		void IssueHTTPGetL(const TDesC8& aUri);
+
+		static CWapBrowserAppUi* Static();
+		void RequestPage(const TDesC8& aUrl);
 
 	private:
 		void Parse();

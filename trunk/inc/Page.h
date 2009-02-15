@@ -43,6 +43,12 @@ private:
 
 	CWidgetGroup* CurWidgetGroup() const;
 
+	void Execute();
+	void Up();
+	void Down();
+	void Left();
+	void Right();
+
 private:
 	RPointerArray<CWidgetGroup> iWidgetGroupArray;
 

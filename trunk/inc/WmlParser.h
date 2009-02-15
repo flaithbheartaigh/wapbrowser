@@ -39,7 +39,8 @@ public:
 	void Parse(TiXmlDocument& doc);
 
 	
-	void ParseInput(TiXmlNode* node);
+	void ParseInput(TiXmlElement* element);
+	void ParseAnchor(TiXmlElement* element);
 
 private:
 	MPageBuilder& iPageBuilder;
