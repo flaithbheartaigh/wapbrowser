@@ -7,12 +7,6 @@ Copyright   : Your copyright notice
 Description : Main application UI class (controller)
 ============================================================================
 */
-#include <avkon.hrh>
-#include <aknnotewrappers.h>
-#include <stringloader.h>
-#include <WapBrowser.rsg>
-#include <f32file.h>
-#include <s32file.h>
 #include "WapBrowser.pan"
 #include "WapBrowserAppUi.h"
 #include "WapBrowserAppView.h"
@@ -26,12 +20,6 @@ Description : Main application UI class (controller)
 #include "UtilityTools.h"
 
 
-#include <favouritessession.h> 
-#include <favouritesdb.h>
-#include <favouritesitem.h>
-
-
-#include <FavouritesDb.h>
 
 void TestBookMark()
 {
@@ -99,6 +87,7 @@ void CWapBrowserAppUi::ConstructL()
 	AddToStackL(iAppView);
 	//RequestConfig();
 
+/*
 //以下代码移至SymbianOsUnit
 	HBufC8* buf = HBufC8::NewLC(1000);
 	buf->Des().Append(_L8("mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134"));
@@ -111,9 +100,11 @@ void CWapBrowserAppUi::ConstructL()
 
 	ParserConfig(buf);
 	CleanupStack::PopAndDestroy(buf);
+*/
 
 	//TestBookMark();
 	//Parse();
+	//iAppView->ShowWaiting();
 }
 
 CWapBrowserAppUi::CWapBrowserAppUi()
@@ -123,6 +114,8 @@ CWapBrowserAppUi::CWapBrowserAppUi()
 
 CWapBrowserAppUi::~CWapBrowserAppUi()
 {
+	//iAppView->StopShowWaiting();
+
 	delete iHTTPEngine;
 	RemoveFromStack(iAppView);
 	if ( iAppView )
@@ -142,14 +135,13 @@ void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 			break;
 
 		case EWapBrowserCommand1:
-			//RequestPage();
-			Parse();
+			RequestPage();
+			//Parse();
 			break;
 		default:
-			Panic( EWapBrowserUi );
+			//Panic( EWapBrowserUi );
 			break;
 	}
-
 }
 
 void CWapBrowserAppUi::HandleStatusPaneSizeChange()
@@ -199,12 +191,18 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 				break;
 
 			case ERequestConfig:
+				ParserConfig(iReceiveData8);
 				break;
 			}
 			delete iReceiveData8;
 			iReceiveData8 = NULL;
 			//Parse();
+			iAppView->StopShowWaiting();
 		}
+	}
+	else if(aEventDescription.Compare(_L("EFailed")) == 0)
+	{
+		iAppView->StopShowWaiting();
 	}
 }
 #include "UtilityTools.h"
@@ -239,6 +237,11 @@ void CWapBrowserAppUi::IssueHTTPGetL(const TDesC8& aUri)
 	}
 	iWebClientEngine->IssueHTTPGetL(aUri);
 }
+
+CWapBrowserAppUi* CWapBrowserAppUi::Static()
+{
+	return (CWapBrowserAppUi*)CCoeEnv::Static()->AppUi();
+}
 //////////////////////////////////////////////////////////////////////////
 //private
 //////////////////////////////////////////////////////////////////////////
@@ -269,33 +272,30 @@ void CWapBrowserAppUi::RequestPage()
 	Parse();
 	//parser->ParseFile("C:\\default_.xml");
 /*/	
-	if(NULL == iHTTPEngine)
-	{
-		iHTTPEngine = CHTTPEngine::NewL(*this);
-	}
-	//HTTPEngine().IssueHTTPGetL(_L8("http://music.i139.cn/"));
-
-	HTTPEngine().IssueHTTPGetL(_L8("http://wap.cocobox.cn/index.do"));
-	
-
-	iRequestType = ERequestPage;
+	//RequestPage(_L8("http://music.i139.cn/"));
+	//RequestPage(_L8("http://wap.cocobox.cn/index.do"));
+	RequestPage(_L8("index.do"));
 //*/
+}
+
+void CWapBrowserAppUi::RequestPage(const TDesC8& aUrl)
+{
+	HBufC8* buf = HBufC8::NewLC(255);
+	buf->Des().Append(_L8("http://wap.cocobox.cn/"));
+	buf->Des().Append(aUrl);
+	HTTPEngine().IssueHTTPGetL(*buf);
+	CleanupStack::PopAndDestroy();
+	//HTTPEngine().IssueHTTPGetL(aUrl);
+	iRequestType = ERequestPage;
+	iAppView->ShowWaiting();
 }
 
 void CWapBrowserAppUi::RequestConfig()
 {
 	HTTPEngine().IssueHTTPGetL(_L8("http://59.36.98.140/g.txt"));
 	iRequestType = ERequestConfig;
+	iAppView->ShowWaiting();
 }
-
-void TRACE(const TDesC8& aDes8)
-{
-	HBufC* buf = HBufC::NewLC(100);
-	buf->Des().Copy(aDes8.Mid(0,aDes8.Length() > 100 ? 100:aDes8.Length()));
-	//buf->Des().Insert(0,_L("\n"));
-	RDebug::Print(*buf);
-	CleanupStack::PopAndDestroy();
-};
 
 void CWapBrowserAppUi::ParserConfig(HBufC8* aBuf)
 {
@@ -307,7 +307,7 @@ void CWapBrowserAppUi::ParserConfig(HBufC8* aBuf)
 	ptr.Set(*aBuf);
 
 	firstPos = ptr.Find(_L8("="));
-	lastPos = ptr.Find(_L8("0X0A"));	
+	lastPos = ptr.Find(_L8("\n"));	
 	TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 // 	if(lastPos > firstPos && lastPos > 0 && firstPos > 0)
 // 	{
@@ -316,13 +316,13 @@ void CWapBrowserAppUi::ParserConfig(HBufC8* aBuf)
 
 	ptr.Set(ptr.Mid(lastPos + 1));
 	firstPos = ptr.Find(_L8("="));
-	lastPos = ptr.Find(_L8("0X0A"));	
+	lastPos = ptr.Find(_L8("\n"));		
 	TPtrC8 mobile_pre_str = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_pre_str);
 
 	ptr.Set(ptr.Mid(lastPos + 1));
 	firstPos = ptr.Find(_L8("="));
-	lastPos = ptr.Find(_L8("0X0A"));	
+	lastPos = ptr.Find(_L8("\n"));		
 	TPtrC8 mobile_len = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_len);
 

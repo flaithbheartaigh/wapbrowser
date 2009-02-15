@@ -148,6 +148,12 @@
 				RelativePath=".\src\HTTPEngine.cpp">
 			</File>
 			<File
+				RelativePath=".\src\HttpTransaction.cpp">
+			</File>
+			<File
+				RelativePath=".\src\NotifyTimer.cpp">
+			</File>
+			<File
 				RelativePath=".\src\Page.cpp">
 			</File>
 			<File
@@ -465,6 +471,9 @@
 			</File>
 			<File
 				RelativePath=".\inc\HttpRequestElement.h">
+			</File>
+			<File
+				RelativePath=".\inc\HttpTransaction.h">
 			</File>
 			<File
 				RelativePath=".\inc\ImageManipAdapter.h">

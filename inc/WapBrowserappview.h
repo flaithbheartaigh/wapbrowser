@@ -10,10 +10,14 @@
 #ifndef __WAPBROWSERAPPVIEW_H__
 #define __WAPBROWSERAPPVIEW_H__
 
+#include "NotifyTimer.h"
+
 //class CPageBuilder;
 class CPage;
 
-class CWapBrowserAppView : public CCoeControl
+class CWapBrowserAppView 
+	: public CCoeControl
+	, public MTimerNotifier
 {
 public: // New methods
 	static CWapBrowserAppView* NewL( const TRect& aRect );
@@ -29,11 +33,22 @@ public:  // Functions from base classes
 	virtual void SizeChanged();
 	virtual TKeyResponse OfferKeyEventL(const TKeyEvent& aKeyEvent,TEventCode aType);
 
+public://From MTimerNotifier
+	virtual TBool DoPeriodTask();
+
 public:
 	void ShowPage(CPage* aPage);
+	void ShowWaiting();
+	void StopShowWaiting();
+	void DrawWaiting(CGraphicsContext& aGc) const;
 
 private:
 	CPage* iPage;
+	
+	TBool iShowWaiting;
+	int iWaitingPos;
+
+	CNotifyTimer* iNotifyTimer;
 };
 #endif // __WAPBROWSERAPPVIEW_H__
 // End of File

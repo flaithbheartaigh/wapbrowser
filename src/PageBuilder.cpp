@@ -82,10 +82,15 @@ void CPageBuilder::AddPicture(const char* aName,const char* aAlt,const char* aLi
 
 	if(aLink)
 	{
+/*
 		HBufC* link = HBufC::NewLC(strlen(aLink) + 1);
 		link->Des().Copy(TPtrC8((const TUint8*)aLink));
 		w->SetLink(*link);
 		CleanupStack::PopAndDestroy();
+*/
+
+		TPtrC8 ptr((const TUint8*)aLink);
+		w->SetLink(ptr);
 	}
 
 	//iElementArray.Append(element);
@@ -108,10 +113,15 @@ void CPageBuilder::AddText(const char* aText,const char* aLink)
 
 	if(aLink)
 	{
+/*
 		HBufC* link = HBufC::NewLC(strlen(aLink) + 1);
 		link->Des().Copy(TPtrC8((const TUint8*)aLink));
 		w->SetLink(*link);
 		CleanupStack::PopAndDestroy();
+*/
+		TPtrC8 ptr((const TUint8*)aLink);
+		w->SetLink(ptr);
+
 	}
 
 

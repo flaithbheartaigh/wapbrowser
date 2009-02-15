@@ -17,6 +17,22 @@
 #include <coecntrl.h>
 #include <coemain.h>
 
+#include <avkon.hrh>
+#include <aknnotewrappers.h>
+#include <stringloader.h>
+#include <WapBrowser.rsg>
+#include <f32file.h>
+#include <s32file.h>
+
+#include <aknappui.h>
+
+#include <favouritessession.h> 
+#include <favouritesdb.h>
+#include <favouritesitem.h>
+
+#include <FavouritesDb.h>
+
+
 
 #define KDefaultFont CCoeEnv::Static()->NormalFont()
 
@@ -110,7 +126,14 @@ namespace Utils
 
 #endif
 
-
+	inline void TRACE(const TDesC8& aDes8)
+	{
+		HBufC* buf = HBufC::NewLC(100);
+		buf->Des().Copy(aDes8.Mid(0,aDes8.Length() > 100 ? 100:aDes8.Length()));
+		//buf->Des().Insert(0,_L("\n"));
+		RDebug::Print(*buf);
+		CleanupStack::PopAndDestroy();
+	}
 }
 
 using namespace Utils;
