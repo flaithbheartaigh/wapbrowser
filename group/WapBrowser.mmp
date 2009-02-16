@@ -24,7 +24,7 @@ END
 
 
 SOURCEPATH                              ..\src 
-/* [+] */ SOURCE                        NotifyTimer.cpp 
+SOURCE                                  NotifyTimer.cpp 
 SOURCE                                  HttpTransaction.cpp 
 SOURCE                                  UtilityTools.cpp 
 SOURCE                                  TimeOut.cpp 
@@ -50,6 +50,7 @@ USERINCLUDE                             ..\inc
 USERINCLUDE                             ..\..\WapBrowser\inc 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
+/* [+] */ LIBRARY                       commdb.lib 
 LIBRARY                                 ecom.lib 
 LIBRARY                                 bafl.lib 
 LIBRARY                                 http.lib 

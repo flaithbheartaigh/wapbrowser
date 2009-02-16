@@ -98,7 +98,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions=" /NDSProjectFile &quot;$(ProjectPath)&quot; /NDSSDKShortName S60_31"
-				AdditionalDependencies="gdi.lib charconv.lib estlib.lib euser.lib apparc.lib cone.lib eikcore.lib avkon.lib commonengine.lib efsrv.lib estor.lib eexe.lib InetProtUtil.lib esock.lib http.lib bafl.lib ecom.lib"
+				AdditionalDependencies="gdi.lib charconv.lib estlib.lib euser.lib apparc.lib cone.lib eikcore.lib avkon.lib commonengine.lib efsrv.lib estor.lib eexe.lib InetProtUtil.lib esock.lib http.lib bafl.lib ecom.lib commdb.lib"
 				OutputFile="d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb\WapBrowser.exe"
 				AdditionalLibraryDirectories="d:\Symbian\9.2\S60_3rd_FP1\\Epoc32\release\winscw\udeb"
 				IgnoreAllDefaultLibraries="TRUE"
