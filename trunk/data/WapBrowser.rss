@@ -14,10 +14,12 @@ NAME HEWB    // 4 letter ID
 #include <avkon.rh>
 #include <avkon.rsg>
 
+#ifdef __SERIES60_3X__
 	#include <appinfo.rh>
+	#include "WapBrowser.rls"
+#endif
 
 #include "WapBrowser.hrh"
-#include "WapBrowser.rls"
 //  RESOURCE DEFINITIONS
 // -----------------------------------------------------------------------------
 //
@@ -59,6 +61,7 @@ RESOURCE EIK_APP_INFO
 //
 // -----------------------------------------------------------------------------
 //
+#ifdef __SERIES60_3X__
 RESOURCE LOCALISABLE_APP_INFO r_wapbrowser_localisable_app_info
     {
     short_caption = qtn_hewb_short_caption_string;
@@ -70,7 +73,7 @@ RESOURCE LOCALISABLE_APP_INFO r_wapbrowser_localisable_app_info
         icon_file = "\\resource\\apps\\WapBrowser_reg.mif";
         };
     }
-
+#endif
 // -----------------------------------------------------------------------------
 //
 //   r_wapbrowser_menubar

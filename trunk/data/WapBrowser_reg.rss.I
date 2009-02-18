@@ -1,4 +1,4 @@
-# 1 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser_reg.rss"
+# 1 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser_reg.rss"
 /*
 ============================================================================
  Name        : WapBrowser_reg.rss
@@ -8,7 +8,7 @@
  Description : Application registration resource file
 ============================================================================
 */
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\appinfo.rh" 1
+# 1 "D:\\Symbian\\9.1\\S60_3rd\\\\epoc32\\include\\appinfo.rh" 1
 // APPINFO.RH
 //
 // Copyright (c) Symbian Software Ltd 2004-2005. All rights reserved.
@@ -230,15 +230,15 @@ STRUCT VIEW_DATA
 
 
 
-# 10 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser_reg.rss" 2
+# 10 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser_reg.rss" 2
 
-# 1 "D:\\projects\\Symbian\\WapBrowser\\inc\\WapBrowser.rsg" 1
-
-
+# 1 "D:\\Projects\\symbian\\WapBrowser_svn\\inc\\WapBrowser.rsg" 1
 
 
 
-# 11 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser_reg.rss" 2
+
+
+# 11 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser_reg.rss" 2
 
 UID2 0x101f8021 
 UID3 0xed86d796

@@ -1,4 +1,4 @@
-/*
+﻿/*
 ============================================================================
  Name        : WapBrowser.rss
  Author      : 浮生若茶
@@ -45,12 +45,12 @@ SOURCE                                  WapBrowserAppView.cpp
 SOURCE                                  WapBrowserAppUi.cpp 
 SOURCE                                  WapBrowserDocument.cpp 
 
+/* [+] */ USERINCLUDE                   ..\inc 
+// [-]    USERINCLUDE                   ..\..\inc 
 SYSTEMINCLUDE                           \epoc32\include\ecom 
-USERINCLUDE                             ..\inc 
-USERINCLUDE                             ..\..\WapBrowser\inc 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
-/* [+] */ LIBRARY                       commdb.lib 
+LIBRARY                                 commdb.lib 
 LIBRARY                                 ecom.lib 
 LIBRARY                                 bafl.lib 
 LIBRARY                                 http.lib 

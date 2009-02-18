@@ -60,9 +60,9 @@ void CNotifyTimer::RunL()
 {
 	if (iStatus == KErrNone)
 	{
-		UtilityTools::WriteLogsL(_L("CNotifyTimer::RunL"));
+//		UtilityTools::WriteLogsL(_L("CNotifyTimer::RunL"));
 		TBool result = iTimerNotifier.DoPeriodTask();
-		UtilityTools::WriteLogsL(_L("CNotifyTimer::RunL End"));
+//		UtilityTools::WriteLogsL(_L("CNotifyTimer::RunL End"));
 		if(result)
 		{
 			CTimer::After(iInterval);

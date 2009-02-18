@@ -7,7 +7,9 @@
  Description : CWmlParser implementation
 ============================================================================
 */
-#include <e32debug.h>
+#ifdef __SERIES60_3X__
+	#include <e32debug.h>
+#endif
 #include <aknnotewrappers.h>
 #include <utf.h>
 
@@ -21,7 +23,7 @@
 //#define TRACE(x,...) RDebug::Printf(x,...)
 //#define TRACE printf
 
-RPointerArray<HBufC> BufArray;
+//RPointerArray<HBufC> BufArray;
 void TRACE(const char* str)
 {
 	return;
@@ -35,8 +37,8 @@ void TRACE(const char* str)
 	RDebug::Print(*buf);
 	CleanupStack::PopAndDestroy();
 
-	buf = CnvUtfConverter::ConvertToUnicodeFromUtf8L(ptr);
-	BufArray.Append(buf);
+// 	buf = CnvUtfConverter::ConvertToUnicodeFromUtf8L(ptr);
+// 	BufArray.Append(buf);
 
 
 // 	RDebug::Print(*buf);
@@ -59,11 +61,13 @@ CWmlParser::CWmlParser(MPageBuilder& aPageBuilder)
 
 CWmlParser::~CWmlParser()
 {
+/*
 	RDebug::Print(_L("CWmlParser::~CWmlParser"));
 	for (int i = 0 ; i < BufArray.Count() ; i++)
 	{
 		RDebug::Print(*BufArray[i]);
 	}
+*/
 
 
 	//BufArray.ResetAndDestroy();

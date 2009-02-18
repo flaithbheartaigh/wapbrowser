@@ -57,6 +57,7 @@
 #endif	
 */
 
+/*
 #undef ASSERT
 
 #define ASSERT(a)	if(a == 0)	\
@@ -71,6 +72,8 @@
 					UtilityTools::WriteLogsL(_L("%d"),__LINE__);		\
 					User::Panic(buf,__LINE__);		\
 					}	
+*/
+
 /*
 
 //以下断言发生时将显示出断言失败的文件名与行号

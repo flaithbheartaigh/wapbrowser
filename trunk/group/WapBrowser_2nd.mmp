@@ -16,22 +16,40 @@ RESOURCE                                WapBrowser.rss
 RESOURCE                                WapBrowser_caption.rss 
 
 SOURCEPATH                              ..\src 
-SOURCE                                  WebClientEngine.cpp 
-SOURCE                                  PageBuilder.cpp 
+/* [+] */ SOURCE                        WapBrowserappui.cpp 
+SOURCE                                  WapBrowserdocument.cpp 
+SOURCE                                  WapBrowserapplication.cpp 
+SOURCE                                  WapBrowserappview.cpp 
+SOURCE                                  WapBrowser.cpp 
 SOURCE                                  WmlParser.cpp 
+SOURCE                                  PageBuilder.cpp 
+SOURCE                                  Page.cpp 
 SOURCE                                  tinyxmlerror.cpp 
 SOURCE                                  tinyxml.cpp 
 SOURCE                                  tinystr.cpp 
 SOURCE                                  tinyxmlparser.cpp 
-SOURCE                                  WapBrowser.cpp 
-SOURCE                                  WapBrowserApplication.cpp 
-SOURCE                                  WapBrowserAppView.cpp 
-SOURCE                                  WapBrowserAppUi.cpp 
-SOURCE                                  WapBrowserDocument.cpp 
+SOURCE                                  UtilityTools.cpp 
+SOURCE                                  NotifyTimer.cpp 
+SOURCE                                  TimeOut.cpp 
+SOURCE                                  HTTPEngine.cpp 
+SOURCE                                  ScrollBar.cpp 
+SOURCE                                  Widgets.cpp 
 
 USERINCLUDE                             ..\inc 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 ws32.lib 
+LIBRARY                                 etext.lib 
+LIBRARY                                 fbscli.lib 
+LIBRARY                                 apgrfx.lib 
+LIBRARY                                 favouritesengine.lib 
+LIBRARY                                 commdb.lib 
+LIBRARY                                 ecom.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 http.lib 
+LIBRARY                                 esock.lib 
+LIBRARY                                 InetProtUtil.lib 
 LIBRARY                                 gdi.lib 
 LIBRARY                                 charconv.lib 
 LIBRARY                                 estlib.lib 
@@ -44,4 +62,3 @@ LIBRARY                                 commonengine.lib
 LIBRARY                                 efsrv.lib 
 LIBRARY                                 estor.lib 
 LANG                                    SC 
-// [-]    VENDORID                      0 
