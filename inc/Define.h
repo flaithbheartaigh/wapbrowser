@@ -26,10 +26,10 @@
 
 #include <aknappui.h>
 
-#include <favouritessession.h> 
-#include <favouritesdb.h>
+#ifdef __SERIES60_3X__
+	#include <favouritessession.h> 
+#endif
 #include <favouritesitem.h>
-
 #include <FavouritesDb.h>
 
 

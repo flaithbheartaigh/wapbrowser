@@ -9,6 +9,7 @@
 */
 #include <httpstringconstants.h>
 #include <commdbconnpref.h>
+#include <HttpFilterProxyInterface.h> 
 
 #include "PreDefine.h"
 #include "HTTPEngine.h"
@@ -151,7 +152,7 @@ void CHTTPEngine::ConstructL()
 	CActiveScheduler::Add(this);				// Add to scheduler
 	//CActiveScheduler::Start();
 
-	SetupConnectionL();
+	//SetupConnectionL();
 }
 
 /*
@@ -1080,3 +1081,20 @@ void CHTTPEngine::SetThreadIndex(TInt aIndex)
 { 
 	iThreadIndex=aIndex;
 }
+
+/*
+#include "WapBrowserapplication.h"
+// DLL entry point, return that everything is ok
+GLDEF_C TInt E32Dll(TDllReason / *aReason* /)
+{
+	return KErrNone;
+}
+
+
+// Create an application, and return a pointer to it
+EXPORT_C CApaApplication* NewApplication() 
+{
+	return NULL;
+	//return (new CWap2Application);
+}
+*/

@@ -1,4 +1,4 @@
-# 1 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss"
+# 1 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser.rss"
 /*
 ============================================================================
  Name        : WapBrowser.rss
@@ -11,785 +11,112 @@
 //  RESOURCE IDENTIFIER
 NAME HEWB    // 4 letter ID
 //  INCLUDES
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.rh" 1
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.hrh" 1
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikon.rh" 1
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikon.hrh" 1
 
 
 
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\uikon.hrh" 1
-// UIKON.HRH
-//
-// Copyright (c) Symbian Software Ltd 1997 - 2005. All rights reserved.
-//
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\uikon.hrh" 1
 
 
 
-
-/** UID for dynamically-loaded Uikon library.
-@publishedAll 
-@released 
-*/
-
-
-
-/** Application resource file standard offsets.
-@publishedAll 
-@released 
-*/
-enum TEikAppResourceFileStandardOffset
-	{
-	/** Offset of RSS_SIGNATURE resource.
-	*/
-	ESignatureResourceOffset=1,
-	/** Offset of NAME resource.
-	*/
-	EDefaultNameResourceOffset,
-	/** Offset of EIK_APP_INFO resource.
-	*/
-	EAppInfoResourceOffset
-	};
-
-
-/** Default RSS_SIGNATURE signature field value.
-@publishedAll 
-@released 
-*/
-
-
-
-/** ID of "Cancel" command button.
-@publishedAll 
-@released 
-*/
-
-
-// standard commands
-
-/** "Canceled" command ID
-@publishedAll 
-@released 
-*/
-
-
-/** "Exit" command ID.
-@publishedAll 
-@released 
-*/
-
-
-
-// EIKSPANE.HRH
-//
-// Copyright (c) Symbian Software Ltd 1997 - 2004. All rights reserved.
-//
-
-// Status pane server, pane declaration flags
-
-/** STATUS_PANE flags resource flag: the pane is owned by the UI server.
-@publishedAll 
-@released 
-*/
-
-
-/** STATUS_PANE flags resource flag: the pane is owned by the client application.
-@publishedAll 
-@released 
-*/
-
-
-
-// Status pane server, top level layout flags
-
-/** STATUS_PANE_LAYOUT position resource flag: lay out panes from the top of the status pane area.
-@publishedAll 
-@released 
-*/
-
-
-/** STATUS_PANE flags resource flag: lay out panes from the bottom of the status pane area.
-@publishedAll 
-@released 
-*/
-
-
-/** STATUS_PANE flags resource flag: lay out panes from the left of the status pane area.
-@publishedAll 
-@released 
-*/
-
-
-/** STATUS_PANE flags resource flag: lay out panes from the right of the status pane area.
-@publishedAll 
-@released 
-*/
-
-
-
-/** STATUS_PANE_LAYOUT position resource flag: lay out panes horizontally.
-@publishedAll 
-@released 
-*/
-
-
-/** STATUS_PANE_LAYOUT position resource flag: lay out panes vertically.
-@publishedAll 
-@released 
-*/
-
-
-
-// Status pane server, pane layout flags
-/** STATUS_PANE flags resource flag: status pane is stretched to fill the available space.
-@publishedAll 
-@released 
-*/
-
-
-
-// Status pane app constants
-/** STATUS_PANE_APP_MODEL layout default value: use default layout.
-@publishedAll 
-@released 
-*/
-
-
-// error resolver
-/** SINGLE_ERROR flags resource flag: this error should be dealt with at the system level and indicates and unrecoverable error (which will result in a panic) if it reaches the UI.
-@publishedAll 
-@released 
-*/
-
-
-/** SINGLE_ERROR flags resource flag: this error should not be displayed.
-@publishedAll 
-@released 
-*/
-
-
-/** SINGLE_ERROR flags resource flag: this error is used for filling in empty slots in error ranges.
-@publishedAll 
-@released 
-*/
-// used for filling in empty slots in error ranges
-
-
-// EIKDEF.HRH
-//
-// Copyright (c) Symbian Software Ltd 1997 - 2004. All rights reserved.
-//
-
-
-
-
-
-
-
-
-/** Shell application bitmap file.
-@publishedAll 
-@released 
-*/
-
-
-/** CP1252 ellipsis character value.
-@publishedAll 
-@released 
-*/
-// cp1252=133
-
-/** CP1252 left single quote character value.
-@publishedAll 
-@released 
-*/
-// cp1252=145
-
-/** CP1252 right single quote character value.
-@publishedAll 
-@released 
-*/
-// cp1252=146
-
-/** CP1252 left double quote character value.
-@publishedAll 
-@released 
-*/
-// cp1252=147
-
-/** CP1252 right double quote character value.
-@publishedAll 
-@released 
-*/
-// cp1252=148
-
-/** CP1252 copyright character value.
-@publishedAll 
-@released 
-*/
-
-
-/** CP1252 soft hyphen character value.
-@publishedAll 
-@released 
-*/
-
-
-/** CP1252 hyphen character value.
-@publishedAll 
-@released 
-*/
-
-
-/** UID of Uikon plugin interface notifiers.
-@internalComponent
-*/
-
-
-
-# 4 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.hrh" 2
-
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\lafpublc.hrh" 1
-/*
-* ==============================================================================
-*  Name        : lafpublc.hrh
-*  Part of     : 
-*  Description : 
-*  Version     : 
-*
-*  Copyright © 2002-2005 Nokia. All rights reserved.
-*  This material, including documentation and any related 
-*  computer programs, is protected by copyright controlled by 
-*  Nokia. All rights are reserved. Copying, including 
-*  reproducing, storing, adapting or translating, any 
-*  or all of this material requires the prior written consent of 
-*  Nokia. This material also contains confidential 
-*  information which may not be disclosed to others without the 
-*  prior written consent of Nokia.
-* ==============================================================================
-*/
-
-
-
-
-enum TLafReferenceButtonGroupControls
-	{
-	ELafBgCba=100
-	};
-
-
-# 6 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.hrh" 2
-
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikcolor.hrh" 1
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikcolor.hrh" 1
 // EIKCOLOR.HRH
 //
-// Copyright (c) Symbian Software Ltd 1997 - 2004. All rights reserved.
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
 
-/** RGB colour constant: black.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dark gray.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dark red.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dark green.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dark yellow.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dark blue.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dark magenta.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dark cyan.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: red.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: green.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: yellow.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: blue.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: magenta.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: cyan.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: gray.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: dithered light gray.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: 1-in-4 dithered gray.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: white.
-@publishedAll 
-@released 
-*/
 
 
 
-/** RGB colour constant: Symbian green.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: Symbian light green.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: Symbian blue.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: Symbian dark blue.
-@publishedAll 
-@released 
-*/
 
 
-/** RGB colour constant: Symbian orange.
-@publishedAll 
-@released 
-*/
 
 
 
-/** Logical colour value for use in resources: The colour of a window's background. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of text in a window. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of the background contents of a control. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of the text inside a control. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The background colour of a control's border. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of text in a control's border. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of a control's background when highlighted for selection. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of the text in a control when highlighted for selection. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of a control's background when dimmed. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of the text in a control when dimmed. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of a control's background when dimmed and highlighted for selection. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of the text in a control when dimmed and highlighted for selection. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of a dialog's background. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of text inside a dialog. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: A dialog title's background colour. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: A dialog title's background colour when pressed. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The text colour in a dialog's title. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The text colour in a dialog's title when pressed. 
-@publishedAll 
-@released 
-*/
 
 
-/** Logical colour value for use in resources: The colour of the menubar's background. 
-@publishedAll 
-@released 
-*/
+# 4 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\uikon.hrh" 2
 
 
-/** Logical colour value for use in resources: The colour of text in the menubar. 
-@publishedAll 
-@released 
-*/
 
+// EIKBTGPC.HRH   (Added by GT)
 
-/** Logical colour value for use in resources: The colour of the menubar title's background. 
-@publishedAll 
-@released 
-*/
 
-
-/** Logical colour value for use in resources: The colour of text in the menubar title. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menupane's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menu pane background when highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane when highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menu pane background when dimmed and highlighted. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane when dimmed and highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background, when the button is in the unset state. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background when the button is in the set state. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background when the button is in the set state and is pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background when the button is in the unset state and is pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button text. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button text when the button is pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button text when the button is dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the message window foreground. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the message window background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar border. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar shaft background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar shaft background when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar shaft background when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the background for scroll bars with no thumb and no shaft. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of scroll bar buttons. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of scroll bar buttons when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of scroll bar buttons when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's background when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's background when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's edge. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a toolbar's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a toolbar. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a status pane's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a status pane. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a label. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of emphasised text in a label. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a label when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the label background when highlighted and dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the label background when highlighted. 
-@publishedAll 
-@released 
-*/
-
-# 8 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.hrh" 2
-
-
-
-// EIKBTGPC.HRH
-
-
-
-
-
-// These are for Enhanced Cba
 
 
 
@@ -813,7 +140,7 @@ enum TLafReferenceButtonGroupControls
 // Introduced in avkon temporarily and deprecated:
 
 
-// CEikEdwin Flags ('flags' in EDWIN resource)
+// CEikEdwin Flags
 
 
 
@@ -833,7 +160,7 @@ enum TLafReferenceButtonGroupControls
 
 
 
-
+//(Added by GT)
 
 
 
@@ -845,92 +172,51 @@ enum TLafReferenceButtonGroupControls
 
 // AVKON EDWIN CONSTANTS
 
-// Number input mode keymappings for * and # keys ('numeric_keymap' in EDWIN resource)
-// If only the number mode is permitted in an editor, special characters can be
-// entered by pressing # key or multitapping '*' key.
-// If also text input mode is available in the editor, special characters entered
-// with '*' key are shown inside special character table pop-up.
-// - Default keymapping for editors that allows both number and 
-// text input modes: EAknEditorAlphanumericNumberModeKeymap.
-// - Default keymapping for editors that allows only number input 
-// mode: EAknEditorStandardNumberModeKeymap.
-//
-// EAknEditorAlphanumericNumberModeKeymap value is not valid for 
-// number input mode only editors. Use avkon_flags 
-// EAknEditorFlagUseSCTNumericCharmap flag instead.
 enum TAknEditorNumericKeymap
-    {
-                                            // Available characters:
-    EAknEditorStandardNumberModeKeymap,     // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, *, +, p, w, #
-    EAknEditorPlainNumberModeKeymap,        // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
-    EAknEditorCalculatorNumberModeKeymap,   // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, +, –, *, /, <decimal separator>
-    EAknEditorConverterNumberModeKeymap,    // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, +, –, E, <decimal separator>
-    EAknEditorToFieldNumberModeKeymap,      // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, +, ;
-    EAknEditorFixedDiallingNumberModeKeymap,// 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, *, +, p, w, ?, #
-    EAknEditorSATNumberModeKeymap,          // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, *, +, #
-    EAknEditorSATHiddenNumberModeKeymap,    // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, *, #
-    EAknEditorAlphanumericNumberModeKeymap, // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, #, <all alpha mode special characters>
-    EAknEditorReservedInternalUseKeymap = 100   // do not use - for internal use only 
-    };
-
-// Case mode flags for input languages that supports case.
-// 'default_case' and 'allowed_case_modes' in EDWIN resource.
+	{
+	EAknEditorStandardNumberModeKeymap,
+	EAknEditorPlainNumberModeKeymap,
+	EAknEditorCalculatorNumberModeKeymap,
+	EAknEditorConverterNumberModeKeymap,
+	EAknEditorToFieldNumberModeKeymap,
+	EAknEditorFixedDiallingNumberModeKeymap,		
+	EAknEditorSATNumberModeKeymap,
+	EAknEditorSATHiddenNumberModeKeymap,
+	EAknEditorReservedInternalUseKeymap = 100	// do not use - for internal use only 
+	};
 
 
 
 
 
-// Input mode flags for editors.
-// 'default_input_mode' and 'allowed_input_modes' in EDWIN resource.
-
-// All text input modes that are available in current language.
 
 
 
-// Japanese input modes - only effective in Japanese variant.
-// half-width Katakana
-// full-width latin alphabet
-// full-width numeric (0-9)
-// full-width Katakana
-// Hiragana/Kanji
-// only Hiragana
-// half-width Latin alphabet
 
 
 
-// Following two are deprecated
+
+// next two will be deprecated
 
 
 //
 
-// Avkon editor flags ('avkon_flags' in EDWIN resource).
-// -----------------------------------------------------
 
-// case changes are not allowed
-// predictive text entry is not allowed
-// editor indicators are not shown
-// the cursor cannot be moved
-// edit menu cannot be opened from edit key
 
-// The character next to the cursor (if exists) is replaced by a new entered character.
-// This flag has effect only in latin multitap input.
 
-// The number input mode uses same special character table character set
-// as alpha input mode if the flag is set. The flag overrides
-// number mode keymapping if they are in conflict. This flag can be used
-// also with number input mode only editors.
+
+
+
+
+
+
 
 // Input language is changed to English locally in the editor.
-
-// Chinese find mode input.
-
-// Line feed character is added with scroll down key event 
-// if the cursor is at the end of the buffer. The functionality is 
-// available only in certain variants.
 
 
 
 // NOTICE! Flag value 0x80000000 is reserved for internal use by FEP.
+
 
 // EIKLABEL.HRH
 //
@@ -948,12 +234,12 @@ enum TAknEditorNumericKeymap
 
 
 enum EEikLabelStandardFont
-    {
-    EEikLabelFontNormal,
-    EEikLabelFontLegend,
-    EEikLabelFontAnnotation
-    };
-    
+	{
+	EEikLabelFontNormal,
+	EEikLabelFontLegend,
+	EEikLabelFontAnnotation
+	};
+	
 // EIKLBBUT.HRH
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
@@ -1001,7 +287,7 @@ enum EEikLabelStandardFont
 
 
 
-//The following value is reserved       0x020000
+//The following value is reserved		0x020000
 //(Added by GT)
 
 // EIKTBAR.HRH
@@ -1091,6 +377,23 @@ enum EEikLabelStandardFont
 
 
 
+
+
+// cp1252=133
+// cp1252=145
+// cp1252=146
+// cp1252=147
+// cp1252=148
+
+
+enum TEikAppResourceFileStandardOffset
+	{
+	ESignatureResourceOffset=1,
+	EDefaultNameResourceOffset,
+	EAppInfoResourceOffset
+	};
+
+// Added by Bill
 // Built-in app UIDs
 
 
@@ -1209,77 +512,76 @@ enum EEikLabelStandardFont
 //
 
 enum TEikStockControls
-    {
-    EEikCtCommandButton,
-    EEikCtLabeledButton,
-    EEikCtEdwin,
-    EEikCtRichTextEditor,
-    EEikCtSecretEd,
-    EEikCtCheckBox,
-    EEikCtChoiceList,
-    EEikCtOptionButton,
-    EEikCtHorOptionButList,
-    EEikCtFileNameSel,
-    EEikCtFileNameEd,
-    EEikCtFolderNameSel,
-    EEikCtFolderNameEd,
-    EEikCtDriveNameSel,
-    EEikCtListBox,
-    EEikCtCharMap,
-    EEikCtCharEd,
-    EEikCtImage,
-    EEikCtImageArray,
-    EEikCtLabel,
-    EEikCtComboBox,
-    EEikCtProgInfo,
-    EEikCtFlPtEd,
-    EEikCtFxPtEd,
-    EEikCtTwipsEd,
-    EEikCtNumberEditor,
-    EEikCtRangeEditor,
-    EEikCtTimeEditor,
-    EEikCtDateEditor,
-    EEikCtTimeAndDateEditor,
-    EEikCtDurationEditor,
-    EEikCtTimeOffsetEditor,
-    EEikCtLatitudeEditor_Not_Supported,
-    EEikCtLongitudeEditor_Not_Supported,
-    EEikCtBorderPreview,
-    EEikCtFontPreview,
-    EEikCtGraySelector,
-    EEikCtWorldSelector,
-    EEikCtGlobalTextEditor,
-    EEikCtSoundSelector,
-    EEikCtClock,
-    EEikCtPrintPreview,
-    EEikCtMenuButton,
-    EEikCtDirContentsListBox,
-    EAknCtIpFieldEditor,
-    EEikCtCalendar,
-    EEikCtSpacer,
-    EEikCtColListBox,
-    EEikCtRangeRefEditor,
-    EEikCtTextButton,
-    EEikCtBitmapButton,
-    EEikCtDialogToolBar,
-    EEikCtFileBrowser,
-    EEikCtFileNameLabel,
-    EEikCtUnifiedFileSel,
-    EEikCtTelephoneNumberEditor,
-    EEikCtTwoPictureCommandButton,
-    EEikCtInverterCommandButton,
-    EEikCtScrollBar,
-    EEikCtArrowHeadScrollBar,
-    EAknCtLocationEditor
-    };
+	{
+	EEikCtCommandButton,
+	EEikCtLabeledButton,
+	EEikCtEdwin,
+	EEikCtRichTextEditor,
+	EEikCtSecretEd,
+	EEikCtCheckBox,
+	EEikCtChoiceList,
+	EEikCtOptionButton,
+	EEikCtHorOptionButList,
+	EEikCtFileNameSel,
+	EEikCtFileNameEd,
+	EEikCtFolderNameSel,
+	EEikCtFolderNameEd,
+	EEikCtDriveNameSel,
+	EEikCtListBox,
+	EEikCtCharMap,
+	EEikCtCharEd,
+	EEikCtImage,
+	EEikCtImageArray,
+	EEikCtLabel,
+	EEikCtComboBox,
+	EEikCtProgInfo,
+	EEikCtFlPtEd,
+	EEikCtFxPtEd,
+	EEikCtTwipsEd,
+	EEikCtNumberEditor,
+	EEikCtRangeEditor,
+	EEikCtTimeEditor,
+	EEikCtDateEditor,
+	EEikCtTimeAndDateEditor,
+	EEikCtDurationEditor,
+	EEikCtTimeOffsetEditor,
+	EEikCtLatitudeEditor_Not_Supported,
+	EEikCtLongitudeEditor_Not_Supported,
+	EEikCtBorderPreview,
+	EEikCtFontPreview,
+	EEikCtGraySelector,
+	EEikCtWorldSelector,
+	EEikCtGlobalTextEditor,
+	EEikCtSoundSelector,
+	EEikCtClock,
+	EEikCtPrintPreview,
+	EEikCtMenuButton,
+	EEikCtDirContentsListBox,
+	EAknCtIpFieldEditor,
+	EEikCtCalendar,
+	EEikCtSpacer,
+	EEikCtColListBox,
+	EEikCtRangeRefEditor,
+	EEikCtTextButton,
+	EEikCtBitmapButton,
+	EEikCtDialogToolBar,
+	EEikCtFileBrowser,
+	EEikCtFileNameLabel,
+	EEikCtUnifiedFileSel,
+	EEikCtTelephoneNumberEditor,
+	EEikCtTwoPictureCommandButton,
+	EEikCtInverterCommandButton,
+	EEikCtScrollBar,
+	EEikCtArrowHeadScrollBar
+	};
 
 // not available before Release 6.1
 enum TEikStockButtonGroupControls
-    {
-    EEikBgToolBar,
-    EEikBgButtonPanel,
-    EEikBgCba
-    };
+	{
+	EEikBgToolBar,
+	EEikBgButtonPanel,
+	EEikBgCba
+	};
 
 // EIKPRIV.HRH
 //
@@ -1407,7 +709,7 @@ enum TEikStockButtonGroupControls
 
 
 //print progress
-                                     
+									 
 
 
 
@@ -1556,11 +858,7 @@ enum TEikStockButtonGroupControls
 
 
 
-
 // EEikDlgItemSeparatorAfter has been deprecated.
-
-
-
 
 
 
@@ -1626,18 +924,7 @@ enum TEikStockButtonGroupControls
 
 
 
-// Redefine the base-defined keys to Series 60 specific names.
-// These key events are reserved for Series 60 Platform.
-
-
-
-
-
-
-
-
-
-// Voice key
+// Redefine the base-defined keys to Avkon-specific names
 
 
 
@@ -1653,21 +940,24 @@ enum TEikStockButtonGroupControls
 
 
 
+# 4 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikon.hrh" 2
 
-// Following key events are reserved for internal use by Series 60 Platform:
-// EKeyF19, EKeyF20, EKeyF21, EKeyF22, EKeyF23, EKeyF24,
-// EKeyApplication9, EKeyApplicationA, EKeyApplicationB, EKeyApplicationC
-// EKeyApplicationD, EKeyApplicationE, EKeyApplicationF
-// EKeyDeviceF for resolution change and Qwerty input mode in emulator.
-
-// Scancodes (TStdScanCode) 0xE0 - 0xF7 and key codes (TKeyCode) 0xF880 - 0xF897 
-// are reserved for product specific use. The meaning of the event can vary 
-// in different products.
-
-// Series 60 platform reserves all EKeyDeviceX and EKeyApplicationX events for
-// future use.
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\lafpublc.hrh" 1
+// LAFPUBLC.HRH
+//
+// Copyright (c) 2000 Symbian Ltd.  All rights reserved.
+//
 
 
+
+
+enum TLafReferenceButtonGroupControls
+	{
+	ELafBgCba=100
+	};
+
+
+# 5 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikon.hrh" 2
 
 
 // EIKCFDLG.HRH
@@ -1943,9 +1233,8 @@ enum
 	{
 	EEikKeyLockEnabled = 1110,
 	EEikKeyLockDisabled = 1111,
-	EEikLeyLockDisabled = 1111,  // This should be removed
-	EEikKeyLockPowerKeyPressed,
-	EEikKeyLockLightsOnRequest // ecs / unlock query
+    EEikLeyLockDisabled = 1111,  // TODO: This should be removed!!!
+	EEikKeyLockPowerKeyPressed
 	};
 
 //
@@ -1960,98 +1249,14 @@ enum
 	};
 
 
-// COmmand operationtypes for enhanced cba
-enum TEikCommandOperationTypes
-	{
-	EEikCommandTypeAnyCommand,
-	EEikCommandTypeMenu,
-	EEikCommandTypeOpenItem,
-	EEikCommandTypeDeleteItem,
-	EEikCommandTypeOperatesItem,
-	EEikCommandTypeCreateItem,
-	EEikCommandTypePositiveAnswer,
-	EEikCommandTypeNegativeAnswer,
-	EEikCommandTypeCancel,
-	EEikCommandTypeExitOrBack,
-	EEikCommandTypeExitApplication
-	};
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikon.rh" 2
 
-//
-// Flags for CAknButton
-//
-
-// For Text&Icon button, by default text is on the right side.
-
-// MinimumSize() will return the width to fit the text.
-
-// No frame is drawn for the button, useful for icon buttons.
-
-// Reports CAknButton::ELongPressEvent, when button is pressed for a long time.
-
-// Reports of state change on key down event, instead of key up event.
-
-// When button has frame frame won't be changed on press event.
-
-// Button requests exit on button up event.
-
-// Reports state changed events repeatedly, when button is kept pressed.
-
-// Test if pointer hits other than transparent area
-
-// Button control area will not be cleared. Usefull if using 
-// overlapping button control areas with KAknButtonHitTest flag.
-
-
-
-//
-// Flags for CAknButtonState
-//
-
-// Button state has latchable frame.
-
-
-
-//
-// Flags for CAknToolbar
-//
-
-// Position of the toolbar can be changed with SetPosition() before
-// toolbar is shown, by default it is fixed.
-
-// Middle item will be initially focused instead of the first item.
-
-// Toolbar is always opened as focusing.
-
-// Toolbar keeps focus on the last used Item
-
-// Toolbar does not have internally owned CBA
-
-// Toolbar uses transparent graphics
-
-//
-// Location editor flags
-//
-enum TLocationEditorFlags
-	{
-	ELocationEdFlagLatitude = 1,
-	ELocationEdFlagLongitude = 2
-	};
-
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.rh" 2
-
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\uikon.rh" 1
-// UIKON.RH
-//
-// Copyright (c) Symbian Software Ltd 1997 - 2005. All rights reserved.
-//
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\uikon.rh" 1
 
 
 
 
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\BADEF.RH" 1
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\BADEF.RH" 1
 // BADEF.RH
 //
 // Copyright (c) 1997-2000 Symbian Ltd.  All rights reserved.
@@ -2089,46 +1294,10 @@ STRUCT UID_NAME_PAIR
 
 
 
-# 10 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\uikon.rh" 2
+# 5 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\uikon.rh" 2
 
 
 
-
-
-
-
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\BAERRRSVR.RH" 1
-// BAERRRSVR.RH
-//
-// Copyright (c) 2003 Symbian Ltd.  All rights reserved.
-//
-
-
-
-
-
-// Error Resolver
-
-STRUCT ERROR_SET
-	{
-	STRUCT errorarrays[];
-	}
-
-STRUCT ERROR_ARRAY
-	{
-	LONG startError;
-	LLINK errors;
-	}
-
-STRUCT SINGLE_ERROR
-	{
-	BYTE flags=0;
-	LLINK text=0;
-	}
-
-
-# 18 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\uikon.rh" 2
 
 
 
@@ -2137,718 +1306,6 @@ STRUCT RESOURCE_LINK
 	{
 	LLINK id;
 	}
-
-STRUCT HOTKEY
-    {
-    LONG command;
-    LONG key;
-    }
-
-STRUCT HOTKEYS
-    {
-    STRUCT plain[];
-    STRUCT control[];
-    STRUCT shift_control[];
-    }
-
-// Removed by Bill
-//#include <eikfont.rh> // for STRUCT FONT
-
-STRUCT NUMBER_INT8
-	{
-	BYTE value=0;
-	}
-
-STRUCT NUMBER_INT16
-	{
-	WORD value=0;
-	}
-
-STRUCT NUMBER_INT32
-	{
-	LONG value=0;
-	}
-
-// EIKCOLOR.RH
-//
-// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
-//
-
-STRUCT COLOR
-	{
-	BYTE red;
-	BYTE green;
-	BYTE blue;
-	}
-
-STRUCT CTRL_COLOR
-	{
-	WORD logical_color;
-	STRUCT color; // COLOR
-	}
-
-STRUCT COLORLIST
-	{
-	LLINK array_id=0;
-	}
-
-STRUCT EIKCOLORLIST
-	{
-	LLINK array_id=0;
-	LLINK ext_id;
-	}
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikcolor.hrh" 1
-// EIKCOLOR.HRH
-//
-// Copyright (c) Symbian Software Ltd 1997 - 2004. All rights reserved.
-//
-
-/** RGB colour constant: black.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dark gray.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dark red.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dark green.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dark yellow.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dark blue.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dark magenta.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dark cyan.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: red.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: green.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: yellow.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: blue.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: magenta.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: cyan.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: gray.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: dithered light gray.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: 1-in-4 dithered gray.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: white.
-@publishedAll 
-@released 
-*/
-
-
-
-/** RGB colour constant: Symbian green.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: Symbian light green.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: Symbian blue.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: Symbian dark blue.
-@publishedAll 
-@released 
-*/
-
-
-/** RGB colour constant: Symbian orange.
-@publishedAll 
-@released 
-*/
-
-
-
-/** Logical colour value for use in resources: The colour of a window's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in a window. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the background contents of a control. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text inside a control. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The background colour of a control's border. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in a control's border. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a control's background when highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a control when highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a control's background when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a control when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a control's background when dimmed and highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a control when dimmed and highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a dialog's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text inside a dialog. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: A dialog title's background colour. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: A dialog title's background colour when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The text colour in a dialog's title. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The text colour in a dialog's title when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menubar's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menubar. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menubar title's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menubar title. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menupane's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menu pane background when highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane when highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the menu pane background when dimmed and highlighted. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of text in the menu pane when dimmed and highlighted for selection. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background, when the button is in the unset state. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background when the button is in the set state. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background when the button is in the set state and is pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button background when the button is in the unset state and is pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button text. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button text when the button is pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the button text when the button is dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the message window foreground. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the message window background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar border. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar shaft background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar shaft background when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the scroll bar shaft background when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the background for scroll bars with no thumb and no shaft. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of scroll bar buttons. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of scroll bar buttons when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of scroll bar buttons when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's background when pressed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's background when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a scroll bar thumb's edge. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a toolbar's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a toolbar. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of a status pane's background. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a status pane. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a label. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of emphasised text in a label. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the text in a label when dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the label background when highlighted and dimmed. 
-@publishedAll 
-@released 
-*/
-
-
-/** Logical colour value for use in resources: The colour of the label background when highlighted. 
-@publishedAll 
-@released 
-*/
-
-# 87 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\uikon.rh" 2
-
-
-// EIKFONT.RH
-//
-// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
-//
-
-//#include <eikfont.hrh>
-
-STRUCT FONT
-	{
-	LONG fontid; // a value from fontids.h
-	WORD flags=0; // a combination of EGulFontFlagXxxxs
-	}
-
-STRUCT NAMED_FONT
-	{
-	LTEXT name;
-	WORD height;	// in twips
-	WORD flags=0; // a combination of EGulFontFlagXxxxs
-	}
-
-// EIKPRIV.RH
-//
-// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
-//
-
-STRUCT INT16
-	{
-	WORD value;
-	}
-
-// EIKPRTPV.RH
-//
-// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
-//
-
-// EIKDEF.RH
-//
-// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
-//
-
-STRUCT RSS_SIGNATURE
-    {
-    LONG signature= 4 ;
-    SRLINK self;
-    }
-
-STRUCT TBUF1	{ BUF<1> buf; }
-STRUCT TBUF2	{ BUF<2> buf; }
-STRUCT TBUF4	{ BUF<4> buf; }
-STRUCT TBUF8	{ BUF<8> buf; }
-STRUCT TBUF9	{ BUF<9> buf; }
-STRUCT TBUF16	{ BUF<16> buf; }
-STRUCT TBUF32	{ BUF<32> buf; }
-STRUCT TBUF40	{ BUF<40> buf; }
-STRUCT TBUF64	{ BUF<64> buf; }
-STRUCT TBUF80	{ BUF<80> buf; }
-STRUCT TBUF128	{ BUF<128> buf; }
-STRUCT TBUF256	{ BUF<256> buf; }
-
-STRUCT EIK_APP_INFO
-    {
-    LLINK hotkeys=0;
-    LLINK menubar=0;
-    LLINK toolbar=0;
-    LLINK toolband=0;
-    LLINK cba=0;	
-    LLINK status_pane=0;
-    LLINK custom_app_info_extension=0;	
-    }
-
-STRUCT PAGESIZE
-	{
-	LONG width=0;
-	LONG height=0;
-	}
-
-STRUCT VIEW_ID
-	{
-	LONG appuid;
-	LONG viewuid;
-	}
-
-// EIKSPANE.RH
-//
-// Copyright (c) 1999 - 2003 Symbian Ltd.  All rights reserved.
-//
-
-
-STRUCT STATUS_PANE_SYSTEM_MODEL				// System wide status pane declaration
-	{
-	STRUCT panes[];							// entire set of valid SPANE_PANEs
-	LLINK default_layout;					// default STATUS_PANE_LAYOUT
-	LLINK layouts[];						// entire set of STATUS_PANE_LAYOUTs
-	}
- 
-STRUCT SPANE_PANE
-	{
-	LONG id;
-	WORD flags= 0 ;
-	WORD type;
-	LLINK resource=0;
-	}
-
-STRUCT STATUS_PANE_LAYOUT
-	{
-	WORD position;
-	STRUCT pane_tree;						// SPANE_LAYOUT_TREE_NODE root of the layout tree
-	}
-
-STRUCT SPANE_LAYOUT_TREE_NODE
-	{
-	LONG id=0;
-	WORD flags;
-	WORD size;
-	STRUCT sub_panes[];						// SPANE_LAYOUT_TREE_NODE sub panes
-	}
-
-STRUCT STATUS_PANE_APP_MODEL				// Application specific status pane
-	{
-	LLINK layout= 0 ;		// STATUS_PANE_LAYOUT to use for this app
-	STRUCT panes[];							// SPANE_PANE overrides to use for this app
-	}
-
-// Notifiers
-
-STRUCT NOTIFIER_LIST
-	{
-	LONG dll_uid;
-	
-	LEN WORD STRUCT notifier_list[]; // notifier data
-	}
-
-STRUCT NOTIFIER_DATA
-	{
-	LONG notifier_uid;
-	}
-
-
-# 3 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.rh" 2
-
-
-
-
-
-
-
-
-
-
 
 STRUCT BTG_RESOURCE_COLLECTION
     {
@@ -2862,7 +1319,7 @@ STRUCT BTG_RESOURCE_COLLECTION
 //
 
 
-# 36 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.rh"
+# 39 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\uikon.rh"
 
 STRUCT EDWIN
     {
@@ -2870,14 +1327,17 @@ STRUCT EDWIN
     WORD width=0;
     WORD lines=1;
     WORD maxlength=0;
-	WORD default_case= 0x4 ;	WORD allowed_case_modes= 0x1  | 0x2  | 0x4  ;	WORD numeric_keymap=EAknEditorAlphanumericNumberModeKeymap;	WORD allowed_input_modes= 0x1  | 0x2  | 0x4  | 0x8  | 0x10  | 0x20  | 0x40  | 0x80  | 0x200  ;	WORD default_input_mode= 0x1 ;	LLINK special_character_table=-1;	WORD avkon_flags= 0x000 ;	WORD max_view_height_in_lines=0;	WORD base_line_delta=0;	WORD spare=0; 
+	WORD default_case= 0x4 ;	WORD allowed_case_modes= 0x1  | 0x2  | 0x4  ;	WORD numeric_keymap=EAknEditorStandardNumberModeKeymap;	WORD allowed_input_modes= 0x1  | 0x2  | 0x4  ;	WORD default_input_mode= 0x1 ;	LLINK special_character_table=-1;	WORD avkon_flags= 0x000 ;	WORD max_view_height_in_lines=0;	WORD base_line_delta=0;	WORD spare=0; 
     }
+
+//#include <eikedwin.hrh>
 
 // EIKIMAGE.RH
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
 
+//#include <eiklabel.hrh>
 
 STRUCT IMAGE
 	{
@@ -2893,6 +1353,8 @@ STRUCT IMAGE
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
+
+//#include <eiklabel.hrh>
 
 STRUCT LABEL
     {
@@ -2912,17 +1374,31 @@ STRUCT LABEL
 STRUCT LISTBOX
 	{
 	BYTE version=0;
-	LONG flags = 0;
+	WORD flags = 0;
 	WORD height = 5;		// in items
 	WORD width = 10;		// in chars
     LLINK array_id = 0;
 	}
 
+//#include <eiklbx.hrh>
 
 // EIKMENU.RH
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
+
+STRUCT HOTKEY
+    {
+    LONG command;
+    LONG key;
+    }
+
+STRUCT HOTKEYS
+    {
+    STRUCT plain[];
+    STRUCT control[];
+    STRUCT shift_control[];
+    }
 
 STRUCT MENU_PANE
     {
@@ -2960,6 +1436,7 @@ STRUCT MENU_TITLE
 	LLINK extension=0;
     }
 
+//#include <eikmenu.hrh>
 
 // EIKMNBUT.RH
 //
@@ -2982,11 +1459,35 @@ STRUCT MNBUT
     WORD bmpmask=0xffff;
     }
 
+// EIKRUTIL.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+// Removed by Bill
+//#include <eikfont.rh> // for STRUCT FONT
+
+STRUCT NUMBER_INT8
+	{
+	BYTE value=0;
+	}
+
+STRUCT NUMBER_INT16
+	{
+	WORD value=0;
+	}
+
+STRUCT NUMBER_INT32
+	{
+	LONG value=0;
+	}
+
 // EIKTBAR.RH
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
 
+//#include <eiktbar.hrh>
 
 STRUCT TOOLBAR
     {
@@ -3058,6 +1559,7 @@ STRUCT TBAR_PICBUT
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
 
+//#include <eikcmbut.hrh>
 
 STRUCT CMBUT
     {
@@ -3113,12 +1615,69 @@ STRUCT BMPBUT
     WORD bmp2mask;
     }
 
+// EIKCOLOR.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+STRUCT COLOR
+	{
+	BYTE red;
+	BYTE green;
+	BYTE blue;
+	}
+
+STRUCT CTRL_COLOR
+	{
+	WORD logical_color;
+	STRUCT color; // COLOR
+	}
+
+STRUCT COLORLIST
+	{
+	LLINK array_id=0;
+	}
+
+STRUCT EIKCOLORLIST
+	{
+	LLINK array_id=0;
+	LLINK ext_id;
+	}
+
+//#include <eikcolor.hrh>
+
+// EIKFONT.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+//#include <eikfont.hrh>
+
+STRUCT FONT
+	{
+	LONG fontid; // a value from fontids.hrh
+	WORD flags=0; // a combination of EGulFontFlagXxxxs
+	}
+
+STRUCT NAMED_FONT
+	{
+	LTEXT name;
+	WORD height;	// in twips
+	WORD flags=0; // a combination of EGulFontFlagXxxxs
+	}
+
+STRUCT AVKON_SYSTEM_FONT
+	{
+	LONG fontuid; // a value from fontids.hrh
+	STRUCT named_font; // this must be a NAMED_FONT structure type
+	}
 
 // EIKLBBUT.RH
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
 
+//#include <eiklbbut.hrh>
 
 STRUCT LBBUT
     {
@@ -3128,9 +1687,70 @@ STRUCT LBBUT
 	BYTE flags=1; // EEikLabeledButtonShowHotKey
     }
 
+// EIKPRIV.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+STRUCT INT16
+	{
+	WORD value;
+	}
+
+// EIKPRTPV.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+// EIKDEF.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+STRUCT RSS_SIGNATURE
+    {
+    LONG signature= 4 ;
+    SRLINK self;
+    }
+
+STRUCT TBUF1	{ BUF<1> buf; }
+STRUCT TBUF2	{ BUF<2> buf; }
+STRUCT TBUF4	{ BUF<4> buf; }
+STRUCT TBUF8	{ BUF<8> buf; }
+STRUCT TBUF9	{ BUF<9> buf; }
+STRUCT TBUF16	{ BUF<16> buf; }
+STRUCT TBUF32	{ BUF<32> buf; }
+STRUCT TBUF40	{ BUF<40> buf; }
+STRUCT TBUF64	{ BUF<64> buf; }
+STRUCT TBUF80	{ BUF<80> buf; }
+STRUCT TBUF128	{ BUF<128> buf; }
+STRUCT TBUF256	{ BUF<256> buf; }
+
 STRUCT CONTROLS
 	{
 	LEN BYTE STRUCT controls[];
+	}
+
+STRUCT EIK_APP_INFO
+    {
+    LLINK hotkeys=0;
+    LLINK menubar=0;
+    LLINK toolbar=0;
+    LLINK toolband=0;
+    LLINK cba=0;	
+    LLINK status_pane=0;
+    }
+
+STRUCT PAGESIZE
+	{
+	LONG width=0;
+	LONG height=0;
+	}
+
+STRUCT VIEW_ID
+	{
+	LONG appuid;
+	LONG viewuid;
 	}
 
 // EIKDIALG.RH
@@ -3156,6 +1776,45 @@ STRUCT DLG_BUTTON
 	BYTE line=1;
     }
 
+// EIKSPANE.RH
+//
+// Copyright (c) 1999 Symbian Ltd.  All rights reserved.
+//
+
+STRUCT STATUS_PANE_SYSTEM_MODEL				// System wide status pane declaration
+	{
+	STRUCT panes[];							// entire set of valid SPANE_PANEs
+	LLINK default_layout;					// default STATUS_PANE_LAYOUT
+	LLINK layouts[];						// entire set of STATUS_PANE_LAYOUTs
+	}
+
+STRUCT SPANE_PANE
+	{
+	LONG id;
+	WORD flags= 0 ;
+	WORD type;
+	LLINK resource=0;
+	}
+
+STRUCT STATUS_PANE_LAYOUT
+	{
+	WORD position;
+	STRUCT pane_tree;						// SPANE_LAYOUT_TREE_NODE root of the layout tree
+	}
+
+STRUCT SPANE_LAYOUT_TREE_NODE
+	{
+	LONG id=0;
+	WORD flags;
+	WORD size;
+	STRUCT sub_panes[];						// SPANE_LAYOUT_TREE_NODE sub panes
+	}
+
+STRUCT STATUS_PANE_APP_MODEL				// Application specific status pane
+	{
+	LLINK layout= 0 ;		// STATUS_PANE_LAYOUT to use for this app
+	STRUCT panes[];							// SPANE_PANE overrides to use for this app
+	}
 
 // EIKCBA.RH
 //
@@ -3179,6 +1838,10 @@ STRUCT CBA_BUTTON
   	WORD bmpid=0xffff;		// -1
     WORD bmpmask=0xffff;	// -1
 	}
+
+
+# 2 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikon.rh" 2
+
 
 
 // EIKDIALG.RH
@@ -3259,6 +1922,47 @@ STRUCT DTLBOX
 	WORD width=0;	// in pixels
 	}
 
+// EIKFBROW.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+//#include <eikfbrow.hrh>
+
+//STRUCT FBROW
+//    {
+//    WORD flags;
+//    WORD num_visible_items;
+//	WORD dir_tree_width;
+//	WORD dir_contents_width;
+//    }
+
+// EIKCHLST.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+//STRUCT CHOICELIST
+//	{
+  //  WORD flags=0;
+ //   WORD maxdisplaychar=0;
+//	LLINK array_id=0;
+//	}
+
+//#include <eikchlst.hrh>
+
+// EIKFPREV.RH
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+//STRUCT FPREV
+//    {
+//	WORD width=0;
+//	WORD height=0;
+//    LTEXT txt;
+//    }
+
 // EIKIMGAR.RH
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
@@ -3274,6 +1978,8 @@ STRUCT IMAGE_ARRAY
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
+
+//#include <eikcal.hrh>
 
 //
 // calendar STRUCT
@@ -3306,6 +2012,8 @@ STRUCT CALENDAR
 //
 // Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
+
+//#include <eikclock.hrh>
 
 //
 // primitive STRUCTs
@@ -3718,108 +2426,108 @@ STRUCT PROGRESSINFO
 
 //#include <eikrted.hrh>
 //#include <eikgted.hrh>
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\gulftflg.hrh" 1
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\gulftflg.hrh" 1
 // GULFTFLG.HRH
 //
-// Copyright (c) Symbian Software Ltd 1997 - 2004. All rights reserved.
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
 //
 
-/** Maximum length for text selection.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** All font controls.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Font control name.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Font control size.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Bold font control.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Italic font control.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Underline font control.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Strikethrough font control.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Font text color control.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Print position font control.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** All fonts.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Monospace fonts only.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** No monospace fonts.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** Symbol fonts only.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** No symbol fonts.
+/**
 @publishedAll 
 @released 
 */
 
 
-/** No monospace or symbol fonts.
+/**
 @publishedAll 
 @released 
 */
 
-# 891 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\eikon.rh" 2
+# 587 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\eikon.rh" 2
 
 
 STRUCT RTXTED
@@ -3831,7 +2539,7 @@ STRUCT RTXTED
 	LONG flags=0;
 	WORD fontcontrolflags=1;
 	WORD fontnameflags= 0x10 ;
-	WORD default_case= 0x4 ;	WORD allowed_case_modes= 0x1  | 0x2  | 0x4  ;	WORD numeric_keymap=EAknEditorAlphanumericNumberModeKeymap;	WORD allowed_input_modes= 0x1  | 0x2  | 0x4  | 0x8  | 0x10  | 0x20  | 0x40  | 0x80  | 0x200  ;	WORD default_input_mode= 0x1 ;	LLINK special_character_table=-1;	WORD avkon_flags= 0x000 ;	WORD max_view_height_in_lines=0;	WORD base_line_delta=0;	WORD spare=0; 
+	WORD default_case= 0x4 ;	WORD allowed_case_modes= 0x1  | 0x2  | 0x4  ;	WORD numeric_keymap=EAknEditorStandardNumberModeKeymap;	WORD allowed_input_modes= 0x1  | 0x2  | 0x4  ;	WORD default_input_mode= 0x1 ;	LLINK special_character_table=-1;	WORD avkon_flags= 0x000 ;	WORD max_view_height_in_lines=0;	WORD base_line_delta=0;	WORD spare=0; 
     }
 
 // EIKSECED.RH
@@ -3970,7 +2678,7 @@ STRUCT GTXTED
 	LONG flags=0;
 	WORD fontcontrolflags=1;
 	WORD fontnameflags= 0x10 ;
-	WORD default_case= 0x4 ;	WORD allowed_case_modes= 0x1  | 0x2  | 0x4  ;	WORD numeric_keymap=EAknEditorAlphanumericNumberModeKeymap;	WORD allowed_input_modes= 0x1  | 0x2  | 0x4  | 0x8  | 0x10  | 0x20  | 0x40  | 0x80  | 0x200  ;	WORD default_input_mode= 0x1 ;	LLINK special_character_table=-1;	WORD avkon_flags= 0x000 ;	WORD max_view_height_in_lines=0;	WORD base_line_delta=0;	WORD spare=0; 
+	WORD default_case= 0x4 ;	WORD allowed_case_modes= 0x1  | 0x2  | 0x4  ;	WORD numeric_keymap=EAknEditorStandardNumberModeKeymap;	WORD allowed_input_modes= 0x1  | 0x2  | 0x4  ;	WORD default_input_mode= 0x1 ;	LLINK special_character_table=-1;	WORD avkon_flags= 0x000 ;	WORD max_view_height_in_lines=0;	WORD base_line_delta=0;	WORD spare=0; 
     }
 
 // EIKUFSEL.RH
@@ -4002,100 +2710,9 @@ STRUCT IP_FIELD
 	BYTE third_field;
 	BYTE fourth_field;
 	}
+# 13 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser.rss" 2
 
-// For Enhanced CBA
-
-STRUCT CBA_BUTTON_LINK
-	{
-	BYTE version= 0x10 ;
-	LLINK button=0;
-	}
-
-
-STRUCT ENHANCED_CBA_BUTTON
-	{
-	BYTE version= 0x20 ;
-	BYTE operationType=EEikCommandTypeAnyCommand;
-	WORD id=0;
-   	LTEXT txt="";
-	LTEXT bmpfile="";
-  	WORD bmpid=0xffff;		// -1
-	WORD bmpmask=0xffff;	// -1
-	}
-
-STRUCT EIK_APP_INFO_EXT
-	{
-	LLINK touch_pane=0;
-	LLINK popup_toolbar=0;
-	LONG supported_resolutions=0;
-	LLINK spare=0; // Reserved for another eik_app_info extension
-	}
-
-// for defining priority order for each button (enhanced cba)
-STRUCT CBA_PRIORITIES
-	{
-	STRUCT buttons[]; // array of buttons in number order ( 1. SK1, 2. SK2 etc )
-	}
-
-STRUCT BUTTON_PRIORITY
-	{
-	BYTE priority_order[]; // e.g. EEikCommandTypeOpenItem, EEikCommandTypeAnyCommand 
-	}
-
-/**
-* Series 60 Button
-*
-* @since Series 60 3.1
-*/
-STRUCT AVKON_BUTTON_STATE
-    {
-    WORD flags=0;
-    LTEXT txt="";
-    LTEXT helptxt="";
-    LTEXT bmpfile="";
-    WORD bmpid=0xffff;
-    WORD bmpmask=0xffff;
-    WORD dim_bmpid=0xffff;
-    WORD dim_bmpmask=0xffff;
-    WORD press_bmpid=0xffff;
-    WORD press_bmpmask=0xffff;
-    WORD hover_bmpid=0xffff;
-    WORD hover_bmpmask=0xffff;
-    LLINK extension=0;
-    }
-
-STRUCT AVKON_BUTTON
-    {
-    WORD flags=0;
-    WORD state=0;
-    STRUCT states[];
-    LLINK extension=0;
-    }
-
-STRUCT AVKON_TOOLBAR
-    {
-    BYTE lines=1;
-    LONG flags=0;
-    STRUCT items[];
-    LLINK extension=0;
-    }
-
-// Resource structure for CAknStylusPopupMenu
-STRUCT STYLUS_POPUP_MENU_ITEM
-    {
-    LTEXT txt="";
-    LONG command;
-    LLINK extension=0;
-    }
-    
-STRUCT STYLUS_POPUP_MENU
-    {
-    STRUCT items[];
-    LLINK extension=0;
-    }
-# 13 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss" 2
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.rh" 1
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\avkon.rh" 1
 /*
 * ============================================================================
 *  Name     : Avkon.rh
@@ -4117,7 +2734,7 @@ STRUCT STYLUS_POPUP_MENU
 * ============================================================================
 */
 
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.hrh" 1
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\avkon.hrh" 1
 /*
 * ============================================================================
 *  Name     : Avkon.hrh
@@ -4128,13 +2745,13 @@ STRUCT STYLUS_POPUP_MENU
 *  Version:
 *
 *  Copyright © 2002 Nokia Corporation.
-*  This material, including documentation and any related
-*  computer programs, is protected by copyright controlled by
-*  Nokia Corporation. All rights are reserved. Copying,
-*  including reproducing, storing,  adapting or translating, any
-*  or all of this material requires the prior written consent of
-*  Nokia Corporation. This material also contains confidential
-*  information which may not be disclosed to others without the
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation. All rights are reserved. Copying, 
+*  including reproducing, storing,  adapting or translating, any 
+*  or all of this material requires the prior written consent of 
+*  Nokia Corporation. This material also contains confidential 
+*  information which may not be disclosed to others without the 
 *  prior written consent of Nokia Corporation.
 * ============================================================================
 */
@@ -4144,112 +2761,7 @@ STRUCT STYLUS_POPUP_MENU
 
 
 
-
-
-
-
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\aknfontcategory.hrh" 1
-/*
-* ============================================================================
-*  Name     : AknFontCategory.hrh
-*  Part of  : FontUtils
-*  Description : Avkon font categories correspond to the font "Category types" in the 
-*  Series60 layout tool
-*
-*  Copyright © 2002-2004 Nokia. All rights reserved.
-*  This material, including documentation and any related 
-*  computer programs, is protected by copyright controlled by 
-*  Nokia. All rights are reserved. Copying, including 
-*  reproducing, storing, adapting or translating, any 
-*  or all of this material requires the prior written consent of 
-*  Nokia. This material also contains confidential 
-*  information which may not be disclosed to others without the 
-*  prior written consent of Nokia.
-* ==============================================================================
-*/
-
-
-
-
-
-/**
-* Definition of Series 60 logical font categories. 
-* Note: These are not logical font ids
-* 
-* @since Series 60 2.8
-*/
-
-
-
-
-
-
-
-enum TAknFontCategory
-	{
-	EAknFontCategoryUndefined =		0 ,
-	EAknFontCategoryPrimary =		1 ,
-	EAknFontCategorySecondary =		2 ,
-	EAknFontCategoryTitle =			3 ,
-	EAknFontCategoryPrimarySmall =	4 ,
-	EAknFontCategoryDigital =		5 
-	};
-
-
-
-// End of File
-# 32 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.hrh" 2
-
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\aknfontidoffsets.hrh" 1
-/*
-* ============================================================================
-*  Name     : AknFontIdOffsets.h
-*  Part of  : FontUtils
-*
-*  Description: Constants and offsets for Scalable and Encoded Font IDs
-*
-*  Copyright © 2002-2004 Nokia. All rights reserved.
-*  This material, including documentation and any related 
-*  computer programs, is protected by copyright controlled by 
-*  Nokia. All rights are reserved. Copying, including 
-*  reproducing, storing, adapting or translating, any 
-*  or all of this material requires the prior written consent of 
-*  Nokia. This material also contains confidential 
-*  information which may not be disclosed to others without the 
-*  prior written consent of Nokia.
-* ==============================================================================
-*/
-
-
-
-
-/**
-* Constants and Offsets for Scalable and Encoded Font IDs
-*/
-
-// Constant to form the base value for the definition of Logical fonts
-
-// This constant is retained for binary compatibility
-
-
-
-
-enum {EScalableFontIdOffset = (0x1000)  };
-
-// "Lowest" is defined in an unsigned context
-
-
-
-// Define lowest end of range of IDs to be generated by toolchain
-// Start at Scalable ID offset, but leave space for all the "lay scaled" IDs
-
-
-
-// End of File
-# 33 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.hrh" 2
-
-
+//
 // This file is very important for applications!
 //
 // Here we have many names you can find from Series 60 specifications
@@ -4257,9 +2769,6 @@ enum {EScalableFontIdOffset = (0x1000)  };
 //   * Selection Service
 //   * Find
 //
-
-// moved from uikon.hrh
-
 
 // internal, do not use (maybe you might need to use LoopScrolling though, but use it with some other flags...)
 
@@ -4269,9 +2778,6 @@ enum {EScalableFontIdOffset = (0x1000)  };
 
 
 // Note there's also EAknListBoxViewerFlags, which is better for apps.
-
-
-
 
 
 // These are combined to the viewerflag to make it fit to WORD in resources.
@@ -4301,11 +2807,6 @@ enum {EScalableFontIdOffset = (0x1000)  };
 
 
 
-// if pen input is supported, then these two flags can be used 
-// to get Multiselection and Markable lists to work as s60 style by using stylus
-
-
-
 
 
 
@@ -4315,7 +2816,7 @@ enum {EScalableFontIdOffset = (0x1000)  };
 
 //
 // Viewers (see Selection service)
-//
+// 
 
 
 //
@@ -4369,7 +2870,7 @@ enum {EScalableFontIdOffset = (0x1000)  };
 
 //
 // There are also ready-made HandleCommandL() implementations for selection service in aknutils.h
-//
+//  
 // AknSelectionService::HandleSelectionListProcessCommandL(aCommand, iListBox);
 // AknSelectionService::HandleMultiSelectionListProcessCommandL(aCommand, iListBox);
 // AknSelectionService::HandleMarkableSelectionListProcessCommandL(aCommand, iListBox);
@@ -4381,8 +2882,8 @@ enum {EScalableFontIdOffset = (0x1000)  };
 
 enum
     {
-    EAknApplicationIconWidth = 42,
-    EAknApplicationIconHeight = 29
+	EAknApplicationIconWidth = 42,
+	EAknApplicationIconHeight = 29
     };
 
 //
@@ -4410,158 +2911,99 @@ enum
 
 
 // for ProcessCommandL()
-enum
-    {
-    EAknDummyForProcessCommands = 4000,
-    EAknMarkAll, // selection service impl
-    EAknUnmarkAll, // selection service impl
-    EAknCmdHelp,
-    EAknCmdAddToPinboard,
-    EAknCmdFindPopupActivated,
-    EAknCmdEditModeT9,
-    EAknCmdEditModeMultitap,
-    EAknCmdEditModeNumber,
-    EAknCmdEditInsertNumber,
-    EAknCmdEditInsertSymbol,
-    EAknCmdInputLanguage,
-    EAknCmdPredictiveTextCascade,
-    EAknCmdT9PredictiveMatches,
-    EAknCmdT9PredictiveInsertWord,
-    EAknCmdT9PredictiveEditWord,
-    EAknCmdT9PredictiveT9Off,
-    EAknCmdMultitapPredictiveT9On,
-    EAknCmdExit,
-    EAknCmdEditTextMenu,
-    EAknCmdEditListMenu, // selection service impl
-    EAknCmdMark, // selection service impl
-    EAknCmdUnmark, // selection service impl
-    EAknCmdOpen,    // selection service impl
+enum 
+	{
+	EAknDummyForProcessCommands=4000,
+	EAknMarkAll, // selection service impl
+	EAknUnmarkAll, // selection service impl
+	EAknCmdHelp,
+	EAknCmdAddToPinboard,
+	EAknCmdFindPopupActivated,
+	EAknCmdEditModeT9,
+	EAknCmdEditModeMultitap,
+	EAknCmdEditModeNumber,
+	EAknCmdEditInsertNumber,
+	EAknCmdEditInsertSymbol,
+	EAknCmdInputLanguage,
+	EAknCmdPredictiveTextCascade,
+	EAknCmdT9PredictiveMatches,
+	EAknCmdT9PredictiveInsertWord,
+	EAknCmdT9PredictiveEditWord,
+	EAknCmdT9PredictiveT9Off,
+	EAknCmdMultitapPredictiveT9On,
+	EAknCmdExit,
+	EAknCmdEditTextMenu,
+	EAknCmdEditListMenu, // selection service impl
+	EAknCmdMark, // selection service impl
+	EAknCmdUnmark, // selection service impl
+	EAknCmdOpen,    // selection service impl
 
-    // command ids for APAC build
-    EChinFepCmdInstructions,
-    EChinFepCmdModePinyin,
-    EChinFepCmdModeZhuyin,
-    EChinFepCmdModeStroke,
-    EChinFepCmdModeLatinUpper,
-    EChinFepCmdModeLatinLower,
-    EChinFepCmdModeNumber,
-    EChinFepCmdModeZhuyinFind,
-    EChinFepCmdModeStrokeFind,
+	// command ids for APAC build 
+	EChinFepCmdInstructions,
+	EChinFepCmdModePinyin,
+	EChinFepCmdModeZhuyin,
+	EChinFepCmdModeStroke,
+	EChinFepCmdModeLatinUpper,
+	EChinFepCmdModeLatinLower,
+	EChinFepCmdModeNumber,
+	EChinFepCmdModeZhuyinFind,
+	EChinFepCmdModeStrokeFind,
 
     EAknCmdEditModeArabicIndicNumber,
     EAknCmdEditModeAlpha,
-    EAknCmdEditModeLatinText,
-    EAknCmdEditModeIndicNumber,
-    // command ids for Japanese build
-    EJapanFepCmdModeHiragana,
-    EJapanFepCmdModeKatakana,
-    EJapanFepCmdModePictographs,
-    EJapanFepCmdModeFullWidth,
-    EJapanFepCmdModeHalfWidth,
-    EJapanFepCmdModePredictiveOn,
-    EJapanFepCmdModePredictiveOff,
-    EJapanFepCmdModeUserDic,
-    EJapanFepCmdModeKutenCodeInput,
-    EAknCmdEditInsertPictograph,
-    EJapanFepCmdPredictiveTextCascade,
-    EJapanFepCmdMultitapPredictiveT9On,
-    EJapanFepCmdEditModeAlpha,
-    EJapanFepCmdEditModeNumber,
-
-    // Command ids for CangJie IME and Chinese Option Menu
-    EAknCmdInputMethod,
-    EChinFepCmdModeCangJie,
-    EChinFepCmdModeCangJieOption,
-    
-    // Edit menu specific command id
-    EAknCmdEditMenuSctSelected,
-    // Command ids for Hwr IME and Chinese Option Menu
-    EPenInputCmdCut,
-    EPenInputCmdCopy,
-    EPenInputCmdPaste,
-    EPenInputCmdSetting,
-    EPenInputCmdHwrTraining,
-    EFepInputCmdHelp,
-
-    /**
-    * Command id for eastern arabic-indic digit type menu item.
-    * @since 3.1
-    */
-    EAknCmdEditModeEasternArabicIndicNumber,
-
-    /**
-    * Command id for launching task swapper from options menu.
-    * @since 3.1
-    */
-    EAknCmdTaskSwapper,
-    
-    // Add new command ids here.
-
-
-    /**
-    * @deprecated
-    * Do not use.
-    */
-    EAknCmdEnd = 4999
+    EAknCmdEditModeLatinText
 };
 
 /**
-* Note that although these are the command ids resulting from the CBA key press, codes returned from
-* CAknDialog::ExecuteLD are mapped in the routine CEikDialog::MappedCommandId.  This routine should be consulted
+* Note that although these are the command ids resulting from the CBA key press, codes returned from 
+* CAknDialog::ExecuteLD are mapped in the routine CEikDialog::MappedCommandId.  This routine should be consulted 
 * before knowing what the dialog will return.
 */
-enum        // CBA constants
-    {
-    EAknSoftkeyOk = -2 ,
-    EAknSoftkeyCancel = -1 ,
-    EAknSoftkeySelect = -6 ,
-    EAknSoftkeyOptions= 3000,
-    EAknSoftkeyBack,
-    EAknSoftkeyMark,
-    EAknSoftkeyUnmark,
-    EAknSoftkeyInsert,
-    EAknSoftkeyYes,
-    EAknSoftkeyNo,
-    EAknSoftkeyDone,
-    EAknSoftkeyClose,
-    EAknSoftkeyExit,
-    EAknSoftkeyClear,
-    EAknSoftkeyUnlock,
-    EAknSoftkeySave,
-    EAknSoftkeyShow,
-    EAknSoftkeyListen,
-    EAknSoftkeyRead,
-    EAknSoftkeySearch,
-    EAknSoftkeyEmpty,
-    EAknSoftkeyLock,
+enum		// CBA constants
+	{
+	EAknSoftkeyOk = -2 ,
+	EAknSoftkeyCancel = -1 ,
+   	EAknSoftkeySelect = -6 ,
+	EAknSoftkeyOptions= 3000,
+	EAknSoftkeyBack,
+	EAknSoftkeyMark,
+	EAknSoftkeyUnmark,
+	EAknSoftkeyInsert,
+	EAknSoftkeyYes,
+	EAknSoftkeyNo,
+	EAknSoftkeyDone,
+	EAknSoftkeyClose,
+	EAknSoftkeyExit,
+	EAknSoftkeyClear,
+	EAknSoftkeyUnlock,
+	EAknSoftkeySave,
+	EAknSoftkeyShow,
+	EAknSoftkeyListen,
+	EAknSoftkeyRead,
+	EAknSoftkeySearch,
+	EAknSoftkeyEmpty,
+	EAknSoftkeyLock,
     EAknSoftkeyCall,
     EAknSoftkeyAgain,
     EAknSoftkeyQuit,
     EAknSoftkeyDetails,
-    EAknSoftkeyNext,
-    EAknSoftkeyOther,
-    EAknSoftkeyEdit,
-    EAknSoftkeyOpen,
-    EAknSoftkeySend,
-    EAknSoftkeyView,
-    EAknSoftkeyContextOptions,
-    EAknSoftkeyChange
-    };
+    EAknSoftkeyNext
+	};
 
-enum    {
-    EAknSoftkeyDummyUsedWithShortcuts = 3200
-    };
+enum	{
+	EAknSoftkeyDummyUsedWithShortcuts = 3200
+	};
 
 enum
-    {
-    EAknCBAFlagRespondWhenInvisible = 0x02   // softkeys still respond to key events even when control is invisible
-    };
+	{
+	EAknCBAFlagRespondWhenInvisible	= 0x02   // softkeys still respond to key events even when control is invisible
+	};
 
 
 // Predefined softkey ranges for supporting limited automatic control of such things as
 // return from dialog-like contexts.
 // All dialog-like contexts should  return 0 for values in the first range.
-// CEikDialog does not use the other implied ranges at all.
+// CEikDialog does not use the other implied ranges at all.  
 // Other contexts may use the "accept" range for internal behaviour
 
 
@@ -4586,9 +3028,9 @@ enum
 
 
 enum
-    {
-    EAknCtTest = 5699 ,
-    EAknControlIdBase = 5700,
+	{
+	EAknCtTest = 5699 ,
+	EAknControlIdBase = 5700,
 
     EAknCtFormattedListBox, // generic formatted listbox
 
@@ -4635,106 +3077,87 @@ enum
     EAknCtNaviPane,
     EAknCtSignalPane,
     EAknCtBatteryPane,
-    EAknCtIndicatorPane,
+	EAknCtIndicatorPane,
     EAknCtIdleContextPane,
 //
 //  For AVKON notes and queries:
 //
     EAknCtNote,
     EAknCtQuery,
-    EAknCtMultilineQuery,
+	EAknCtMultilineQuery,
 //
 // For AVKON popup field:
 //
-    EAknCtPopupField,
-    EAknCtPopupFieldText,
+	EAknCtPopupField,
+	EAknCtPopupFieldText,
 // For AVKON Form
-    EAknCtFormLabelEditor,
+	EAknCtFormLabelEditor,
 
 // For LAF reader
-    EAknCtLAF,
-    EAknCtPopupHeadingPane,
-    EAknCtSearchField,
+	EAknCtLAF,
+	EAknCtPopupHeadingPane,
+	EAknCtSearchField,
 
-//  For Setting Page
-    EAknCtSettingPage,
+//  For Setting Page 
+	EAknCtSettingPage,
 
 // For AknVolumeControl and AknSlider
-    EAknCtVolumeControl,
-    EAknCtSlider,
-    EAknCtListQueryControl,
-    EAknCtSpecialCharacterMap,
+	EAknCtVolumeControl,
+	EAknCtSlider,
+	EAknCtListQueryControl,
+   	EAknCtSpecialCharacterMap,
 
 // For AknPhoneNumberEditor
-    EAknPhoneNumberEditor,
+	EAknPhoneNumberEditor,
 
 // Numeric secret editor
-    EAknCtNumericSecretEditor,
+	EAknCtNumericSecretEditor,
 
 // Popup Setting List Page
-    EAknCtPopupSettingList,
+	EAknCtPopupSettingList,
 // Message query
     EAknCtMessageQuery,
 
 // Specialized numeric edwins
-    EAknCtIntegerEdwin,
-    EAknCtFloatingPointEdwin,
-    EAknCtSelectionListFixedFind,
-    EAknCtSelectionListPopupFind,
-    EAknCtEmptyList,
-    EAknCtDouble2GraphicListBox,
-    EAknCtDouble2LargeListBox,
-    EAknCtDouble2PopupMenuListBox,
+	EAknCtIntegerEdwin,
+	EAknCtFloatingPointEdwin,
+	EAknCtSelectionListFixedFind,
+	EAknCtSelectionListPopupFind,
+	EAknCtEmptyList,
+	EAknCtDouble2GraphicListBox,
+	EAknCtDouble2LargeListBox,
+	EAknCtDouble2PopupMenuListBox,
 
 // NOTE: DO NOT USE THESE LISTS (break ui-style, only for java)!!!
-    EAknCtSingle2GraphicListBox,
-    EAknCtDouble2GraphicLargeListBox,
+	EAknCtSingle2GraphicListBox,
+	EAknCtDouble2GraphicLargeListBox,
 // END OF NOTE
 
 // Colour selection grid
-    EAknCtColourSelectionDialogNoneField, // Deprecated
-    EAknCtColourSelectionDialogGrid,      // Deprecated
+	EAknCtColourSelectionDialogNoneField,
+	EAknCtColourSelectionDialogGrid,
 
 // Find box in list query dialog
     EAknCtListQuerySearchControl,
 
 // Derived query control for ip & fixed point queries
-    EAknExtCtQuery,
+	EAknExtCtQuery,
 
 // Derived multiline query control for ip&ip queries
-    EAknExtCtMultilineQuery,
+	EAknExtCtMultilineQuery,
 
-   EAknCtBitmapAnimation,
-   
-// button for 4.0
-    EAknCtButton,
-    
-// new popuplists for 3.0    
-    EAknCtSingle2GraphicPopupMenuListBox,
-    EAknCtDoubleGraphicPopupMenuListBox,
-
-// Colour selection grid control for rel 3.0.
-    EAknCtColourSelectionGridDialog,
-//  Small digital clock for Avkon Status pane 3.1
-    EAknCtDigitalClockPane,
-//  Empty control for Avkon Status pane 3.1
-    EAknCtStatuspaneEmpty,
-    
-// use messageBox with listQuery, 3.0->
-    EAknListQueryWithMsgBox,    
-    
 // This is the marker for the last AVKON control id: It does not construct a control
-    EAknCtLastControlId = 0x2000 
+	EAknCtLastControlId = 0x2000  
 
-//  Control ids beyond (or including) this value will be dealt with as custom controls.
-
-//  However, to assist collaboration between applications, the following Series 60 -specific
-//  application- related ranges are documented here:
+//  Control ids beyond (or including) this value will be dealt with as custom controls. 
+ 
+//	However, to assist collaboration between applications, the following Series 60 -specific 
+//	application- related ranges are documented here: 
 //
 //  Phonebook- related control ids = 0x2800 - 0x2C00
 //
-//  Applications which do not have to correlate with any other DLLs or apps, should use the
-//  range 0x2001 - 0x2800
+//  Applications which do not have to correlate with any other DLLs or apps, should use the 
+//	range 0x2001 - 0x2800
 //
 
 // Control ID range 0xF000 - 0xFFFF is reserved for licensee controls.
@@ -4755,17 +3178,17 @@ enum
 
 
 enum
-    {
-    EAknTabWidthWithTwoTabs = 36,
-    EAknTabWidthWithTwoLongTabs = 74,
-    EAknTabWidthWithThreeTabs = 22,
-    EAknTabWidthWithThreeLongTabs = 67,
-    EAknTabWidthWithFourTabs = 18,
-    EAknTabWidthWithOneTab = 107
-    };
+	{
+	EAknTabWidthWithTwoTabs = 36,
+	EAknTabWidthWithTwoLongTabs = 74,
+	EAknTabWidthWithThreeTabs = 22,
+	EAknTabWidthWithThreeLongTabs = 67,
+	EAknTabWidthWithFourTabs = 18,
+	EAknTabWidthWithOneTab = 107
+	};
 
-// Note dialog constants
-enum
+// Note dialog constants 
+enum 
     {
     EGeneralLayout = 1,
     EConfirmationLayout,
@@ -4773,20 +3196,20 @@ enum
     ENoteWithImageLayout,
     ETextualNotificationLayout,
     ENotificationWithGraphicsLayout,
-    EAknNoteControlAnimationCreationFailed,
-    EWaitLayout
+	EAknNoteControlAnimationCreationFailed,
+	EWaitLayout
     };
 
-enum
+enum 
     {
-    EAknInvalidBorderCount = 1,
-    EAknInvalidDimensionArrayOutOfBounds,
-    EAknNoNoteControlDimensionDefined,
-    EAknNoteControlNullArgumentUsed
+	EAknInvalidBorderCount = 1,
+	EAknInvalidDimensionArrayOutOfBounds,
+	EAknNoNoteControlDimensionDefined,
+	EAknNoteControlNullArgumentUsed
     };
 
 enum EAknNoteItemType {
-    EAknNoteNoType = 1,
+	EAknNoteNoType = 1,
     EAknNoteBitmap,
     EAknNoteNumberTypeIndication,
     EAknNoteProgressBar,
@@ -4795,14 +3218,13 @@ enum EAknNoteItemType {
 };
 
 enum TNoteCtrlIds
-    {
-    EGeneralNote = 1
-    };
+	{
+	EGeneralNote = 1
+	};
 
 
 //Note control flags
 
-// Sets the TNoteFlags::ENoteLeftSKWhenTapped
 
 
 // Query dialog constants
@@ -4813,7 +3235,7 @@ enum TNoteCtrlIds
 // KQueryTypeToLayout in aknquerycontrol.cpp otherwise
 // query control will crash with EAknPanicNotSupported
 // because the layout is not known
-enum
+enum 
     {
     EDataLayout=1,
     EConfirmationQueryLayout,
@@ -4822,167 +3244,137 @@ enum
     EDateLayout,
     EListLayout,
     EMultiListLayout,
-    EMultiLineDataLayout,
-    EDurationLayout,
-    ETextSoftNotification,
-    ENumberLayout,
-    EPinLayout,
-    EPhoneLayout,
+	EMultiLineDataLayout,
+	EDurationLayout,
+	ETextSoftNotification,
+	ENumberLayout,
+	EPinLayout,
+	EPhoneLayout,
     EMessageQueryLayout,
     EStaticSizeDataLayout,
     EFloatingPointLayout,
-    EIpLayout,
-    EFixedPointLayout,
-    EDataLayoutAllowEmptyInput,
-    ELocationLayout
+	EIpLayout,							
+	EFixedPointLayout					
     };
 
 enum
-    {
-    ETextEditor=1,
-    ESecretEditor,
-    ETimeEditor,
-    EDateEditor,
-    ENumberEditor,
-    EDurationEditor,
-    EIpEditor,
-    EFixedPointEditor,
-    ELocationEditor
-    };
+	{
+	ETextEditor=1,
+	ESecretEditor,
+	ETimeEditor,
+	EDateEditor,
+	ENumberEditor,
+	EDurationEditor,
+	EIpEditor,							
+	EFixedPointEditor					
+	};
 
 enum EAknMultilineDataLayout
 {
-    EMultiDataFirstEdwin = 1,
-    EMultiDataSecondEdwin,
-    EMultiDataFirstSecEd,
-    EMultiDataSecondSecEd,
-    EMultiDataFirstTimeEd,
-    EMultiDataSecondTimeEd,
-    EMultiDataFirstDateEd,
-    EMultiDataSecondDateEd,
-    EMultiDataFirstDurEd,
-    EMultiDataSecondDurEd,
-    EMultiDataFirstPhoneEd,
-    EMultiDataSecondPhoneEd,
-    EMultiDataFirstNumEd,
-    EMultiDataSecondNumEd,
-    EMultiDataFirstPinEd,
-    EMultiDataSecondPinEd,
-    EMultiDataFirstIpEd,
-    EMultiDataSecondIpEd,
-    EMultiDataFirstLocationEd,
-    EMultiDataSecondLocationEd
-    };
+	EMultiDataFirstEdwin = 1,
+	EMultiDataSecondEdwin,
+	EMultiDataFirstSecEd,
+	EMultiDataSecondSecEd,
+	EMultiDataFirstTimeEd,
+	EMultiDataSecondTimeEd,
+	EMultiDataFirstDateEd,
+	EMultiDataSecondDateEd,
+	EMultiDataFirstDurEd,
+	EMultiDataSecondDurEd,
+	EMultiDataFirstPhoneEd,
+	EMultiDataSecondPhoneEd,
+	EMultiDataFirstNumEd,
+	EMultiDataSecondNumEd,
+	EMultiDataFirstPinEd,
+	EMultiDataSecondPinEd,
+	EMultiDataFirstIpEd,				
+    EMultiDataSecondIpEd				
+	};
 
 enum TQueryCtrlIds
-    {
-    EGeneralQuery = 0x500,
-    EMultilineFirstLine,
-    EMultilineSecondLine
-    };
+	{
+	EGeneralQuery = 0x500,
+	EMultilineFirstLine,
+	EMultilineSecondLine
+	};
 
 enum TListQueryCtrlIds
-    {
-    EListQueryMainInboxList = 1,
-    EListQueryMainDraftList,
-    EListQueryMainOutboxList,
-    EListQueryAppViewLabel,
-    EListQueryMsgEditField,
-    EListQueryHeading,
-    EListQueryControl
-    };
-
+	{
+	EListQueryMainInboxList = 1,
+	EListQueryMainDraftList,
+	EListQueryMainOutboxList,
+	EListQueryAppViewLabel,
+	EListQueryMsgEditField,
+	EListQueryHeading,
+	EListQueryControl
+	};
+   
 enum TSelectionListCtrlIds
     {
     ESelectionListControl = 1,
     EFindControl,
     EAknEmptyListControl,
-    EAknListQueryMessageBox
+    EAknListQueryMessageBox   
     };
-
+   
 
 // layout commands (for lists currently)
 enum
-    {
-    ELayoutNoCmd =1,
-    ELayoutOptional, // optional items
-    ELayoutRightSeparator, // adds separator
-    ELayoutTransparentCell,  // transparent cell for formattedlistbox only
-    ELayoutItemMark,         // sets column/subcell to handle item mark in multiselection lists
+	{
+	ELayoutNoCmd =1,
+	ELayoutOptional, // optional items
+	ELayoutRightSeparator, // adds separator
+	ELayoutTransparentCell,  // transparent cell for formattedlistbox only
+	ELayoutItemMark,         // sets column/subcell to handle item mark in multiselection lists
 
-    ELayoutNotFilled,
-    ELayoutNotAlwaysDrawn
-    };
+	ELayoutNotFilled,
+	ELayoutNotAlwaysDrawn
+	};
 
 enum {
-    ELayoutAlignNone,
-    ELayoutAlignCenter,
-    ELayoutAlignLeft,
-    ELayoutAlignRight,
-    ELayoutAlignBidi
+	ELayoutAlignNone,
+	ELayoutAlignCenter,
+	ELayoutAlignLeft,
+	ELayoutAlignRight,
+	ELayoutAlignBidi
      };
 
 // Editor alignment
-enum
-    {
-    EAknEditorAlignNone = ELayoutAlignNone,
-    EAknEditorAlignCenter = ELayoutAlignCenter,
-    EAknEditorAlignLeft = ELayoutAlignLeft,
-    EAknEditorAlignRight = ELayoutAlignRight,
-    EAknEditorAlignBidi = ELayoutAlignBidi
+enum 
+	{
+	EAknEditorAlignNone = ELayoutAlignNone,
+	EAknEditorAlignCenter = ELayoutAlignCenter,
+	EAknEditorAlignLeft = ELayoutAlignLeft,
+	EAknEditorAlignRight = ELayoutAlignRight,
+	EAknEditorAlignBidi = ELayoutAlignBidi
      };
 
 // Editor character case
-enum
-    {
-    EAknEditorCharactersUpperCase = 0x1 ,
-    EAknEditorCharactersLowerCase = 0x2 ,
-    EAknEditorCharactersTextCase = 0x4 
-    };
-
-/**
-*
-* Series 60 pre-2.8 Font Ids
-*
-*/
+enum 
+	{
+ 	EAknEditorCharactersUpperCase = 0x1 ,
+	EAknEditorCharactersLowerCase = 0x2 ,
+	EAknEditorCharactersTextCase = 0x4 
+	};
 
 enum {
-    EFontNone = 0,
-    ELatinPlain12,
-    ELatinBold12,
-    ELatinBold13,
-    ELatinBold17,
-    ELatinBold19,
-    ENumberPlain5,
-    EClockBold30,
-    ELatinClock14,
-    EFontCustom,
-    EPlain12,
-    EPlain16,
-    EApacPlain12 = EPlain12,
-    EApacPlain16 = EPlain16,
-    EBold18,
-    EBold24,
-    ELatinBold16,
-    ECalcBold21,
-    ECalcOperBold21,
-    ECalcOperBold13,
-	EHighestFixedLayoutFont = ((0x100-1) ) 
-    };
-
-/**
-* Series 60 Logical Fonts
-*
-* @since Series 60 2.6
-*/
-enum TAknLogicalFontId
-	{
-	EAknLogicalFontPrimaryFont = ((0x100-1) )   + 1 ,
-	EAknLogicalFontSecondaryFont= ((0x100-1) )  + 2 ,
-	EAknLogicalFontTitleFont= ((0x100-1) )  + 3 ,
-	EAknLogicalFontPrimarySmallFont= ((0x100-1) )  + 4 ,
-	EAknLogicalFontDigitalFont= ((0x100-1) )  + 5 ,
-	EAknHighestLogicalFont = ((0x1000) -1) 
+	EFontNone = 0,
+	ELatinPlain12,
+	ELatinBold12,
+	ELatinBold13,
+	ELatinBold17,
+	ELatinBold19,
+	ENumberPlain5,
+	EClockBold30,
+	ELatinClock14,
+	EFontCustom,
+	EPlain12,
+	EPlain16, 
+	EApacPlain12 = EPlain12,
+	EApacPlain16 = EPlain16,
+	EBold18,
+	EBold24,
+	ELatinBold16
 	};
 
 
@@ -4990,39 +3382,38 @@ enum TAknLogicalFontId
 // For layout resource of findbox
 enum
 {
-    EAknLayoutFindPaneIconId = 1,
-    EAknLayoutFindPaneEditorId,
-    EAknLayoutMainPaneListGenPane,
-    EAknLayoutMainPaneListGenPaneWithFindBox,
-    EAknLayoutMainPaneFindPane,
+	EAknLayoutFindPaneIconId = 1,
+	EAknLayoutFindPaneEditorId,
+	EAknLayoutMainPaneListGenPane,
+	EAknLayoutMainPaneListGenPaneWithFindBox,
+	EAknLayoutMainPaneFindPane,
 
-    EAknListSinglePane,
-    EAknListSingleNumberPane,
-    EAknListSingleHeadingPane,
-    EAknListSingleGraphicPane,
-    EAknListSingleGraphicHeadingPane,
-    EAknListSingleNumberHeadingPane,
-    EAknListSingleLargeGraphicPane,
-    EAknListDoubleNumberPane,
-    EAknListDoubleTimePane,
-    EAknListDoubleLargeGraphicPane,
-    EAknListDoubleGraphicPane,
-    EAknListSettingNumberPane,
-
-
-    EAknLayoutFindPaneVShadow,
-    EAknLayoutFindPaneHShadow,
-    EAknLayoutFindPaneOutlineRect,
+	EAknListSinglePane,
+	EAknListSingleNumberPane,
+	EAknListSingleHeadingPane,
+	EAknListSingleGraphicPane,
+	EAknListSingleGraphicHeadingPane,
+	EAknListSingleNumberHeadingPane,
+	EAknListSingleLargeGraphicPane,
+	EAknListDoubleNumberPane,
+	EAknListDoubleTimePane,
+	EAknListDoubleLargeGraphicPane,
+	EAknListDoubleGraphicPane,
+	EAknListSettingNumberPane,
 
 
-    EAknLayoutEmptyList1stLine,
-    EAknLayoutEmptyList2ndLine
+	EAknLayoutFindPaneVShadow,
+	EAknLayoutFindPaneHShadow,
+	EAknLayoutFindPaneOutlineRect,
+
+
+	EAknLayoutEmptyList1stLine,
+	EAknLayoutEmptyList2ndLine
+
 };
 
 
 // Status pane pane Uids
-
-
 
 
 
@@ -5040,74 +3431,61 @@ enum
 
 
 enum
-    {
-    EAknDialogQueryValueTextEditor1 = 1,
-    EAknDialogQueryValueNumberEditor1,
-    EAknDialogQueryValuePhoneEditor1,
-    EAknDialogQueryValueTimeEditor1,
-    EAknDialogQueryValueDateEditor1,
-    EAknDialogQueryValueDurationEditor1,
-    EAknFormQueryControl,
-    EAknPopupFieldEmptyListNote
-    };
+	{
+	EAknDialogQueryValueTextEditor1 = 1,
+	EAknDialogQueryValueNumberEditor1,
+	EAknDialogQueryValuePhoneEditor1,
+	EAknDialogQueryValueTimeEditor1,
+	EAknDialogQueryValueDateEditor1,
+	EAknDialogQueryValueDurationEditor1,
+	EAknFormQueryControl,
+	EAknPopupFieldEmptyListNote
+	};
 
 // POPUP_SETTING_LIST flags
 enum
-    {
-    EAknPopupSettingListFlagAllowsUserDefinedEntry = 0x001,
-    EAknPopupSettingListFlagInitialised = 0x002
-    };
+	{
+	EAknPopupSettingListFlagAllowsUserDefinedEntry = 0x001,
+	EAknPopupSettingListFlagInitialised = 0x002
+	};
 
 // FORM default menu constants
 enum
-    {
-    EAknFormCmdEdit = 950,
-    EAknFormCmdAdd,
-    EAknFormCmdSave,
-    EAknFormCmdLabel,
-    EAknFormCmdDelete,
-    EAknFormMaxDefault
-    };
+	{
+	EAknFormCmdEdit = 950,
+	EAknFormCmdAdd,
+	EAknFormCmdSave,
+	EAknFormCmdLabel,
+	EAknFormCmdDelete,
+	EAknFormMaxDefault
+	};
 
-/**
-* Avkon controls that support vertical and horizontal orientation should use
-* these constants for orientation.
-*
-* @since 3.2
-*/
-enum TAknOrientation
-    {
-    EAknOrientationVertical   = 0,
-    EAknOrientationHorizontal
-    };
 // Slider layouts
 enum
-    {
-    EAknFormSliderLayout1 = 1,
-    EAknFormSliderLayout2,
-    EAknFormSliderLayout3,
-    EAknSettingsItemSliderLayout,
-    EAknSettingsItemSliderLayoutWithGraphics,
-    EAknMIDPFormSliderLayout
-    };
-    
+	{
+	EAknFormSliderLayout1 =1,
+	EAknFormSliderLayout2,
+	EAknFormSliderLayout3,
+	EAknSettingsItemSliderLayout, 
+	EAknSettingsItemSliderLayoutWithGraphics
+	};
+
 // Slider value types
 enum
-    {
-    EAknSliderValueNone,
-    EAknSliderValueBareFigure,
-    EAknSliderValuePercentage,
-    EAknSliderValueFraction,
-    EAknSliderValueDecimal
-    };
+	{
+	EAknSliderValueNone,
+	EAknSliderValueBareFigure,
+	EAknSliderValuePercentage,
+	EAknSliderValueFraction,
+	EAknSliderValueDecimal
+	};
 
 // Volume layouts
 enum
-    {
-    ESettingsVolumeControl,
-    ENaviPaneVolumeControl,
-    EPopupVolumeControl
-    };
+	{
+	ESettingsVolumeControl,
+	ENaviPaneVolumeControl
+	};
 
 // Small indicator pane indicators & navi pane editor indicators
 enum
@@ -5122,8 +3500,8 @@ enum
     EAknIndicatorSecuredConnection,
     EAknIndicatorVoiceMailWaiting,
     EAknIndicatorVoiceMailWaitingOnLine1,
-    EAknIndicatorVoiceMailWaitingOnLine2,
-    EAknIndicatorVoiceMailWaitingOnBothLines,
+    EAknIndicatorVoiceMailWaitingOnLine2,  
+    EAknIndicatorVoiceMailWaitingOnBothLines,  
     EAknIndicatorHomeZone,
     EAknIndicatorBluetooth,
     EAknIndicatorBluetoothModuleOn,
@@ -5131,11 +3509,11 @@ enum
     EAknIndicatorKeyguard,
     EAknIndicatorAllCallsForwarded,
     EAknIndicatorCallsForwardedOnLine1,
-    EAknIndicatorCallsForwardedOnLine2,
+    EAknIndicatorCallsForwardedOnLine2, 
     EAknIndicatorCallsForwardedOnBothLines,
     EAknIndicatorCallsForwardedToVoiceMailbox,
     EAknIndicatorSelectedLine,
-    EAknIndicatorAlarmClock,
+    EAknIndicatorAlarmClock,     
     EAknIndicatorHeadset,
     EAknIndicatorLoopset,
     EAknIndicatorIHFActive,
@@ -5146,24 +3524,6 @@ enum
     EAknIndicatorRemoteMailboxEmailMessage,
     EAknIndicatorLocation,
     EAknIndicatorHeadsetUnavailable,
-    EAknIndicatorRoaming,
-    EAknIndicatorLocationOn,
-    EAknIndicatorLocationOff,
-    EAknIndicatorPoC,
-    EAknIndicatorWlanAvailable,
- 	EAknIndicatorWlanActive,
-	EAknIndicatorWlanActiveSecure,
-	EAknIndicatorCarkit,
-    EAknIndicatorPoCDnD,
-    EAknIndicatorPoCMissed,
-    EAknIndicatorTvOut,
-    EAknIndicatorVoIP, 
-    EAknIndicatorTARM, 
-    EAknIndicatorTARMModuleOn, 
-    EAknIndicatorMobileTV, 
-    EAknIndicatorMobileTVRec, 
-    EAknIndicatorHAC, 
-    EAknIndicatorMemoryCard, 
 
     // Navi pane editor indicators
     EAknNaviPaneEditorIndicatorT9 = 100,
@@ -5172,21 +3532,10 @@ enum
     EAknNaviPaneEditorIndicatorTextCase,
     EAknNaviPaneEditorIndicatorNumberCase,
     EAknNaviPaneEditorIndicatorQuery,
-    EAknNaviPaneEditorIndicatorQwertyShift,
-
-    // indicators for selection modes
-    EAknNaviPaneEditorIndicatorUpperCaseSelect,
-    EAknNaviPaneEditorIndicatorLowerCaseSelect,
-    EAknNaviPaneEditorIndicatorTextCaseSelect,
-    EAknNaviPaneEditorIndicatorNumberCaseSelect,
-
 
     EAknNaviPaneEditorIndicatorArabicCase = 130,
     EAknNaviPaneEditorIndicatorHebrewCase,
     EAknNaviPaneEditorIndicatorArabicIndicNumberCase,
-
-    EAknNaviPaneEditorIndicatorDevanagariCase = 140,
-    EAknNaviPaneEditorIndicatorDevanagariIndicNumberCase,
 
     // APAC
     EAknNaviPaneEditorIndicatorPinyin = 150,
@@ -5196,15 +3545,11 @@ enum
     EAknNaviPaneEditorIndicatorZhuyinFind,
     EAknNaviPaneEditorIndicatorStrokeFind,
 
-    EAknNaviPaneEditorIndicatorCangJie,
     // THAI
     EAknNaviPaneEditorIndicatorThai = 170,
 
 
     EAknNaviPaneEditorIndicatorStrokeTrad,  // Stroke editor indicator for traditional Chinese.
-
-    //FARSI aND URDU
-    EAknNaviPaneEditorIndicatorFarsiAndUrduCase,
 
     // Application indicators to editor indicator pane
     EAknNaviPaneEditorIndicatorAudioAttached = 200,
@@ -5219,89 +3564,27 @@ enum
     EAknNaviPaneEditorIndicatorProgressBar,
     EAknNaviPaneEditorIndicatorSecuredConnection,
     EAknNaviPaneEditorIndicatorWmlWaitGlobe,
-    EAknNaviPaneEditorIndicatorGprs,
-    EAknNaviPaneEditorIndicatorFileSize,
-    EAknNaviPaneEditorIndicatorWmlWindows,
-    EAknNaviPaneEditorIndicatorMcePriorityHigh,
-    EAknNaviPaneEditorIndicatorMcePriorityLow,
-    EAknNaviPaneEditorIndicatorWmlWindowsText,
-
-    // Navi pane editor indicators for Japanese
-    EAknNaviPaneEditorIndicatorJapaneseHiraganaKanji = 300, // Hiragana/Kanji
-    EAknNaviPaneEditorIndicatorJapaneseHiragana,            // Hiragana
-    EAknNaviPaneEditorIndicatorJapaneseFullKatakana,        // Full-width Katakana
-    EAknNaviPaneEditorIndicatorJapaneseHalfKatakana,        // Half-width Katakana
-    EAknNaviPaneEditorIndicatorJapaneseFullUpperAlphabet,   // Full-width Upper Case alphabet
-    EAknNaviPaneEditorIndicatorJapaneseFullLowerAlphabet,   // Full-width Lower Case alphabet
-    EAknNaviPaneEditorIndicatorJapaneseFullTextAlphabet,    // Full-width Text Case alphabet
-    EAknNaviPaneEditorIndicatorJapaneseFullNumeric,         // Full-width numeric
-
-    // Navi Pane editor indicators for Vietnamese
-    EAknNaviPaneEditorIndicatorVietnameseUpperCase = 400,
-    EAknNaviPaneEditorIndicatorVietnameseLowerCase,
-    EAknNaviPaneEditorIndicatorVietnameseTextCase,
-    
-    // Reserved for dynamic indicators
-    EAknNaviPaneEditorIndicatorDynamicUidRangeFirst = 10000,
-    EAknNaviPaneEditorIndicatorDynamicUidRangeLast  = 11000
+    EAknNaviPaneEditorIndicatorGprs, 
+    EAknNaviPaneEditorIndicatorFileSize 
     };
 
 
 enum  // Indicator states
-    {
-    EAknIndicatorStateOff,
-    EAknIndicatorStateOn,
-    EAknIndicatorStateAnimate
-    };
+	{
+	EAknIndicatorStateOff,
+	EAknIndicatorStateOn,
+	EAknIndicatorStateAnimate
+	};
 
-enum // Signal indicator states
+enum // GPRS indicator states
     {
-    // GPRS indicator states
     EAknSignalGprsIndicatorOff = 0,
     EAknSignalGprsIndicatorAvailable,  // Same as EAknSignalGprsIndicatorOff
     EAknSignalGprsIndicatorAttached,
     EAknSignalGprsIndicatorEstablishingContext,
     EAknSignalGprsIndicatorContext,
     EAknSignalGprsIndicatorSuspended,
-    EAknSignalGprsIndicatorMultipdp,
-
-     // Common packet data indicator states
-    EAknSignalCommonPacketDataIndicatorOff = 0x100,
-    EAknSignalCommonPacketDataIndicatorAvailable,  // Same as EAknSignalCommonPacketDataIndicatorOff
-    EAknSignalCommonPacketDataIndicatorAttached,
-    EAknSignalCommonPacketDataIndicatorEstablishingContext,
-    EAknSignalCommonPacketDataIndicatorContext,
-    EAknSignalCommonPacketDataIndicatorSuspended,
-    EAknSignalCommonPacketDataIndicatorMultipdp,
-
-     // WCDMA indicator states
-    EAknSignalWcdmaIndicatorOff = 0x200,
-    EAknSignalWcdmaIndicatorAvailable,
-    EAknSignalWcdmaIndicatorAttached,
-    EAknSignalWcdmaIndicatorEstablishingContext,
-    EAknSignalWcdmaIndicatorContext,
-    EAknSignalWcdmaIndicatorMultipdp,
-    EAknSignalWcdmaIndicatorSuspended,
-
-
-    // CDMA indicator states
-    EAknSignalCdmaIndicatorOff = 0x300,
-    EAknSignalCdmaIndicatorNoService,
-    EAknSignalCdmaIndicatorAvailable,
-    EAknSignalCdmaIndicatorNotAvailable,
-    EAknSignalCdmaIndicatorActive,
-    EAknSignalCdmaIndicatorDormant,
-    EAknSignalCdmaIndicatorSending,
-    EAknSignalCdmaIndicatorReceiving,
-
-     // EDGE indicator states
-    EAknSignalEdgeIndicatorOff = 0x400,
-    EAknSignalEdgeIndicatorAvailable, // Same as EAknSignalEdgeIndicatorOff
-    EAknSignalEdgeIndicatorAttached,
-    EAknSignalEdgeIndicatorEstablishingContext, 
-    EAknSignalEdgeIndicatorContext,
-    EAknSignalEdgeIndicatorSuspended,
-    EAknSignalEdgeIndicatorMultipdp
+    EAknSignalGprsIndicatorMultipdp
     };
 
 
@@ -5333,7 +3616,7 @@ enum // Signal indicator states
 
 // Defining colors in resource file (this is for defining your own color schemes, do not use in applications!) (num is the number from LAF specification!) This is used in eikcolor.ra to setup color lists.
 
-
+	
 
 // This is used in eikcolor.ra
 
@@ -5358,15 +3641,14 @@ enum // Signal indicator states
 // SCT enumerations
 enum  // ids in SCT_CHAR_SET resource.
     {
-    EAknSCTLowerCase,
-    EAknSCTUpperCase,
-    EAknSCTNumeric,
-    EAknSCTFullCase,
-    EAknSCTHalfCase,
-	EAknSCTQwerty,	       
-    EAknSCTChiChineseInputModes = EAknSCTUpperCase,
-    EAknSCTChiLatinInputModes = EAknSCTLowerCase
-    };
+	EAknSCTLowerCase,
+	EAknSCTUpperCase,
+	EAknSCTNumeric,
+	EAknSCTFullCase,
+	EAknSCTHalfCase,
+	EAknSCTChiChineseInputModes = EAknSCTUpperCase,
+	EAknSCTChiLatinInputModes = EAknSCTLowerCase
+	};
 
 // For Setting Page resource so that no number is displayed
 
@@ -5385,160 +3667,160 @@ enum TSCTQueryCtrlIds
 // Enemerations for Avkon KeySounds
 
 enum TAvkonSKeyRepeatType
-    {
-    ESKeyTypeShort,
-    ESKeyTypeLong,
-    ESKeyTypeRepeat
-    };
+	{
+	ESKeyTypeShort,
+	ESKeyTypeLong,
+	ESKeyTypeRepeat
+	};
 
 // These SID numbers should specify all AVKON defined SID's
-// The first item starts from 1000 so there are no clashes
+// The first item starts from 1000 so there are no clashes 
 // with application defined SID's (which should start at 0)
 enum TAvkonSystemSID
-    {
-    EAvkonSIDNoSound = 1000,
-    EAvkonSIDDefaultSound = 1001,
-    EAvkonSIDStandardKeyClick = 1002,
-    EAvkonSIDConfirmationTone = 1003,
-    EAvkonSIDInformationTone = 1003,
-    EAvkonSIDWarningTone = 1004,
-    EAvkonSIDErrorTone = 1005,
-    EAvkonSIDVolumeMaxTone = 1006,
-    EAvkonSIDVolumeMinTone = 1007,
-    EAvkonSIDReadialCompleteTone = 1008,
-    EAvkonSIDBatteryLowTone = 1009,
-    EAvkonSIDChargingBatteryTone  = 1010,
-    EAvkonSIDConnectionStartTone  = 1011,
-    EAvkonSIDConnectionStopTone  = 1012,
-    EAvkonSIDOperationReadyTone  = 1013,
-    EAvkonSIDNameDiallerStartTone  = 1014,
-    EAvkonSIDNameDiallerErrorTone  = 1015,
-    EAvkonSIDNameDiallerAbortTone  = 1016,
-    EAvkonSIDPowerOffTone  = 1017,
-    EAvkonSIDPowerOnTone  = 1018,
-    EAvkonSIDRechargeBatteryTone = 1019,
-    EAvkonSIDVoiceRecordingTone  = 1020,
-    EAvkonSIDVoiceRecordingStartTone  = 1021,
-    EAvkonSIDVoiceRecordingStopTone  = 1022,
-    EAvkonSIDWrongCharger  = 1023,
-    EAvkonSIDNetBusy = 1024,
-    EAvkonSIDNetCallWaiting = 1025,
-    EAvkonSIDNetReorder = 1026,
-    EAvkonSIDNetCongestion = 1027,
-    EAvkonSIDNetSpecialInformation = 1028,
-    EAvkonSIDNetRadioNotAvailable = 1029,
-    EAvkonSIDIHFActive = 1030,
-    EAvkonSIDRadioPathAcknowledge = 1031,
-    EAvkonSIDDial = 1032,
-    EAvkonSIDRingGoing = 1033,
-    EAvkonSIDLocationRequest = 1034
-    };
+	{
+	EAvkonSIDNoSound = 1000,
+	EAvkonSIDDefaultSound = 1001,
+	EAvkonSIDStandardKeyClick = 1002,
+	EAvkonSIDConfirmationTone = 1003,
+	EAvkonSIDInformationTone = 1003,	
+	EAvkonSIDWarningTone = 1004,
+	EAvkonSIDErrorTone = 1005,
+	EAvkonSIDVolumeMaxTone = 1006,
+	EAvkonSIDVolumeMinTone = 1007,
+	EAvkonSIDReadialCompleteTone = 1008,
+	EAvkonSIDBatteryLowTone = 1009,	
+	EAvkonSIDChargingBatteryTone  = 1010,
+	EAvkonSIDConnectionStartTone  = 1011,
+	EAvkonSIDConnectionStopTone  = 1012,
+	EAvkonSIDOperationReadyTone  = 1013,
+	EAvkonSIDNameDiallerStartTone  = 1014,
+	EAvkonSIDNameDiallerErrorTone  = 1015,
+	EAvkonSIDNameDiallerAbortTone  = 1016,
+	EAvkonSIDPowerOffTone  = 1017,
+	EAvkonSIDPowerOnTone  = 1018,
+	EAvkonSIDRechargeBatteryTone = 1019,
+	EAvkonSIDVoiceRecordingTone  = 1020,
+	EAvkonSIDVoiceRecordingStartTone  = 1021,
+	EAvkonSIDVoiceRecordingStopTone  = 1022,
+	EAvkonSIDWrongCharger  = 1023,
+	EAvkonSIDNetBusy = 1024,				
+	EAvkonSIDNetCallWaiting = 1025,		
+	EAvkonSIDNetReorder = 1026,	
+	EAvkonSIDNetCongestion = 1027,		
+	EAvkonSIDNetSpecialInformation = 1028,	
+	EAvkonSIDNetRadioNotAvailable = 1029,
+	EAvkonSIDIHFActive = 1030,
+	EAvkonSIDRadioPathAcknowledge = 1031,
+	EAvkonSIDDial = 1032,
+	EAvkonSIDRingGoing = 1033,
+	EAvkonSIDLocationRequest = 1034
+	};
 
 // These are used as priority values for Media Server
 enum TAvkonSoundsPriority
-    {
-    EAvkonKeyClickPriority = 45, // contains DTMF and camera
-    EAvkonPoweringTonesPriority = 50,
-    EAvkonLowLevelNotesPriority = 55,
-    EAvkonConfirmationNotePriority = 55,
-    EAvkonVolumeSettingTonesPriority = 60,
-    EAvkonConnectionTonesPriority = 65,
-    EAvkonHighLevelNotesPriority = 70,
-    EAvkonErrorNotePriority = 70,
-    EAvkonWarningNotePriority = 70,
-    EAvkonVoiceDiallingTonesPriority = 73,
-    EAvkonNetworkingTonesPriority = 75,
-    EAvkonRecordingTonesPriority = 80,
-    EAvkonChargingTonesPriority = 85,
-    EAvkonNewMessageTonesPriority = 90,
-    EAvkonAlarmTonesPriority = 95,
-    EAvkonRingingTonesPriority = 100
-    };
+	{
+	EAvkonKeyClickPriority = 45, // contains DTMF and camera
+	EAvkonPoweringTonesPriority = 50,
+	EAvkonLowLevelNotesPriority = 55,
+	EAvkonConfirmationNotePriority = 55,
+	EAvkonVolumeSettingTonesPriority = 60,
+	EAvkonConnectionTonesPriority = 65,
+	EAvkonHighLevelNotesPriority = 70,
+	EAvkonErrorNotePriority = 70,
+	EAvkonWarningNotePriority = 70,
+	EAvkonVoiceDiallingTonesPriority = 73,
+	EAvkonNetworkingTonesPriority = 75,
+	EAvkonRecordingTonesPriority = 80,
+	EAvkonChargingTonesPriority = 85,
+	EAvkonNewMessageTonesPriority = 90,
+	EAvkonAlarmTonesPriority = 95,	
+	EAvkonRingingTonesPriority = 100
+	};
 
 // These are used as priority preference values for Media Server
 enum TAvkonSoundsPreference
-    {
-    EAknAudioPrefIncomingCall       =0x01340001,
-    EAknAudioPrefIncomingCallLine2  =0x01330001,
-    EAknAudioPrefIncomingDataCall       =0x01320001,
-    EAknAudioPrefAutoRedialCompleted    =0x01310001,
+	{
+	EAknAudioPrefIncomingCall		=0x01340001,
+	EAknAudioPrefIncomingCallLine2	=0x01330001,
+	EAknAudioPrefIncomingDataCall		=0x01320001,
+	EAknAudioPrefAutoRedialCompleted	=0x01310001,
 
-    EAknAudioPrefAlarmClock         =0x01220001,
-    EAknAudioPrefCalendarAlarm      =0x01210001,
+	EAknAudioPrefAlarmClock			=0x01220001,
+	EAknAudioPrefCalendarAlarm		=0x01210001,
 
-// Message Preferences
-    EAknAudioPrefNewSMS         =0x01120001,
-    EAknAudioPrefNewSpecialMessage  =0x01110001,
+// Message Preferences				
+	EAknAudioPrefNewSMS			=0x01120001,
+	EAknAudioPrefNewSpecialMessage	=0x01110001,
 
-// Battery preferences
-    EAknAudioPrefBatteryLow         =0x01030001,
-    EAknAudioPrefRechargeBattery        =0x01020001,
-    EAknAudioPrefWrongCharger       =0x01010001,
+// Battery preferences				
+	EAknAudioPrefBatteryLow			=0x01030001,
+	EAknAudioPrefRechargeBattery		=0x01020001,
+	EAknAudioPrefWrongCharger		=0x01010001,
 
-// Recording Tone preferences
-    EAknAudioPrefVoiceRecStart      =0x00930001,
-    EAknAudioPrefVoiceRecRecording  =0x00920001,
-    EAknAudioPrefVoiceRecStop       =0x00910001,
+// Recording Tone preferences				
+	EAknAudioPrefVoiceRecStart		=0x00930001,
+	EAknAudioPrefVoiceRecRecording	=0x00920001,
+	EAknAudioPrefVoiceRecStop		=0x00910001,
 
 // Network preferences
-    EAknAudioPrefRadioPathAck       =0x00890001,
-    EAknAudioPrefDial               =0x00880001,
-    EAknAudioPrefRingGoing          =0x00870001,
-    EAknAudioPrefBusy               =0x00860001,
-    EAknAudioPrefCallWaiting        =0x00850001,
-    EAknAudioPrefReorder            =0x00840001,
-    EAknAudioPrefCongestion         =0x00830001,
-    EAknAudioPrefSpecialInformation =0x00820001,
-    EAknAudioPrefRadioNotAvailable  =0x00810001,
+	EAknAudioPrefRadioPathAck		=0x00890001,
+	EAknAudioPrefDial				=0x00880001,
+	EAknAudioPrefRingGoing			=0x00870001,					
+	EAknAudioPrefBusy				=0x00860001,
+	EAknAudioPrefCallWaiting		=0x00850001,
+	EAknAudioPrefReorder			=0x00840001,
+	EAknAudioPrefCongestion			=0x00830001,
+	EAknAudioPrefSpecialInformation	=0x00820001,
+	EAknAudioPrefRadioNotAvailable	=0x00810001,
 
-// High level preferences
-    EAknAudioPrefError      =0x00720001,
-    EAknAudioPrefWarning        =0x00710001,
+// High level preferences				
+	EAknAudioPrefError		=0x00720001,
+	EAknAudioPrefWarning		=0x00710001,
 
-// Voice Dialling preferences
-    EAknAudioPrefVoiceStarting  =0x00630001,
-    EAknAudioPrefVoiceError     =0x00620001,
-    EAknAudioPrefVoiceAbort     =0x00610001,
+// Voice Dialling preferences			
+	EAknAudioPrefVoiceStarting	=0x00630001,
+	EAknAudioPrefVoiceError		=0x00620001,
+	EAknAudioPrefVoiceAbort		=0x00610001,
 
-// Connection preferences
-    EAknAudioPrefConnectionStart    =0x00530001,
-    EAknAudioPrefConnectionStop =0x00520001,
-    EAknAudioPrefOperationReady =0x00510001,
+// Connection preferences			
+	EAknAudioPrefConnectionStart	=0x00530001,
+	EAknAudioPrefConnectionStop	=0x00520001,
+	EAknAudioPrefOperationReady	=0x00510001,
 
-// Volume / IHF preferences /Previews
-    EAknAudioPrefFilePreview    =0x00440001,
-    EAknAudioPrefAudioVolumeMin =0x00430001,
-    EAknAudioPrefAudioVolumeMax =0x00420001,
-    EAknAudioPrefIHFActive      =0x00410001,
+// Volume / IHF	preferences	/Previews
+	EAknAudioPrefFilePreview	=0x00440001,
+	EAknAudioPrefAudioVolumeMin	=0x00430001,
+	EAknAudioPrefAudioVolumeMax	=0x00420001,
+	EAknAudioPrefIHFActive		=0x00410001,
 
-// Low Level preferences
-    EAknAudioPrefCharging       =0x00330001,
-    EAknAudioPrefConfirmation   =0x00320001,
-    EAknAudioPrefDefaultTone    =0x00310001,
+// Low Level preferences				
+	EAknAudioPrefCharging		=0x00330001,
+	EAknAudioPrefConfirmation	=0x00320001,
+	EAknAudioPrefDefaultTone	=0x00310001,
 
-// Phone power preferences
-    EAknAudioPrefPowerOn        =0x00220001,
-    EAknAudioPrefPowerOff       =0x00210001,
+// Phone power preferences				
+	EAknAudioPrefPowerOn		=0x00220001,
+	EAknAudioPrefPowerOff		=0x00210001,
 
-// Key press / camera click preferences
-    EAknAudioPrefKeyPressNonDTMF    =0x00140001,
-    EAknAudioPrefKeyDownDTMF    =0x00130001,
-    EAknAudioPrefKeyUpDTMF      =0x00120001,
-    EAknAudioPrefCamera     =0x00110001,
+// Key press / camera click preferences				
+	EAknAudioPrefKeyPressNonDTMF	=0x00140001,
+	EAknAudioPrefKeyDownDTMF	=0x00130001,
+	EAknAudioPrefKeyUpDTMF		=0x00120001,
+	EAknAudioPrefCamera		=0x00110001,
 
 // Record and VoCos Preferences
-    EAknAudioPrefVoiceRec       =0x00060001,
-    EAknAudioPrefComposer       =0x00050001,
-    EAknAudioPrefRingFilePreview    =0x00040001,
-    EAknAudioPrefVocosPlayback  =0x00030001,
-    EAknAudioPrefVocosTrain     =0x00020001,
-    EAknAudioPrefVocosRecog     =0x00010001,
-
-    EAvkonKeyClickPreference = 0x00140001,
-    EAvkonConfirmationNotePreference = 0x00320001,
-    EAvkonErrorNotePreference = 0x00720001,
-    EAvkonWarningNotePreference = 0x00710001
-    };
+	EAknAudioPrefVoiceRec		=0x00060001,
+	EAknAudioPrefComposer		=0x00050001,
+	EAknAudioPrefRingFilePreview	=0x00040001,
+	EAknAudioPrefVocosPlayback	=0x00030001,
+	EAknAudioPrefVocosTrain		=0x00020001,
+	EAknAudioPrefVocosRecog		=0x00010001,
+	
+	EAvkonKeyClickPreference = 0x00140001,
+	EAvkonConfirmationNotePreference = 0x00320001,
+	EAvkonErrorNotePreference = 0x00720001,
+	EAvkonWarningNotePreference = 0x00710001
+	};
 
 // Constants for integer editor widths; may be required in resource
 
@@ -5554,38 +3836,27 @@ enum TMessageQueryCtrlIds
     *   Bit             Explanation
     *   0 and 1         Call state
     *   2               No Ciphering
-    *   3               Is muted
+    *   3               Is muted               
     *   4               Is Visible
-    *   5               Is a Fax
-    *   6               Is a Data call
-    *   7               Is a Hscsd data call
+    *   5               Is a Fax       
+    *   6               Is a Data call  
+    *   7               Is a Hscsd data call  
     *   8               Line 2 indication
-    *   9               Is a Video call
-    *   10              Is an emergency call
-    *   11              Is a VoIP call
-    *   ...
-    *   ...
-    *   31              Reserved for incall bubble notifier internal use. 
     */
-enum TAvkonIncallStatusBubbleFlags
+enum TAvkonIncallStatusBubbleFlags 
     {
     EAknStatusBubbleAlerting     = 0x00, //  One of
     EAknStatusBubbleActive       = 0x01, //  these
-    EAknStatusBubbleOnHold       = 0x02, //  to set
-    EAknStatusBubbleDisconnected = 0x03, //  the call state
-    EAknStatusBubbleNoCiphering  = 0x04,
+    EAknStatusBubbleOnHold       = 0x02, //  to set 
+    EAknStatusBubbleDisconnected = 0x03, //  the call state	
+    EAknStatusBubbleNoCiphering  = 0x04,		
     EAknStatusBubbleMuted        = 0x08,
     EAknStatusBubbleVisible      = 0x10,
     EAknStatusBubbleFax      = 0x20,
     EAknStatusBubbleData      = 0x40,
     EAknStatusBubbleDataHscsd      = 0x80,
-    EAknStatusBubbleLine2      = 0x100,
-    EAknStatusBubbleVideo      = 0x200,
-    EAknStatusBubbleEmergency  = 0x400,
-    EAknStatusBubbleVoIP       = 0x800,  
-     
-    EAknStatusBubbleReservedInternal = 0x80000000   
-    }; 
+    EAknStatusBubbleLine2      = 0x100
+    };
 
 
 /**
@@ -5597,7 +3868,7 @@ enum TAknNoteDialogTimeout
     EAknNoteDialogUndefinedTimeout = 0,
     EAknNoteDialogShortTimeout = 1500000,
     EAknNoteDialogLongTimeout = 3000000,
-
+    
     // Change these if Notes UI spec changes:
     EAknConfirmationNoteTimeout = EAknNoteDialogShortTimeout,
     EAknInformationNoteTimeout = EAknNoteDialogLongTimeout,
@@ -5609,7 +3880,7 @@ enum TAknNoteDialogTimeout
  * Tones for note dialog wrappers
  * These should be kept same as CAknNoteDialog::TTone.
  */
-enum TAknNoteDialogTone
+enum TAknNoteDialogTone 
     {
     EAknNoteDialogNoTone = 0,
     EAknNoteDialogConfirmationTone = EAvkonSIDConfirmationTone,
@@ -5652,14 +3923,14 @@ enum ESubVariantFlag
    };
 
 
-// This is the max length of the screensaver text
+// This is the max length of the screensaver text 
 
 
 // These flags are to be used in conjunction with CAknForm
 
 
 
-//
+// 
 // Deprecated
 
 
@@ -5668,81 +3939,50 @@ enum ESubVariantFlag
 
 
 enum TAknKeyBlockMode
-    {
-    EDefaultBlockMode=0,
-    ENoKeyBlock
-    };
+	{
+	EDefaultBlockMode=0,
+	ENoKeyBlock
+	};
 
 // Separator line.
 enum TAknSeparatorLinePosition
-    {
-    ENoLine,
-    EAColumn,
-    EABColumn,
-    EBCColumn,
-    EBCColumnStretched
-    };
+	{
+	ENoLine,
+	EAColumn,
+	EABColumn,
+	EBCColumn
+	};
 enum TAknColourSelectionDialogIds {
-    ECtrlGridType = 100,
-    EColourGridPopup,
-    EColourGridPopupNone
+	ECtrlGridType = 100,
+	EColourGridPopup,
+	EColourGridPopupNone
 };
 
 
 // custom text cursor constants
 
 enum TAknCustomTextCursorIds
-    {
-    KAknCustomTextCursorIdLeftToRight = 0x101fdf03,
-    KAknCustomTextCursorIdRightToLeft = 0x101fdf04,
-    KAknCustomTextCursorIdLeftToRightThin = 0x101fe51c,
-    KAknCustomTextCursorIdRightToLeftThin = 0x101fe51d
-    };
+	{
+	KAknCustomTextCursorIdLeftToRight = 0x101fdf03,
+	KAknCustomTextCursorIdRightToLeft = 0x101fdf04,
+	KAknCustomTextCursorIdLeftToRightThin = 0x101fe51c,
+	KAknCustomTextCursorIdRightToLeftThin = 0x101fe51d
+	};
 
 enum TAknNaviPaneBackgroundTypes
     {
     EAknNaviPaneBackgroundTypeNotDefined  = 0,
     EAknNaviPaneBackgroundTypeWipe        = 1,
-    EAknNaviPaneBackgroundTypeSolid       = 2
-    };
-// common bitmap file definitions (for .rss etc.)
-
-
-
-
-
-
-
-// End key closing event. If this window server event is received,
-// by default application will be closed unless it is system application.
-
-
-enum TAknStylusPopUpCmdLinkIds
-    {
-    EAknStylusPopUpCmdLink1 = 0,
-    EAknStylusPopUpCmdLink2
+    EAknNaviPaneBackgroundTypeSolid       = 2     
     };
 
 
 
 
-# 22 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.rh" 2
+# 22 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\avkon.rh" 2
 
 
 
-
-
-
-
-
-
-
-
-STRUCT AVKON_SYSTEM_FONT
-	{
-	LONG fontuid; // a value from fontids.hrh
-	STRUCT named_font; // this must be a NAMED_FONT structure type
-	}
 
 STRUCT NAVI_DECORATOR
 	{
@@ -5832,14 +4072,11 @@ STRUCT INDICATOR_ICON
 	}
 
 STRUCT AVKON_VIEW
-    {
-    BYTE version=0; // resource struct version, do not change.
-    LLINK hotkeys=0;
-    LLINK menubar=0;
-    LLINK cba=0;
-    LLINK toolbar=0;
-    LLINK extension=0; // reserved for future extensions
-    }
+	{
+	LLINK hotkeys=0;
+	LLINK menubar=0;
+	LLINK cba=0;
+	}
 
 STRUCT AVKON_NOTE
 	{
@@ -6001,7 +4238,7 @@ STRUCT GRID_STYLE
 STRUCT GRID
 	{
 	BYTE version = 0;
-	LONG flags = 0;
+	WORD flags = 0;
 	WORD height = 5;		// in items
 	WORD width = 10;		// in chars
 	LLINK array_id = 0;
@@ -6079,7 +4316,6 @@ STRUCT AVKON_LISTBOX_LINES
 // Bitmap Animation
 STRUCT BMPANIM_DATA
 	{
-    BYTE identifier = 0; // Do not change, used to identify the used resource struct.
 	WORD frameinterval	= -1;
 	WORD playmode		= 0;
 	BYTE flash		= 0;
@@ -6096,6 +4332,8 @@ STRUCT BMPANIM_FRAME
 	WORD bmpid		= -1;
 	WORD maskid		= -1;
 	}
+
+
 
 // Resource-based layout resources (Deprecated)
 // These does not define absolute coordinates => resizing these layouts is possible!
@@ -6389,7 +4627,7 @@ STRUCT AVKON_LIST_QUERY
     LONG flags = ((0x001 | 0x200  | 0x040  | 0x2000 ) ) ;
     LTEXT xxxx1 = "";
     LLINK xxxx2 = 0;
-    LLINK softkeys = R_AVKON_SOFTKEYS_OK_CANCEL__OK; // CBA
+    LLINK softkeys = R_AVKON_SOFTKEYS_OK_CANCEL; // CBA
     STRUCT items[]; // AVKON_LIST_QUERY_DLG_LINE
     LLINK xxxx3 = 0;
     }
@@ -6399,7 +4637,7 @@ STRUCT AVKON_MULTISELECTION_LIST_QUERY
     LONG flags = ((0x001 | 0x200  | 0x040  | 0x2000 ) ) ;
     LTEXT xxxx1 = "";
     LLINK xxxx2 = 0;
-    LLINK softkeys = R_AVKON_SOFTKEYS_OK_CANCEL__MARK; // CBA
+    LLINK softkeys = R_AVKON_SOFTKEYS_OK_CANCEL; // CBA
     STRUCT items[]; // AVKON_MULTISELECTION_LIST_QUERY_DLG_LINE
     LLINK xxxx3 = 0;
     }
@@ -6436,7 +4674,7 @@ STRUCT AVKON_MULTISELECTION_LIST_QUERY_DLG_LINE
 STRUCT AVKON_LIST_QUERY_LIST
     {
     BYTE version = 0;
-    LONG flags = ((0x0080 ) ) ;
+    WORD flags = ((0x0080 ) ) ;
     WORD height = 5;
     WORD width = 10;
     LLINK array_id = 0;
@@ -6445,17 +4683,17 @@ STRUCT AVKON_LIST_QUERY_LIST
 STRUCT AVKON_MULTISELECTION_LIST_QUERY_LIST
     {
     BYTE version = 0;
-    LONG flags = ((0x0080 )  | 0x0001   | 0x2000 ) ;
+    WORD flags = ((0x0080 )  | 0x0001   | 0x2000 ) ;
     WORD height = 5;
     WORD width = 10;
     LLINK array_id = 0;    
     }
- 
+
 // LISTBOX resources:
 STRUCT AVKON_SELECTION_LIST
     {
     BYTE version = 0;
-    LONG flags = ((0x0080 ) ) ;
+    WORD flags = ((0x0080 ) ) ;
     WORD height = 5;
     WORD width = 10;
     LLINK array_id = 0;
@@ -6463,7 +4701,7 @@ STRUCT AVKON_SELECTION_LIST
 STRUCT AVKON_MARKABLE_LIST
     {
     BYTE version = 0;
-    LONG flags = ((0x0080 )  | 0x0001   | 0x4000 ) ;
+    WORD flags = ((0x0080 )  | 0x0001   | 0x4000 ) ;
     WORD height = 5;
     WORD width = 10;
     LLINK array_id = 0;
@@ -6472,7 +4710,7 @@ STRUCT AVKON_MARKABLE_LIST
 STRUCT AVKON_MULTISELECTION_LIST
     {
     BYTE version = 0;
-    LONG flags = ((0x0080 )  | 0x0001   | 0x2000 ) ;
+    WORD flags = ((0x0080 )  | 0x0001   | 0x2000 ) ;
     WORD height = 5;
     WORD width = 10;
     LLINK array_id = 0;
@@ -6481,7 +4719,7 @@ STRUCT AVKON_MULTISELECTION_LIST
 STRUCT AVKON_MENU_LIST
     {
     BYTE version = 0;
-    LONG flags = ((0x0080 ) ) ;
+    WORD flags = ((0x0080 ) ) ;
     WORD height = 5;
     WORD width = 10;
     LLINK array_id = 0;
@@ -6497,8 +4735,8 @@ STRUCT AVKON_INTEGER_EDWIN
 	LLINK extension2 = 0;
 	}
 
- 
- 
+
+
 // Avkon note wrappers
 
 
@@ -6514,15 +4752,6 @@ STRUCT AKN_NOTE_WRAPPER
     LTEXT text="";
     }
 
-STRUCT AVKON_GROUPED_NOTE_TEXTS
-  {
-  LLINK singular_label; // must point to resource of type TBUF 
-  LLINK plural_label; // must point to resource of type TBUF 
-  WORD flags=0; // for future proofing
-  }
-
-
-
 // DEPRECATED.
 STRUCT AKN_SELECTION_LIST
     {
@@ -6535,49 +4764,15 @@ STRUCT AKN_SELECTION_LIST
 STRUCT AVKON_UNUSED
 	{
 	}
+# 14 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser.rss" 2
 
+# 1 "D:\\Symbian\\7.0s\\Series60_v21_C\\\\epoc32\\include\\avkon.rsg" 1
 
-STRUCT AVKON_COLOUR_SELECTION_GRID
-    {
-    LTEXT nonetext = "";
-    STRUCT gridcontrol;  // GRID
-    }
-    
-    
-STRUCT AVKON_LIST_QUERY_CONTROL_WITH_MSGBOX
-    {
-    WORD listtype = EAknListQueryWithMsgBox;
-    WORD actuallisttype;	
-    STRUCT listbox;
-    LTEXT message = "";
-    LTEXT heading = "";
-    LTEXT bmpfile="";
-    WORD bmpid=0xffff;
-    WORD bmpmask=0xffff;
-    LLINK animation=0;	
-    }    
 
-// resource structures for CAknStylusActivatedPopUpContent
-STRUCT AVKON_STYLUSACTIVATEDPOPUP_CONTENT
-    {
-    LTEXT titletext = "";
-    LTEXT infotext = "";
-    
-    STRUCT cmdlinks[]; // AVKON_STYLUSACTIVATEDPOPUP_LINK
-    LLINK extension = 0; // for future extensions
-    }
 
-STRUCT AVKON_STYLUSACTIVATEDPOPUP_LINK
-    {
-    BYTE  linkid; // use TAknStylusPopupCmdLinkIds, see avkon.hrh
-    LTEXT linktext = "";
-    LLINK extension = 0; // for future extensions
-    }
 
 
-# 14 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss" 2
 
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\avkon.rsg" 1
 
 
 
@@ -6936,6 +5131,7 @@ STRUCT AVKON_STYLUSACTIVATEDPOPUP_LINK
 
 
 
+# 15 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser.rss" 2
 
 
 
@@ -6943,350 +5139,7 @@ STRUCT AVKON_STYLUSACTIVATEDPOPUP_LINK
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 15 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss" 2
-
-
-	
-# 1 "d:\\Symbian\\9.2\\S60_3rd_FP1\\\\epoc32\\include\\appinfo.rh" 1
-// APPINFO.RH
-//
-// Copyright (c) Symbian Software Ltd 2004-2005. All rights reserved.
-//
-
-
-
-//
-// contains definitions for the Application Information resource files
-
-/**
-@publishedAll
-@released
-*/
-
-
-//////////////////////////////////////////////////////////////////
-// DEFINITIONS FOR THE NON-LOCALISABLE REGISTRATION RESOURCE FILE
-//////////////////////////////////////////////////////////////////
-
-/**
-@publishedAll
-@released
-*/
-
-
-/**
-@publishedAll
-@released
-*/
-// constants for capability.hidden
-
-
-
-/**
-@publishedAll
-@released
-*/
-// constants for capability.newfile
-
-
-
-/**
-@publishedAll
-@released
-*/
-// constants for capability.embeddability
-
-
-
-
-
-
-/**
-@publishedAll
-@released
-*/
-// constants for capability.launch
-
-
-
-/**
-@publishedAll
-@released
-*/
-// bit flags for capability.attributes
-
-
-
-
-/**
-@publishedAll
-@released
-*/
-// application group name
-
-
-
-/**
-@publishedAll
-@released
-*/
-STRUCT APP_REGISTRATION_INFO
-	{
-	LONG reserved_long = 0; // reserved for future use, do not use
-	LLINK reserved_llink = 0; // reserved for future use, do not use
-	//
-	LTEXT app_file(256 ) = ""; // name of application binary file (not including extension) - mandatory
-	LONG attributes = 0;
-	//
-	LTEXT localisable_resource_file(256 ) = ""; // path (not including drive) and name of localisable resource file
-	LONG localisable_resource_id = 1;
-	//
-	BYTE hidden = 0 ;
-	BYTE embeddability = 0 ;
-	BYTE newfile = 0 ;
-	BYTE launch = 0 ;
-	LTEXT group_name(16 ) = "";
-	//
-	BYTE default_screen_number = 0;
-	//
-	LEN WORD STRUCT datatype_list[]; // DATATYPE
-	//
-	LEN WORD STRUCT file_ownership_list[]; // FILE_OWNERSHIP_INFO
-	//
-	LEN WORD STRUCT service_list[]; // SERVICE_INFO
-	//
-	LLINK opaque_data = 0;	// use for opaque data to send to non-native application launchers i.e. MIDlet id
-	}
-
-
-/**
-@publishedAll
-@released
-*/
-
-
-/**
-@publishedAll
-@released
-*/
-enum
-	{
-	EDataTypePrioritySystem = 0xFFF9,
-	EDataTypePriorityHigh = 10000,
-	EDataTypePriorityNormal = 0,
-	EDataTypePriorityLow = -10000,
-	EDataTypePriorityLastResort = -20000
-	};
-
-/**
-@publishedAll
-@released
-*/
-STRUCT DATATYPE
-	{
-	LONG priority;
-	LTEXT8 type(256 );
-	}
-
-/**
-@publishedAll
-@released
-*/
-STRUCT FILE_OWNERSHIP_INFO
-	{
-	LTEXT file_name(256 );
-	}
-
-/**
-@publishedAll
-@released
-*/
-STRUCT SERVICE_INFO
-	{
-	LONG uid = 0;
-	LEN WORD STRUCT datatype_list[];
-	LLINK opaque_data = 0;
-	}
-
-
-/////////////////////////////////////////////////
-// DEFINITIONS FOR THE LOCALISABLE RESOURCE FILE
-/////////////////////////////////////////////////
-
-/**
-@publishedAll
-@released
-*/
-
-
-/**
-@publishedAll
-@released
-*/
-STRUCT LOCALISABLE_APP_INFO
-	{
-	LONG reserved_long = 0; // reserved for future use, do not use
-	LLINK reserved_llink = 0; // reserved for future use, do not use
-	//
-	LTEXT short_caption(256 ) = "";
-	STRUCT caption_and_icon; // CAPTION_AND_ICON_INFO
-	//
-	LEN WORD STRUCT view_list[]; // VIEW_DATA
-	//
-	LTEXT group_name(16 ) = "";
-	}
-
-/**
-@publishedAll
-@released
-*/
-STRUCT CAPTION_AND_ICON_INFO
-	{
-	LONG reserved_long = 0; // reserved for future use, do not use
-	LLINK reserved_llink = 0; // reserved for future use, do not use
-	//
-	LTEXT caption(256 ) = "";
-	//
-	WORD number_of_icons = 0; // each icon must be a bitmap/mask pair
-	LTEXT icon_file(256 ) = "";
-	}
-
-/**
-@publishedAll
-@released
-*/
-STRUCT VIEW_DATA
-	{
-	LONG reserved_long = 0; // reserved for future use, do not use
-	LLINK reserved_llink = 0; // reserved for future use, do not use
-	//
-	LONG uid = 0;
-	//
-	LONG screen_mode = 0;
-	//
-	STRUCT caption_and_icon; // CAPTION_AND_ICON_INFO
-	}
-
-
-
-# 17 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss" 2
-
-
-# 1 "D:\\projects\\Symbian\\WapBrowser\\inc\\WapBrowser.hrh" 1
+# 1 "D:\\Projects\\symbian\\WapBrowser_svn\\inc\\WapBrowser.hrh" 1
 /*
 ============================================================================
  Name        : WapBrowser.hrh
@@ -7305,31 +5158,7 @@ enum TWapBrowserIds
     EWapBrowserCommand2
     };
 // __WAPBROWSER_HRH__
-# 19 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss" 2
-
-# 1 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rls" 1
-/*
-============================================================================
- Name        : WapBrowser.rls
- Author      : æµ®ç”Ÿè‹¥èŒ¶
- Version     :
- Copyright   : Your copyright notice
- Description : String localization file
-============================================================================
-*/
-//  LOCALISATION STRINGS
-//d:Caption string for app.
-rls_string qtn_hewb_caption_string "WapBrowser"
-//d:Short caption string for app.
-rls_string qtn_hewb_short_caption_string "WapBrowser"
-//d:First item in "Options" menu pane, "hello" event.
-rls_string qtn_hewb_command1 "Hello"
-//d:Third item in "Options" menu pane, "exit" event.
-rls_string qtn_hewb_exit "Exit"
-//d:When user requests EWapBrowserCommand1 event, text below is shown.
-rls_string qtn_hewb_command1_text "Hello world!"
-// End of File
-# 20 "D:\\projects\\Symbian\\WapBrowser\\data\\WapBrowser.rss" 2
+# 22 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser.rss" 2
 
 //  RESOURCE DEFINITIONS
 // -----------------------------------------------------------------------------
@@ -7372,17 +5201,7 @@ RESOURCE EIK_APP_INFO
 //
 // -----------------------------------------------------------------------------
 //
-RESOURCE LOCALISABLE_APP_INFO r_wapbrowser_localisable_app_info
-    {
-    short_caption = qtn_hewb_short_caption_string;
-    caption_and_icon = 
-    CAPTION_AND_ICON_INFO
-        {
-        caption = qtn_hewb_caption_string;
-        number_of_icons = 1;
-        icon_file = "\\resource\\apps\\WapBrowser_reg.mif";
-        };
-    }
+# 76 "D:\\Projects\\symbian\\WapBrowser_svn\\data\\WapBrowser.rss"
 
 // -----------------------------------------------------------------------------
 //

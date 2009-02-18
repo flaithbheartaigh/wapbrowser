@@ -1,19 +1,18 @@
 ; WapBrowser.pkg
-;
-;Language - standard language definitions
+
+; Languages
 &EN
-;Standard SIS file header
-#{"WapBrowser"},(0xed86d796),1,0,0
-;Localised Vendor name
-%{"Vendor Name-EN"}
 
-;Unique Vendor name
-:"Vendor Name"
-;Supports Series 60 v 3.0
-[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+; Header
+#{"WapBrowser"},(0x04bd3744), 0, 1, 1
 
-;Files to install
-"..\..\..\epoc32\release\armv5\urel\WapBrowser.exe"                 -"!:\sys\bin\WapBrowser.exe"
-"..\..\..\epoc32\data\z\resource\apps\WapBrowser.rsc"               -"!:\resource\apps\WapBrowser.rsc"
-"..\..\..\epoc32\data\z\resource\apps\WapBrowser.mif"               -"!:\resource\apps\WapBrowser.mif"
-"..\..\..\epoc32\data\z\private\10003a3f\apps\WapBrowser_reg.rsc"   -"!:\private\10003a3f\import\apps\WapBrowser_reg.rsc"
+; Platform compatibility
+(0x101F9115), 0, 0, 0, {"Series60ProductID"}
+
+; Target
+"D:\Symbian\7.0s\Series60_v21_C\Epoc32\release\armi\UREL\WapBrowser.app"-"!:\system\apps\WapBrowser\WapBrowser.app"
+"D:\Symbian\7.0s\Series60_v21_C\Epoc32\data\z\system\apps\WapBrowser\WapBrowser.rSC"-"!:\system\apps\WapBrowser\WapBrowser.rSC"
+"D:\Symbian\7.0s\Series60_v21_C\Epoc32\data\z\system\apps\WapBrowser\WapBrowser_caption.rSC"-"!:\system\apps\WapBrowser\WapBrowser_caption.rSC"
+;"D:\Symbian\7.0s\Series60_v21_C\Epoc32\data\z\system\apps\WapBrowser\WapBrowser_reg.mif"-"!:\system\apps\WapBrowser\WapBrowser_reg.mif"
+;"D:\Symbian\7.0s\Series60_v21_C\\epoc32\release\ARMI\urel\WapBrowser.exe"-"!:\sys\bin\WapBrowser.exe"
+"D:\Symbian\7.0s\Series60_v21_C\\epoc32\release\ARMI\urel\WapBrowser.app"-"!:\sys\bin\WapBrowser.app"
