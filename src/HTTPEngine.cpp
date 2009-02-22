@@ -152,7 +152,7 @@ void CHTTPEngine::ConstructL()
 	CActiveScheduler::Add(this);				// Add to scheduler
 	//CActiveScheduler::Start();
 
-	//SetupConnectionL();
+	SetupConnectionL();
 }
 
 /*
@@ -533,6 +533,8 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,const THTTPEvent& aEvent
 {
 	iNetStatus=aEvent.iStatus;
 
+	UtilityTools::WriteLogsL(_L("CHTTPEngine::MHFRunL iNetStatus = %d"),iNetStatus);
+
 	switch (aEvent.iStatus)
 	{
 	case THTTPEvent::EGotResponseHeaders:
@@ -605,14 +607,21 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,const THTTPEvent& aEvent
 
 	case THTTPEvent::EGotResponseBodyData:
 		{
+			UtilityTools::WriteLogsL(_L("THTTPEvent::EGotResponseBodyData"));
 			iTimer.Begin (KBeyondTime);
 
 			MHTTPDataSupplier* body = aTransaction.Response().Body();
 			TPtrC8 dataChunk;
 
+			UtilityTools::WriteLogsL(_L("THTTPEvent::EGotResponseBodyData 1"));
 			TBool isLast = body->GetNextDataPart(dataChunk);
 			ASSERT(iObserver);
+
+			UtilityTools::WriteLogsL(_L("THTTPEvent::EGotResponseBodyData 2"));
+
 			iObserver->ClientBodyReceived(dataChunk,iThreadIndex);
+
+			UtilityTools::WriteLogsL(_L("THTTPEvent::EGotResponseBodyData 3"));
 
 			TBuf<KInfotextBufferSize> text;
 			_LIT(KBodyPartReceived, "%d bytes received... ");
@@ -633,7 +642,7 @@ void CHTTPEngine::MHFRunL(RHTTPTransaction aTransaction,const THTTPEvent& aEvent
 				iObserver->ClientEvent(KBodyReceived,iThreadIndex);
 				iNetStatus=0;
 			}
-
+			UtilityTools::WriteLogsL(_L("THTTPEvent::EGotResponseBodyData End"));
 		}
 		break;
 
