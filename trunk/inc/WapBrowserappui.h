@@ -70,6 +70,8 @@ class CWapBrowserAppUi
 		HBufC8* iReceiveData8;
 
 		int iRequestType;
+
+		TBool iIsRequesting;
 	};
 
 #endif // __WAPBROWSERAPPUI_H__

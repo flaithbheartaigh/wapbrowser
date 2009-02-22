@@ -38,7 +38,8 @@ public:
 	void ParseData(const char* p);
 	void Parse(TiXmlDocument& doc);
 
-	
+	void ParseP(TiXmlElement* p);
+	void ParseChild(TiXmlNode* child);
 	void ParseInput(TiXmlElement* element);
 	void ParseAnchor(TiXmlElement* element);
 

@@ -24,6 +24,7 @@
 
 #undef _DEBUG
 
+#define __WRITE_LOG__
 
 HBufC8* UtilityTools::GetFileContentL(RFs& fs,const TDesC& aFileName)
 {
@@ -76,6 +77,14 @@ void UtilityTools::WriteFileL(const TDesC8& aDes, TInt aOffset, const TDesC& aFi
 	User::LeaveIfError(fs.Connect());
 	RFile file;
 	User::LeaveIfError(file.Open(fs,aFileName,EFileWrite));
+
+/*
+	if(!file.Open(fs,aFileName,EFileWrite))
+	{
+		User::LeaveIfError(file.Create(fs,aFileName,EFileWrite));
+	}
+*/
+
 	CleanupClosePushL(file);
 	file.Seek(ESeekStart, aOffset);
 	file.Write(aDes);
@@ -407,7 +416,7 @@ void UtilityTools::WriteLogsL(TRefByValue<const TDesC8> aFmt, ...)
 {
 	//#ifndef _DEBUG
 #ifdef __WRITE_LOG__
-	_LIT(KSettingPathname,"c:\\");
+	_LIT(KSettingPathname,"c:\\data\\");
 	_LIT(KIniFileName,"log_static.txt");
 
 	TFileName fn;
@@ -465,7 +474,7 @@ void UtilityTools::WriteLogsL(TRefByValue<const TDesC16> aFmt, ...)
 {
 	//#ifndef _DEBUG
 #ifdef __WRITE_LOG__
-	_LIT(KSettingPathname,"c:\\");
+	_LIT(KSettingPathname,"c:\\data\\");
 	_LIT(KIniFileName,"log_static.txt");
 
 	TFileName fn;

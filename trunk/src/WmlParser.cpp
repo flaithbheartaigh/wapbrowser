@@ -120,83 +120,96 @@ void CWmlParser::Parse(TiXmlDocument& doc)
 			const char* title = card->Attribute("title");			//title attribute
 			TRACE(id);
 			TRACE(title);
-			if(TiXmlElement* p = card->FirstChildElement("p"))		//p tag
+			TiXmlElement* p = card->FirstChildElement("p");
+			//do
+			while(p)//TiXmlElement* p = card->FirstChildElement("p"))		//p tag
 			{
-				const char* align = p->Attribute("align");			//align attribute
-				TRACE(align);
-				
-				TiXmlNode* childNode = p->FirstChild();
-				do 
-				{
-					if(childNode->Type() == TiXmlNode::TEXT)
-					{
-						const char* text = childNode->Value();
-						TRACE(text);
-						iPageBuilder.AddText(text);
-						//TRACE("%d",10);
-					}
-					else if(childNode->Type() == TiXmlNode::ELEMENT)
-					{
-						TiXmlElement* child = childNode->ToElement();
-						const char* value = child->Value();
-						if(strcmp(value,"a") == 0)		//链接
-						{
-							const char* href = child->Attribute("href");
-							if(TiXmlNode* node = child->FirstChild())
-							{
-								switch(node->Type())
-								{
-								case TiXmlNode::TEXT:
-									{
-										const char* text = node->Value();
-										TRACE(text);
-										iPageBuilder.AddText(text,href);
-									}
-									break;
-
-								case TiXmlNode::ELEMENT:
-									if(TiXmlElement* ele = node->ToElement())
-									{
-										if(strcmp(ele->Value(),"img") == 0)		//图片
-										{
-											const char* src = ele->Attribute("src");
-											const char* alt = ele->Attribute("alt");
-											iPageBuilder.AddPicture(src,alt,href);
-										}
-									}
-									break;
-
-								default:
-									break;
-								}
-							}
-						}
-						else if(strcmp(value,"br") == 0)		//换行
-						{
-							TRACE("br");
-							iPageBuilder.AddBr();
-						}
-						else if(strcmp(value,"img") == 0)		//图片
-						{
-							const char* src = child->Attribute("src");
-							const char* alt = child->Attribute("alt");
-							iPageBuilder.AddPicture(src,alt);
-						}
-						else if(strcmp(value,"input") == 0)
-						{
-							//ParseInput(child);
-						}
-						//archor在这里被忽略
-					}
-
-					//if(
-				}while (childNode = childNode->NextSibling());
-				
+				//const char* align = p->Attribute("align");			//align attribute
+//				TRACE(align);
+				ParseP(p);
+				iPageBuilder.AddBr();
+				p = p->NextSiblingElement("p");
 				//delete p;
-			}
+			}//while(p = p->NextSiblingElement("p"));//TiXmlElement* p = card->FirstChildElement("p")
 			//delete card;
 		}
 		//delete root;
+	}
+}
+
+void CWmlParser::ParseP(TiXmlElement* p)
+{
+	TiXmlNode* childNode = p->FirstChild();
+	while (childNode)
+	{
+		ParseChild(childNode);
+		childNode = childNode->NextSibling();
+	}	 
+}
+
+void CWmlParser::ParseChild(TiXmlNode* childNode)
+{
+	if(childNode->Type() == TiXmlNode::TEXT)
+	{
+		const char* text = childNode->Value();
+		TRACE(text);
+		iPageBuilder.AddText(text);
+		//TRACE("%d",10);
+	}
+	else if(childNode->Type() == TiXmlNode::ELEMENT)
+	{
+		TiXmlElement* child = childNode->ToElement();
+		const char* value = child->Value();
+		if(strcmp(value,"a") == 0)		//链接
+		{
+			const char* href = child->Attribute("href");
+			TiXmlNode* node = child->FirstChild();
+			while(node)
+			{
+				switch(node->Type())
+				{
+				case TiXmlNode::TEXT:
+					{
+						const char* text = node->Value();
+						TRACE(text);
+						iPageBuilder.AddText(text,href);
+					}
+					break;
+
+				case TiXmlNode::ELEMENT:
+					if(TiXmlElement* ele = node->ToElement())
+					{
+						if(strcmp(ele->Value(),"img") == 0)		//图片
+						{
+							const char* src = ele->Attribute("src");
+							const char* alt = ele->Attribute("alt");
+							iPageBuilder.AddPicture(src,alt,href);
+						}
+					}
+					break;
+
+				default:
+					break;
+				}
+				node = node->NextSibling();
+			}
+		}
+		else if(strcmp(value,"br") == 0)		//换行
+		{
+			TRACE("br");
+			iPageBuilder.AddBr();
+		}
+		else if(strcmp(value,"img") == 0)		//图片
+		{
+			const char* src = child->Attribute("src");
+			const char* alt = child->Attribute("alt");
+			iPageBuilder.AddPicture(src,alt);
+		}
+		else if(strcmp(value,"input") == 0)
+		{
+			//ParseInput(child);
+		}
+		//archor在这里被忽略
 	}
 }
 
