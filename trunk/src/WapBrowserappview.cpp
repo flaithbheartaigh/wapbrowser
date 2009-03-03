@@ -51,7 +51,7 @@ void CWapBrowserAppView::Draw( const TRect& /*aRect*/ ) const
 	CWindowGc& gc = SystemGc();
 	TRect drawRect( Rect());
 	gc.SetBrushStyle(CGraphicsContext::ESolidBrush);
-	gc.SetBrushColor(KRgbGray);
+	gc.SetBrushColor(KRgbWhite);
 	gc.Clear( drawRect );
 
 	if(iPage)

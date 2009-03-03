@@ -302,11 +302,11 @@ void CWapBrowserAppUi::RequestPage()
 	//parser->ParseFile("C:\\default_.xml");
 /*/	
 	//RequestPage(_L8("http://music.i139.cn/"));
-	//RequestPage(_L8("http://wap.cocobox.cn/index.do"));
+	RequestPage(_L8("http://wap.cocobox.cn/index.do"));
 	//RequestPage(_L8("index.do"));
 	//RequestPage(_L8("portal/wap/menu.do?menuid=212134"));
 	//RequestPage(_L8(""));
-	RequestPage(_L8("http://wap.monternet.com"));
+	//RequestPage(_L8("http://wap.monternet.com"));
 //*/
 }
 

@@ -57,6 +57,15 @@ const TDesC8& CWidget::Link() const
 	return KNullDesC8;
 }
 
+TBool CWidget::SetActive(TBool aActive)
+{
+	if(iLink)
+	{
+		iActive = aActive; 
+		return ETrue;
+	}
+	return EFalse;
+}
 /*
 //////////////////////////////////////////////////////////////////////////
 CTextWidget
@@ -64,6 +73,7 @@ CTextWidget
 */
 //public:
 CTextWidget::CTextWidget(const TDesC& aDes)
+	: CWidget(_L("CTextWidget"))
 	//: CWidget(EText)
 {
 	ASSERT(aDes.Length());
@@ -97,23 +107,38 @@ void CTextWidget::Draw(CGraphicsContext &aGc) const
 {
 	const TDesC& text = /*((CTextWidget&)element).*/Text();
 
-	int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-	//TRect rect(point,TSize(width,textHeight));
 	//gc.DrawRect(rect);
 
 	if(/*element.*/Link().Length())		//带链接
 	{
-		aGc.SetPenColor(KRgbBlue);
-
-		//TODO：添加焦点的显示
+		int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
+		//aGc.SetPenColor(KRgbBlue);
+		if(iActive)
+		{
+			int textHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
+			TRect rect(point,TSize(width,textHeight));
+			rect.Move(TPoint(0,-textHeight));
+			aGc.SetBrushStyle(CGraphicsContext::ESolidBrush);
+			aGc.SetBrushColor(KRgbBlue);
+			aGc.SetPenStyle(CGraphicsContext::ENullPen);
+			aGc.DrawRect(rect);
+			aGc.SetPenColor(KRgbWhite);
+		}
+		else
+		{
+			aGc.SetBrushStyle(CGraphicsContext::ENullBrush);
+			aGc.SetPenStyle(CGraphicsContext::ESolidPen);
+			aGc.SetPenColor(KRgbBlue);
+		}
 		TPoint point1 = point;
 		TPoint point2 = point1;
 		point2.iX += width;
-		aGc.SetPenColor(KRgbBlue);
 		aGc.DrawLine(point1,point2);
 	}
 	else							//不带链接
 	{
+		aGc.SetBrushStyle(CGraphicsContext::ENullBrush);
+		aGc.SetPenStyle(CGraphicsContext::ESolidPen);
 		aGc.SetPenColor(KRgbBlack);
 	}
 	aGc.DrawText(text,point);
@@ -145,7 +170,7 @@ CPictureWidget
 //public:
 	//CPictureWidget(const TDesC& aDes,const TDesC& aLink)
 CPictureWidget::CPictureWidget()
-	//: CWidget(EPicture)
+	: CWidget(_L("CPictureWidget"))
 {
 }
 
@@ -220,11 +245,19 @@ void CPictureWidget::Draw(CGraphicsContext &aGc) const
 	TRect rect(point,TSize(width,iTextHeight));
 	rect.Move(TPoint(0,-iTextHeight));
 
+
+	aGc.SetPenStyle(CGraphicsContext::ESolidPen);
 	aGc.SetPenColor(KRgbYellow);
 	aGc.DrawRect(rect);
 
 	aGc.SetPenColor(KRgbBlue);
 	aGc.DrawText(text,point);
+	if(iActive)
+	{
+		aGc.SetBrushStyle(CGraphicsContext::ENullBrush);
+		rect.Shrink(-1,-1);
+		aGc.DrawRect(rect);
+	}
 }
 
 void CPictureWidget::Move(TPoint& aPoint)

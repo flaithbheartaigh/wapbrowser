@@ -9,6 +9,7 @@
 */
 #include "Define.h"
 #include "Page.h"
+#include "WidgetGroup.h"
 #include "PageBuilder.h"
 #include "Widgets.h"
 #include "ScrollBar.h"
@@ -19,6 +20,8 @@
 CWidgetGroup
 //////////////////////////////////////////////////////////////////////////
 */
+/*
+
 class CWidgetGroup : public CBase
 {
 public:
@@ -91,7 +94,9 @@ public:
 			CWidget* widget = iWidgetArray[i];
 			if(widget->Link().Length() > 0)
 			{
-				iFocusIndex = i;
+				//CWidget* widget = iWidgetArray[i];
+				.
+				iFocusIndex = i;				
 				break;
 			}
 		}
@@ -134,6 +139,20 @@ public:
 		return iTextHeight;	//TODO:高度不一定是相同的
 	}
 
+	CWidget* CurWidget()
+	{
+		ASSERT(iFocusIndex >= 0 && iFocusIndex < iWidgetArray.Count());
+		CWidget* widget = iWidgetArray[iFocusIndex];
+		return widget;
+	}
+
+	const CWidget* CurWidget() const
+	{
+		ASSERT(iFocusIndex >= 0 && iFocusIndex < iWidgetArray.Count());
+		CWidget* widget = iWidgetArray[iFocusIndex];
+		return widget;
+	}
+
 private:
 	RPointerArray<CWidget> iWidgetArray;
 	TPoint iPoint;
@@ -141,6 +160,7 @@ private:
 	int iTextHeight;
 	TBool iFocus;
 };
+*/
 
 /*
 //////////////////////////////////////////////////////////////////////////
@@ -271,9 +291,13 @@ void CPage::AddGroup()
 {
 	if(iWidgetGroup)
 	{
-		if(-1 == iFocusIndex && iWidgetGroup->HasFocus())
+// 		if(-1 == iFocusIndex && iWidgetGroup->HasFocus())
+// 		{
+// 			iWidgetGroup->SetFocus(ETrue);
+// 			iFocusIndex = iWidgetGroupArray.Count();
+// 		}
+		if(-1 == iFocusIndex && iWidgetGroup->SetActive(ETrue))
 		{
-			iWidgetGroup->SetFocus(ETrue);
 			iFocusIndex = iWidgetGroupArray.Count();
 		}
 		if(-1 == iStartIndex)
@@ -322,12 +346,12 @@ void CPage::Up()
 			for (int i = iFocusIndex - 1 ; i >= iStartIndex ; i--)
 			{
 				CWidgetGroup* wg = iWidgetGroupArray[i];
-				if(wg->HasFocus())
+
+				if(wg->SetActive(ETrue))
 				{
+					CurWidgetGroup()->SetActive(EFalse);
 					focusChanged = ETrue;
-					iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
 					iFocusIndex = i;
-					iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
 					break;
 				}
 			}
@@ -358,12 +382,11 @@ void CPage::Down()
 			for (int i = iFocusIndex + 1 ; i < iEndIndex && i < iWidgetGroupArray.Count() ; i++)
 			{
 				CWidgetGroup* wg = iWidgetGroupArray[i];
-				if(wg->HasFocus())
+				if(wg->SetActive(ETrue))
 				{
+					CurWidgetGroup()->SetActive(EFalse);
 					focusChanged = ETrue;
-					iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
 					iFocusIndex = i;
-					iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
 					break;
 				}
 			}
@@ -396,3 +419,23 @@ void CPage::Right()
 		CurWidgetGroup()->Right();
 	}
 }
+
+/*
+TBool CPage::ChangeFocus(CWidgetGroup& aWidgetGroup)
+{
+	if(aWidgetGroup.SetActive(ETrue))
+	{
+		return ETrue;
+	}
+	return EFalse;
+	if(wg->HasFocus())
+	{
+		focusChanged = ETrue;
+		iWidgetGroupArray[iFocusIndex]->SetFocus(EFalse);
+		iFocusIndex = i;
+		iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
+		break;
+	}
+
+}
+*/

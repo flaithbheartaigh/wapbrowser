@@ -124,8 +124,6 @@ void CPageBuilder::AddText(const char* aText,const char* aLink)
 
 	}
 
-
-
 	AddWidget(w);
 	//iElementArray.Append(element);
 }
