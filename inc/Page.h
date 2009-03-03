@@ -49,12 +49,16 @@ private:
 	void Left();
 	void Right();
 
+
+//	TBool ChangeFocus(CWidgetGroup& aWidgetGroup);
+
 private:
 	RPointerArray<CWidgetGroup> iWidgetGroupArray;
 
 	//RPointerArray<CWidget> iWidgetArray;
 
 	CWidgetGroup* iWidgetGroup;
+	//CWidgetGroup* iCurWidgetGroup;
 
 	int iTextHeight;
 	TRect iRect;

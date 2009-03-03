@@ -1,4 +1,5 @@
 #define R_DEFAULT_DOCUMENT_NAME                   0x277c4002
-#define R_WAPBROWSER_MENUBAR                      0x277c4004
-#define R_WAPBROWSER_MENU                         0x277c4005
-#define R_HEWB_COMMAND1_TEXT                      0x277c4006
+#define R_WAPBROWSER_LOCALISABLE_APP_INFO         0x277c4004
+#define R_WAPBROWSER_MENUBAR                      0x277c4005
+#define R_WAPBROWSER_MENU                         0x277c4006
+#define R_HEWB_COMMAND1_TEXT                      0x277c4007

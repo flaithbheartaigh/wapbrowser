@@ -9,7 +9,11 @@
 */
 #include <httpstringconstants.h>
 #include <commdbconnpref.h>
-#include <HttpFilterProxyInterface.h> 
+
+#ifndef __SERIES60_3X__
+	#include <HttpFilterProxyInterface.h> 
+#endif
+
 
 #include "PreDefine.h"
 #include "HTTPEngine.h"

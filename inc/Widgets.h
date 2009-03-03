@@ -23,19 +23,15 @@ CWidget
 */
 class CWidget : public CBase //元素基类
 {
-/*
-public:
-	enum TType		//TODO:改为多态
-	{
-		EText,
-		EPicture,
-		EBr
-	};
-*/
-
 public:
 	//CWidget(TType aType);
-	CWidget(){};
+	CWidget(const TDesC& aName)
+	{
+		//iActive = ETrue;
+		iWidgetName.Zero();
+		ASSERT(aName.Length() <= iWidgetName.MaxLength());
+		iWidgetName.Append(aName);
+	};
 	virtual ~CWidget();
 	TBool IsLink();
 // 	void SetLink(const TDesC& aLink);
@@ -43,6 +39,16 @@ public:
 	void SetLink(const TDesC8& aLink);
 	const TDesC8& Link() const;
 //	TType Type() const;
+	TBool SetActive(TBool aActive);
+
+	TBool Equal(const CWidget& aWidget) const
+	{
+		return aWidget.iWidgetName.Compare(iWidgetName) == 0;
+	};
+	TBool Equal(const TDesC& aWidgetName) const
+	{
+		return iWidgetName.Compare(aWidgetName) == 0;
+	}
 
 public:
 	//virtual void Draw() {};
@@ -70,6 +76,8 @@ public:
 	//HBufC* iLink;
 	HBufC8* iLink;
 	TSize iSize;
+	TBool iActive;
+	TBuf<20> iWidgetName;
 };
 
 /*
