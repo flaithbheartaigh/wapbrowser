@@ -275,12 +275,12 @@ void CPage::Layout()
 		iScrollBar->SetBackgroundColor(KScrollBackgroundColor);
 		iScrollBar->SetCursorColor(KScrollSpaceColor);
 	}
-	//iScrollBar->SetMaxLinePerPage(iRect.Height());		//TODO:
+	iScrollBar->SetMaxLinePerPage(iRect.Height());		//TODO:
 	//iScrollBar->SetMaxLinePerPage(10);		//TODO:
-	//iScrollBar->SetTotalLineNum(iTotalHeight);
+	iScrollBar->SetTotalLineNum(iTotalHeight);
 
- 	iScrollBar->SetMaxLinePerPage(10);		//TODO:这个值应该通过计算得到
- 	iScrollBar->SetTotalLineNum(iWidgetGroupArray.Count());
+//  	iScrollBar->SetMaxLinePerPage(10);		//TODO:这个值应该通过计算得到
+//  	iScrollBar->SetTotalLineNum(iWidgetGroupArray.Count());
 
 	iScrollBar->Layout();
 }
@@ -363,7 +363,10 @@ void CPage::Up()
 				//TODO:等量增减不适合元素大小不同的情况
 				iStartIndex--;
 				iEndIndex--;
-				iScrollBar->Up();
+				for (int i = 0 ; i < iTextHeight ; i++)
+				{
+					iScrollBar->Up();
+				}
 			}
 		}
 	}
@@ -398,7 +401,10 @@ void CPage::Down()
 				//TODO:等量增减不适合元素大小不同的情况
 				iStartIndex++;
 				iEndIndex++;
-				iScrollBar->Down();
+				for (int i = 0 ; i < iTextHeight ; i++)
+				{
+					iScrollBar->Down();
+				}
 			}
 		}
 	}
