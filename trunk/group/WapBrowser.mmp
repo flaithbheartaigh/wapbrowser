@@ -1,12 +1,13 @@
-﻿/*
-============================================================================
- Name        : WapBrowser.rss
- Author      : 浮生若茶
- Version     :
- Copyright   : Your copyright notice
- Description : Project specification file for WapBrowser
-============================================================================
-*/
+
+�?*                                      
+============================================================================ 
+Name                                    : WapBrowser.rss 
+Author                                  : 浮生若茶 
+Version                                 : 
+Copyright                               : Your copyright notice 
+Description                             : Project specification file for WapBrowser 
+============================================================================ 
+*/                                       
 TARGET                                  WapBrowser.exe 
 TARGETTYPE                              exe 
 UID                                     0x0 0xed86d796 
@@ -24,6 +25,7 @@ END
 
 
 SOURCEPATH                              ..\src 
+/* [+] */ SOURCE                        WidgetGroup.cpp 
 SOURCE                                  NotifyTimer.cpp 
 SOURCE                                  HttpTransaction.cpp 
 SOURCE                                  UtilityTools.cpp 
@@ -45,8 +47,7 @@ SOURCE                                  WapBrowserAppView.cpp
 SOURCE                                  WapBrowserAppUi.cpp 
 SOURCE                                  WapBrowserDocument.cpp 
 
-/* [+] */ USERINCLUDE                   ..\inc 
-// [-]    USERINCLUDE                   ..\..\inc 
+USERINCLUDE                             ..\inc 
 SYSTEMINCLUDE                           \epoc32\include\ecom 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
