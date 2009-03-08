@@ -1,0 +1,42 @@
+/*
+* ============================================================================
+*  Name     : IAPConnect_v20 resource header file iapconnect_v20.hrh
+*  Part of  : IAPConnect_v20
+*  Created  : 30.09.2003 by Forum Nokia
+*  Description:
+*     This file contains declarations for constants of IAPConnect_v20.
+*  Version  :
+*  Copyright: Nokia Corporation
+* ============================================================================
+*/
+
+#ifndef IAPCONNECT_V20_HRH
+#define IAPCONNECT_V20_HRH
+
+enum TIAPConnectCommandIds // Menu commands
+    {
+    EIAPConnectCmdConnect = 0x6000,
+    EIAPConnectCmdConnectPSD,
+    EIAPConnectCmdConnectCSD,
+	EIAPConnectCmdConnectUsingAPHandler,
+    EIAPConnectCmdTerminate,
+	EIAPConnectCmdShowConnectionInfo
+    };
+
+enum TIAPConnectControlIds // Progress note id
+    {
+    EIAPConnectNoteCtrlIdWaitNote = 0x100
+    };
+
+enum TIAPConnectEngineStates // Engine states
+    {
+    EIAPConnectStateNotConnected,
+    EIAPConnectStateConnecting,
+    EIAPConnectStateConnected,
+    EIAPConnectStateDisconnecting,
+    EIAPConnectStateUnknown
+    };
+
+
+
+#endif      // IAPCONNECT_V20_HRH
