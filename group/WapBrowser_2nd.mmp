@@ -16,7 +16,9 @@ RESOURCE                                WapBrowser.rss
 RESOURCE                                WapBrowser_caption.rss 
 
 SOURCEPATH                              ..\src 
-/* [+] */ SOURCE                        WapBrowserappui.cpp 
+SOURCE                                  Image_Reader.cpp 
+SOURCE                                  WidgetGroup.cpp 
+SOURCE                                  WapBrowserappui.cpp 
 SOURCE                                  WapBrowserdocument.cpp 
 SOURCE                                  WapBrowserapplication.cpp 
 SOURCE                                  WapBrowserappview.cpp 
@@ -38,6 +40,8 @@ SOURCE                                  Widgets.cpp
 USERINCLUDE                             ..\inc 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
+/* [+] */ LIBRARY                       apmime.lib 
+LIBRARY                                 ImageConversion.lib 
 LIBRARY                                 eikcoctl.lib 
 LIBRARY                                 ws32.lib 
 LIBRARY                                 etext.lib 

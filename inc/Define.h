@@ -32,6 +32,7 @@
 #include <favouritesitem.h>
 #include <FavouritesDb.h>
 
+#include "UtilityTools.h"
 
 
 #define KDefaultFont CCoeEnv::Static()->NormalFont()
@@ -113,10 +114,12 @@ namespace Utils
 	inline void Assert(const char* filename,int line)
 	{
 		TPtrC8 ptr8((const TUint8*)filename);
-		TFileName buf;
+		TBuf<128> buf;
 		buf.Zero();
 		buf.Copy(ptr8);
-		//UtilityTools::WriteLogsL(buf);
+		buf.Append(_L(" "));
+		buf.AppendNum(line);
+		UtilityTools::WriteLogsL(buf);
 		User::Panic(buf,line);
 	}
 #define ASSERT(a)	if(a == 0)	\

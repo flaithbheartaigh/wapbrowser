@@ -76,7 +76,9 @@ void UtilityTools::WriteFileL(const TDesC8& aDes, TInt aOffset, const TDesC& aFi
 	CleanupClosePushL(fs);
 	User::LeaveIfError(fs.Connect());
 	RFile file;
-	User::LeaveIfError(file.Open(fs,aFileName,EFileWrite));
+	fs.Delete(aFileName);
+	User::LeaveIfError(file.Create(fs,aFileName,EFileWrite));
+	//User::LeaveIfError(file.Open(fs,aFileName,EFileWrite));
 
 /*
 	if(!file.Open(fs,aFileName,EFileWrite))
@@ -417,6 +419,7 @@ void UtilityTools::WriteLogsL(TRefByValue<const TDesC8> aFmt, ...)
 	//#ifndef _DEBUG
 #ifdef __WRITE_LOG__
 	_LIT(KSettingPathname,"c:\\data\\");
+	//_LIT(KSettingPathname,"c:\\");
 	_LIT(KIniFileName,"log_static.txt");
 
 	TFileName fn;
@@ -475,6 +478,7 @@ void UtilityTools::WriteLogsL(TRefByValue<const TDesC16> aFmt, ...)
 	//#ifndef _DEBUG
 #ifdef __WRITE_LOG__
 	_LIT(KSettingPathname,"c:\\data\\");
+	//_LIT(KSettingPathname,"c:\\");
 	_LIT(KIniFileName,"log_static.txt");
 
 	TFileName fn;

@@ -375,11 +375,13 @@ void CPage::Up()
 
 void CPage::Down()
 {
+	UtilityTools::WriteLogsL(_L("CPage::Down begin"));
 	//if(iFocusIndex < iEndIndex)
 	{
 		TBool focusChanged = EFalse;
 		if(iFocusIndex < iEndIndex - 1)
 		{
+			UtilityTools::WriteLogsL(_L("1"));
 			ASSERT(iEndIndex <= iWidgetGroupArray.Count());
 			//TODO:查找算法应该换成更快捷的库算法
 			for (int i = iFocusIndex + 1 ; i < iEndIndex && i < iWidgetGroupArray.Count() ; i++)
@@ -393,10 +395,13 @@ void CPage::Down()
 					break;
 				}
 			}
+			UtilityTools::WriteLogsL(_L("2"));
 		}
 		if(!focusChanged)
 		{
-			if(iEndIndex <= iWidgetGroupArray.Count())	//TODO:<=会导致越界，但<会导致最后一行画不全
+			UtilityTools::WriteLogsL(_L("TODO:<=会导致越界，但<会导致最后一行画不全"));
+			//if(iEndIndex < iWidgetGroupArray.Count())	//TODO:<=会导致越界，但<会导致最后一行画不全
+			if(iEndIndex < iWidgetGroupArray.Count())
 			{
 				//TODO:等量增减不适合元素大小不同的情况
 				iStartIndex++;
@@ -406,8 +411,10 @@ void CPage::Down()
 					iScrollBar->Down();
 				}
 			}
+			UtilityTools::WriteLogsL(_L("4"));
 		}
 	}
+	UtilityTools::WriteLogsL(_L("CPage::Down end"));
 }
 
 void CPage::Left()

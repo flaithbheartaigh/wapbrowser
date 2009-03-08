@@ -34,9 +34,9 @@ private:
 	void ConstructL();
 
 public:
-	void ParseFile(const char* aFileName);
-	void ParseData(const char* p);
-	void Parse(TiXmlDocument& doc);
+	TBool ParseFile(const char* aFileName);
+	TBool ParseData(const char* p);
+	TBool Parse(TiXmlDocument& doc);
 
 	void ParseP(TiXmlElement* p);
 	void ParseChild(TiXmlNode* child);
