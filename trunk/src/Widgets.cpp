@@ -172,10 +172,12 @@ CPictureWidget
 CPictureWidget::CPictureWidget()
 	: CWidget(_L("CPictureWidget"))
 {
+	iTextHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
 }
 
 CPictureWidget::~CPictureWidget()
 {
+	delete iImageReader;
 	delete iAlt;
 	delete iParentLink;
 	delete iPictureLink;
@@ -197,6 +199,14 @@ void CPictureWidget::SetAlt(const TDesC& aAlt)
 {
 	iAlt = aAlt.Alloc();
 	width = KDefaultFont->MeasureText(*iAlt);
+
+
+	ASSERT(NULL == iBitmap);
+	ASSERT(NULL == iImageReader);
+	iImageReader = new (ELeave)CImage_Reader(*this);
+	CleanupStack::PushL(iImageReader);
+	iImageReader->ConstructL(_L("C:\\coco.jpg"));
+	CleanupStack::Pop(iImageReader);
 }
 
 const TDesC& CPictureWidget::Alt() const
@@ -245,18 +255,25 @@ void CPictureWidget::Draw(CGraphicsContext &aGc) const
 	TRect rect(point,TSize(width,iTextHeight));
 	rect.Move(TPoint(0,-iTextHeight));
 
-
-	aGc.SetPenStyle(CGraphicsContext::ESolidPen);
-	aGc.SetPenColor(KRgbYellow);
-	aGc.DrawRect(rect);
-
-	aGc.SetPenColor(KRgbBlue);
-	aGc.DrawText(text,point);
 	if(iActive)
 	{
 		aGc.SetBrushStyle(CGraphicsContext::ENullBrush);
 		rect.Shrink(-1,-1);
 		aGc.DrawRect(rect);
+	}
+
+	if(iBitmap)
+	{
+		aGc.DrawBitmap(TRect(point - TPoint(0,iTextHeight),iSize),iBitmap,TRect(iSize));
+	}
+	else
+	{
+		aGc.SetPenStyle(CGraphicsContext::ESolidPen);
+		aGc.SetPenColor(KRgbYellow);
+		aGc.DrawRect(rect);
+
+		aGc.SetPenColor(KRgbBlue);
+		aGc.DrawText(text,point);
 	}
 }
 
@@ -267,8 +284,27 @@ void CPictureWidget::Move(TPoint& aPoint)
 
 TSize CPictureWidget::Size() const
 {
+	/*
 	TSize size;
 	size.iWidth = CCoeEnv::Static()->NormalFont()->MeasureText(Alt());
-	size.iHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
+	//size.iHeight = CCoeEnv::Static()->NormalFont()->HeightInPixels();
+	size.iHeight = 53;
 	return size;
+	*/
+
+	return iSize;
 }
+//////////////////////////////////////////////////////////////////////////
+//From MImageReadyCallBack
+//////////////////////////////////////////////////////////////////////////
+void CPictureWidget::ImageReadyL(const TInt& aError)
+{
+	ASSERT(iImageReader);
+	if(KErrNone == aError)
+	{
+		ASSERT(NULL == iBitmap);
+		iBitmap = iImageReader->Bitmap();
+		iSize = iBitmap->SizeInPixels();
+	}
+}
+

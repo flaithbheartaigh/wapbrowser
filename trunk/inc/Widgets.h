@@ -124,7 +124,10 @@ private:
 CPictureWidget
 //////////////////////////////////////////////////////////////////////////
 */
+#include "Image_Reader.h"
+
 class CPictureWidget : public CWidget
+	, public MImageReadyCallBack
 {
 public:
 	CPictureWidget();
@@ -143,12 +146,16 @@ public:
 	virtual void Move(TPoint& aPoint);
 	virtual TSize Size() const;
 
+public://From MImageReadyCallBack
+	virtual void ImageReadyL(const TInt& aError);
+
 private:
 	HBufC* iPictureLink;
 	HBufC* iParentLink;
 	HBufC* iFileName;
 	HBufC* iAlt;
 	CFbsBitmap* iBitmap;
+	CImage_Reader* iImageReader;
 	TSize iSize;
 	int width;
 };

@@ -30,7 +30,7 @@ public:
 	~CWidgetGroup();
 
 	void AddWidget(CWidget* aWidget);
-	void Draw(CGraphicsContext& aGc) const;;
+	void Draw(CGraphicsContext& aGc) const;
 	void Execute();
 	void Left();			//向左移动焦点
 	void Right();			//向右移动焦点

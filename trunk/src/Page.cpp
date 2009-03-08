@@ -199,7 +199,8 @@ void CPage::Draw(CGraphicsContext& aGc) const
 		CWidgetGroup* wg = iWidgetGroupArray[i];
 		wg->SetPoint(point);
 		wg->Draw(aGc);
-		point.iY += iTextHeight;
+		//point.iY += iTextHeight;
+		point.iY += wg->Height();
 	}
 	ASSERT(iScrollBar);
 	iScrollBar->Draw(aGc);
@@ -363,14 +364,13 @@ void CPage::Up()
 				//TODO:等量增减不适合元素大小不同的情况
 				iStartIndex--;
 				iEndIndex--;
-				for (int i = 0 ; i < iTextHeight ; i++)
+				for (int i = 0 ; i < iTextHeight ; i++)		//TODO:移动不精确
 				{
 					iScrollBar->Up();
 				}
 			}
 		}
 	}
-
 }
 
 void CPage::Down()
@@ -401,7 +401,7 @@ void CPage::Down()
 				//TODO:等量增减不适合元素大小不同的情况
 				iStartIndex++;
 				iEndIndex++;
-				for (int i = 0 ; i < iTextHeight ; i++)
+				for (int i = 0 ; i < iTextHeight ; i++)		//TODO:移动不精确
 				{
 					iScrollBar->Down();
 				}
@@ -442,6 +442,5 @@ TBool CPage::ChangeFocus(CWidgetGroup& aWidgetGroup)
 		iWidgetGroupArray[iFocusIndex]->SetFocus(ETrue);
 		break;
 	}
-
 }
 */
