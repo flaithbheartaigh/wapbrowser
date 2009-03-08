@@ -160,7 +160,18 @@ return EFalse;
 
 int CWidgetGroup::Height()
 {
-	return iTextHeight;	//TODO:高度不一定是相同的
+	int height = 0;
+	for (int i = 0 ; i < iWidgetArray.Count() ; i++)
+	{
+		CWidget* w = iWidgetArray[i];
+		int wHeight = w->Size().iHeight;
+		if(wHeight > height)
+		{
+			height = wHeight;
+		}
+	}
+	return height;
+	//return iTextHeight;	//TODO:高度不一定是相同的
 }
 
 CWidget* CWidgetGroup::FocusWidget()
