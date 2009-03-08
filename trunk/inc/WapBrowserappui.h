@@ -49,6 +49,7 @@ class CWapBrowserAppUi
 	private:
 		void Parse();
 		void ParseData(HBufC8* aBuf);
+		void ParseFile(const TDesC8& aFileName);
 		void RequestPage();
 		void RequestConfig();
 		void ParserConfig(HBufC8* aBuf);

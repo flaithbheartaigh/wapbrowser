@@ -195,8 +195,12 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 		if(iReceiveData8)
 		{
 			iIsRequesting = FALSE;
+			iAppView->StopShowWaiting();
 			UtilityTools::WriteLogsL(_L("2"));
-			TRAPD(err,UtilityTools::WriteFileL(*iReceiveData8,0,_L("C:\\data\\default_.txt")));
+			//TRAPD(err,UtilityTools::WriteFileL(*iReceiveData8,0,_L("C:\\data\\default_.txt")));
+			_LIT(KTempFileName,		"C:\\data\\temp.xml");
+			_LIT8(KTempFileName8,		"C:\\data\\temp.xml");
+			TRAPD(err,UtilityTools::WriteFileL(*iReceiveData8,0,KTempFileName));
 			if(KErrNone != err)
 			{
 				//UtilityTools::ShowDialog();
@@ -206,7 +210,8 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 			switch(iRequestType)
 			{
 			case ERequestPage:
-				ParseData(iReceiveData8);
+				ParseFile(KTempFileName8);
+				//ParseData(iReceiveData8);
 				break;
 
 			case ERequestConfig:
@@ -216,11 +221,10 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 			delete iReceiveData8;
 			iReceiveData8 = NULL;
 			//Parse();
-			iAppView->StopShowWaiting();
 			UtilityTools::WriteLogsL(_L("4"));
 		}
 	}
-	else if(aEventDescription.Compare(_L("EFailed")) == 0)
+	else if(aEventDescription.Compare(_L("Transaction Failed")) == 0)
 	{
 		iAppView->StopShowWaiting();
 	}
@@ -274,25 +278,71 @@ void CWapBrowserAppUi::Parse()
 {
 	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
 	CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
-	parser->ParseFile("C:\\Default.xml");
+	//parser->ParseFile("C:\\Event1.xml");
+	//parser->ParseFile("C:\\Default.xml");
+	if(parser->ParseFile("C:\\Data\\Default.xml"))
+	{
+		iAppView->ShowPage(pageBuilder->FetchPage());
+	}
 	//parser->ParseData("")
 	CleanupStack::PopAndDestroy();	//parser
-	iAppView->ShowPage(pageBuilder->FetchPage());
 	CleanupStack::PopAndDestroy();	//pageBuilder
 }
 
 void CWapBrowserAppUi::ParseData(HBufC8* aBuf)
 {
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData"));
 	ASSERT(aBuf);
 	//UtilityTools::WriteFileL(*aBuf,0,_L("C:\\test.xml"));
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData pageBuilder"));
 	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser"));
 	CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
-	parser->ParseData((const char*)aBuf->Des().PtrZ());
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser->ParseData"));
+	TPtr8 ptr(aBuf->Des());
+	UtilityTools::WriteLogsL(ptr.Left(128));
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser->ParseData"));
+	const char* data = (const char*)ptr.PtrZ();
+	//TRAPD(err,(const char* data = (const char*)aBuf->Des().PtrZ()));
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser->ParseData err = %d"));
+	if(parser->ParseData(data))
+	{
+		UtilityTools::WriteLogsL(_L("ShowPage"));
+		iAppView->ShowPage(pageBuilder->FetchPage());
+		UtilityTools::WriteLogsL(_L("ShowPage End"));
+	}
 	CleanupStack::PopAndDestroy();	//parser
-	iAppView->ShowPage(pageBuilder->FetchPage());
 	CleanupStack::PopAndDestroy();	//pageBuilder
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData End"));
+}
 
-
+void CWapBrowserAppUi::ParseFile(const TDesC8& aFileName)
+{
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile"));
+//	ASSERT(aBuf);
+	//UtilityTools::WriteFileL(*aBuf,0,_L("C:\\test.xml"));
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile pageBuilder"));
+	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser"));
+	CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser->ParseFile"));
+	//TPtr8 ptr(aBuf->Des());
+	//UtilityTools::WriteLogsL(ptr.Left(128));
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser->ParseFile"));
+	//const char* data = (const char*)ptr.PtrZ();
+	//TRAPD(err,(const char* data = (const char*)aBuf->Des().PtrZ()));
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser->ParseFile err = %d"));
+	//TPtr8 fileName(aFileName);
+	TBuf8<100> fileName = aFileName;
+	if(parser->ParseFile((const char*)fileName.PtrZ()))
+	{
+		UtilityTools::WriteLogsL(_L("ShowPage"));
+		iAppView->ShowPage(pageBuilder->FetchPage());
+		UtilityTools::WriteLogsL(_L("ShowPage End"));
+	}
+	CleanupStack::PopAndDestroy();	//parser
+	CleanupStack::PopAndDestroy();	//pageBuilder
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile End"));
 }
 
 void CWapBrowserAppUi::RequestPage()
@@ -302,18 +352,21 @@ void CWapBrowserAppUi::RequestPage()
 	//parser->ParseFile("C:\\default_.xml");
 /*/	
 	//RequestPage(_L8("http://music.i139.cn/"));
-	RequestPage(_L8("http://wap.cocobox.cn/index.do"));
+	//RequestPage(_L8("http://wap.cocobox.cn/index.do"));
 	//RequestPage(_L8("index.do"));
 	//RequestPage(_L8("portal/wap/menu.do?menuid=212134"));
 	//RequestPage(_L8(""));
-	//RequestPage(_L8("http://wap.monternet.com"));
+	RequestPage(_L8("http://wap.monternet.com"));
 //*/
 }
+
 
 void CWapBrowserAppUi::RequestPage(const TDesC8& aUrl)
 {
 	//if(!iIsRequesting)
 	{
+		UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::RequestPage"));
+		UtilityTools::WriteLogsL(aUrl);
 		HBufC8* buf = HBufC8::NewLC(255);
 		//buf->Des().Append(_L8("http://wap.cocobox.cn/"));	
 		//buf->Des().Append(_L8("http://wap.gd.monternet.com/"));

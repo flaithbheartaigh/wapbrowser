@@ -14,10 +14,12 @@
 #include <utf.h>
 
 #include "WmlParser.h"
+#include "WapBrowserappui.h"
 //#include "PageBuilder.h"
 #include "Define.h"
 
-//#include "UtilityTools.h"
+
+#include "UtilityTools.h"
 
 //#define TRACE RDebug::Printf
 //#define TRACE(x,...) RDebug::Printf(x,...)
@@ -55,6 +57,7 @@ CWmlParser::CWmlParser(MPageBuilder& aPageBuilder)
 {
 	// No implementation required
 
+	UtilityTools::WriteLogsL(_L("CWmlParser::CWmlParser"));
 	RDebug::Print(_L("CWmlParser::CWmlParser"));
 }
 
@@ -94,47 +97,105 @@ void CWmlParser::ConstructL()
 
 }
 
-void CWmlParser::ParseFile(const char* aFileName)
+TBool CWmlParser::ParseFile(const char* aFileName)
 {
 	//TiXmlDocument doc("C:\\default.xml");
 	TiXmlDocument doc(aFileName);
 	//doc.LoadFile("C:\\default.xml");
 	doc.LoadFile();
-	Parse(doc);
+	return Parse(doc);
 }
 
-void CWmlParser::ParseData(const char* p)
+TBool CWmlParser::ParseData(const char* p)
 {
+	UtilityTools::WriteLogsL(_L("CWmlParser::ParseData"));
+
+	TPtrC8 text;
+	text.Set((const unsigned char*)p);
+	UtilityTools::WriteLogsL(text.Left(120));
+	UtilityTools::WriteLogsL(_L("CWmlParser::ParseData.."));
+
 	TiXmlDocument doc;
 	doc.Parse(p);
-	Parse(doc);
+	return Parse(doc);
+	UtilityTools::WriteLogsL(_L("CWmlParser::ParseData End"));
 }
 
-void CWmlParser::Parse(TiXmlDocument& doc)
+TBool CWmlParser::Parse(TiXmlDocument& doc)
 {
+	UtilityTools::WriteLogsL(_L("CWmlParser::Parse1"));
 	if(TiXmlElement* root = doc.RootElement())	//wml tag
 	{
+		UtilityTools::WriteLogsL(_L("CWmlParser::Parse2"));
 		if(TiXmlElement* card = root->FirstChildElement("card"))	//card tag
 		{
-			const char* id = card->Attribute("id");					//id attribute
-			const char* title = card->Attribute("title");			//title attribute
-			TRACE(id);
-			TRACE(title);
-			TiXmlElement* p = card->FirstChildElement("p");
-			//do
-			while(p)//TiXmlElement* p = card->FirstChildElement("p"))		//p tag
+			UtilityTools::WriteLogsL(_L("CWmlParser::Parse3"));
+			/*
+			<card ontimer="http://xdown.monternet.com/portalapp/wml/content/logic/queryHotLogic.jsp?page=1&amp;mark=4&amp;AUTH=true&amp;S=1&amp;CHANNEL=0002">
+							<timer value="10"/>
+							<p/>
+							</card>
+			*/			
+			if(const char* ontimer = card->Attribute("ontimer"))
 			{
-				//const char* align = p->Attribute("align");			//align attribute
-//				TRACE(align);
-				ParseP(p);
-				iPageBuilder.AddBr();
-				p = p->NextSiblingElement("p");
-				//delete p;
-			}//while(p = p->NextSiblingElement("p"));//TiXmlElement* p = card->FirstChildElement("p")
+				TPtrC8 link;
+				link.Set((const unsigned char*)ontimer);
+				CWapBrowserAppUi::Static()->RequestPage(link);
+
+			}
+			else if(const char* onenterforward  = card->Attribute("onenterforward "))
+			{
+				TPtrC8 link;
+				link.Set((const unsigned char*)onenterforward);
+				CWapBrowserAppUi::Static()->RequestPage(link);
+			}
+			else if(TiXmlElement* onevent = card->FirstChildElement("onevent"))
+			{
+				if(const char* type  = onevent->Attribute("type"))
+				{
+					if(strcmp(type,"onenterforward") == 0)
+					{
+						if(TiXmlElement* go = onevent->FirstChildElement("go"))
+						{
+							if(const char* href = go->Attribute("href"))
+							{
+								UtilityTools::WriteLogsL(_L("href:"));
+								TPtrC8 link;
+								link.Set((const unsigned char*)href);
+								UtilityTools::WriteLogsL(link);
+								CWapBrowserAppUi::Static()->RequestPage(link);
+							}
+						}
+					}
+				}
+			}
+			else
+			{
+				const char* id = card->Attribute("id");					//id attribute
+				const char* title = card->Attribute("title");			//title attribute
+				TRACE(id);
+				TRACE(title);
+				TiXmlElement* p = card->FirstChildElement("p");
+				//do
+				while(p)//TiXmlElement* p = card->FirstChildElement("p"))		//p tag
+				{
+					//const char* align = p->Attribute("align");			//align attribute
+					//				TRACE(align);
+					ParseP(p);
+					iPageBuilder.AddBr();
+					p = p->NextSiblingElement("p");
+					//delete p;
+				}//while(p = p->NextSiblingElement("p"));//TiXmlElement* p = card->FirstChildElement("p")
+				return ETrue;
+			}
 			//delete card;
+			UtilityTools::WriteLogsL(_L("CWmlParser::Parse8"));
 		}
 		//delete root;
+		UtilityTools::WriteLogsL(_L("CWmlParser::Parse9"));
 	}
+	UtilityTools::WriteLogsL(_L("CWmlParser::Parse10"));
+	return EFalse;
 }
 
 void CWmlParser::ParseP(TiXmlElement* p)
