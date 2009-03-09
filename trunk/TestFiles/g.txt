@@ -1,0 +1,4 @@
+mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134
+mobile_pre_str=mobileID=
+mobile_len=11
+service_url=http://wap.monternet.com/

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml"> 
+
+
+<wml>
+
+	<card id="card" title="CoCo 首页">
+	<p>	   
+	 
+   	    <img src="pic/coco.jpg" alt="CoCo" />
+   	    
+	
+	  <br/> <a href="mobiletype.jsp">【CoCo下载】手机上的迅雷！</a><br/>
+ 
+	   <a href="getTypeList.do?bigtypeid=1&amp;name=图片">图片</a> 
+	   <a href="getTypeList.do?bigtypeid=2&amp;name=炫铃">炫铃</a> 
+	   <a href="getTypeList.do?bigtypeid=3&amp;name=游戏">游戏</a> <br/>
+	   <a href="getTypeList.do?bigtypeid=5&amp;name=软件">软件</a> 
+	   <a href="getTypeList.do?bigtypeid=4&amp;name=视频">视频</a> 
+	   <a href="getTypeList.do?bigtypeid=7&amp;name=主题">主题</a> <br/>
+ <br/>
+ <input name="keyword" type="text" tabindex="1" value="" size="5"/>
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="2"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>搜音乐</anchor> 
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="5"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>软件</anchor> 
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="3"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>游戏</anchor> 
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="1"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>图片</anchor>
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="7"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>主题</anchor>
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="4"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>视频</anchor>
+<br/>
+
+   【<a href="getTypeList.do?bigtypeid=1&amp;name=图片">图片</a>】<br/><a href="cocoDownload.do?fileid=208556&amp;typeid=2&amp;typename=明星 影视&amp;bigtypeid=1&amp;name=图片&amp;nowPage=0">劳尔一战成皇马百年第1人</a> <br/><a href="cocoDownload.do?fileid=208553&amp;typeid=2&amp;typename=明星 影视&amp;bigtypeid=1&amp;name=图片&amp;nowPage=0">刘德华扮公仔出海过情人节</a> <br/><a href="cocoDownload.do?fileid=208555&amp;typeid=2&amp;typename=明星 影视&amp;bigtypeid=1&amp;name=图片&amp;nowPage=0">陈慧琳怀孕3个月穿高跟捧场</a> <br/><a href="cocoDownload.do?fileid=208554&amp;typeid=2&amp;typename=明星 影视&amp;bigtypeid=1&amp;name=图片&amp;nowPage=0">蒋勤勤生子后广东化身打工妹 </a> <br/><a href="cocoDownload.do?fileid=208552&amp;typeid=2&amp;typename=明星 影视&amp;bigtypeid=1&amp;name=图片&amp;nowPage=0">史冬鹏丢冠失风度拒央视采访</a> <br/>【<a href="getTypeList.do?bigtypeid=2&amp;name=炫铃">炫铃</a>】<br/><a href="cocoDownload.do?fileid=208557&amp;typeid=20&amp;typename=另类&amp;bigtypeid=2&amp;name=炫铃&amp;nowPage=0">爱是那么痛苦(大话西游)</a> <br/><a href="cocoDownload.do?fileid=208560&amp;typeid=20&amp;typename=另类&amp;bigtypeid=2&amp;name=炫铃&amp;nowPage=0">赌神出场必备音乐</a> <br/><a href="cocoDownload.do?fileid=208559&amp;typeid=20&amp;typename=另类&amp;bigtypeid=2&amp;name=炫铃&amp;nowPage=0">温柔美媚叫你起床闹铃</a> <br/><a href="cocoDownload.do?fileid=208558&amp;typeid=20&amp;typename=另类&amp;bigtypeid=2&amp;name=炫铃&amp;nowPage=0">蜡笔小新-大姐姐你很无聊吗</a> <br/><a href="cocoDownload.do?fileid=208561&amp;typeid=20&amp;typename=另类&amp;bigtypeid=2&amp;name=炫铃&amp;nowPage=0">多拉A梦版经典短信音</a> <br/>【<a href="getTypeList.do?bigtypeid=3&amp;name=游戏">游戏</a>】<br/><a href="cocoDownload.do?fileid=208261&amp;typeid=30&amp;typename=棋牌游戏&amp;bigtypeid=3&amp;name=游戏&amp;nowPage=0">陕西开心挖坑极限智能版</a> <br/><a href="cocoDownload.do?fileid=207803&amp;typeid=31&amp;typename=冒险游戏&amp;bigtypeid=3&amp;name=游戏&amp;nowPage=0">成龙电影改编警察故事</a> <br/><a href="cocoDownload.do?fileid=207802&amp;typeid=31&amp;typename=冒险游戏&amp;bigtypeid=3&amp;name=游戏&amp;nowPage=0">丛林冒险之雨果费尔南多</a> <br/><a href="cocoDownload.do?fileid=207723&amp;typeid=24&amp;typename=动作游戏&amp;bigtypeid=3&amp;name=游戏&amp;nowPage=0">美少女战士之露娜传奇</a> <br/><a href="cocoDownload.do?fileid=207444&amp;typeid=24&amp;typename=动作游戏&amp;bigtypeid=3&amp;name=游戏&amp;nowPage=0">消防队员：城市救援</a> <br/>【<a href="getTypeList.do?bigtypeid=4&amp;name=视频">视频</a>】<br/><a href="cocoDownload.do?fileid=208547&amp;typeid=35&amp;typename=整蛊搞怪&amp;bigtypeid=4&amp;name=视频&amp;nowPage=0">央视元宵晚会小沈阳未公开片断</a> <br/><a href="cocoDownload.do?fileid=205828&amp;typeid=37&amp;typename=影视短片&amp;bigtypeid=4&amp;name=视频&amp;nowPage=0">《咒怨3》预告片胆小勿进</a> <br/><a href="cocoDownload.do?fileid=206537&amp;typeid=35&amp;typename=整蛊搞怪&amp;bigtypeid=4&amp;name=视频&amp;nowPage=0">超级恶搞放屁都能放成这样</a> <br/><a href="cocoDownload.do?fileid=208481&amp;typeid=35&amp;typename=整蛊搞怪&amp;bigtypeid=4&amp;name=视频&amp;nowPage=0">爆笑饿疯了的猫咪</a> <br/><a href="cocoDownload.do?fileid=208544&amp;typeid=71&amp;typename=动漫游戏&amp;bigtypeid=4&amp;name=视频&amp;nowPage=0">蘑菇点点-春心萌动的情人节</a> <br/>【<a href="getTypeList.do?bigtypeid=5&amp;name=软件">软件</a>】<br/><a href="cocoDownload.do?fileid=188404&amp;typeid=44&amp;typename=实用工具&amp;bigtypeid=5&amp;name=软件&amp;nowPage=0">个人理财帮手财务管家婆</a> <br/><a href="cocoDownload.do?fileid=188824&amp;typeid=44&amp;typename=实用工具&amp;bigtypeid=5&amp;name=软件&amp;nowPage=0">功能超强经典好用闹钟</a> <br/><a href="cocoDownload.do?fileid=191508&amp;typeid=40&amp;typename=手机管理&amp;bigtypeid=5&amp;name=软件&amp;nowPage=0">手机管理我的电脑</a> <br/><a href="cocoDownload.do?fileid=193204&amp;typeid=42&amp;typename=网络通信&amp;bigtypeid=5&amp;name=软件&amp;nowPage=0">加强型二版来电显示</a> <br/><a href="cocoDownload.do?fileid=203238&amp;typeid=44&amp;typename=实用工具&amp;bigtypeid=5&amp;name=软件&amp;nowPage=0">路路通列车时刻表大屏版</a> <br/>【<a href="getTypeList.do?bigtypeid=7&amp;name=主题">主题</a>】<br/><a href="cocoDownload.do?fileid=208454&amp;typeid=62&amp;typename=创意&amp;bigtypeid=7&amp;name=主题&amp;nowPage=0">吸的是烟 抽的是寂寞</a> <br/><a href="cocoDownload.do?fileid=208456&amp;typeid=60&amp;typename=动漫&amp;bigtypeid=7&amp;name=主题&amp;nowPage=0">黑白经典主题SHOW</a> <br/><a href="cocoDownload.do?fileid=208448&amp;typeid=67&amp;typename=爱情&amp;bigtypeid=7&amp;name=主题&amp;nowPage=0">韩国唯美爱情主题</a> <br/><a href="cocoDownload.do?fileid=208447&amp;typeid=58&amp;typename=性感&amp;bigtypeid=7&amp;name=主题&amp;nowPage=0">非主流洋娃娃般的女孩</a> <br/><a href="cocoDownload.do?fileid=206949&amp;typeid=62&amp;typename=创意&amp;bigtypeid=7&amp;name=主题&amp;nowPage=0">放飞自己的心情快乐过下去</a> <br/>
+<br/>
+       <a href="getLinkType.do">CoCo酷站大全</a><br/>
+       <a href="addLink.jsp">自助加盟</a><br/>      
+ 
+
+
+  	    ©2004-2008 CoCoBox.cn
+  	  </p>
+
+	</card>
+</wml>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapfourm.org/DTD/wml_1.1.xml">
+<wml>
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+</head>
+<card id="main" title="欢迎登录Wap掌上服务厅" >
+    <onevent type="ontimer">
+      <go href="first.jsp"/>
+    </onevent>
+    <timer value="1"/>
+</card>
+</wml>

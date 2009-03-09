@@ -1,0 +1,165 @@
+﻿环境准备：
+1：下载opera 7.6
+2：配置代理：
+	HTTP  127.0.0.1 8088
+启动:
+ 	D:\software\wap\gprs_proxy_v1.3
+ 	start.bat
+
+打开opera访问梦网http://wap.monternet.com
+
+蓝牙拨号配置串：
+AT+CGDCONT=1,"IP","cmwap",,0,0;+CGEQREQ=1,2,64,128,,,0,1500,,,,,
+========================================== 	
+
+
+特殊页面的处理：
+==============
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+  "http://www.wapforum.org/DTD/wml11.dtd">
+<wml>
+<card ontimer="http://wap.gd.chinamobile.com/">
+ <timer value="10"/>
+<p></p>
+</card></wml>
+========================
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<head>
+<meta http-equiv="Cache-Control" content="max-age=0" forua="true"/>
+<meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+<meta http-equiv="Cache-Control" content="must-revalidate" forua="true"/>
+</head>
+<card id="card" title="" >
+<onevent type="onenterforward">
+<go href="http://218.206.76.18:8080/dlWap/freePage.do?channelId=732&amp;MISC_ID=999&amp;MISC_SessionID=999-eb6365f3!82540520!-1745397844!1235646683403&amp;MISC_ServiceID=03205590&amp;MISC_AccessMode=2&amp;MISC_MID=ACER%2F%2F%2BQBjb%2F%2F%2F8BmP%2F%2F%2F4xKoaYWgibZd%2FhqzB1e%2BDE%3D"></go></onevent>
+</card>
+</wml>
+
+主要处理2个标签
+onenterforward=
+ontimer=
+
+
+
+订购页面
+================
+进入订购页面：
+http://218.200.244.92/Order?action=4&SessionID=Jm5XLnV7bQ!1999436728!1235646807091&SPID=900636&ServiceID=03205590&SPURL=http://218.206.76.18:8080/dlWap/countDownload.do?channelId=732&columnId=11769&colResId=265240&resourceFileId=711778&ws=7248343&ctype=100
+
+===================
+订购页面代码：
+<?xml version="1.0"?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<!--order-->
+<head>
+<meta http-equiv="Cache-Control" content="max-age=0" forua="true" />
+<meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+<meta http-equiv="Cache-Control" content="must-revalidate" forua="true" />
+</head>
+<card id="card_2" title="订购服务"  onenterbackward="http://218.200.244.92/PullServlet;xid=Jm520Jvn!632497720!189098910?MISC_U=http://218.206.76.18:8080/dlWap/countDownload.do?channelId=732&amp;columnId=11769&amp;colResId=265240&amp;resourceFileId=711778&amp;ws=7248343&amp;ctype=100">
+<p>
+--服务介绍--<br/>
+名称: <br/>
+极致纯美*高清闪图<br/>
+服务提供商：<br/>
+广州易诚(900636)<br/>
+收费方式:<br/>
+本次点播收取信息费2.0元.由中国移动代收，不点播不收费<br/>
+<anchor>
+我要点播		 	
+<go sendreferer="true" href="http://218.200.244.92/Order;xid=Jm520Jvn!632497720!189098910?action=1&amp;MISC_TYPE=2"  method="post" >            				
+<postfield name="rcode" value="1235646839205"/>		 	
+</go>		 
+</anchor>		 
+<br/>
+
+<anchor>
+返回继续浏览
+<go sendreferer="true" href="http://218.200.244.92/PullServlet?SessionID=Jm5XLnV7bQ!1999436728!1235646807091&amp;SPID=900636&amp;ServiceID=03205590">	
+</go> 
+</anchor>
+<br/>
+
+<anchor>
+梦网首页
+<go href="http://wap.monternet.com">
+</go>
+</anchor>
+<br/>
+
+温馨提示：尊敬的客户，请勿重复点击或反复刷新页面，否则将可能导致系统无法正常提供服务或重复计费等问题，如有疑问请咨询10086。
+</p>
+</card>
+</wml>
+
+
+
+对应页面文字
+=========
+
+--服务介绍-- 
+名称: 
+极致纯美*高清闪图
+服务提供商： 
+广州易诚(900636) 
+收费方式:
+本次点播收取信息费2.0元.由中国移动代收，不点播不收费
+我要点播 --link
+返回继续浏览  --link
+梦网首页  --link
+温馨提示：尊敬的客户，请勿重复点击或反复刷新页面，否则将可能导致系统无法正常提供服务或重复计费等问题，如有疑问请咨询10086。
+
+点击"我要点播"之后， 通过post提交，而且带上referer参数(referer=true 表示http 头信息里面带referer=.....参数)
+http://218.200.244.92/Order;xid=Jm520Jvn!632497720!189098910?action=1&amp;MISC_TYPE=2
+write("rcode=1235646839205");
+
+
+
+wap服务厅ontimer
+搜索archor
+海量MP3全曲<onevent type="onenterforward">
+
+
+问题:
+真机上,一直向下按键会崩溃,模拟器不会
+<onevent 时会崩溃
+第三版的测试
+表单
+
+图片链接不一致
+跳转页情况太多
+表单的具体格式
+
+
+经以下页面跳
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+  "http://www.wapforum.org/DTD/wml11.dtd">
+<wml>
+<card ontimer="http://wap.gd.chinamobile.com/">
+ <timer value="10"/>
+<p></p>
+</card></wml>
+会返回以下页面,不知该如何处理!
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapfourm.org/DTD/wml_1.1.xml">
+<wml>
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+</head>
+<card id="main" title="欢迎登录Wap掌上服务厅" >
+    <onevent type="ontimer">
+      <go href="first.jsp"/>
+    </onevent>
+    <timer value="1"/>
+</card>
+</wml>
+
+
+mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134
+mobile_pre_str=mobileID=
+mobile_len=11
+service_url=http://wap.monternet.com/

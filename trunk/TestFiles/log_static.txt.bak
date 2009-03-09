@@ -1,0 +1,3435 @@
+
+03/08 23:28:54 CWapBrowserAppUi::CWapBrowserAppUi
+03/08 23:28:54 CWapBrowserAppUi::ConstructL
+03/08 23:28:54 CWmlParser::CWmlParser
+03/08 23:28:54 CWmlParser::Parse1
+03/08 23:28:54 CWmlParser::Parse10
+03/08 23:28:55 CWapBrowserAppUi::RequestPage
+03/08 23:28:55 http://wap.monternet.com
+03/08 23:28:57 Connecting...
+03/08 23:29:01 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:29:01 Http-Status:200
+03/08 23:29:01 Content-Type:text/vnd.wap.wml
+03/08 23:29:01 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData 1
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData 2
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData 3
+03/08 23:29:01 1153 bytes received... 
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData End
+03/08 23:29:01 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData 1
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData 2
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData 3
+03/08 23:29:01 1348 bytes received... 
+03/08 23:29:01 THTTPEvent::EGotResponseBodyData End
+03/08 23:29:02 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:29:02 THTTPEvent::EGotResponseBodyData
+03/08 23:29:02 THTTPEvent::EGotResponseBodyData 1
+03/08 23:29:02 THTTPEvent::EGotResponseBodyData 2
+03/08 23:29:02 THTTPEvent::EGotResponseBodyData 3
+03/08 23:29:02 1348 bytes received... 
+03/08 23:29:02 THTTPEvent::EGotResponseBodyData End
+03/08 23:29:03 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData 1
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData 2
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData 3
+03/08 23:29:03 1348 bytes received... 
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData End
+03/08 23:29:03 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData 1
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData 2
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData 3
+03/08 23:29:03 1002 bytes received... 
+03/08 23:29:03 Body received
+03/08 23:29:03 THTTPEvent::EGotResponseBodyData End
+03/08 23:29:03 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:29:03 Transaction Complete
+03/08 23:29:03 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:29:03 Transaction Successful
+03/08 23:29:03 1
+03/08 23:29:03 2
+03/08 23:29:03 3
+03/08 23:29:03 CWapBrowserAppUi::ParseData
+03/08 23:29:03 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:29:03 CWapBrowserAppUi::ParseData parser
+03/08 23:29:03 CWmlParser::CWmlParser
+03/08 23:29:03 CWmlParser::ParseData
+03/08 23:29:03 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+03/08 23:29:03 CWmlParser::ParseData..
+03/08 23:29:03 CWmlParser::Parse1
+03/08 23:29:03 CWmlParser::Parse2
+03/08 23:29:03 CWmlParser::Parse3
+03/08 23:29:03 ShowPage
+03/08 23:29:03 ShowPage End
+03/08 23:29:03 CWapBrowserAppUi::ParseData End
+03/08 23:29:03 4
+03/08 23:29:11 CWapBrowserAppUi::RequestPage
+03/08 23:29:11 http://wap.monternet.com/redirect4visitlog?rMenuID=213773&destURL=http://wap.i139.cn/pams/s.do?p=666&ts=3568
+03/08 23:29:11 Connecting...
+03/08 23:29:13 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:29:13 Http-Status:200
+03/08 23:29:13 Content-Type:text/vnd.wap.wml
+03/08 23:29:13 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:29:13 THTTPEvent::EGotResponseBodyData
+03/08 23:29:13 THTTPEvent::EGotResponseBodyData 1
+03/08 23:29:13 THTTPEvent::EGotResponseBodyData 2
+03/08 23:29:13 THTTPEvent::EGotResponseBodyData 3
+03/08 23:29:13 508 bytes received... 
+03/08 23:29:13 Body received
+03/08 23:29:13 THTTPEvent::EGotResponseBodyData End
+03/08 23:29:13 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:29:13 Transaction Complete
+03/08 23:29:13 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:29:13 Transaction Successful
+03/08 23:29:13 1
+03/08 23:29:13 2
+03/08 23:29:13 3
+03/08 23:29:13 CWapBrowserAppUi::ParseData
+03/08 23:29:13 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:29:13 CWapBrowserAppUi::ParseData parser
+03/08 23:29:13 CWmlParser::CWmlParser
+03/08 23:33:10 CWapBrowserAppUi::CWapBrowserAppUi
+03/08 23:33:10 CWapBrowserAppUi::ConstructL
+03/08 23:33:10 CWmlParser::CWmlParser
+03/08 23:33:10 CWmlParser::Parse1
+03/08 23:33:10 CWmlParser::Parse10
+03/08 23:33:12 CWapBrowserAppUi::RequestPage
+03/08 23:33:12 http://wap.monternet.com
+03/08 23:33:16 Connecting...
+03/08 23:33:19 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:33:19 Http-Status:200
+03/08 23:33:19 Content-Type:text/vnd.wap.wml
+03/08 23:33:19 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:33:19 THTTPEvent::EGotResponseBodyData
+03/08 23:33:19 THTTPEvent::EGotResponseBodyData 1
+03/08 23:33:19 THTTPEvent::EGotResponseBodyData 2
+03/08 23:33:19 THTTPEvent::EGotResponseBodyData 3
+03/08 23:33:19 1152 bytes received... 
+03/08 23:33:19 THTTPEvent::EGotResponseBodyData End
+03/08 23:33:20 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:33:20 THTTPEvent::EGotResponseBodyData
+03/08 23:33:20 THTTPEvent::EGotResponseBodyData 1
+03/08 23:33:20 THTTPEvent::EGotResponseBodyData 2
+03/08 23:33:20 THTTPEvent::EGotResponseBodyData 3
+03/08 23:33:20 1348 bytes received... 
+03/08 23:33:20 THTTPEvent::EGotResponseBodyData End
+03/08 23:33:20 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:33:20 THTTPEvent::EGotResponseBodyData
+03/08 23:33:20 THTTPEvent::EGotResponseBodyData 1
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData 2
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData 3
+03/08 23:33:21 1348 bytes received... 
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData End
+03/08 23:33:21 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData 1
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData 2
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData 3
+03/08 23:33:21 2353 bytes received... 
+03/08 23:33:21 Body received
+03/08 23:33:21 THTTPEvent::EGotResponseBodyData End
+03/08 23:33:21 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:33:21 Transaction Complete
+03/08 23:33:21 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:33:21 Transaction Successful
+03/08 23:33:21 1
+03/08 23:33:21 2
+03/08 23:33:21 3
+03/08 23:33:21 CWapBrowserAppUi::ParseData
+03/08 23:33:21 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:33:21 CWapBrowserAppUi::ParseData parser
+03/08 23:33:21 CWmlParser::CWmlParser
+03/08 23:33:21 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:33:21 CWmlParser::ParseData
+03/08 23:33:21 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+03/08 23:33:21 CWmlParser::ParseData..
+03/08 23:33:21 CWmlParser::Parse1
+03/08 23:33:21 CWmlParser::Parse2
+03/08 23:33:21 CWmlParser::Parse3
+03/08 23:33:21 ShowPage
+03/08 23:33:21 ShowPage End
+03/08 23:33:21 CWapBrowserAppUi::ParseData End
+03/08 23:33:21 4
+03/08 23:33:24 CWapBrowserAppUi::RequestPage
+03/08 23:33:24 http://wap.monternet.com/redirect4visitlog?rMenuID=213773&destURL=http://wap.i139.cn/pams/s.do?p=666&ts=3071
+03/08 23:33:24 Connecting...
+03/08 23:33:26 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:33:26 Http-Status:200
+03/08 23:33:26 Content-Type:text/vnd.wap.wml
+03/08 23:33:26 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:33:26 THTTPEvent::EGotResponseBodyData
+03/08 23:33:26 THTTPEvent::EGotResponseBodyData 1
+03/08 23:33:26 THTTPEvent::EGotResponseBodyData 2
+03/08 23:33:26 THTTPEvent::EGotResponseBodyData 3
+03/08 23:33:27 508 bytes received... 
+03/08 23:33:27 Body received
+03/08 23:33:27 THTTPEvent::EGotResponseBodyData End
+03/08 23:33:27 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:33:27 Transaction Complete
+03/08 23:33:27 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:33:27 Transaction Successful
+03/08 23:33:27 1
+03/08 23:33:27 2
+03/08 23:33:27 3
+03/08 23:33:27 CWapBrowserAppUi::ParseData
+03/08 23:33:27 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:33:27 CWapBrowserAppUi::ParseData parser
+03/08 23:33:27 CWmlParser::CWmlParser
+03/08 23:33:27 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:37:01 CWapBrowserAppUi::CWapBrowserAppUi
+03/08 23:37:01 CWapBrowserAppUi::ConstructL
+03/08 23:37:01 CWmlParser::CWmlParser
+03/08 23:37:01 CWmlParser::Parse1
+03/08 23:37:01 CWmlParser::Parse10
+03/08 23:37:04 CWapBrowserAppUi::RequestPage
+03/08 23:37:04 http://wap.monternet.com
+03/08 23:37:06 Connecting...
+03/08 23:37:08 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:37:08 Http-Status:200
+03/08 23:37:08 Content-Type:text/vnd.wap.wml
+03/08 23:37:08 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:37:08 THTTPEvent::EGotResponseBodyData
+03/08 23:37:08 THTTPEvent::EGotResponseBodyData 1
+03/08 23:37:08 THTTPEvent::EGotResponseBodyData 2
+03/08 23:37:08 THTTPEvent::EGotResponseBodyData 3
+03/08 23:37:08 1152 bytes received... 
+03/08 23:37:08 THTTPEvent::EGotResponseBodyData End
+03/08 23:37:09 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 1
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 2
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 3
+03/08 23:37:09 1348 bytes received... 
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData End
+03/08 23:37:09 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 1
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 2
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 3
+03/08 23:37:09 1348 bytes received... 
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData End
+03/08 23:37:09 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 1
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 2
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 3
+03/08 23:37:09 1348 bytes received... 
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData End
+03/08 23:37:09 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 1
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 2
+03/08 23:37:09 THTTPEvent::EGotResponseBodyData 3
+03/08 23:37:09 1005 bytes received... 
+03/08 23:37:10 Body received
+03/08 23:37:10 THTTPEvent::EGotResponseBodyData End
+03/08 23:37:10 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:37:10 Transaction Complete
+03/08 23:37:10 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:37:10 Transaction Successful
+03/08 23:37:10 1
+03/08 23:37:10 2
+03/08 23:37:10 3
+03/08 23:37:10 CWapBrowserAppUi::ParseData
+03/08 23:37:10 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:37:10 CWapBrowserAppUi::ParseData parser
+03/08 23:37:10 CWmlParser::CWmlParser
+03/08 23:37:10 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:37:10 CWmlParser::ParseData
+03/08 23:37:10 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+03/08 23:37:10 CWmlParser::ParseData..
+03/08 23:37:10 CWmlParser::Parse1
+03/08 23:37:10 CWmlParser::Parse2
+03/08 23:37:10 CWmlParser::Parse3
+03/08 23:37:10 ShowPage
+03/08 23:37:10 ShowPage End
+03/08 23:37:10 CWapBrowserAppUi::ParseData End
+03/08 23:37:10 4
+03/08 23:37:13 CWapBrowserAppUi::RequestPage
+03/08 23:37:13 http://wap.monternet.com/redirect4visitlog?rMenuID=213773&destURL=http://wap.i139.cn/pams/s.do?p=666&ts=2578
+03/08 23:37:13 Connecting...
+03/08 23:37:16 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:37:16 Http-Status:200
+03/08 23:37:16 Content-Type:text/vnd.wap.wml
+03/08 23:37:16 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:37:16 THTTPEvent::EGotResponseBodyData
+03/08 23:37:16 THTTPEvent::EGotResponseBodyData 1
+03/08 23:37:16 THTTPEvent::EGotResponseBodyData 2
+03/08 23:37:16 THTTPEvent::EGotResponseBodyData 3
+03/08 23:37:16 508 bytes received... 
+03/08 23:37:16 Body received
+03/08 23:37:16 THTTPEvent::EGotResponseBodyData End
+03/08 23:37:16 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:37:16 Transaction Complete
+03/08 23:37:16 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:37:16 Transaction Successful
+03/08 23:37:16 1
+03/08 23:37:16 2
+03/08 23:37:16 3
+03/08 23:37:16 CWapBrowserAppUi::ParseData
+03/08 23:37:16 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:37:16 CWapBrowserAppUi::ParseData parser
+03/08 23:37:16 CWmlParser::CWmlParser
+03/08 23:37:16 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:44:45 CWapBrowserAppUi::CWapBrowserAppUi
+03/08 23:44:45 CWapBrowserAppUi::ConstructL
+03/08 23:44:45 CWmlParser::CWmlParser
+03/08 23:44:45 CWmlParser::Parse1
+03/08 23:44:45 CWmlParser::Parse10
+03/08 23:44:47 CWapBrowserAppUi::RequestPage
+03/08 23:44:47 http://wap.monternet.com
+03/08 23:44:50 Connecting...
+03/08 23:44:53 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:44:53 Http-Status:200
+03/08 23:44:53 Content-Type:text/vnd.wap.wml
+03/08 23:44:53 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:44:53 THTTPEvent::EGotResponseBodyData
+03/08 23:44:53 THTTPEvent::EGotResponseBodyData 1
+03/08 23:44:53 THTTPEvent::EGotResponseBodyData 2
+03/08 23:44:53 THTTPEvent::EGotResponseBodyData 3
+03/08 23:44:53 1151 bytes received... 
+03/08 23:44:53 THTTPEvent::EGotResponseBodyData End
+03/08 23:44:54 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData 1
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData 2
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData 3
+03/08 23:44:54 1348 bytes received... 
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData End
+03/08 23:44:54 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData 1
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData 2
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData 3
+03/08 23:44:54 1348 bytes received... 
+03/08 23:44:54 THTTPEvent::EGotResponseBodyData End
+03/08 23:44:55 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData 1
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData 2
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData 3
+03/08 23:44:55 1348 bytes received... 
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData End
+03/08 23:44:55 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData 1
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData 2
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData 3
+03/08 23:44:55 1008 bytes received... 
+03/08 23:44:55 Body received
+03/08 23:44:55 THTTPEvent::EGotResponseBodyData End
+03/08 23:44:55 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:44:55 Transaction Complete
+03/08 23:44:55 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:44:55 Transaction Successful
+03/08 23:44:55 1
+03/08 23:44:55 2
+03/08 23:44:55 3
+03/08 23:44:55 CWapBrowserAppUi::ParseData
+03/08 23:44:55 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+
+
+
+
+03/08 23:44:55 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:44:55 CWapBrowserAppUi::ParseData parser
+03/08 23:44:55 CWmlParser::CWmlParser
+03/08 23:44:55 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:44:55 CWapBrowserAppUi::ParseData parser->ParseData err = 268435510
+03/08 23:44:55 CWmlParser::ParseData
+03/08 23:44:55 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+03/08 23:44:55 CWmlParser::ParseData..
+03/08 23:44:55 CWmlParser::Parse1
+03/08 23:44:55 CWmlParser::Parse2
+03/08 23:44:55 CWmlParser::Parse3
+03/08 23:44:55 ShowPage
+03/08 23:44:55 ShowPage End
+03/08 23:44:55 CWapBrowserAppUi::ParseData End
+03/08 23:44:55 4
+03/08 23:44:59 CWapBrowserAppUi::RequestPage
+03/08 23:44:59 http://wap.monternet.com/redirect4visitlog?rMenuID=213773&destURL=http://wap.i139.cn/pams/s.do?p=666&ts=6820
+03/08 23:44:59 Connecting...
+03/08 23:45:01 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:45:01 Http-Status:200
+03/08 23:45:01 Content-Type:text/vnd.wap.wml
+03/08 23:45:01 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:45:01 THTTPEvent::EGotResponseBodyData
+03/08 23:45:01 THTTPEvent::EGotResponseBodyData 1
+03/08 23:45:01 THTTPEvent::EGotResponseBodyData 2
+03/08 23:45:01 THTTPEvent::EGotResponseBodyData 3
+03/08 23:45:01 508 bytes received... 
+03/08 23:45:01 Body received
+03/08 23:45:01 THTTPEvent::EGotResponseBodyData End
+03/08 23:45:01 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:45:01 Transaction Complete
+03/08 23:45:01 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:45:01 Transaction Successful
+03/08 23:45:01 1
+03/08 23:45:01 2
+03/08 23:45:01 3
+03/08 23:45:01 CWapBrowserAppUi::ParseData
+03/08 23:45:01 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<h
+03/08 23:45:01 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:45:01 CWapBrowserAppUi::ParseData parser
+03/08 23:45:01 CWmlParser::CWmlParser
+03/08 23:45:01 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:48:58 CWapBrowserAppUi::CWapBrowserAppUi
+03/08 23:48:58 CWapBrowserAppUi::ConstructL
+03/08 23:48:58 CWmlParser::CWmlParser
+03/08 23:48:58 CWmlParser::Parse1
+03/08 23:48:58 CWmlParser::Parse10
+03/08 23:49:00 CWapBrowserAppUi::RequestPage
+03/08 23:49:00 http://wap.monternet.com
+03/08 23:49:03 Connecting...
+03/08 23:49:06 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:49:06 Http-Status:200
+03/08 23:49:06 Content-Type:text/vnd.wap.wml
+03/08 23:49:06 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData 1
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData 2
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData 3
+03/08 23:49:06 1152 bytes received... 
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData End
+03/08 23:49:06 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData 1
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData 2
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData 3
+03/08 23:49:06 2696 bytes received... 
+03/08 23:49:06 THTTPEvent::EGotResponseBodyData End
+03/08 23:49:08 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData 1
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData 2
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData 3
+03/08 23:49:08 1348 bytes received... 
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData End
+03/08 23:49:08 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData 1
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData 2
+03/08 23:49:08 THTTPEvent::EGotResponseBodyData 3
+03/08 23:49:08 1005 bytes received... 
+03/08 23:49:09 Body received
+03/08 23:49:09 THTTPEvent::EGotResponseBodyData End
+03/08 23:49:09 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:49:09 Transaction Complete
+03/08 23:49:09 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:49:09 Transaction Successful
+03/08 23:49:09 1
+03/08 23:49:09 2
+03/08 23:49:09 3
+03/08 23:49:09 CWapBrowserAppUi::ParseData
+03/08 23:49:09 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+
+
+
+
+03/08 23:49:09 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:49:09 CWapBrowserAppUi::ParseData parser
+03/08 23:49:09 CWmlParser::CWmlParser
+03/08 23:49:09 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:49:09 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:49:09 CWapBrowserAppUi::ParseData parser->ParseData err = 268435510
+03/08 23:49:09 CWmlParser::ParseData
+03/08 23:49:09 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+03/08 23:49:09 CWmlParser::ParseData..
+03/08 23:49:09 CWmlParser::Parse1
+03/08 23:49:09 CWmlParser::Parse2
+03/08 23:49:09 CWmlParser::Parse3
+03/08 23:49:09 ShowPage
+03/08 23:49:09 ShowPage End
+03/08 23:49:09 CWapBrowserAppUi::ParseData End
+03/08 23:49:09 4
+03/08 23:49:13 CWapBrowserAppUi::RequestPage
+03/08 23:49:13 http://wap.monternet.com/redirect4visitlog?rMenuID=213773&destURL=http://wap.i139.cn/pams/s.do?p=666&ts=9843
+03/08 23:49:13 Connecting...
+03/08 23:49:14 CHTTPEngine::MHFRunL iNetStatus = 4
+03/08 23:49:14 Http-Status:200
+03/08 23:49:14 Content-Type:text/vnd.wap.wml
+03/08 23:49:14 CHTTPEngine::MHFRunL iNetStatus = 5
+03/08 23:49:15 THTTPEvent::EGotResponseBodyData
+03/08 23:49:15 THTTPEvent::EGotResponseBodyData 1
+03/08 23:49:15 THTTPEvent::EGotResponseBodyData 2
+03/08 23:49:15 THTTPEvent::EGotResponseBodyData 3
+03/08 23:49:15 508 bytes received... 
+03/08 23:49:15 Body received
+03/08 23:49:15 THTTPEvent::EGotResponseBodyData End
+03/08 23:49:15 CHTTPEngine::MHFRunL iNetStatus = 6
+03/08 23:49:15 Transaction Complete
+03/08 23:49:15 CHTTPEngine::MHFRunL iNetStatus = 8
+03/08 23:49:15 Transaction Successful
+03/08 23:49:15 1
+03/08 23:49:15 2
+03/08 23:49:15 3
+03/08 23:49:15 CWapBrowserAppUi::ParseData
+03/08 23:49:15 <?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<h
+03/08 23:49:15 CWapBrowserAppUi::ParseData pageBuilder
+03/08 23:49:15 CWapBrowserAppUi::ParseData parser
+03/08 23:49:15 CWmlParser::CWmlParser
+03/08 23:49:15 CWapBrowserAppUi::ParseData parser->ParseData
+03/08 23:49:15 CWapBrowserAppUi::ParseData parser->ParseData
+03/09 00:04:39 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 00:04:39 CWapBrowserAppUi::ConstructL
+03/09 00:04:39 CWmlParser::CWmlParser
+03/09 00:04:39 CWmlParser::Parse1
+03/09 00:04:39 CWmlParser::Parse10
+03/09 00:04:42 CWapBrowserAppUi::RequestPage
+03/09 00:04:42 http://wap.monternet.com
+03/09 00:04:43 Connecting...
+03/09 00:04:46 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:04:46 Http-Status:200
+03/09 00:04:46 Content-Type:text/vnd.wap.wml
+03/09 00:04:46 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:04:46 THTTPEvent::EGotResponseBodyData
+03/09 00:04:46 THTTPEvent::EGotResponseBodyData 1
+03/09 00:04:46 THTTPEvent::EGotResponseBodyData 2
+03/09 00:04:46 THTTPEvent::EGotResponseBodyData 3
+03/09 00:04:46 1152 bytes received... 
+03/09 00:04:46 THTTPEvent::EGotResponseBodyData End
+03/09 00:04:47 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData 1
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData 2
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData 3
+03/09 00:04:47 1348 bytes received... 
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData End
+03/09 00:04:47 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData 1
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData 2
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData 3
+03/09 00:04:47 1348 bytes received... 
+03/09 00:04:47 THTTPEvent::EGotResponseBodyData End
+03/09 00:04:56 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:04:56 THTTPEvent::EGotResponseBodyData
+03/09 00:04:56 THTTPEvent::EGotResponseBodyData 1
+03/09 00:04:56 THTTPEvent::EGotResponseBodyData 2
+03/09 00:04:57 THTTPEvent::EGotResponseBodyData 3
+03/09 00:04:57 1348 bytes received... 
+03/09 00:04:57 THTTPEvent::EGotResponseBodyData End
+03/09 00:04:57 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:04:57 THTTPEvent::EGotResponseBodyData
+03/09 00:04:57 THTTPEvent::EGotResponseBodyData 1
+03/09 00:04:57 THTTPEvent::EGotResponseBodyData 2
+03/09 00:04:57 THTTPEvent::EGotResponseBodyData 3
+03/09 00:04:57 1005 bytes received... 
+03/09 00:04:57 Body received
+03/09 00:04:57 THTTPEvent::EGotResponseBodyData End
+03/09 00:04:57 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:04:57 Transaction Complete
+03/09 00:04:57 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:04:57 Transaction Successful
+03/09 00:04:57 1
+03/09 00:04:57 2
+03/09 00:04:57 3
+03/09 00:04:57 CWapBrowserAppUi::ParseFile
+03/09 00:04:57 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:04:57 CWapBrowserAppUi::ParseFile parser
+03/09 00:04:57 CWmlParser::CWmlParser
+03/09 00:04:57 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:04:57 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:04:57 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:04:57 CWmlParser::Parse1
+03/09 00:04:57 CWmlParser::Parse10
+03/09 00:04:57 CWapBrowserAppUi::ParseFile End
+03/09 00:04:57 4
+03/09 00:07:00 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 00:07:01 CWapBrowserAppUi::ConstructL
+03/09 00:07:01 CWmlParser::CWmlParser
+03/09 00:07:01 CWmlParser::Parse1
+03/09 00:07:01 CWmlParser::Parse10
+03/09 00:07:02 CWapBrowserAppUi::RequestPage
+03/09 00:07:02 http://wap.monternet.com
+03/09 00:07:36 Connecting...
+03/09 00:07:39 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:07:39 Http-Status:200
+03/09 00:07:39 Content-Type:text/vnd.wap.wml
+03/09 00:07:39 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:39 THTTPEvent::EGotResponseBodyData
+03/09 00:07:39 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:39 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:39 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:40 1152 bytes received... 
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:40 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:40 1348 bytes received... 
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:40 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:40 1348 bytes received... 
+03/09 00:07:40 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:41 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:41 1348 bytes received... 
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:41 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:41 1005 bytes received... 
+03/09 00:07:41 Body received
+03/09 00:07:41 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:41 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:07:41 Transaction Complete
+03/09 00:07:41 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:07:41 Transaction Successful
+03/09 00:07:41 1
+03/09 00:07:41 2
+03/09 00:07:41 3
+03/09 00:07:41 CWapBrowserAppUi::ParseFile
+03/09 00:07:41 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:07:41 CWapBrowserAppUi::ParseFile parser
+03/09 00:07:41 CWmlParser::CWmlParser
+03/09 00:07:42 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:07:42 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:07:42 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:07:42 CWmlParser::Parse1
+03/09 00:07:42 CWmlParser::Parse2
+03/09 00:07:42 CWmlParser::Parse3
+03/09 00:07:42 ShowPage
+03/09 00:07:42 ShowPage End
+03/09 00:07:42 CWapBrowserAppUi::ParseFile End
+03/09 00:07:42 4
+03/09 00:07:46 CWapBrowserAppUi::RequestPage
+03/09 00:07:46 http://wap.monternet.com/redirect4visitlog?rMenuID=213773&destURL=http://wap.i139.cn/pams/s.do?p=666&ts=3157
+03/09 00:07:46 Connecting...
+03/09 00:07:49 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:07:49 Http-Status:200
+03/09 00:07:49 Content-Type:text/vnd.wap.wml
+03/09 00:07:49 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:49 THTTPEvent::EGotResponseBodyData
+03/09 00:07:49 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:49 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:49 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:49 508 bytes received... 
+03/09 00:07:49 Body received
+03/09 00:07:49 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:49 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:07:49 Transaction Complete
+03/09 00:07:49 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:07:49 Transaction Successful
+03/09 00:07:49 1
+03/09 00:07:49 2
+03/09 00:07:49 3
+03/09 00:07:49 CWapBrowserAppUi::ParseFile
+03/09 00:07:49 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:07:49 CWapBrowserAppUi::ParseFile parser
+03/09 00:07:49 CWmlParser::CWmlParser
+03/09 00:07:49 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:07:49 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:07:49 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:07:50 CWmlParser::Parse1
+03/09 00:07:50 CWmlParser::Parse2
+03/09 00:07:50 CWmlParser::Parse3
+03/09 00:07:50 href:
+03/09 00:07:50 http://wap.i139.cn/pams/s.do?p=666&ts=3157
+03/09 00:07:50 CWapBrowserAppUi::RequestPage
+03/09 00:07:50 http://wap.i139.cn/pams/s.do?p=666&ts=3157
+03/09 00:07:50 Connecting...
+03/09 00:07:50 CWmlParser::Parse8
+03/09 00:07:50 CWmlParser::Parse9
+03/09 00:07:50 CWmlParser::Parse10
+03/09 00:07:50 CWapBrowserAppUi::ParseFile End
+03/09 00:07:50 4
+03/09 00:07:51 CHTTPEngine::MHFRunL iNetStatus = 10001
+03/09 00:07:51 Unrecognised event: 10001
+03/09 00:07:54 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:07:54 Http-Status:200
+03/09 00:07:54 Content-Type:text/vnd.wap.wml
+03/09 00:07:54 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:54 THTTPEvent::EGotResponseBodyData
+03/09 00:07:54 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:54 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:54 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:54 285 bytes received... 
+03/09 00:07:54 Body received
+03/09 00:07:54 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:54 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:07:54 Transaction Complete
+03/09 00:07:54 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:07:54 Transaction Successful
+03/09 00:07:54 1
+03/09 00:07:54 2
+03/09 00:07:54 3
+03/09 00:07:54 CWapBrowserAppUi::ParseFile
+03/09 00:07:54 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:07:55 CWapBrowserAppUi::ParseFile parser
+03/09 00:07:55 CWmlParser::CWmlParser
+03/09 00:07:55 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:07:55 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:07:55 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:07:55 CWmlParser::Parse1
+03/09 00:07:55 CWmlParser::Parse2
+03/09 00:07:55 CWmlParser::Parse3
+03/09 00:07:55 CWapBrowserAppUi::RequestPage
+03/09 00:07:55 http://3g.i139.cn/caijing/s.do?p=7&fr=666
+03/09 00:07:55 Connecting...
+03/09 00:07:55 CWmlParser::Parse8
+03/09 00:07:55 CWmlParser::Parse9
+03/09 00:07:55 CWmlParser::Parse10
+03/09 00:07:55 CWapBrowserAppUi::ParseFile End
+03/09 00:07:55 4
+03/09 00:07:57 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:07:57 Http-Status:404
+03/09 00:07:57 Content-Type:text/html
+03/09 00:07:57 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:07:57 THTTPEvent::EGotResponseBodyData
+03/09 00:07:57 THTTPEvent::EGotResponseBodyData 1
+03/09 00:07:57 THTTPEvent::EGotResponseBodyData 2
+03/09 00:07:57 THTTPEvent::EGotResponseBodyData 3
+03/09 00:07:57 991 bytes received... 
+03/09 00:07:57 Body received
+03/09 00:07:57 THTTPEvent::EGotResponseBodyData End
+03/09 00:07:57 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:07:57 Transaction Complete
+03/09 00:07:57 CHTTPEngine::MHFRunL iNetStatus = 9
+03/09 00:07:57 Transaction Failed
+03/09 00:14:08 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 00:14:08 CWapBrowserAppUi::ConstructL
+03/09 00:14:08 CWmlParser::CWmlParser
+03/09 00:14:08 CWmlParser::Parse1
+03/09 00:14:08 CWmlParser::Parse10
+03/09 00:14:09 CWapBrowserAppUi::RequestPage
+03/09 00:14:09 http://wap.monternet.com
+03/09 00:14:11 Connecting...
+03/09 00:14:16 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:14:16 Http-Status:200
+03/09 00:14:16 Content-Type:text/vnd.wap.wml
+03/09 00:14:16 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:14:16 THTTPEvent::EGotResponseBodyData
+03/09 00:14:16 THTTPEvent::EGotResponseBodyData 1
+03/09 00:14:16 THTTPEvent::EGotResponseBodyData 2
+03/09 00:14:16 THTTPEvent::EGotResponseBodyData 3
+03/09 00:14:16 1151 bytes received... 
+03/09 00:14:16 THTTPEvent::EGotResponseBodyData End
+03/09 00:14:17 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData 1
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData 2
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData 3
+03/09 00:14:17 1348 bytes received... 
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData End
+03/09 00:14:17 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData 1
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData 2
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData 3
+03/09 00:14:17 1348 bytes received... 
+03/09 00:14:17 THTTPEvent::EGotResponseBodyData End
+03/09 00:14:18 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData 1
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData 2
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData 3
+03/09 00:14:18 1348 bytes received... 
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData End
+03/09 00:14:18 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData 1
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData 2
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData 3
+03/09 00:14:18 1008 bytes received... 
+03/09 00:14:18 Body received
+03/09 00:14:18 THTTPEvent::EGotResponseBodyData End
+03/09 00:14:18 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:14:18 Transaction Complete
+03/09 00:14:18 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:14:18 Transaction Successful
+03/09 00:14:18 1
+03/09 00:14:18 2
+03/09 00:14:18 3
+03/09 00:14:18 CWapBrowserAppUi::ParseFile
+03/09 00:14:18 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:14:18 CWapBrowserAppUi::ParseFile parser
+03/09 00:14:18 CWmlParser::CWmlParser
+03/09 00:14:18 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:14:18 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:14:18 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:14:18 CWmlParser::Parse1
+03/09 00:14:18 CWmlParser::Parse2
+03/09 00:14:18 CWmlParser::Parse3
+03/09 00:14:18 ShowPage
+03/09 00:14:18 ShowPage End
+03/09 00:14:18 CWapBrowserAppUi::ParseFile End
+03/09 00:14:18 4
+03/09 00:14:27 ..\SRC\Page.cpp
+03/09 00:14:29 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 00:14:29 CWapBrowserAppUi::ConstructL
+03/09 00:14:29 CWmlParser::CWmlParser
+03/09 00:14:30 CWmlParser::Parse1
+03/09 00:14:30 CWmlParser::Parse10
+03/09 00:14:31 CWapBrowserAppUi::RequestPage
+03/09 00:14:31 http://wap.monternet.com
+03/09 00:15:04 Connecting...
+03/09 00:15:06 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 00:15:06 CWapBrowserAppUi::ConstructL
+03/09 00:15:06 CWmlParser::CWmlParser
+03/09 00:15:06 CWmlParser::Parse1
+03/09 00:15:06 CWmlParser::Parse10
+03/09 00:15:08 CWapBrowserAppUi::RequestPage
+03/09 00:15:08 http://wap.monternet.com
+03/09 00:15:10 Connecting...
+03/09 00:15:12 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:15:12 Http-Status:200
+03/09 00:15:12 Content-Type:text/vnd.wap.wml
+03/09 00:15:12 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 1
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 2
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 3
+03/09 00:15:12 1153 bytes received... 
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData End
+03/09 00:15:12 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 1
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 2
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 3
+03/09 00:15:12 1348 bytes received... 
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData End
+03/09 00:15:12 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 1
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 2
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData 3
+03/09 00:15:12 1348 bytes received... 
+03/09 00:15:12 THTTPEvent::EGotResponseBodyData End
+03/09 00:15:13 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData 1
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData 2
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData 3
+03/09 00:15:13 1348 bytes received... 
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData End
+03/09 00:15:13 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData 1
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData 2
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData 3
+03/09 00:15:13 1002 bytes received... 
+03/09 00:15:13 Body received
+03/09 00:15:13 THTTPEvent::EGotResponseBodyData End
+03/09 00:15:13 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:15:13 Transaction Complete
+03/09 00:15:13 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:15:13 Transaction Successful
+03/09 00:15:13 1
+03/09 00:15:13 2
+03/09 00:15:13 3
+03/09 00:15:13 CWapBrowserAppUi::ParseFile
+03/09 00:15:13 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:15:14 CWapBrowserAppUi::ParseFile parser
+03/09 00:15:14 CWmlParser::CWmlParser
+03/09 00:15:14 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:15:14 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:15:14 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:15:14 CWmlParser::Parse1
+03/09 00:15:14 CWmlParser::Parse2
+03/09 00:15:14 CWmlParser::Parse3
+03/09 00:15:14 ShowPage
+03/09 00:15:14 ShowPage End
+03/09 00:15:14 CWapBrowserAppUi::ParseFile End
+03/09 00:15:14 4
+03/09 00:19:35 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 00:19:35 CWapBrowserAppUi::ConstructL
+03/09 00:19:35 CWmlParser::CWmlParser
+03/09 00:19:35 CWmlParser::Parse1
+03/09 00:19:35 CWmlParser::Parse10
+03/09 00:19:36 CWapBrowserAppUi::RequestPage
+03/09 00:19:36 http://wap.monternet.com
+03/09 00:19:39 Connecting...
+03/09 00:19:41 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:19:41 Http-Status:200
+03/09 00:19:41 Content-Type:text/vnd.wap.wml
+03/09 00:19:41 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:19:41 THTTPEvent::EGotResponseBodyData
+03/09 00:19:41 THTTPEvent::EGotResponseBodyData 1
+03/09 00:19:41 THTTPEvent::EGotResponseBodyData 2
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData 3
+03/09 00:19:42 1151 bytes received... 
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData End
+03/09 00:19:42 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData 1
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData 2
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData 3
+03/09 00:19:42 2696 bytes received... 
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData End
+03/09 00:19:42 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData 1
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData 2
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData 3
+03/09 00:19:42 1348 bytes received... 
+03/09 00:19:42 THTTPEvent::EGotResponseBodyData End
+03/09 00:19:43 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:19:43 THTTPEvent::EGotResponseBodyData
+03/09 00:19:43 THTTPEvent::EGotResponseBodyData 1
+03/09 00:19:43 THTTPEvent::EGotResponseBodyData 2
+03/09 00:19:43 THTTPEvent::EGotResponseBodyData 3
+03/09 00:19:43 1008 bytes received... 
+03/09 00:19:43 Body received
+03/09 00:19:43 THTTPEvent::EGotResponseBodyData End
+03/09 00:19:43 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:19:43 Transaction Complete
+03/09 00:19:43 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:19:43 Transaction Successful
+03/09 00:19:43 1
+03/09 00:19:43 2
+03/09 00:19:43 3
+03/09 00:19:43 CWapBrowserAppUi::ParseFile
+03/09 00:19:43 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:19:43 CWapBrowserAppUi::ParseFile parser
+03/09 00:19:43 CWmlParser::CWmlParser
+03/09 00:19:43 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:19:43 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:19:43 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:19:43 CWmlParser::Parse1
+03/09 00:19:43 CWmlParser::Parse2
+03/09 00:19:43 CWmlParser::Parse3
+03/09 00:19:43 ShowPage
+03/09 00:19:43 ShowPage End
+03/09 00:19:43 CWapBrowserAppUi::ParseFile End
+03/09 00:19:43 4
+03/09 00:19:44 CPage::Down begin
+03/09 00:19:44 1
+03/09 00:19:44 2
+03/09 00:19:44 CPage::Down end
+03/09 00:19:44 CPage::Down begin
+03/09 00:19:44 1
+03/09 00:19:44 2
+03/09 00:19:44 CPage::Down end
+03/09 00:19:44 CPage::Down begin
+03/09 00:19:44 1
+03/09 00:19:44 2
+03/09 00:19:44 CPage::Down end
+03/09 00:19:44 CPage::Down begin
+03/09 00:19:44 1
+03/09 00:19:44 2
+03/09 00:19:44 CPage::Down end
+03/09 00:19:45 CPage::Down begin
+03/09 00:19:45 1
+03/09 00:19:45 2
+03/09 00:19:45 CPage::Down end
+03/09 00:19:45 CPage::Down begin
+03/09 00:19:45 1
+03/09 00:19:45 2
+03/09 00:19:45 CPage::Down end
+03/09 00:19:46 CPage::Down begin
+03/09 00:19:46 1
+03/09 00:19:46 2
+03/09 00:19:46 CPage::Down end
+03/09 00:19:46 CPage::Down begin
+03/09 00:19:46 1
+03/09 00:19:46 2
+03/09 00:19:46 CPage::Down end
+03/09 00:19:46 CPage::Down begin
+03/09 00:19:46 1
+03/09 00:19:46 2
+03/09 00:19:46 CPage::Down end
+03/09 00:19:46 CPage::Down begin
+03/09 00:19:46 1
+03/09 00:19:46 2
+03/09 00:19:46 CPage::Down end
+03/09 00:19:46 CPage::Down begin
+03/09 00:19:46 1
+03/09 00:19:46 2
+03/09 00:19:46 CPage::Down end
+03/09 00:19:46 CPage::Down begin
+03/09 00:19:46 3
+03/09 00:19:46 4
+03/09 00:19:46 CPage::Down end
+03/09 00:19:47 CPage::Down begin
+03/09 00:19:47 1
+03/09 00:19:47 2
+03/09 00:19:47 CPage::Down end
+03/09 00:19:47 CPage::Down begin
+03/09 00:19:47 3
+03/09 00:19:47 4
+03/09 00:19:47 CPage::Down end
+03/09 00:19:47 CPage::Down begin
+03/09 00:19:47 1
+03/09 00:19:47 2
+03/09 00:19:47 CPage::Down end
+03/09 00:19:47 CPage::Down begin
+03/09 00:19:47 3
+03/09 00:19:47 4
+03/09 00:19:47 CPage::Down end
+03/09 00:19:47 CPage::Down begin
+03/09 00:19:47 1
+03/09 00:19:47 2
+03/09 00:19:47 CPage::Down end
+03/09 00:19:47 CPage::Down begin
+03/09 00:19:47 3
+03/09 00:19:47 4
+03/09 00:19:47 CPage::Down end
+03/09 00:19:48 CPage::Down begin
+03/09 00:19:48 1
+03/09 00:19:48 2
+03/09 00:19:48 CPage::Down end
+03/09 00:19:48 CPage::Down begin
+03/09 00:19:48 3
+03/09 00:19:48 4
+03/09 00:19:48 CPage::Down end
+03/09 00:19:48 CPage::Down begin
+03/09 00:19:48 1
+03/09 00:19:48 2
+03/09 00:19:48 CPage::Down end
+03/09 00:19:48 CPage::Down begin
+03/09 00:19:48 3
+03/09 00:19:48 4
+03/09 00:19:48 CPage::Down end
+03/09 00:19:48 CPage::Down begin
+03/09 00:19:48 1
+03/09 00:19:48 2
+03/09 00:19:48 CPage::Down end
+03/09 00:19:49 CPage::Down begin
+03/09 00:19:49 3
+03/09 00:19:49 4
+03/09 00:19:49 CPage::Down end
+03/09 00:19:49 CPage::Down begin
+03/09 00:19:49 1
+03/09 00:19:49 2
+03/09 00:19:49 CPage::Down end
+03/09 00:19:49 CPage::Down begin
+03/09 00:19:49 3
+03/09 00:19:49 4
+03/09 00:19:49 CPage::Down end
+03/09 00:19:49 CPage::Down begin
+03/09 00:19:49 1
+03/09 00:19:49 2
+03/09 00:19:49 CPage::Down end
+03/09 00:19:49 CPage::Down begin
+03/09 00:19:49 3
+03/09 00:19:49 4
+03/09 00:19:49 CPage::Down end
+03/09 00:19:50 CPage::Down begin
+03/09 00:19:50 1
+03/09 00:19:50 2
+03/09 00:19:50 CPage::Down end
+03/09 00:19:50 CPage::Down begin
+03/09 00:19:50 3
+03/09 00:19:50 4
+03/09 00:19:50 CPage::Down end
+03/09 00:19:50 CPage::Down begin
+03/09 00:19:50 1
+03/09 00:19:50 2
+03/09 00:19:50 CPage::Down end
+03/09 00:19:50 CPage::Down begin
+03/09 00:19:50 3
+03/09 00:19:50 4
+03/09 00:19:50 CPage::Down end
+03/09 00:19:50 CPage::Down begin
+03/09 00:19:50 1
+03/09 00:19:50 2
+03/09 00:19:50 CPage::Down end
+03/09 00:19:50 CPage::Down begin
+03/09 00:19:51 3
+03/09 00:19:51 4
+03/09 00:19:51 CPage::Down end
+03/09 00:19:51 CPage::Down begin
+03/09 00:19:51 1
+03/09 00:19:51 2
+03/09 00:19:51 CPage::Down end
+03/09 00:19:51 CPage::Down begin
+03/09 00:19:51 3
+03/09 00:19:51 4
+03/09 00:19:51 CPage::Down end
+03/09 00:19:51 CPage::Down begin
+03/09 00:19:51 1
+03/09 00:19:51 2
+03/09 00:19:51 CPage::Down end
+03/09 00:19:51 CPage::Down begin
+03/09 00:19:51 3
+03/09 00:19:51 4
+03/09 00:19:51 CPage::Down end
+03/09 00:19:51 CPage::Down begin
+03/09 00:19:51 1
+03/09 00:19:51 2
+03/09 00:19:51 CPage::Down end
+03/09 00:19:52 CPage::Down begin
+03/09 00:19:52 3
+03/09 00:19:52 4
+03/09 00:19:52 CPage::Down end
+03/09 00:19:52 CPage::Down begin
+03/09 00:19:52 1
+03/09 00:19:52 ..\SRC\Page.cpp
+03/09 00:26:01 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 00:26:01 CWapBrowserAppUi::ConstructL
+03/09 00:26:01 CWmlParser::CWmlParser
+03/09 00:26:01 CWmlParser::Parse1
+03/09 00:26:01 CWmlParser::Parse10
+03/09 00:26:03 CWapBrowserAppUi::RequestPage
+03/09 00:26:03 http://wap.monternet.com
+03/09 00:26:06 Connecting...
+03/09 00:26:09 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:26:09 Http-Status:200
+03/09 00:26:09 Content-Type:text/vnd.wap.wml
+03/09 00:26:09 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData 1
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData 2
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData 3
+03/09 00:26:09 1152 bytes received... 
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData End
+03/09 00:26:09 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData 1
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData 2
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData 3
+03/09 00:26:09 2696 bytes received... 
+03/09 00:26:09 THTTPEvent::EGotResponseBodyData End
+03/09 00:26:10 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData 1
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData 2
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData 3
+03/09 00:26:10 1348 bytes received... 
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData End
+03/09 00:26:10 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData 1
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData 2
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData 3
+03/09 00:26:10 1005 bytes received... 
+03/09 00:26:10 Body received
+03/09 00:26:10 THTTPEvent::EGotResponseBodyData End
+03/09 00:26:10 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:26:10 Transaction Complete
+03/09 00:26:10 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:26:10 Transaction Successful
+03/09 00:26:10 1
+03/09 00:26:10 2
+03/09 00:26:10 3
+03/09 00:26:10 CWapBrowserAppUi::ParseFile
+03/09 00:26:10 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:26:10 CWapBrowserAppUi::ParseFile parser
+03/09 00:26:10 CWmlParser::CWmlParser
+03/09 00:26:10 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:26:10 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:26:10 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:26:10 CWmlParser::Parse1
+03/09 00:26:10 CWmlParser::Parse2
+03/09 00:26:10 CWmlParser::Parse3
+03/09 00:26:10 ShowPage
+03/09 00:26:10 ShowPage End
+03/09 00:26:10 CWapBrowserAppUi::ParseFile End
+03/09 00:26:10 4
+03/09 00:26:12 CPage::Down begin
+03/09 00:26:12 1
+03/09 00:26:12 2
+03/09 00:26:12 CPage::Down end
+03/09 00:26:12 CPage::Down begin
+03/09 00:26:12 1
+03/09 00:26:12 2
+03/09 00:26:12 CPage::Down end
+03/09 00:26:12 CPage::Down begin
+03/09 00:26:12 1
+03/09 00:26:12 2
+03/09 00:26:12 CPage::Down end
+03/09 00:26:12 CPage::Down begin
+03/09 00:26:12 1
+03/09 00:26:12 2
+03/09 00:26:12 CPage::Down end
+03/09 00:26:12 CPage::Down begin
+03/09 00:26:12 1
+03/09 00:26:12 2
+03/09 00:26:12 CPage::Down end
+03/09 00:26:13 CPage::Down begin
+03/09 00:26:13 1
+03/09 00:26:13 2
+03/09 00:26:13 CPage::Down end
+03/09 00:26:13 CPage::Down begin
+03/09 00:26:13 1
+03/09 00:26:13 2
+03/09 00:26:13 CPage::Down end
+03/09 00:26:13 CPage::Down begin
+03/09 00:26:13 1
+03/09 00:26:13 2
+03/09 00:26:13 CPage::Down end
+03/09 00:26:13 CPage::Down begin
+03/09 00:26:13 1
+03/09 00:26:13 2
+03/09 00:26:13 CPage::Down end
+03/09 00:26:13 CPage::Down begin
+03/09 00:26:13 1
+03/09 00:26:13 2
+03/09 00:26:13 CPage::Down end
+03/09 00:26:15 CPage::Down begin
+03/09 00:26:15 1
+03/09 00:26:15 2
+03/09 00:26:15 CPage::Down end
+03/09 00:26:15 CPage::Down begin
+03/09 00:26:15 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:15 4
+03/09 00:26:15 CPage::Down end
+03/09 00:26:15 CPage::Down begin
+03/09 00:26:15 1
+03/09 00:26:15 2
+03/09 00:26:15 CPage::Down end
+03/09 00:26:16 CPage::Down begin
+03/09 00:26:16 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:16 4
+03/09 00:26:16 CPage::Down end
+03/09 00:26:16 CPage::Down begin
+03/09 00:26:16 1
+03/09 00:26:16 2
+03/09 00:26:16 CPage::Down end
+03/09 00:26:16 CPage::Down begin
+03/09 00:26:16 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:16 4
+03/09 00:26:16 CPage::Down end
+03/09 00:26:16 CPage::Down begin
+03/09 00:26:16 1
+03/09 00:26:16 2
+03/09 00:26:16 CPage::Down end
+03/09 00:26:16 CPage::Down begin
+03/09 00:26:16 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:16 4
+03/09 00:26:16 CPage::Down end
+03/09 00:26:16 CPage::Down begin
+03/09 00:26:16 1
+03/09 00:26:16 2
+03/09 00:26:16 CPage::Down end
+03/09 00:26:17 CPage::Down begin
+03/09 00:26:17 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:17 4
+03/09 00:26:17 CPage::Down end
+03/09 00:26:17 CPage::Down begin
+03/09 00:26:17 1
+03/09 00:26:17 2
+03/09 00:26:17 CPage::Down end
+03/09 00:26:17 CPage::Down begin
+03/09 00:26:17 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:17 4
+03/09 00:26:17 CPage::Down end
+03/09 00:26:17 CPage::Down begin
+03/09 00:26:17 1
+03/09 00:26:17 2
+03/09 00:26:17 CPage::Down end
+03/09 00:26:17 CPage::Down begin
+03/09 00:26:17 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:17 4
+03/09 00:26:17 CPage::Down end
+03/09 00:26:18 CPage::Down begin
+03/09 00:26:18 1
+03/09 00:26:18 2
+03/09 00:26:18 CPage::Down end
+03/09 00:26:18 CPage::Down begin
+03/09 00:26:18 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:18 4
+03/09 00:26:18 CPage::Down end
+03/09 00:26:18 CPage::Down begin
+03/09 00:26:18 1
+03/09 00:26:18 2
+03/09 00:26:18 CPage::Down end
+03/09 00:26:18 CPage::Down begin
+03/09 00:26:18 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:18 4
+03/09 00:26:18 CPage::Down end
+03/09 00:26:18 CPage::Down begin
+03/09 00:26:18 1
+03/09 00:26:18 2
+03/09 00:26:18 CPage::Down end
+03/09 00:26:19 CPage::Down begin
+03/09 00:26:19 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:19 4
+03/09 00:26:19 CPage::Down end
+03/09 00:26:19 CPage::Down begin
+03/09 00:26:19 1
+03/09 00:26:19 2
+03/09 00:26:19 CPage::Down end
+03/09 00:26:19 CPage::Down begin
+03/09 00:26:19 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:19 4
+03/09 00:26:19 CPage::Down end
+03/09 00:26:19 CPage::Down begin
+03/09 00:26:19 1
+03/09 00:26:19 2
+03/09 00:26:19 CPage::Down end
+03/09 00:26:19 CPage::Down begin
+03/09 00:26:19 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:19 4
+03/09 00:26:19 CPage::Down end
+03/09 00:26:19 CPage::Down begin
+03/09 00:26:19 1
+03/09 00:26:20 2
+03/09 00:26:20 CPage::Down end
+03/09 00:26:20 CPage::Down begin
+03/09 00:26:20 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:20 4
+03/09 00:26:20 CPage::Down end
+03/09 00:26:20 CPage::Down begin
+03/09 00:26:20 1
+03/09 00:26:20 2
+03/09 00:26:20 CPage::Down end
+03/09 00:26:20 CPage::Down begin
+03/09 00:26:20 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:20 4
+03/09 00:26:20 CPage::Down end
+03/09 00:26:20 CPage::Down begin
+03/09 00:26:20 1
+03/09 00:26:20 2
+03/09 00:26:20 CPage::Down end
+03/09 00:26:20 CPage::Down begin
+03/09 00:26:20 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:20 4
+03/09 00:26:20 CPage::Down end
+03/09 00:26:21 CPage::Down begin
+03/09 00:26:21 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:21 4
+03/09 00:26:21 CPage::Down end
+03/09 00:26:21 CPage::Down begin
+03/09 00:26:21 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:21 4
+03/09 00:26:21 CPage::Down end
+03/09 00:26:21 CPage::Down begin
+03/09 00:26:21 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:21 4
+03/09 00:26:21 CPage::Down end
+03/09 00:26:23 CPage::Down begin
+03/09 00:26:23 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:23 4
+03/09 00:26:23 CPage::Down end
+03/09 00:26:23 CPage::Down begin
+03/09 00:26:23 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:23 4
+03/09 00:26:23 CPage::Down end
+03/09 00:26:23 CPage::Down begin
+03/09 00:26:23 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:23 4
+03/09 00:26:23 CPage::Down end
+03/09 00:26:25 CPage::Down begin
+03/09 00:26:25 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:25 4
+03/09 00:26:25 CPage::Down end
+03/09 00:26:25 CPage::Down begin
+03/09 00:26:25 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:25 4
+03/09 00:26:25 CPage::Down end
+03/09 00:26:25 CPage::Down begin
+03/09 00:26:25 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:25 4
+03/09 00:26:25 CPage::Down end
+03/09 00:26:27 CPage::Down begin
+03/09 00:26:27 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:27 4
+03/09 00:26:27 CPage::Down end
+03/09 00:26:27 CPage::Down begin
+03/09 00:26:27 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:27 4
+03/09 00:26:27 CPage::Down end
+03/09 00:26:27 CPage::Down begin
+03/09 00:26:27 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:27 4
+03/09 00:26:27 CPage::Down end
+03/09 00:26:29 CPage::Down begin
+03/09 00:26:29 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:29 4
+03/09 00:26:29 CPage::Down end
+03/09 00:26:38 CPage::Down begin
+03/09 00:26:38 1
+03/09 00:26:38 2
+03/09 00:26:38 CPage::Down end
+03/09 00:26:39 CPage::Down begin
+03/09 00:26:39 1
+03/09 00:26:39 2
+03/09 00:26:39 CPage::Down end
+03/09 00:26:39 CPage::Down begin
+03/09 00:26:39 1
+03/09 00:26:39 2
+03/09 00:26:39 CPage::Down end
+03/09 00:26:39 CPage::Down begin
+03/09 00:26:39 1
+03/09 00:26:39 2
+03/09 00:26:39 CPage::Down end
+03/09 00:26:39 CPage::Down begin
+03/09 00:26:39 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:39 4
+03/09 00:26:39 CPage::Down end
+03/09 00:26:39 CPage::Down begin
+03/09 00:26:39 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:39 4
+03/09 00:26:39 CPage::Down end
+03/09 00:26:40 CPage::Down begin
+03/09 00:26:40 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:40 4
+03/09 00:26:40 CPage::Down end
+03/09 00:26:40 CPage::Down begin
+03/09 00:26:40 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:26:40 4
+03/09 00:26:40 CPage::Down end
+03/09 00:26:47 CPage::Down begin
+03/09 00:26:47 1
+03/09 00:26:47 2
+03/09 00:26:47 CPage::Down end
+03/09 00:26:47 CPage::Down begin
+03/09 00:26:47 1
+03/09 00:26:47 2
+03/09 00:26:47 CPage::Down end
+03/09 00:26:56 CPage::Down begin
+03/09 00:26:56 1
+03/09 00:26:56 2
+03/09 00:26:56 CPage::Down end
+03/09 00:26:56 CPage::Down begin
+03/09 00:26:56 1
+03/09 00:26:56 2
+03/09 00:26:56 CPage::Down end
+03/09 00:26:56 CPage::Down begin
+03/09 00:26:56 1
+03/09 00:26:56 2
+03/09 00:26:56 CPage::Down end
+03/09 00:26:58 CPage::Down begin
+03/09 00:26:58 1
+03/09 00:26:58 2
+03/09 00:26:58 CPage::Down end
+03/09 00:26:58 CPage::Down begin
+03/09 00:26:58 1
+03/09 00:26:58 2
+03/09 00:26:58 CPage::Down end
+03/09 00:26:59 CPage::Down begin
+03/09 00:26:59 1
+03/09 00:26:59 2
+03/09 00:26:59 CPage::Down end
+03/09 00:26:59 CPage::Down begin
+03/09 00:26:59 1
+03/09 00:26:59 2
+03/09 00:26:59 CPage::Down end
+03/09 00:26:59 CPage::Down begin
+03/09 00:26:59 1
+03/09 00:26:59 2
+03/09 00:26:59 CPage::Down end
+03/09 00:27:00 CPage::Down begin
+03/09 00:27:00 1
+03/09 00:27:00 2
+03/09 00:27:00 CPage::Down end
+03/09 00:27:01 CPage::Down begin
+03/09 00:27:01 1
+03/09 00:27:01 2
+03/09 00:27:01 CPage::Down end
+03/09 00:27:01 CPage::Down begin
+03/09 00:27:01 1
+03/09 00:27:01 2
+03/09 00:27:01 CPage::Down end
+03/09 00:27:01 CPage::Down begin
+03/09 00:27:01 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:01 4
+03/09 00:27:01 CPage::Down end
+03/09 00:27:02 CPage::Down begin
+03/09 00:27:02 1
+03/09 00:27:02 2
+03/09 00:27:02 CPage::Down end
+03/09 00:27:02 CPage::Down begin
+03/09 00:27:02 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:02 4
+03/09 00:27:02 CPage::Down end
+03/09 00:27:03 CPage::Down begin
+03/09 00:27:03 1
+03/09 00:27:03 2
+03/09 00:27:03 CPage::Down end
+03/09 00:27:03 CPage::Down begin
+03/09 00:27:03 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:03 4
+03/09 00:27:03 CPage::Down end
+03/09 00:27:03 CPage::Down begin
+03/09 00:27:03 1
+03/09 00:27:03 2
+03/09 00:27:03 CPage::Down end
+03/09 00:27:04 CPage::Down begin
+03/09 00:27:04 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:04 4
+03/09 00:27:04 CPage::Down end
+03/09 00:27:04 CPage::Down begin
+03/09 00:27:04 1
+03/09 00:27:04 2
+03/09 00:27:04 CPage::Down end
+03/09 00:27:04 CPage::Down begin
+03/09 00:27:05 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:05 4
+03/09 00:27:05 CPage::Down end
+03/09 00:27:06 CPage::Down begin
+03/09 00:27:06 1
+03/09 00:27:06 2
+03/09 00:27:06 CPage::Down end
+03/09 00:27:06 CPage::Down begin
+03/09 00:27:06 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:06 4
+03/09 00:27:06 CPage::Down end
+03/09 00:27:07 CPage::Down begin
+03/09 00:27:07 1
+03/09 00:27:07 2
+03/09 00:27:07 CPage::Down end
+03/09 00:27:07 CPage::Down begin
+03/09 00:27:07 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:07 4
+03/09 00:27:07 CPage::Down end
+03/09 00:27:08 CPage::Down begin
+03/09 00:27:08 1
+03/09 00:27:08 2
+03/09 00:27:08 CPage::Down end
+03/09 00:27:08 CPage::Down begin
+03/09 00:27:08 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:08 4
+03/09 00:27:08 CPage::Down end
+03/09 00:27:10 CPage::Down begin
+03/09 00:27:10 1
+03/09 00:27:10 2
+03/09 00:27:10 CPage::Down end
+03/09 00:27:10 CPage::Down begin
+03/09 00:27:10 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:10 4
+03/09 00:27:10 CPage::Down end
+03/09 00:27:11 CPage::Down begin
+03/09 00:27:11 1
+03/09 00:27:11 2
+03/09 00:27:11 CPage::Down end
+03/09 00:27:11 CPage::Down begin
+03/09 00:27:11 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:11 4
+03/09 00:27:11 CPage::Down end
+03/09 00:27:12 CPage::Down begin
+03/09 00:27:12 1
+03/09 00:27:12 2
+03/09 00:27:12 CPage::Down end
+03/09 00:27:12 CPage::Down begin
+03/09 00:27:12 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:12 4
+03/09 00:27:12 CPage::Down end
+03/09 00:27:13 CPage::Down begin
+03/09 00:27:13 1
+03/09 00:27:13 2
+03/09 00:27:13 CPage::Down end
+03/09 00:27:13 CPage::Down begin
+03/09 00:27:13 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:13 4
+03/09 00:27:13 CPage::Down end
+03/09 00:27:14 CPage::Down begin
+03/09 00:27:14 1
+03/09 00:27:14 2
+03/09 00:27:14 CPage::Down end
+03/09 00:27:14 CPage::Down begin
+03/09 00:27:14 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:14 4
+03/09 00:27:14 CPage::Down end
+03/09 00:27:16 CPage::Down begin
+03/09 00:27:16 1
+03/09 00:27:16 2
+03/09 00:27:16 CPage::Down end
+03/09 00:27:16 CPage::Down begin
+03/09 00:27:16 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:16 4
+03/09 00:27:16 CPage::Down end
+03/09 00:27:17 CPage::Down begin
+03/09 00:27:17 1
+03/09 00:27:17 2
+03/09 00:27:17 CPage::Down end
+03/09 00:27:18 CPage::Down begin
+03/09 00:27:18 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:18 4
+03/09 00:27:18 CPage::Down end
+03/09 00:27:18 CPage::Down begin
+03/09 00:27:18 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:18 4
+03/09 00:27:18 CPage::Down end
+03/09 00:27:18 CPage::Down begin
+03/09 00:27:18 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:18 4
+03/09 00:27:18 CPage::Down end
+03/09 00:27:31 CPage::Down begin
+03/09 00:27:31 1
+03/09 00:27:31 2
+03/09 00:27:31 CPage::Down end
+03/09 00:27:31 CPage::Down begin
+03/09 00:27:31 1
+03/09 00:27:31 2
+03/09 00:27:31 CPage::Down end
+03/09 00:27:31 CPage::Down begin
+03/09 00:27:31 1
+03/09 00:27:31 2
+03/09 00:27:31 CPage::Down end
+03/09 00:27:32 CPage::Down begin
+03/09 00:27:32 1
+03/09 00:27:32 2
+03/09 00:27:32 CPage::Down end
+03/09 00:27:32 CPage::Down begin
+03/09 00:27:32 1
+03/09 00:27:32 2
+03/09 00:27:32 CPage::Down end
+03/09 00:27:32 CPage::Down begin
+03/09 00:27:32 1
+03/09 00:27:32 2
+03/09 00:27:32 CPage::Down end
+03/09 00:27:32 CPage::Down begin
+03/09 00:27:32 1
+03/09 00:27:32 2
+03/09 00:27:32 CPage::Down end
+03/09 00:27:32 CPage::Down begin
+03/09 00:27:32 1
+03/09 00:27:32 2
+03/09 00:27:32 CPage::Down end
+03/09 00:27:33 CPage::Down begin
+03/09 00:27:33 1
+03/09 00:27:33 2
+03/09 00:27:33 CPage::Down end
+03/09 00:27:33 CPage::Down begin
+03/09 00:27:33 1
+03/09 00:27:33 2
+03/09 00:27:33 CPage::Down end
+03/09 00:27:33 CPage::Down begin
+03/09 00:27:33 1
+03/09 00:27:33 2
+03/09 00:27:33 CPage::Down end
+03/09 00:27:33 CPage::Down begin
+03/09 00:27:33 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:33 4
+03/09 00:27:33 CPage::Down end
+03/09 00:27:33 CPage::Down begin
+03/09 00:27:33 1
+03/09 00:27:33 2
+03/09 00:27:33 CPage::Down end
+03/09 00:27:34 CPage::Down begin
+03/09 00:27:34 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:34 4
+03/09 00:27:34 CPage::Down end
+03/09 00:27:34 CPage::Down begin
+03/09 00:27:34 1
+03/09 00:27:34 2
+03/09 00:27:34 CPage::Down end
+03/09 00:27:34 CPage::Down begin
+03/09 00:27:34 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:34 4
+03/09 00:27:34 CPage::Down end
+03/09 00:27:34 CPage::Down begin
+03/09 00:27:34 1
+03/09 00:27:34 2
+03/09 00:27:34 CPage::Down end
+03/09 00:27:34 CPage::Down begin
+03/09 00:27:35 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:35 4
+03/09 00:27:35 CPage::Down end
+03/09 00:27:35 CPage::Down begin
+03/09 00:27:35 1
+03/09 00:27:35 2
+03/09 00:27:35 CPage::Down end
+03/09 00:27:35 CPage::Down begin
+03/09 00:27:35 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:35 4
+03/09 00:27:35 CPage::Down end
+03/09 00:27:35 CPage::Down begin
+03/09 00:27:35 1
+03/09 00:27:35 2
+03/09 00:27:35 CPage::Down end
+03/09 00:27:35 CPage::Down begin
+03/09 00:27:35 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:35 4
+03/09 00:27:35 CPage::Down end
+03/09 00:27:36 CPage::Down begin
+03/09 00:27:36 1
+03/09 00:27:36 2
+03/09 00:27:36 CPage::Down end
+03/09 00:27:36 CPage::Down begin
+03/09 00:27:36 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:36 4
+03/09 00:27:36 CPage::Down end
+03/09 00:27:36 CPage::Down begin
+03/09 00:27:36 1
+03/09 00:27:36 2
+03/09 00:27:36 CPage::Down end
+03/09 00:27:36 CPage::Down begin
+03/09 00:27:36 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:36 4
+03/09 00:27:36 CPage::Down end
+03/09 00:27:36 CPage::Down begin
+03/09 00:27:36 1
+03/09 00:27:36 2
+03/09 00:27:36 CPage::Down end
+03/09 00:27:37 CPage::Down begin
+03/09 00:27:37 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:37 4
+03/09 00:27:37 CPage::Down end
+03/09 00:27:37 CPage::Down begin
+03/09 00:27:37 1
+03/09 00:27:37 2
+03/09 00:27:37 CPage::Down end
+03/09 00:27:37 CPage::Down begin
+03/09 00:27:37 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:37 4
+03/09 00:27:37 CPage::Down end
+03/09 00:27:37 CPage::Down begin
+03/09 00:27:37 1
+03/09 00:27:37 2
+03/09 00:27:37 CPage::Down end
+03/09 00:27:38 CPage::Down begin
+03/09 00:27:38 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:38 4
+03/09 00:27:38 CPage::Down end
+03/09 00:27:38 CPage::Down begin
+03/09 00:27:38 1
+03/09 00:27:38 2
+03/09 00:27:38 CPage::Down end
+03/09 00:27:38 CPage::Down begin
+03/09 00:27:38 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:38 4
+03/09 00:27:38 CPage::Down end
+03/09 00:27:38 CPage::Down begin
+03/09 00:27:38 1
+03/09 00:27:38 2
+03/09 00:27:38 CPage::Down end
+03/09 00:27:38 CPage::Down begin
+03/09 00:27:38 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:39 4
+03/09 00:27:39 CPage::Down end
+03/09 00:27:39 CPage::Down begin
+03/09 00:27:39 1
+03/09 00:27:39 2
+03/09 00:27:39 CPage::Down end
+03/09 00:27:39 CPage::Down begin
+03/09 00:27:39 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:39 4
+03/09 00:27:39 CPage::Down end
+03/09 00:27:39 CPage::Down begin
+03/09 00:27:39 1
+03/09 00:27:39 2
+03/09 00:27:39 CPage::Down end
+03/09 00:27:39 CPage::Down begin
+03/09 00:27:39 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:39 4
+03/09 00:27:39 CPage::Down end
+03/09 00:27:40 CPage::Down begin
+03/09 00:27:40 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:40 4
+03/09 00:27:40 CPage::Down end
+03/09 00:27:40 CPage::Down begin
+03/09 00:27:40 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:40 4
+03/09 00:27:40 CPage::Down end
+03/09 00:27:53 CPage::Down begin
+03/09 00:27:53 1
+03/09 00:27:53 2
+03/09 00:27:53 CPage::Down end
+03/09 00:27:53 CPage::Down begin
+03/09 00:27:53 1
+03/09 00:27:53 2
+03/09 00:27:53 CPage::Down end
+03/09 00:27:53 CPage::Down begin
+03/09 00:27:53 1
+03/09 00:27:53 2
+03/09 00:27:53 CPage::Down end
+03/09 00:27:53 CPage::Down begin
+03/09 00:27:53 1
+03/09 00:27:53 2
+03/09 00:27:53 CPage::Down end
+03/09 00:27:53 CPage::Down begin
+03/09 00:27:53 1
+03/09 00:27:53 2
+03/09 00:27:53 CPage::Down end
+03/09 00:27:54 CPage::Down begin
+03/09 00:27:54 1
+03/09 00:27:54 2
+03/09 00:27:54 CPage::Down end
+03/09 00:27:54 CPage::Down begin
+03/09 00:27:54 1
+03/09 00:27:54 2
+03/09 00:27:54 CPage::Down end
+03/09 00:27:54 CPage::Down begin
+03/09 00:27:54 1
+03/09 00:27:54 2
+03/09 00:27:54 CPage::Down end
+03/09 00:27:54 CPage::Down begin
+03/09 00:27:54 1
+03/09 00:27:54 2
+03/09 00:27:54 CPage::Down end
+03/09 00:27:54 CPage::Down begin
+03/09 00:27:55 1
+03/09 00:27:55 2
+03/09 00:27:55 CPage::Down end
+03/09 00:27:55 CPage::Down begin
+03/09 00:27:55 1
+03/09 00:27:55 2
+03/09 00:27:55 CPage::Down end
+03/09 00:27:55 CPage::Down begin
+03/09 00:27:55 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:55 4
+03/09 00:27:55 CPage::Down end
+03/09 00:27:55 CPage::Down begin
+03/09 00:27:55 1
+03/09 00:27:55 2
+03/09 00:27:55 CPage::Down end
+03/09 00:27:55 CPage::Down begin
+03/09 00:27:55 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:55 4
+03/09 00:27:55 CPage::Down end
+03/09 00:27:56 CPage::Down begin
+03/09 00:27:56 1
+03/09 00:27:56 2
+03/09 00:27:56 CPage::Down end
+03/09 00:27:56 CPage::Down begin
+03/09 00:27:56 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:56 4
+03/09 00:27:56 CPage::Down end
+03/09 00:27:56 CPage::Down begin
+03/09 00:27:56 1
+03/09 00:27:56 2
+03/09 00:27:56 CPage::Down end
+03/09 00:27:56 CPage::Down begin
+03/09 00:27:56 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:56 4
+03/09 00:27:56 CPage::Down end
+03/09 00:27:56 CPage::Down begin
+03/09 00:27:56 1
+03/09 00:27:56 2
+03/09 00:27:56 CPage::Down end
+03/09 00:27:57 CPage::Down begin
+03/09 00:27:57 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:57 4
+03/09 00:27:57 CPage::Down end
+03/09 00:27:57 CPage::Down begin
+03/09 00:27:57 1
+03/09 00:27:57 2
+03/09 00:27:57 CPage::Down end
+03/09 00:27:57 CPage::Down begin
+03/09 00:27:57 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:57 4
+03/09 00:27:57 CPage::Down end
+03/09 00:27:57 CPage::Down begin
+03/09 00:27:57 1
+03/09 00:27:57 2
+03/09 00:27:57 CPage::Down end
+03/09 00:27:58 CPage::Down begin
+03/09 00:27:58 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:58 4
+03/09 00:27:58 CPage::Down end
+03/09 00:27:58 CPage::Down begin
+03/09 00:27:58 1
+03/09 00:27:58 2
+03/09 00:27:58 CPage::Down end
+03/09 00:27:58 CPage::Down begin
+03/09 00:27:58 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:58 4
+03/09 00:27:58 CPage::Down end
+03/09 00:27:58 CPage::Down begin
+03/09 00:27:58 1
+03/09 00:27:58 2
+03/09 00:27:58 CPage::Down end
+03/09 00:27:58 CPage::Down begin
+03/09 00:27:58 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:59 4
+03/09 00:27:59 CPage::Down end
+03/09 00:27:59 CPage::Down begin
+03/09 00:27:59 1
+03/09 00:27:59 2
+03/09 00:27:59 CPage::Down end
+03/09 00:27:59 CPage::Down begin
+03/09 00:27:59 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:59 4
+03/09 00:27:59 CPage::Down end
+03/09 00:27:59 CPage::Down begin
+03/09 00:27:59 1
+03/09 00:27:59 2
+03/09 00:27:59 CPage::Down end
+03/09 00:27:59 CPage::Down begin
+03/09 00:27:59 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:27:59 4
+03/09 00:27:59 CPage::Down end
+03/09 00:28:00 CPage::Down begin
+03/09 00:28:00 1
+03/09 00:28:00 2
+03/09 00:28:00 CPage::Down end
+03/09 00:28:00 CPage::Down begin
+03/09 00:28:00 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:28:00 4
+03/09 00:28:00 CPage::Down end
+03/09 00:28:00 CPage::Down begin
+03/09 00:28:00 1
+03/09 00:28:00 2
+03/09 00:28:00 CPage::Down end
+03/09 00:28:00 CPage::Down begin
+03/09 00:28:00 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:28:00 4
+03/09 00:28:00 CPage::Down end
+03/09 00:28:00 CPage::Down begin
+03/09 00:28:00 1
+03/09 00:28:00 2
+03/09 00:28:00 CPage::Down end
+03/09 00:28:01 CPage::Down begin
+03/09 00:28:01 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:28:01 4
+03/09 00:28:01 CPage::Down end
+03/09 00:28:01 CPage::Down begin
+03/09 00:28:01 1
+03/09 00:28:01 2
+03/09 00:28:01 CPage::Down end
+03/09 00:28:01 CPage::Down begin
+03/09 00:28:01 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:28:01 4
+03/09 00:28:01 CPage::Down end
+03/09 00:28:01 CPage::Down begin
+03/09 00:28:01 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:28:01 4
+03/09 00:28:01 CPage::Down end
+03/09 00:28:01 CPage::Down begin
+03/09 00:28:01 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:28:01 4
+03/09 00:28:01 CPage::Down end
+03/09 00:28:22 CPage::Down begin
+03/09 00:28:22 1
+03/09 00:28:22 2
+03/09 00:28:22 CPage::Down end
+03/09 00:28:23 CWapBrowserAppUi::RequestPage
+03/09 00:28:23 http://wap.monternet.com/redirect4visitlog?rMenuID=213773&destURL=http://wap.i139.cn/pams/s.do?p=666&ts=2404
+03/09 00:28:23 Connecting...
+03/09 00:28:25 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:28:25 Http-Status:200
+03/09 00:28:25 Content-Type:text/vnd.wap.wml
+03/09 00:28:25 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:28:25 THTTPEvent::EGotResponseBodyData
+03/09 00:28:25 THTTPEvent::EGotResponseBodyData 1
+03/09 00:28:25 THTTPEvent::EGotResponseBodyData 2
+03/09 00:28:25 THTTPEvent::EGotResponseBodyData 3
+03/09 00:28:25 508 bytes received... 
+03/09 00:28:25 Body received
+03/09 00:28:25 THTTPEvent::EGotResponseBodyData End
+03/09 00:28:25 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:28:26 Transaction Complete
+03/09 00:28:26 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:28:26 Transaction Successful
+03/09 00:28:26 1
+03/09 00:28:26 2
+03/09 00:28:26 3
+03/09 00:28:26 CWapBrowserAppUi::ParseFile
+03/09 00:28:26 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:28:26 CWapBrowserAppUi::ParseFile parser
+03/09 00:28:26 CWmlParser::CWmlParser
+03/09 00:28:26 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:28:26 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:28:26 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:28:26 CWmlParser::Parse1
+03/09 00:28:26 CWmlParser::Parse2
+03/09 00:28:26 CWmlParser::Parse3
+03/09 00:28:26 href:
+03/09 00:28:26 http://wap.i139.cn/pams/s.do?p=666&ts=2404
+03/09 00:28:26 CWapBrowserAppUi::RequestPage
+03/09 00:28:26 http://wap.i139.cn/pams/s.do?p=666&ts=2404
+03/09 00:28:26 Connecting...
+03/09 00:28:26 CWmlParser::Parse8
+03/09 00:28:26 CWmlParser::Parse9
+03/09 00:28:26 CWmlParser::Parse10
+03/09 00:28:26 CWapBrowserAppUi::ParseFile End
+03/09 00:28:26 4
+03/09 00:28:27 CHTTPEngine::MHFRunL iNetStatus = 10001
+03/09 00:28:27 Unrecognised event: 10001
+03/09 00:28:41 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:28:41 Http-Status:200
+03/09 00:28:41 Content-Type:text/vnd.wap.wml
+03/09 00:28:41 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:28:41 THTTPEvent::EGotResponseBodyData
+03/09 00:28:41 THTTPEvent::EGotResponseBodyData 1
+03/09 00:28:41 THTTPEvent::EGotResponseBodyData 2
+03/09 00:28:41 THTTPEvent::EGotResponseBodyData 3
+03/09 00:28:41 285 bytes received... 
+03/09 00:28:41 Body received
+03/09 00:28:41 THTTPEvent::EGotResponseBodyData End
+03/09 00:28:41 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:28:41 Transaction Complete
+03/09 00:28:41 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 00:28:41 Transaction Successful
+03/09 00:28:41 1
+03/09 00:28:41 2
+03/09 00:28:41 3
+03/09 00:28:41 CWapBrowserAppUi::ParseFile
+03/09 00:28:41 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 00:28:41 CWapBrowserAppUi::ParseFile parser
+03/09 00:28:41 CWmlParser::CWmlParser
+03/09 00:28:41 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:28:41 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 00:28:41 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 00:28:41 CWmlParser::Parse1
+03/09 00:28:41 CWmlParser::Parse2
+03/09 00:28:41 CWmlParser::Parse3
+03/09 00:28:41 CWapBrowserAppUi::RequestPage
+03/09 00:28:41 http://3g.i139.cn/caijing/s.do?p=7&fr=666
+03/09 00:28:41 Connecting...
+03/09 00:28:41 CWmlParser::Parse8
+03/09 00:28:41 CWmlParser::Parse9
+03/09 00:28:41 CWmlParser::Parse10
+03/09 00:28:41 CWapBrowserAppUi::ParseFile End
+03/09 00:28:41 4
+03/09 00:28:44 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 00:28:44 Http-Status:404
+03/09 00:28:44 Content-Type:text/html
+03/09 00:28:44 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 00:28:44 THTTPEvent::EGotResponseBodyData
+03/09 00:28:44 THTTPEvent::EGotResponseBodyData 1
+03/09 00:28:44 THTTPEvent::EGotResponseBodyData 2
+03/09 00:28:44 THTTPEvent::EGotResponseBodyData 3
+03/09 00:28:44 991 bytes received... 
+03/09 00:28:44 Body received
+03/09 00:28:44 THTTPEvent::EGotResponseBodyData End
+03/09 00:28:44 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 00:28:44 Transaction Complete
+03/09 00:28:44 CHTTPEngine::MHFRunL iNetStatus = 9
+03/09 00:28:44 Transaction Failed
+03/09 00:28:47 CPage::Down begin
+03/09 00:28:47 1
+03/09 00:28:47 2
+03/09 00:28:47 CPage::Down end
+03/09 00:28:47 CPage::Down begin
+03/09 00:28:47 1
+03/09 00:28:47 2
+03/09 00:28:47 CPage::Down end
+03/09 00:28:47 CPage::Down begin
+03/09 00:28:47 1
+03/09 00:28:48 2
+03/09 00:28:48 CPage::Down end
+03/09 00:28:48 CPage::Down begin
+03/09 00:28:48 1
+03/09 00:28:48 2
+03/09 00:28:48 CPage::Down end
+03/09 00:29:07 CPage::Down begin
+03/09 00:29:07 1
+03/09 00:29:07 2
+03/09 00:29:07 CPage::Down end
+03/09 00:29:07 CPage::Down begin
+03/09 00:29:07 1
+03/09 00:29:07 2
+03/09 00:29:07 CPage::Down end
+03/09 00:29:07 CPage::Down begin
+03/09 00:29:07 1
+03/09 00:29:07 2
+03/09 00:29:07 CPage::Down end
+03/09 00:29:08 CPage::Down begin
+03/09 00:29:08 1
+03/09 00:29:08 2
+03/09 00:29:08 CPage::Down end
+03/09 00:29:08 CPage::Down begin
+03/09 00:29:08 1
+03/09 00:29:08 2
+03/09 00:29:08 CPage::Down end
+03/09 00:29:08 CPage::Down begin
+03/09 00:29:08 1
+03/09 00:29:08 2
+03/09 00:29:08 CPage::Down end
+03/09 00:29:08 CPage::Down begin
+03/09 00:29:08 1
+03/09 00:29:08 2
+03/09 00:29:08 CPage::Down end
+03/09 00:29:09 CPage::Down begin
+03/09 00:29:09 1
+03/09 00:29:09 2
+03/09 00:29:09 CPage::Down end
+03/09 00:29:09 CPage::Down begin
+03/09 00:29:09 1
+03/09 00:29:09 2
+03/09 00:29:09 CPage::Down end
+03/09 00:29:09 CPage::Down begin
+03/09 00:29:09 1
+03/09 00:29:09 2
+03/09 00:29:09 CPage::Down end
+03/09 00:29:09 CPage::Down begin
+03/09 00:29:09 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:09 4
+03/09 00:29:09 CPage::Down end
+03/09 00:29:09 CPage::Down begin
+03/09 00:29:09 1
+03/09 00:29:09 2
+03/09 00:29:09 CPage::Down end
+03/09 00:29:10 CPage::Down begin
+03/09 00:29:10 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:10 4
+03/09 00:29:10 CPage::Down end
+03/09 00:29:10 CPage::Down begin
+03/09 00:29:10 1
+03/09 00:29:10 2
+03/09 00:29:10 CPage::Down end
+03/09 00:29:10 CPage::Down begin
+03/09 00:29:10 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:10 4
+03/09 00:29:10 CPage::Down end
+03/09 00:29:10 CPage::Down begin
+03/09 00:29:10 1
+03/09 00:29:10 2
+03/09 00:29:10 CPage::Down end
+03/09 00:29:10 CPage::Down begin
+03/09 00:29:10 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:10 4
+03/09 00:29:10 CPage::Down end
+03/09 00:29:11 CPage::Down begin
+03/09 00:29:11 1
+03/09 00:29:11 2
+03/09 00:29:11 CPage::Down end
+03/09 00:29:11 CPage::Down begin
+03/09 00:29:11 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:11 4
+03/09 00:29:11 CPage::Down end
+03/09 00:29:11 CPage::Down begin
+03/09 00:29:11 1
+03/09 00:29:11 2
+03/09 00:29:11 CPage::Down end
+03/09 00:29:11 CPage::Down begin
+03/09 00:29:11 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:11 4
+03/09 00:29:11 CPage::Down end
+03/09 00:29:11 CPage::Down begin
+03/09 00:29:11 1
+03/09 00:29:11 2
+03/09 00:29:11 CPage::Down end
+03/09 00:29:11 CPage::Down begin
+03/09 00:29:11 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:11 4
+03/09 00:29:11 CPage::Down end
+03/09 00:29:12 CPage::Down begin
+03/09 00:29:12 1
+03/09 00:29:12 2
+03/09 00:29:12 CPage::Down end
+03/09 00:29:12 CPage::Down begin
+03/09 00:29:12 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:12 4
+03/09 00:29:12 CPage::Down end
+03/09 00:29:12 CPage::Down begin
+03/09 00:29:12 1
+03/09 00:29:12 2
+03/09 00:29:12 CPage::Down end
+03/09 00:29:12 CPage::Down begin
+03/09 00:29:12 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:12 4
+03/09 00:29:12 CPage::Down end
+03/09 00:29:12 CPage::Down begin
+03/09 00:29:12 1
+03/09 00:29:12 2
+03/09 00:29:12 CPage::Down end
+03/09 00:29:13 CPage::Down begin
+03/09 00:29:13 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:13 4
+03/09 00:29:13 CPage::Down end
+03/09 00:29:13 CPage::Down begin
+03/09 00:29:13 1
+03/09 00:29:13 2
+03/09 00:29:13 CPage::Down end
+03/09 00:29:13 CPage::Down begin
+03/09 00:29:13 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:13 4
+03/09 00:29:13 CPage::Down end
+03/09 00:29:13 CPage::Down begin
+03/09 00:29:13 1
+03/09 00:29:13 2
+03/09 00:29:13 CPage::Down end
+03/09 00:29:13 CPage::Down begin
+03/09 00:29:13 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:13 4
+03/09 00:29:13 CPage::Down end
+03/09 00:29:13 CPage::Down begin
+03/09 00:29:13 1
+03/09 00:29:13 2
+03/09 00:29:13 CPage::Down end
+03/09 00:29:14 CPage::Down begin
+03/09 00:29:14 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:14 4
+03/09 00:29:14 CPage::Down end
+03/09 00:29:14 CPage::Down begin
+03/09 00:29:14 1
+03/09 00:29:14 2
+03/09 00:29:14 CPage::Down end
+03/09 00:29:14 CPage::Down begin
+03/09 00:29:14 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:14 4
+03/09 00:29:14 CPage::Down end
+03/09 00:29:14 CPage::Down begin
+03/09 00:29:14 1
+03/09 00:29:14 2
+03/09 00:29:14 CPage::Down end
+03/09 00:29:14 CPage::Down begin
+03/09 00:29:14 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:14 4
+03/09 00:29:14 CPage::Down end
+03/09 00:29:15 CPage::Down begin
+03/09 00:29:15 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:15 4
+03/09 00:29:15 CPage::Down end
+03/09 00:29:15 CPage::Down begin
+03/09 00:29:15 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 00:29:15 4
+03/09 00:29:15 CPage::Down end
+03/09 00:29:19 CPage::Down begin
+03/09 00:29:19 1
+03/09 00:29:19 2
+03/09 00:29:19 CPage::Down end
+03/09 21:15:15 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:15:15 CWapBrowserAppUi::ConstructL
+03/09 21:15:15 CWmlParser::CWmlParser
+03/09 21:15:15 CWmlParser::Parse1
+03/09 21:15:15 CWmlParser::Parse10
+03/09 21:15:23 CWapBrowserAppUi::RequestPage
+03/09 21:15:23 http://wap.monternet.com
+03/09 21:15:28 Connecting...
+03/09 21:15:36 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 21:15:36 Http-Status:200
+03/09 21:15:36 Content-Type:text/vnd.wap.wml
+03/09 21:15:36 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:15:36 THTTPEvent::EGotResponseBodyData
+03/09 21:15:36 THTTPEvent::EGotResponseBodyData 1
+03/09 21:15:36 THTTPEvent::EGotResponseBodyData 2
+03/09 21:15:36 THTTPEvent::EGotResponseBodyData 3
+03/09 21:15:36 1152 bytes received... 
+03/09 21:15:36 THTTPEvent::EGotResponseBodyData End
+03/09 21:15:37 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 1
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 2
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 3
+03/09 21:15:37 1348 bytes received... 
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData End
+03/09 21:15:37 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 1
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 2
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 3
+03/09 21:15:37 1348 bytes received... 
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData End
+03/09 21:15:37 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 1
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 2
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData 3
+03/09 21:15:37 1348 bytes received... 
+03/09 21:15:37 THTTPEvent::EGotResponseBodyData End
+03/09 21:15:38 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData 1
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData 2
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData 3
+03/09 21:15:38 1348 bytes received... 
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData End
+03/09 21:15:38 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData 1
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData 2
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData 3
+03/09 21:15:38 1348 bytes received... 
+03/09 21:15:38 THTTPEvent::EGotResponseBodyData End
+03/09 21:15:39 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:15:39 THTTPEvent::EGotResponseBodyData
+03/09 21:15:39 THTTPEvent::EGotResponseBodyData 1
+03/09 21:15:39 THTTPEvent::EGotResponseBodyData 2
+03/09 21:15:39 THTTPEvent::EGotResponseBodyData 3
+03/09 21:15:39 727 bytes received... 
+03/09 21:15:39 Body received
+03/09 21:15:39 THTTPEvent::EGotResponseBodyData End
+03/09 21:15:39 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 21:15:39 Transaction Complete
+03/09 21:15:39 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 21:15:39 Transaction Successful
+03/09 21:15:39 1
+03/09 21:15:39 2
+03/09 21:15:39 3
+03/09 21:15:39 CWapBrowserAppUi::ParseFile
+03/09 21:15:39 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 21:15:39 CWapBrowserAppUi::ParseFile parser
+03/09 21:15:39 CWmlParser::CWmlParser
+03/09 21:15:39 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 21:15:39 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 21:15:39 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 21:15:39 CWmlParser::Parse1
+03/09 21:15:39 CWmlParser::Parse2
+03/09 21:15:39 CWmlParser::Parse3
+03/09 21:15:39 ShowPage
+03/09 21:15:39 ShowPage End
+03/09 21:15:39 CWapBrowserAppUi::ParseFile End
+03/09 21:15:39 4
+03/09 21:15:42 CPage::Down begin
+03/09 21:15:42 1
+03/09 21:15:42 2
+03/09 21:15:42 CPage::Down end
+03/09 21:15:43 CPage::Down begin
+03/09 21:15:43 1
+03/09 21:15:43 2
+03/09 21:15:43 CPage::Down end
+03/09 21:15:48 CPage::Down begin
+03/09 21:15:48 1
+03/09 21:15:48 2
+03/09 21:15:48 CPage::Down end
+03/09 21:15:51 CPage::Down begin
+03/09 21:15:51 1
+03/09 21:15:51 2
+03/09 21:15:51 CPage::Down end
+03/09 21:15:54 CPage::Down begin
+03/09 21:15:54 1
+03/09 21:15:54 2
+03/09 21:15:54 CPage::Down end
+03/09 21:16:00 CPage::Down begin
+03/09 21:16:00 1
+03/09 21:16:00 2
+03/09 21:16:00 CPage::Down end
+03/09 21:16:02 CPage::Down begin
+03/09 21:16:02 1
+03/09 21:16:02 2
+03/09 21:16:02 CPage::Down end
+03/09 21:16:03 CPage::Down begin
+03/09 21:16:03 1
+03/09 21:16:03 2
+03/09 21:16:03 CPage::Down end
+03/09 21:16:03 CPage::Down begin
+03/09 21:16:03 1
+03/09 21:16:03 2
+03/09 21:16:03 CPage::Down end
+03/09 21:16:04 CPage::Down begin
+03/09 21:16:04 1
+03/09 21:16:04 2
+03/09 21:16:04 CPage::Down end
+03/09 21:16:04 CPage::Down begin
+03/09 21:16:04 1
+03/09 21:16:04 2
+03/09 21:16:04 CPage::Down end
+03/09 21:16:04 CPage::Down begin
+03/09 21:16:04 1
+03/09 21:16:04 2
+03/09 21:16:04 CPage::Down end
+03/09 21:16:04 CPage::Down begin
+03/09 21:16:04 1
+03/09 21:16:04 2
+03/09 21:16:04 CPage::Down end
+03/09 21:16:04 CPage::Down begin
+03/09 21:16:04 1
+03/09 21:16:04 2
+03/09 21:16:04 CPage::Down end
+03/09 21:16:05 CPage::Down begin
+03/09 21:16:05 1
+03/09 21:16:05 2
+03/09 21:16:05 CPage::Down end
+03/09 21:16:05 CPage::Down begin
+03/09 21:16:05 1
+03/09 21:16:05 2
+03/09 21:16:05 CPage::Down end
+03/09 21:16:05 CPage::Down begin
+03/09 21:16:05 1
+03/09 21:16:05 2
+03/09 21:16:05 CPage::Down end
+03/09 21:16:05 CPage::Down begin
+03/09 21:16:05 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:05 4
+03/09 21:16:05 CPage::Down end
+03/09 21:16:05 CPage::Down begin
+03/09 21:16:05 1
+03/09 21:16:05 2
+03/09 21:16:05 CPage::Down end
+03/09 21:16:05 CPage::Down begin
+03/09 21:16:05 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:05 4
+03/09 21:16:05 CPage::Down end
+03/09 21:16:06 CPage::Down begin
+03/09 21:16:06 1
+03/09 21:16:06 2
+03/09 21:16:06 CPage::Down end
+03/09 21:16:06 CPage::Down begin
+03/09 21:16:06 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:06 4
+03/09 21:16:06 CPage::Down end
+03/09 21:16:06 CPage::Down begin
+03/09 21:16:06 1
+03/09 21:16:06 2
+03/09 21:16:06 CPage::Down end
+03/09 21:16:06 CPage::Down begin
+03/09 21:16:06 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:06 4
+03/09 21:16:06 CPage::Down end
+03/09 21:16:07 CPage::Down begin
+03/09 21:16:07 1
+03/09 21:16:07 2
+03/09 21:16:07 CPage::Down end
+03/09 21:16:07 CPage::Down begin
+03/09 21:16:07 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:07 4
+03/09 21:16:07 CPage::Down end
+03/09 21:16:07 CPage::Down begin
+03/09 21:16:07 1
+03/09 21:16:07 2
+03/09 21:16:07 CPage::Down end
+03/09 21:16:07 CPage::Down begin
+03/09 21:16:07 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:07 4
+03/09 21:16:07 CPage::Down end
+03/09 21:16:07 CPage::Down begin
+03/09 21:16:07 1
+03/09 21:16:07 2
+03/09 21:16:07 CPage::Down end
+03/09 21:16:08 CPage::Down begin
+03/09 21:16:08 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:08 4
+03/09 21:16:08 CPage::Down end
+03/09 21:16:08 CPage::Down begin
+03/09 21:16:08 1
+03/09 21:16:08 2
+03/09 21:16:08 CPage::Down end
+03/09 21:16:08 CPage::Down begin
+03/09 21:16:08 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:08 4
+03/09 21:16:08 CPage::Down end
+03/09 21:16:08 CPage::Down begin
+03/09 21:16:08 1
+03/09 21:16:08 2
+03/09 21:16:08 CPage::Down end
+03/09 21:16:08 CPage::Down begin
+03/09 21:16:08 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:08 4
+03/09 21:16:08 CPage::Down end
+03/09 21:16:09 CPage::Down begin
+03/09 21:16:09 1
+03/09 21:16:09 2
+03/09 21:16:09 CPage::Down end
+03/09 21:16:09 CPage::Down begin
+03/09 21:16:09 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:09 4
+03/09 21:16:09 CPage::Down end
+03/09 21:16:09 CPage::Down begin
+03/09 21:16:09 1
+03/09 21:16:09 2
+03/09 21:16:09 CPage::Down end
+03/09 21:16:09 CPage::Down begin
+03/09 21:16:09 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:09 4
+03/09 21:16:09 CPage::Down end
+03/09 21:16:09 CPage::Down begin
+03/09 21:16:09 1
+03/09 21:16:09 2
+03/09 21:16:09 CPage::Down end
+03/09 21:16:09 CPage::Down begin
+03/09 21:16:10 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:10 4
+03/09 21:16:10 CPage::Down end
+03/09 21:16:10 CPage::Down begin
+03/09 21:16:10 1
+03/09 21:16:10 2
+03/09 21:16:10 CPage::Down end
+03/09 21:16:10 CPage::Down begin
+03/09 21:16:10 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:10 4
+03/09 21:16:10 CPage::Down end
+03/09 21:16:10 CPage::Down begin
+03/09 21:16:10 1
+03/09 21:16:10 2
+03/09 21:16:10 CPage::Down end
+03/09 21:16:10 CPage::Down begin
+03/09 21:16:10 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:10 4
+03/09 21:16:10 CPage::Down end
+03/09 21:16:10 CPage::Down begin
+03/09 21:16:10 1
+03/09 21:16:10 2
+03/09 21:16:10 CPage::Down end
+03/09 21:16:11 CPage::Down begin
+03/09 21:16:11 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:11 4
+03/09 21:16:11 CPage::Down end
+03/09 21:16:11 CPage::Down begin
+03/09 21:16:11 1
+03/09 21:16:11 2
+03/09 21:16:11 CPage::Down end
+03/09 21:16:11 CPage::Down begin
+03/09 21:16:11 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:11 4
+03/09 21:16:11 CPage::Down end
+03/09 21:16:11 CPage::Down begin
+03/09 21:16:11 1
+03/09 21:16:11 2
+03/09 21:16:11 CPage::Down end
+03/09 21:16:11 CPage::Down begin
+03/09 21:16:11 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:11 4
+03/09 21:16:11 CPage::Down end
+03/09 21:16:12 CPage::Down begin
+03/09 21:16:12 1
+03/09 21:16:12 2
+03/09 21:16:12 CPage::Down end
+03/09 21:16:12 CPage::Down begin
+03/09 21:16:12 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:12 4
+03/09 21:16:12 CPage::Down end
+03/09 21:16:12 CPage::Down begin
+03/09 21:16:12 1
+03/09 21:16:12 2
+03/09 21:16:12 CPage::Down end
+03/09 21:16:12 CPage::Down begin
+03/09 21:16:12 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:12 4
+03/09 21:16:12 CPage::Down end
+03/09 21:16:12 CPage::Down begin
+03/09 21:16:12 1
+03/09 21:16:12 2
+03/09 21:16:12 CPage::Down end
+03/09 21:16:13 CPage::Down begin
+03/09 21:16:13 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:13 4
+03/09 21:16:13 CPage::Down end
+03/09 21:16:13 CPage::Down begin
+03/09 21:16:13 1
+03/09 21:16:13 2
+03/09 21:16:13 CPage::Down end
+03/09 21:16:13 CPage::Down begin
+03/09 21:16:13 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:13 4
+03/09 21:16:13 CPage::Down end
+03/09 21:16:13 CPage::Down begin
+03/09 21:16:13 1
+03/09 21:16:13 2
+03/09 21:16:13 CPage::Down end
+03/09 21:16:14 CPage::Down begin
+03/09 21:16:14 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:14 4
+03/09 21:16:14 CPage::Down end
+03/09 21:16:14 CPage::Down begin
+03/09 21:16:14 1
+03/09 21:16:14 2
+03/09 21:16:14 CPage::Down end
+03/09 21:16:14 CPage::Down begin
+03/09 21:16:14 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:14 4
+03/09 21:16:14 CPage::Down end
+03/09 21:16:14 CPage::Down begin
+03/09 21:16:14 1
+03/09 21:16:14 2
+03/09 21:16:14 CPage::Down end
+03/09 21:16:14 CPage::Down begin
+03/09 21:16:14 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:14 4
+03/09 21:16:14 CPage::Down end
+03/09 21:16:15 CPage::Down begin
+03/09 21:16:15 1
+03/09 21:16:15 2
+03/09 21:16:15 CPage::Down end
+03/09 21:16:15 CPage::Down begin
+03/09 21:16:15 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:15 4
+03/09 21:16:15 CPage::Down end
+03/09 21:16:15 CPage::Down begin
+03/09 21:16:15 1
+03/09 21:16:15 2
+03/09 21:16:15 CPage::Down end
+03/09 21:16:15 CPage::Down begin
+03/09 21:16:15 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:15 4
+03/09 21:16:15 CPage::Down end
+03/09 21:16:15 CPage::Down begin
+03/09 21:16:15 1
+03/09 21:16:15 2
+03/09 21:16:15 CPage::Down end
+03/09 21:16:16 CPage::Down begin
+03/09 21:16:16 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:16 4
+03/09 21:16:16 CPage::Down end
+03/09 21:16:16 CPage::Down begin
+03/09 21:16:16 1
+03/09 21:16:16 2
+03/09 21:16:16 CPage::Down end
+03/09 21:16:16 CPage::Down begin
+03/09 21:16:16 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:16 4
+03/09 21:16:16 CPage::Down end
+03/09 21:16:16 CPage::Down begin
+03/09 21:16:16 1
+03/09 21:16:16 2
+03/09 21:16:16 CPage::Down end
+03/09 21:16:16 CPage::Down begin
+03/09 21:16:17 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:17 4
+03/09 21:16:17 CPage::Down end
+03/09 21:16:17 CPage::Down begin
+03/09 21:16:17 1
+03/09 21:16:17 2
+03/09 21:16:17 CPage::Down end
+03/09 21:16:17 CPage::Down begin
+03/09 21:16:17 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:17 4
+03/09 21:16:17 CPage::Down end
+03/09 21:16:17 CPage::Down begin
+03/09 21:16:17 1
+03/09 21:16:17 2
+03/09 21:16:17 CPage::Down end
+03/09 21:16:17 CPage::Down begin
+03/09 21:16:17 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:17 4
+03/09 21:16:17 CPage::Down end
+03/09 21:16:18 CPage::Down begin
+03/09 21:16:18 1
+03/09 21:16:18 2
+03/09 21:16:18 CPage::Down end
+03/09 21:16:18 CPage::Down begin
+03/09 21:16:18 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:18 4
+03/09 21:16:18 CPage::Down end
+03/09 21:16:18 CPage::Down begin
+03/09 21:16:18 1
+03/09 21:16:18 2
+03/09 21:16:18 CPage::Down end
+03/09 21:16:18 CPage::Down begin
+03/09 21:16:18 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:18 4
+03/09 21:16:18 CPage::Down end
+03/09 21:16:18 CPage::Down begin
+03/09 21:16:18 1
+03/09 21:16:18 2
+03/09 21:16:18 CPage::Down end
+03/09 21:16:19 CPage::Down begin
+03/09 21:16:19 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:19 4
+03/09 21:16:19 CPage::Down end
+03/09 21:16:19 CPage::Down begin
+03/09 21:16:19 1
+03/09 21:16:19 2
+03/09 21:16:19 CPage::Down end
+03/09 21:16:19 CPage::Down begin
+03/09 21:16:19 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:19 4
+03/09 21:16:19 CPage::Down end
+03/09 21:16:20 CPage::Down begin
+03/09 21:16:20 1
+03/09 21:16:20 2
+03/09 21:16:20 CPage::Down end
+03/09 21:16:20 CPage::Down begin
+03/09 21:16:20 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:20 4
+03/09 21:16:20 CPage::Down end
+03/09 21:16:20 CPage::Down begin
+03/09 21:16:20 1
+03/09 21:16:20 2
+03/09 21:16:20 CPage::Down end
+03/09 21:16:20 CPage::Down begin
+03/09 21:16:20 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:20 4
+03/09 21:16:20 CPage::Down end
+03/09 21:16:20 CPage::Down begin
+03/09 21:16:20 1
+03/09 21:16:20 2
+03/09 21:16:20 CPage::Down end
+03/09 21:16:21 CPage::Down begin
+03/09 21:16:21 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:21 4
+03/09 21:16:21 CPage::Down end
+03/09 21:16:21 CPage::Down begin
+03/09 21:16:21 1
+03/09 21:16:21 2
+03/09 21:16:21 CPage::Down end
+03/09 21:16:21 CPage::Down begin
+03/09 21:16:21 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:21 4
+03/09 21:16:21 CPage::Down end
+03/09 21:16:21 CPage::Down begin
+03/09 21:16:21 1
+03/09 21:16:21 2
+03/09 21:16:21 CPage::Down end
+03/09 21:16:22 CPage::Down begin
+03/09 21:16:22 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:22 4
+03/09 21:16:22 CPage::Down end
+03/09 21:16:22 CPage::Down begin
+03/09 21:16:22 1
+03/09 21:16:22 2
+03/09 21:16:22 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:22 4
+03/09 21:16:22 CPage::Down end
+03/09 21:16:22 CPage::Down begin
+03/09 21:16:22 1
+03/09 21:16:22 2
+03/09 21:16:22 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:22 4
+03/09 21:16:22 CPage::Down end
+03/09 21:16:22 CPage::Down begin
+03/09 21:16:22 1
+03/09 21:16:22 2
+03/09 21:16:23 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:23 4
+03/09 21:16:23 CPage::Down end
+03/09 21:16:23 CPage::Down begin
+03/09 21:16:23 1
+03/09 21:16:23 2
+03/09 21:16:23 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:23 4
+03/09 21:16:23 CPage::Down end
+03/09 21:16:23 CPage::Down begin
+03/09 21:16:23 1
+03/09 21:16:23 2
+03/09 21:16:23 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:16:23 4
+03/09 21:16:23 CPage::Down end
+03/09 21:18:29 CPage::Down begin
+03/09 21:18:29 1
+03/09 21:18:29 2
+03/09 21:18:29 CPage::Down end
+03/09 21:18:30 CPage::Down begin
+03/09 21:18:30 1
+03/09 21:18:30 2
+03/09 21:18:30 CPage::Down end
+03/09 21:18:31 CPage::Down begin
+03/09 21:18:31 1
+03/09 21:18:31 2
+03/09 21:18:31 CPage::Down end
+03/09 21:18:31 CPage::Down begin
+03/09 21:18:31 1
+03/09 21:18:31 2
+03/09 21:18:31 CPage::Down end
+03/09 21:18:31 CPage::Down begin
+03/09 21:18:31 1
+03/09 21:18:31 2
+03/09 21:18:31 CPage::Down end
+03/09 21:18:32 CPage::Down begin
+03/09 21:18:32 1
+03/09 21:18:32 2
+03/09 21:18:32 CPage::Down end
+03/09 21:18:32 CPage::Down begin
+03/09 21:18:32 1
+03/09 21:18:32 2
+03/09 21:18:32 CPage::Down end
+03/09 21:18:33 CPage::Down begin
+03/09 21:18:33 1
+03/09 21:18:33 2
+03/09 21:18:33 CPage::Down end
+03/09 21:18:33 CPage::Down begin
+03/09 21:18:33 1
+03/09 21:18:33 2
+03/09 21:18:33 CPage::Down end
+03/09 21:18:33 CPage::Down begin
+03/09 21:18:33 1
+03/09 21:18:33 2
+03/09 21:18:33 CPage::Down end
+03/09 21:18:33 CPage::Down begin
+03/09 21:18:33 1
+03/09 21:18:33 2
+03/09 21:18:33 CPage::Down end
+03/09 21:18:33 CPage::Down begin
+03/09 21:18:33 1
+03/09 21:18:33 2
+03/09 21:18:33 CPage::Down end
+03/09 21:18:34 CPage::Down begin
+03/09 21:18:34 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:18:34 4
+03/09 21:18:34 CPage::Down end
+03/09 21:18:37 CPage::Down begin
+03/09 21:18:38 1
+03/09 21:18:38 2
+03/09 21:18:38 CPage::Down end
+03/09 21:18:38 CPage::Down begin
+03/09 21:18:38 1
+03/09 21:18:38 2
+03/09 21:18:38 CPage::Down end
+03/09 21:18:38 CPage::Down begin
+03/09 21:18:38 1
+03/09 21:18:38 2
+03/09 21:18:38 CPage::Down end
+03/09 21:18:40 CPage::Down begin
+03/09 21:18:40 1
+03/09 21:18:40 2
+03/09 21:18:40 CPage::Down end
+03/09 21:18:41 CPage::Down begin
+03/09 21:18:41 1
+03/09 21:18:41 2
+03/09 21:18:41 CPage::Down end
+03/09 21:18:41 CPage::Down begin
+03/09 21:18:41 1
+03/09 21:18:41 2
+03/09 21:18:41 CPage::Down end
+03/09 21:18:41 CPage::Down begin
+03/09 21:18:41 1
+03/09 21:18:41 2
+03/09 21:18:41 CPage::Down end
+03/09 21:18:42 CPage::Down begin
+03/09 21:18:42 1
+03/09 21:18:42 2
+03/09 21:18:42 CPage::Down end
+03/09 21:18:42 CPage::Down begin
+03/09 21:18:42 1
+03/09 21:18:42 2
+03/09 21:18:42 CPage::Down end
+03/09 21:18:42 CPage::Down begin
+03/09 21:18:42 1
+03/09 21:18:42 2
+03/09 21:18:42 CPage::Down end
+03/09 21:18:42 CPage::Down begin
+03/09 21:18:42 1
+03/09 21:18:42 2
+03/09 21:18:42 CPage::Down end
+03/09 21:18:42 CPage::Down begin
+03/09 21:18:42 1
+03/09 21:18:42 2
+03/09 21:18:42 CPage::Down end
+03/09 21:18:43 CPage::Down begin
+03/09 21:18:43 1
+03/09 21:18:43 2
+03/09 21:18:43 CPage::Down end
+03/09 21:18:43 CPage::Down begin
+03/09 21:18:43 TODO:<=会导致越界，但<会导致最后一行画不全
+03/09 21:18:43 4
+03/09 21:18:43 CPage::Down end
+03/09 21:19:11 CPage::Down begin
+03/09 21:19:11 1
+03/09 21:19:11 2
+03/09 21:19:11 CPage::Down end
+03/09 21:19:12 CPage::Down begin
+03/09 21:19:12 1
+03/09 21:19:12 2
+03/09 21:19:12 CPage::Down end
+03/09 21:23:56 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:23:56 CWapBrowserAppUi::ConstructL
+03/09 21:23:56 CWmlParser::CWmlParser
+03/09 21:23:56 CWmlParser::Parse1
+03/09 21:23:56 CWmlParser::Parse10
+03/09 21:23:57 CWapBrowserAppUi::RequestPage
+03/09 21:23:59 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:23:59 CWapBrowserAppUi::ConstructL
+03/09 21:24:00 CWmlParser::CWmlParser
+03/09 21:24:00 CWmlParser::Parse1
+03/09 21:24:00 CWmlParser::Parse10
+03/09 21:24:01 CWapBrowserAppUi::RequestPage
+03/09 21:26:00 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:26:00 CWapBrowserAppUi::ConstructL
+03/09 21:26:00 CWmlParser::CWmlParser
+03/09 21:26:00 CWmlParser::Parse1
+03/09 21:26:00 CWmlParser::Parse10
+03/09 21:26:02 CWapBrowserAppUi::RequestPage
+03/09 21:26:07 Connecting...
+03/09 21:26:09 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 21:26:09 Http-Status:400
+03/09 21:26:09 Content-Type:application/octet-stream
+03/09 21:26:09 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 21:26:09 Transaction Complete
+03/09 21:26:09 CHTTPEngine::MHFRunL iNetStatus = 9
+03/09 21:26:09 Transaction Failed
+03/09 21:33:23 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:33:23 CWapBrowserAppUi::ConstructL
+03/09 21:33:23 CWmlParser::CWmlParser
+03/09 21:33:23 CWmlParser::Parse1
+03/09 21:33:23 CWmlParser::Parse2
+03/09 21:33:23 CWmlParser::Parse3
+03/09 21:33:23 href:
+03/09 21:33:25 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:33:25 CWapBrowserAppUi::ConstructL
+03/09 21:33:25 CWmlParser::CWmlParser
+03/09 21:33:25 CWmlParser::Parse1
+03/09 21:33:25 CWmlParser::Parse2
+03/09 21:33:25 CWmlParser::Parse3
+03/09 21:33:25 href:
+03/09 21:33:26 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:33:26 CWapBrowserAppUi::ConstructL
+03/09 21:33:27 CWmlParser::CWmlParser
+03/09 21:33:27 CWmlParser::Parse1
+03/09 21:33:27 CWmlParser::Parse2
+03/09 21:33:27 CWmlParser::Parse3
+03/09 21:33:27 href:
+03/09 21:33:28 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:33:28 CWapBrowserAppUi::ConstructL
+03/09 21:33:28 CWmlParser::CWmlParser
+03/09 21:33:28 CWmlParser::Parse1
+03/09 21:33:28 CWmlParser::Parse2
+03/09 21:33:28 CWmlParser::Parse3
+03/09 21:33:28 href:
+03/09 21:33:33 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:33:33 CWapBrowserAppUi::ConstructL
+03/09 21:33:33 CWmlParser::CWmlParser
+03/09 21:33:34 CWmlParser::Parse1
+03/09 21:33:34 CWmlParser::Parse10
+03/09 21:35:47 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:35:47 CWapBrowserAppUi::ConstructL
+03/09 21:35:47 CWapBrowserAppUi::Parse
+03/09 21:35:47 CWmlParser::CWmlParser
+03/09 21:35:47 CWmlParser::Parse1
+03/09 21:35:47 CWmlParser::Parse10
+03/09 21:35:47 CWapBrowserAppUi::Parse End
+03/09 21:36:13 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:36:13 CWapBrowserAppUi::ConstructL
+03/09 21:36:13 CWapBrowserAppUi::Parse
+03/09 21:36:13 CWmlParser::CWmlParser
+03/09 21:36:13 CWmlParser::Parse1
+03/09 21:36:13 CWmlParser::Parse2
+03/09 21:36:13 CWmlParser::Parse3
+03/09 21:36:13 href:
+03/09 21:38:32 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:38:33 CWapBrowserAppUi::ConstructL
+03/09 21:38:33 CWapBrowserAppUi::Parse
+03/09 21:38:33 CWmlParser::CWmlParser
+03/09 21:38:33 CWmlParser::Parse1
+03/09 21:38:33 CWmlParser::Parse2
+03/09 21:38:33 CWmlParser::Parse3
+03/09 21:38:33 href:
+03/09 21:39:38 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:39:38 CWapBrowserAppUi::ConstructL
+03/09 21:39:38 CWapBrowserAppUi::Parse
+03/09 21:39:38 CWmlParser::CWmlParser
+03/09 21:39:38 CWmlParser::Parse1
+03/09 21:39:38 CWmlParser::Parse2
+03/09 21:39:38 CWmlParser::Parse3
+03/09 21:39:38 href:
+03/09 21:44:48 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:44:48 CWapBrowserAppUi::ConstructL
+03/09 21:44:48 CWapBrowserAppUi::Parse
+03/09 21:44:48 CWmlParser::CWmlParser
+03/09 21:44:48 CWmlParser::Parse1
+03/09 21:44:48 CWmlParser::Parse2
+03/09 21:44:48 CWmlParser::Parse3
+03/09 21:44:48 href:
+03/09 21:48:00 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:48:01 CWapBrowserAppUi::ConstructL
+03/09 21:48:01 CWapBrowserAppUi::Parse
+03/09 21:48:01 CWmlParser::CWmlParser
+03/09 21:48:01 CWmlParser::Parse1
+03/09 21:48:01 CWmlParser::Parse2
+03/09 21:48:01 CWmlParser::Parse3
+03/09 21:48:01 href:
+03/09 21:48:01 CWapBrowserAppUi::RequestPage
+03/09 21:48:05 Connecting...
+03/09 21:48:05 CWmlParser::Parse8
+03/09 21:48:05 CWmlParser::Parse9
+03/09 21:48:05 CWmlParser::Parse10
+03/09 21:48:05 CWapBrowserAppUi::Parse End
+03/09 21:48:07 CHTTPEngine::MHFRunL iNetStatus = -36
+03/09 21:48:07 Error:KErrDisconnected
+03/09 21:48:41 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:48:41 CWapBrowserAppUi::ConstructL
+03/09 21:48:41 CWapBrowserAppUi::Parse
+03/09 21:48:41 CWmlParser::CWmlParser
+03/09 21:48:41 CWmlParser::Parse1
+03/09 21:48:41 CWmlParser::Parse2
+03/09 21:48:41 CWmlParser::Parse3
+03/09 21:48:41 href:
+03/09 21:48:41 CWapBrowserAppUi::RequestPage
+03/09 21:49:00 Connecting...
+03/09 21:49:00 CWmlParser::Parse8
+03/09 21:49:00 CWmlParser::Parse9
+03/09 21:49:00 CWmlParser::Parse10
+03/09 21:49:00 CWapBrowserAppUi::Parse End
+03/09 21:49:03 CHTTPEngine::MHFRunL iNetStatus = -36
+03/09 21:49:03 Error:KErrDisconnected
+03/09 21:49:49 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:49:49 CWapBrowserAppUi::ConstructL
+03/09 21:49:49 CWapBrowserAppUi::Parse
+03/09 21:49:49 CWmlParser::CWmlParser
+03/09 21:49:49 CWmlParser::Parse1
+03/09 21:49:49 CWmlParser::Parse2
+03/09 21:49:49 CWmlParser::Parse3
+03/09 21:49:49 href:
+03/09 21:49:49 CWapBrowserAppUi::RequestPage
+03/09 21:49:54 Connecting...
+03/09 21:49:54 CWmlParser::Parse8
+03/09 21:49:54 CWmlParser::Parse9
+03/09 21:49:54 CWmlParser::Parse10
+03/09 21:49:54 CWapBrowserAppUi::Parse End
+03/09 21:49:57 CHTTPEngine::MHFRunL iNetStatus = -36
+03/09 21:49:57 Error:KErrDisconnected
+03/09 21:53:26 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:53:26 CWapBrowserAppUi::ConstructL
+03/09 21:53:26 CWapBrowserAppUi::Parse
+03/09 21:53:26 CWmlParser::CWmlParser
+03/09 21:53:26 CWmlParser::Parse1
+03/09 21:53:26 CWmlParser::Parse2
+03/09 21:53:26 CWmlParser::Parse3
+03/09 21:53:26 href:
+03/09 21:53:26 CWapBrowserAppUi::RequestPage
+03/09 21:53:31 Connecting...
+03/09 21:53:31 CWmlParser::Parse8
+03/09 21:53:31 CWmlParser::Parse9
+03/09 21:53:31 CWmlParser::Parse10
+03/09 21:53:31 CWapBrowserAppUi::Parse End
+03/09 21:53:33 CHTTPEngine::MHFRunL iNetStatus = -36
+03/09 21:53:33 Error:KErrDisconnected
+03/09 21:54:59 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:54:59 CWapBrowserAppUi::ConstructL
+03/09 21:54:59 CWapBrowserAppUi::Parse
+03/09 21:54:59 CWmlParser::CWmlParser
+03/09 21:54:59 CWmlParser::Parse1
+03/09 21:54:59 CWmlParser::Parse2
+03/09 21:54:59 CWmlParser::Parse3
+03/09 21:54:59 href:
+03/09 21:54:59 http://218.206.76.18:8080/dlWap/freePage.do?channelId=732&MISC_ID=999&MISC_SessionID=999-eb6365f3!82540520!-1745397844!1235646
+03/09 21:54:59 CWapBrowserAppUi::RequestPage
+03/09 21:55:03 Connecting...
+03/09 21:55:03 CWmlParser::Parse8
+03/09 21:55:03 CWmlParser::Parse9
+03/09 21:55:03 CWmlParser::Parse10
+03/09 21:55:03 CWapBrowserAppUi::Parse End
+03/09 21:55:05 CHTTPEngine::MHFRunL iNetStatus = -36
+03/09 21:55:05 Error:KErrDisconnected
+03/09 21:59:50 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 21:59:50 CWapBrowserAppUi::ConstructL
+03/09 21:59:50 CWapBrowserAppUi::Parse
+03/09 21:59:50 CWmlParser::CWmlParser
+03/09 21:59:50 CWmlParser::Parse1
+03/09 21:59:50 CWmlParser::Parse2
+03/09 21:59:50 CWmlParser::Parse3
+03/09 21:59:50 CWapBrowserAppUi::RequestPage
+03/09 21:59:55 Connecting...
+03/09 21:59:55 CWmlParser::Parse8
+03/09 21:59:55 CWmlParser::Parse9
+03/09 21:59:55 CWmlParser::Parse10
+03/09 21:59:55 CWapBrowserAppUi::Parse End
+03/09 21:59:59 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 21:59:59 Http-Status:200
+03/09 21:59:59 Content-Type:text/vnd.wap.wml
+03/09 21:59:59 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 21:59:59 THTTPEvent::EGotResponseBodyData
+03/09 21:59:59 THTTPEvent::EGotResponseBodyData 1
+03/09 21:59:59 THTTPEvent::EGotResponseBodyData 2
+03/09 21:59:59 THTTPEvent::EGotResponseBodyData 3
+03/09 21:59:59 503 bytes received... 
+03/09 21:59:59 Body received
+03/09 21:59:59 THTTPEvent::EGotResponseBodyData End
+03/09 21:59:59 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 21:59:59 Transaction Complete
+03/09 21:59:59 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 21:59:59 Transaction Successful
+03/09 21:59:59 1
+03/09 21:59:59 2
+03/09 21:59:59 3
+03/09 21:59:59 CWapBrowserAppUi::ParseFile
+03/09 21:59:59 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 21:59:59 CWapBrowserAppUi::ParseFile parser
+03/09 21:59:59 CWmlParser::CWmlParser
+03/09 21:59:59 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 21:59:59 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 21:59:59 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 21:59:59 CWmlParser::Parse1
+03/09 21:59:59 CWmlParser::Parse2
+03/09 21:59:59 CWmlParser::Parse3
+03/09 21:59:59 href:
+03/09 21:59:59 http://wap.gd.chinamobile.com:80/?t=07089
+03/09 21:59:59 CWapBrowserAppUi::RequestPage
+03/09 21:59:59 Connecting...
+03/09 21:59:59 CWmlParser::Parse8
+03/09 21:59:59 CWmlParser::Parse9
+03/09 21:59:59 CWmlParser::Parse10
+03/09 21:59:59 CWapBrowserAppUi::ParseFile End
+03/09 21:59:59 4
+03/09 22:00:01 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:00:01 Http-Status:200
+03/09 22:00:01 Content-Type:text/vnd.wap.wml
+03/09 22:00:01 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:00:01 THTTPEvent::EGotResponseBodyData
+03/09 22:00:01 THTTPEvent::EGotResponseBodyData 1
+03/09 22:00:01 THTTPEvent::EGotResponseBodyData 2
+03/09 22:00:01 THTTPEvent::EGotResponseBodyData 3
+03/09 22:00:01 390 bytes received... 
+03/09 22:00:01 Body received
+03/09 22:00:01 THTTPEvent::EGotResponseBodyData End
+03/09 22:00:01 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:00:01 Transaction Complete
+03/09 22:00:01 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:00:01 Transaction Successful
+03/09 22:00:01 1
+03/09 22:00:01 2
+03/09 22:00:01 3
+03/09 22:00:01 CWapBrowserAppUi::ParseFile
+03/09 22:00:01 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:00:01 CWapBrowserAppUi::ParseFile parser
+03/09 22:00:01 CWmlParser::CWmlParser
+03/09 22:00:01 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:00:01 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:00:01 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:00:01 CWmlParser::Parse1
+03/09 22:00:01 CWmlParser::Parse2
+03/09 22:00:01 CWmlParser::Parse3
+03/09 22:00:01 CWmlParser::Parse8
+03/09 22:00:01 CWmlParser::Parse9
+03/09 22:00:01 CWmlParser::Parse10
+03/09 22:00:01 CWapBrowserAppUi::ParseFile End
+03/09 22:00:01 4
+03/09 22:06:37 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 22:06:37 CWapBrowserAppUi::ConstructL
+03/09 22:06:37 CWapBrowserAppUi::Parse
+03/09 22:06:37 CWmlParser::CWmlParser
+03/09 22:06:37 CWmlParser::Parse1
+03/09 22:06:37 CWmlParser::Parse2
+03/09 22:06:37 CWmlParser::Parse3
+03/09 22:06:37 CWapBrowserAppUi::RequestPage
+03/09 22:06:41 Connecting...
+03/09 22:06:41 CWmlParser::Parse8
+03/09 22:06:41 CWmlParser::Parse9
+03/09 22:06:41 CWmlParser::Parse10
+03/09 22:06:41 CWapBrowserAppUi::Parse End
+03/09 22:06:47 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:06:47 Http-Status:200
+03/09 22:06:47 Content-Type:text/vnd.wap.wml
+03/09 22:06:47 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:06:47 THTTPEvent::EGotResponseBodyData
+03/09 22:06:47 THTTPEvent::EGotResponseBodyData 1
+03/09 22:06:47 THTTPEvent::EGotResponseBodyData 2
+03/09 22:06:47 THTTPEvent::EGotResponseBodyData 3
+03/09 22:06:47 390 bytes received... 
+03/09 22:06:47 Body received
+03/09 22:06:47 THTTPEvent::EGotResponseBodyData End
+03/09 22:06:47 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:06:47 Transaction Complete
+03/09 22:06:47 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:06:47 Transaction Successful
+03/09 22:06:47 1
+03/09 22:06:47 2
+03/09 22:06:47 3
+03/09 22:06:47 CWapBrowserAppUi::ParseFile
+03/09 22:06:47 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:06:47 CWapBrowserAppUi::ParseFile parser
+03/09 22:06:47 CWmlParser::CWmlParser
+03/09 22:06:47 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:06:47 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:06:47 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:06:47 CWmlParser::Parse1
+03/09 22:06:47 CWmlParser::Parse2
+03/09 22:06:47 CWmlParser::Parse3
+03/09 22:06:47 CWmlParser::Parse8
+03/09 22:06:47 CWmlParser::Parse9
+03/09 22:06:47 CWmlParser::Parse10
+03/09 22:06:47 CWapBrowserAppUi::ParseFile End
+03/09 22:06:47 4
+03/09 22:14:39 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 22:14:39 CWapBrowserAppUi::ConstructL
+03/09 22:14:39 CWapBrowserAppUi::Parse
+03/09 22:14:39 CWmlParser::CWmlParser
+03/09 22:14:39 CWmlParser::Parse1
+03/09 22:14:39 CWmlParser::Parse2
+03/09 22:14:39 CWmlParser::Parse3
+03/09 22:14:39 CWapBrowserAppUi::RequestPage
+03/09 22:15:00 Connecting...
+03/09 22:15:00 CWmlParser::Parse8
+03/09 22:15:00 CWmlParser::Parse9
+03/09 22:15:00 CWmlParser::Parse10
+03/09 22:15:00 CWapBrowserAppUi::Parse End
+03/09 22:15:02 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:15:02 Http-Status:200
+03/09 22:15:02 Content-Type:text/vnd.wap.wml
+03/09 22:15:02 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:15:02 THTTPEvent::EGotResponseBodyData
+03/09 22:15:02 THTTPEvent::EGotResponseBodyData 1
+03/09 22:15:02 THTTPEvent::EGotResponseBodyData 2
+03/09 22:15:02 THTTPEvent::EGotResponseBodyData 3
+03/09 22:15:02 503 bytes received... 
+03/09 22:15:02 Body received
+03/09 22:15:02 THTTPEvent::EGotResponseBodyData End
+03/09 22:15:02 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:15:02 Transaction Complete
+03/09 22:15:02 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:15:02 Transaction Successful
+03/09 22:15:02 1
+03/09 22:15:02 2
+03/09 22:15:02 3
+03/09 22:15:02 CWapBrowserAppUi::ParseFile
+03/09 22:15:02 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:15:02 CWapBrowserAppUi::ParseFile parser
+03/09 22:15:02 CWmlParser::CWmlParser
+03/09 22:15:02 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:15:02 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:15:03 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:15:03 CWmlParser::Parse1
+03/09 22:15:03 CWmlParser::Parse2
+03/09 22:15:03 CWmlParser::Parse3
+03/09 22:15:03 href:
+03/09 22:15:03 http://wap.gd.chinamobile.com:80/?t=11491
+03/09 22:15:03 CWapBrowserAppUi::RequestPage
+03/09 22:15:03 Connecting...
+03/09 22:15:03 CWmlParser::Parse8
+03/09 22:15:03 CWmlParser::Parse9
+03/09 22:15:03 CWmlParser::Parse10
+03/09 22:15:03 CWapBrowserAppUi::ParseFile End
+03/09 22:15:03 4
+03/09 22:15:04 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:15:04 Http-Status:200
+03/09 22:15:04 Content-Type:text/vnd.wap.wml
+03/09 22:15:04 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:15:04 THTTPEvent::EGotResponseBodyData
+03/09 22:15:04 THTTPEvent::EGotResponseBodyData 1
+03/09 22:15:04 THTTPEvent::EGotResponseBodyData 2
+03/09 22:15:04 THTTPEvent::EGotResponseBodyData 3
+03/09 22:15:04 390 bytes received... 
+03/09 22:15:04 Body received
+03/09 22:15:04 THTTPEvent::EGotResponseBodyData End
+03/09 22:15:04 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:15:04 Transaction Complete
+03/09 22:15:04 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:15:04 Transaction Successful
+03/09 22:15:04 1
+03/09 22:15:04 2
+03/09 22:15:04 3
+03/09 22:15:04 CWapBrowserAppUi::ParseFile
+03/09 22:15:04 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:15:04 CWapBrowserAppUi::ParseFile parser
+03/09 22:15:04 CWmlParser::CWmlParser
+03/09 22:15:04 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:15:04 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:15:04 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:15:04 CWmlParser::Parse1
+03/09 22:15:04 CWmlParser::Parse2
+03/09 22:15:04 CWmlParser::Parse3
+03/09 22:15:04 CWmlParser::Parse8
+03/09 22:15:04 CWmlParser::Parse9
+03/09 22:15:04 CWmlParser::Parse10
+03/09 22:15:04 CWapBrowserAppUi::ParseFile End
+03/09 22:15:04 4
+03/09 22:20:35 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 22:20:35 CWapBrowserAppUi::ConstructL
+03/09 22:20:35 CWapBrowserAppUi::Parse
+03/09 22:20:35 CWmlParser::CWmlParser
+03/09 22:20:35 CWmlParser::Parse1
+03/09 22:20:35 CWmlParser::Parse2
+03/09 22:20:35 CWmlParser::Parse3
+03/09 22:20:35 CWapBrowserAppUi::RequestPage
+03/09 22:20:41 Connecting...
+03/09 22:20:41 CWmlParser::Parse8
+03/09 22:20:41 CWmlParser::Parse9
+03/09 22:20:41 CWmlParser::Parse10
+03/09 22:20:41 CWapBrowserAppUi::Parse End
+03/09 22:20:45 CWapBrowserAppUi::CWapBrowserAppUi
+03/09 22:20:45 CWapBrowserAppUi::ConstructL
+03/09 22:20:45 CWapBrowserAppUi::Parse
+03/09 22:20:45 CWmlParser::CWmlParser
+03/09 22:20:45 CWmlParser::Parse1
+03/09 22:20:45 CWmlParser::Parse2
+03/09 22:20:45 CWmlParser::Parse3
+03/09 22:20:45 CWapBrowserAppUi::RequestPage
+03/09 22:20:46 Connecting...
+03/09 22:20:46 CWmlParser::Parse8
+03/09 22:20:46 CWmlParser::Parse9
+03/09 22:20:46 CWmlParser::Parse10
+03/09 22:20:46 CWapBrowserAppUi::Parse End
+03/09 22:20:48 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:20:48 Http-Status:200
+03/09 22:20:48 Content-Type:text/vnd.wap.wml
+03/09 22:20:48 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:20:48 THTTPEvent::EGotResponseBodyData
+03/09 22:20:48 THTTPEvent::EGotResponseBodyData 1
+03/09 22:20:48 THTTPEvent::EGotResponseBodyData 2
+03/09 22:20:48 THTTPEvent::EGotResponseBodyData 3
+03/09 22:20:48 390 bytes received... 
+03/09 22:20:48 Body received
+03/09 22:20:48 THTTPEvent::EGotResponseBodyData End
+03/09 22:20:48 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:20:48 Transaction Complete
+03/09 22:20:48 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:20:48 Transaction Successful
+03/09 22:20:48 1
+03/09 22:20:48 2
+03/09 22:20:48 3
+03/09 22:20:48 CWapBrowserAppUi::ParseFile
+03/09 22:20:49 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:20:49 CWapBrowserAppUi::ParseFile parser
+03/09 22:20:49 CWmlParser::CWmlParser
+03/09 22:20:49 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:20:49 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:20:49 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:20:49 CWmlParser::Parse1
+03/09 22:20:49 CWmlParser::Parse2
+03/09 22:20:49 CWmlParser::Parse3
+03/09 22:20:49 CWmlParser::Parse8
+03/09 22:20:49 CWmlParser::Parse9
+03/09 22:20:49 CWmlParser::Parse10
+03/09 22:20:49 CWapBrowserAppUi::ParseFile End
+03/09 22:20:49 4
+03/09 22:20:50 CWapBrowserAppUi::RequestPage
+03/09 22:20:50 Connecting...
+03/09 22:20:52 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:20:52 Http-Status:200
+03/09 22:20:52 Content-Type:text/vnd.wap.wml
+03/09 22:20:52 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData 1
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData 2
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData 3
+03/09 22:20:52 1151 bytes received... 
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData End
+03/09 22:20:52 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData 1
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData 2
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData 3
+03/09 22:20:52 4044 bytes received... 
+03/09 22:20:52 THTTPEvent::EGotResponseBodyData End
+03/09 22:20:53 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:20:53 THTTPEvent::EGotResponseBodyData
+03/09 22:20:53 THTTPEvent::EGotResponseBodyData 1
+03/09 22:20:53 THTTPEvent::EGotResponseBodyData 2
+03/09 22:20:53 THTTPEvent::EGotResponseBodyData 3
+03/09 22:20:53 1020 bytes received... 
+03/09 22:20:53 Body received
+03/09 22:20:53 THTTPEvent::EGotResponseBodyData End
+03/09 22:20:53 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:20:53 Transaction Complete
+03/09 22:20:53 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:20:53 Transaction Successful
+03/09 22:20:53 1
+03/09 22:20:53 2
+03/09 22:20:54 3
+03/09 22:20:54 CWapBrowserAppUi::ParseFile
+03/09 22:20:54 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:20:54 CWapBrowserAppUi::ParseFile parser
+03/09 22:20:54 CWmlParser::CWmlParser
+03/09 22:20:54 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:20:54 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:20:54 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:20:54 CWmlParser::Parse1
+03/09 22:20:54 CWmlParser::Parse2
+03/09 22:20:54 CWmlParser::Parse3
+03/09 22:20:54 ShowPage
+03/09 22:20:54 ShowPage End
+03/09 22:20:54 CWapBrowserAppUi::ParseFile End
+03/09 22:20:54 4
+03/09 22:20:57 CPage::Down begin
+03/09 22:20:57 1
+03/09 22:20:57 2
+03/09 22:20:57 CPage::Down end
+03/09 22:20:57 CPage::Down begin
+03/09 22:20:57 1
+03/09 22:20:57 2
+03/09 22:20:57 CPage::Down end
+03/09 22:20:59 CPage::Down begin
+03/09 22:20:59 1
+03/09 22:20:59 2
+03/09 22:20:59 CPage::Down end
+03/09 22:20:59 CPage::Down begin
+03/09 22:20:59 1
+03/09 22:20:59 2
+03/09 22:20:59 CPage::Down end
+03/09 22:21:02 CPage::Down begin
+03/09 22:21:02 1
+03/09 22:21:02 2
+03/09 22:21:02 CPage::Down end
+03/09 22:21:02 CPage::Down begin
+03/09 22:21:02 1
+03/09 22:21:02 2
+03/09 22:21:02 CPage::Down end
+03/09 22:21:05 CWapBrowserAppUi::RequestPage
+03/09 22:21:05 Connecting...
+03/09 22:21:07 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:21:07 Http-Status:200
+03/09 22:21:07 Content-Type:text/vnd.wap.wml
+03/09 22:21:07 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:07 THTTPEvent::EGotResponseBodyData
+03/09 22:21:07 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:07 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:07 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:07 520 bytes received... 
+03/09 22:21:07 Body received
+03/09 22:21:07 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:07 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:21:07 Transaction Complete
+03/09 22:21:07 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:21:07 Transaction Successful
+03/09 22:21:07 1
+03/09 22:21:07 2
+03/09 22:21:07 3
+03/09 22:21:07 CWapBrowserAppUi::ParseFile
+03/09 22:21:07 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:21:07 CWapBrowserAppUi::ParseFile parser
+03/09 22:21:07 CWmlParser::CWmlParser
+03/09 22:21:07 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:21:07 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:21:07 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:21:07 CWmlParser::Parse1
+03/09 22:21:07 CWmlParser::Parse2
+03/09 22:21:07 CWmlParser::Parse3
+03/09 22:21:07 href:
+03/09 22:21:07 http://3g.i139.cn/finance/s.do?p=7&fr=home&ts=7690
+03/09 22:21:07 CWapBrowserAppUi::RequestPage
+03/09 22:21:07 Connecting...
+03/09 22:21:07 CWmlParser::Parse8
+03/09 22:21:07 CWmlParser::Parse9
+03/09 22:21:07 CWmlParser::Parse10
+03/09 22:21:07 CWapBrowserAppUi::ParseFile End
+03/09 22:21:07 4
+03/09 22:21:09 CHTTPEngine::MHFRunL iNetStatus = 4
+03/09 22:21:09 Http-Status:200
+03/09 22:21:09 Content-Type:text/vnd.wap.wml
+03/09 22:21:09 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:09 THTTPEvent::EGotResponseBodyData
+03/09 22:21:09 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:09 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:10 1111 bytes received... 
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:10 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:10 1348 bytes received... 
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:10 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:10 1348 bytes received... 
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:10 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:10 1348 bytes received... 
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:10 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:10 1348 bytes received... 
+03/09 22:21:10 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:11 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:11 1348 bytes received... 
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:11 CHTTPEngine::MHFRunL iNetStatus = 5
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData 1
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData 2
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData 3
+03/09 22:21:11 495 bytes received... 
+03/09 22:21:11 Body received
+03/09 22:21:11 THTTPEvent::EGotResponseBodyData End
+03/09 22:21:11 CHTTPEngine::MHFRunL iNetStatus = 6
+03/09 22:21:11 Transaction Complete
+03/09 22:21:11 CHTTPEngine::MHFRunL iNetStatus = 8
+03/09 22:21:11 Transaction Successful
+03/09 22:21:11 1
+03/09 22:21:11 2
+03/09 22:21:11 3
+03/09 22:21:11 CWapBrowserAppUi::ParseFile
+03/09 22:21:11 CWapBrowserAppUi::ParseFile pageBuilder
+03/09 22:21:11 CWapBrowserAppUi::ParseFile parser
+03/09 22:21:11 CWmlParser::CWmlParser
+03/09 22:21:11 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:21:11 CWapBrowserAppUi::ParseFile parser->ParseFile
+03/09 22:21:11 CWapBrowserAppUi::ParseFile parser->ParseFile err = 268435510
+03/09 22:21:11 CWmlParser::Parse1
+03/09 22:21:11 CWmlParser::Parse2
+03/09 22:21:11 CWmlParser::Parse3
+
