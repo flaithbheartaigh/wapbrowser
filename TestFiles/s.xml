@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml><card title="天气">
+<p>2009年03月08日<br/> 农历二月十二<br/><img  alt=" " src="http://download.i139.cn/pams2/image/1062/1062738.gif" /> <a href="http://3g.i139.cn/pams2/s.do?p=14&amp;j=l&amp;c=1483">搜索各城市天气</a><br/>
+<img  alt=" " src="http://download.i139.cn/pams2/image/1114/1114910.gif" /><a href="http://wap.i139.cn/d/hc/disneyf.p?PT=CM:W">迪士尼女人节专享靓图</a><br/>
+<img src="icon//a01.gif" alt=""/><br/>中央气象台发布<br/>24小时天气预报<br/>深圳<img src="icon//b1.gif" alt=""/><br/>天气：多云<br/>温度：13℃～18℃<br/>风向：微风<br/>风力：小于3级<br/><a href="http://3g.i139.cn/pams2/s.do?j=l&amp;c=1493&amp;cityId=594933&amp;dayType=0&amp;dateStr=20090308&amp;p=14&amp;origin=zbms" >查详细深圳天气</a><br/><a href="http://3g.i139.cn/pams2/s.do?j=l&amp;c=1484&amp;cityId=594933&amp;p=14&amp;origin=zbms" >未来天气预测&lt;&lt;</a><br/>48小时<img src="icon//b1.gif" alt=""/> 多云 16℃～21℃ 小于3级 <br/>72小时<img src="icon//b1.gif" alt=""/> 多云 18℃～24℃ 小于3级 <br/> <a href="http://3g.i139.cn/pams2/s.do?p=14&amp;j=l&amp;c=1486">设置我关注的城市</a><br/>
+<a href="http://allyes1.i139.cn/main/adfclick?db=aspire/bid=234,806,957/cid=0,0,0/sid=2111/advid=54/camid=258/local=file/show=ignore/url=http://wap.moad.cn/MOAD/10284/?src=106402">新乐驰芯突破强劲动力体验</a><br/>
+<a href="http://3g.i139.cn/pams2/s.do?p=14&amp;j=l&amp;c=1503">天气资讯</a>|<a href="http://3g.i139.cn/pams2/s.do?p=14&amp;j=l&amp;c=1502">气象图示</a>|<a href="http://3g.i139.cn/pams2/s.do?p=14&amp;j=l&amp;c=1501">灾害预警</a><br/>
+<input emptyok="true" type="text" name="cityName" maxlength="15" title=""/><anchor>查询 <go href="http://3g.i139.cn/pams2/s.do?j=l&amp;c=1485&amp;p=14&amp;origin=zbms" method="post"> <postfield name="cityName" value="$cityName"/></go></anchor><br/>可按地名、区号、拼音查<br/>
+<a href="http://wap.i139.cn/wap2/s.do?tl=18955&amp;origin=zhtg">招行积分兑换移动数字商品</a><br/>
+<img  alt=" " src="http://download.i139.cn/pams2/image/1130/1130156.gif" /><a href="http://3g.i139.cn/pams2/s.do?j=l&amp;p=13&amp;c=2859">谁是3月职场"星"红人</a><br/>
+【<a href="http://3g.i139.cn/pams2/s.do?p=2&amp;origin=tqxwzx">新闻中心</a>】<a href="http://3g.i139.cn/pams2/s.do?p=10&amp;origin=tq">直播</a>.<a href="http://3g.i139.cn/pams2/s.do?j=l&amp;p=4&amp;c=2291">彩票</a><br/>
+<a href="http://3g.i139.cn/pams2/s.do?j=l&amp;p=2&amp;c=1&amp;origin=tqgn">国内</a>|<a href="http://3g.i139.cn/pams2/s.do?j=l&amp;p=2&amp;c=127&amp;origin=tqgj">国际</a>|<a href="http://3g.i139.cn/pams2/s.do?j=l&amp;p=2&amp;c=2&amp;origin=tqjs">军事</a>|<a href="http://3g.i139.cn/pams2/s.do?j=l&amp;p=2&amp;c=134">社会</a><br/>
+<a href="http://3g.i139.cn/pams2/s.do?p=4&amp;origin=tqty">体育</a>|<a href="http://3g.i139.cn/finance/s.do?p=7&amp;origin=tqcj">财经</a>|<a href="http://3g.i139.cn/pams2/s.do?p=15">娱乐</a>|<a href="http://3g.i139.cn/pams2/s.do?j=l&amp;p=4&amp;c=25&amp;origin=tqnba">NBA</a><br/>
+<a href="http://3g.i139.cn/pams2/s.do?p=2&amp;j=d&amp;c=131&amp;r=1132883" >美专家支持菲对南海主权要求</a><br/>
+<a href="http://3g.i139.cn/pams2/s.do?p=4&amp;j=d&amp;c=179&amp;r=1132811" >蒙特雷赛李娜完胜09首进决赛</a><br/>
+<a href="http://3g.i139.cn/pams2/s.do?p=15&amp;j=d&amp;c=1272&amp;r=1133189" >阿娇默认未来情感归属麦浚龙</a><br/>
+<img  alt=" " src="http://download.i139.cn/pams2/image/1128/1128135.gif" /><a href="http://wap.i139.cn/pams/s.do?p=505&amp;j=l&amp;c=5560&amp;b=5260&amp;fr=tianqi ">品味最新都市小说</a><br/>
+更多精彩敬请访问↓<br/>
+<a href="http://wap.i139.cn/pams/s.do?p=627&amp;origin=tqtl">铃图</a>.<a href="http://wap.i139.cn/pams/s.do?p=624&amp;origin=tq">影视</a>.<a href="http://wap.i139.cn/pams/s.do?p=630&amp;origin=musictqad">音乐</a>.<a href="http://wap.i139.cn/pams/s.do?p=628&amp;origin=comictqad2">壁纸</a><br/>
+<a href="http://wap.i139.cn/pams/s.do?p=695&amp;f=tq&amp;fr=tianqi">汽车</a>.<a href="http://go.i139.cn/gcomm1/portal/tqyxpdsy.do?url=http://gamepie.i139.cn/wap/s.do?j=3channel">游戏</a>.<a href="http://go.i139.cn/mbox/theme/tq.do?%20url=http://xdown.monternet.com/portalapp/index.jsp?S=3&amp;CHANNEL=0003">主题</a>.<a href="http://go.i139.cn/mbox/soft/tq.do?url=http://xdown.monternet.com/portalapp/index.jsp?S=2&amp;CHANNEL=0003">软件</a><br/>
+<a href="http://wap.i139.cn/pams/s.do?p=505&amp;fr=tianqiwei">年度超级精彩小说大全</a><br/>
+<a href="http://wap.i139.cn/pams/s.do?p=676&amp;origin=tqzc">职场</a>.<a href="http://midc.monternet.com/redirect/redirect.do?j=5">我的机型下载专区</a><br/>
+<a href="http://3g.i139.cn/pams2/s.do?p=14&amp;j=l&amp;c=1492">农历</a>|<a href="http://3g.i139.cn/pams2/s.do?p=13&amp;origin=tqxz">运势</a>|<a href="http://3g.i139.cn/pams2/s.do?p=14&amp;j=l&amp;c=1491">手机归属地查询</a><br/>
+[03-08 19:25]<br/>
+发送短信tq到106581672，免费天气随手即得！<br/>
+<a href="http://wap.i139.cn/pams/s.do?tl=16304">动感首页</a><br/>
+<a href="http://wap.monternet.com/">梦网首页</a>-<a href="http://wap.i139.cn/pams/s.do?j=l&amp;p=610&amp;c=6009&amp;pd=weather">导航</a>-<a href="http://wap.139.com/?fr=portalweather">搜索</a></p>
+</card>
+</wml>

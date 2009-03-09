@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<head>
+<meta http-equiv="Cache-Control" content="max-age=0" forua="true"/>
+<meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+<meta http-equiv="Cache-Control" content="must-revalidate" forua="true"/>
+</head>
+<card id="card" title="" >
+<onevent type="onenterforward">
+<go href="http://218.206.76.18:8080/dlWap/freePage.do?channelId=732&amp;MISC_ID=999&amp;MISC_SessionID=999-
+eb6365f3!82540520!-1745397844!1235646683403&amp;MISC_ServiceID=03205590&amp;MISC_AccessMode=2&amp;MISC_MID=ACER%
+2F%2F%2BQBjb%2F%2F%2F8BmP%2F%2F%2F4xKoaYWgibZd%2FhqzB1e%2BDE%3D"></go></onevent>
+</card>
+</wml>
+
