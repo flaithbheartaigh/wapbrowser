@@ -413,18 +413,19 @@ TSize UtilityTools::ScreenSize()
 	return pixelsTwipsAndRotation.iPixelSize;
 }
 
+_LIT(KLogFileName,	"c:\\data\\log_static.txt");
 
 void UtilityTools::WriteLogsL(TRefByValue<const TDesC8> aFmt, ...)
 {
 	//#ifndef _DEBUG
 #ifdef __WRITE_LOG__
-	_LIT(KSettingPathname,"c:\\data\\");
-	//_LIT(KSettingPathname,"c:\\");
-	_LIT(KIniFileName,"log_static.txt");
+// 	_LIT(KSettingPathname,"c:\\data\\");
+// 	//_LIT(KSettingPathname,"c:\\");
+// 	_LIT(KIniFileName,"log_static.txt");
 
-	TFileName fn;
-	fn = KSettingPathname;
-	fn.Append(KIniFileName);
+// 	TFileName fn;
+// 	fn = KSettingPathname;
+// 	fn.Append(KIniFileName);
 
 	TBuf8<128> buf;
 	VA_LIST	list;
@@ -437,10 +438,10 @@ void UtilityTools::WriteLogsL(TRefByValue<const TDesC8> aFmt, ...)
 	rfs.Connect();
 
 	RFile oFile;
-	if (KErrNone != oFile.Open(rfs, fn, EFileWrite|EFileShareAny))
+	if (KErrNone != oFile.Open(rfs, KLogFileName, EFileWrite|EFileShareAny))
 	{
 #if 0
-		if (KErrNone != oFile.Create(rfs, fn, EFileWrite|EFileShareAny))
+		if (KErrNone != oFile.Create(rfs, KLogFileName, EFileWrite|EFileShareAny))
 		{
 			rfs.Close();
 			return;
@@ -477,13 +478,13 @@ void UtilityTools::WriteLogsL(TRefByValue<const TDesC16> aFmt, ...)
 {
 	//#ifndef _DEBUG
 #ifdef __WRITE_LOG__
-	_LIT(KSettingPathname,"c:\\data\\");
-	//_LIT(KSettingPathname,"c:\\");
-	_LIT(KIniFileName,"log_static.txt");
+// 	_LIT(KSettingPathname,"c:\\data\\");
+// 	//_LIT(KSettingPathname,"c:\\");
+// 	_LIT(KIniFileName,"log_static.txt");
 
-	TFileName fn;
-	fn = KSettingPathname;
-	fn.Append(KIniFileName);
+// 	TFileName fn;
+// 	fn = KSettingPathname;
+// 	fn.Append(KIniFileName);
 
 	TBuf<400> buf16;
 	VA_LIST	list;
@@ -502,10 +503,10 @@ void UtilityTools::WriteLogsL(TRefByValue<const TDesC16> aFmt, ...)
 	rfs.Connect();
 
 	RFile oFile;
-	if (KErrNone != oFile.Open(rfs, fn, EFileWrite|EFileShareAny))
+	if (KErrNone != oFile.Open(rfs, KLogFileName, EFileWrite|EFileShareAny))
 	{
 #if 0
-		if (KErrNone != oFile.Create(rfs, fn, EFileWrite|EFileShareAny))
+		if (KErrNone != oFile.Create(rfs, KLogFileName, EFileWrite|EFileShareAny))
 		{
 			rfs.Close();
 			return;

@@ -20,7 +20,6 @@ class CHTTPEngine;
 // CLASS DECLARATION
 class CWapBrowserAppUi 
 	: public CAknAppUi
-	, public MWebClientObserver
 	, public MClientObserver
 	{
 	public: // Constructors and destructor
@@ -30,11 +29,6 @@ class CWapBrowserAppUi
 	private:  // Functions from base classes
 		void HandleCommandL( TInt aCommand );
 		void HandleStatusPaneSizeChange();
-
-	public://From MWebClientObserver
-		virtual void ClientEvent(const TDesC& aEventDescription);
-		virtual void ClientHeaderReceived(const TDesC& aHeaderData);
-		virtual void ClientBodyReceived(const TDesC8& aBodyData,const TBool& isLast);
 
 	public://From MClientObserver
 		virtual void ClientEvent(const TDesC& aEventDescription,TInt aIndex);
