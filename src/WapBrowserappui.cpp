@@ -23,25 +23,25 @@ Description : Main application UI class (controller)
 
 void TestBookMark()
 {
-//////////////////////////////////////////////////////////////////////////
-//2nd
-//////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////
+	//2nd
+	//////////////////////////////////////////////////////////////////////////
 
 #ifndef __SERIES60_3X__
 
-/*
+	/*
 	_LIT( KBookmarkDbPath, "c:\\system\\data\\" );
 	_LIT( KBookmarkDbFile, "Bookmarks1.db" );
 
 	CAddFavouritesDb* CAddFavouritesDb::NewL()
 	{
-		CAddFavouritesDb* favdb = new (ELeave) CAddFavouritesDb();
-		CleanupStack::PushL( favdb );
-		favdb->ConstructL( KBookmarkDbPath, KBookmarkDbFile );
-		CleanupStack::Pop();    
-		return favdb;
+	CAddFavouritesDb* favdb = new (ELeave) CAddFavouritesDb();
+	CleanupStack::PushL( favdb );
+	favdb->ConstructL( KBookmarkDbPath, KBookmarkDbFile );
+	CleanupStack::Pop();    
+	return favdb;
 	}
-	
+
 	CAddFavouritesDb * addBookmrk = CAddFavouritesDb::NewL();
 	CleanupStack::PushL( addBookmrk );
 	User::LeaveIfError(addBookmrk->OpenL());
@@ -53,13 +53,13 @@ void TestBookMark()
 	addBookmrk->Close();
 	CleanupStack::PopAndDestroy( bookmrkItem );
 	CleanupStack::PopAndDestroy( addBookmrk );
-*/
+	*/
 
 	//LIBRARY favouritesengine.lib
 #else
-//////////////////////////////////////////////////////////////////////////
-//3nd
-//////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////
+	//3nd
+	//////////////////////////////////////////////////////////////////////////
 	// Link against: favouritesengine.lib 
 
 	RFavouritesSession iSession;
@@ -92,8 +92,8 @@ void CWapBrowserAppUi::ConstructL()
 	//RequestConfig();
 
 	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ConstructL"));
-/*
-//以下代码移至SymbianOsUnit
+	/*
+	//以下代码移至SymbianOsUnit
 	HBufC8* buf = HBufC8::NewLC(1000);
 	buf->Des().Append(_L8("mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134"));
 	buf->Des().Append(_L8("0X0A"));
@@ -105,7 +105,7 @@ void CWapBrowserAppUi::ConstructL()
 
 	ParserConfig(buf);
 	CleanupStack::PopAndDestroy(buf);
-*/
+	*/
 
 	//TestBookMark();
 	Parse();
@@ -113,7 +113,7 @@ void CWapBrowserAppUi::ConstructL()
 }
 
 CWapBrowserAppUi::CWapBrowserAppUi()
-	: iHTTPEngine(NULL)
+: iHTTPEngine(NULL)
 {
 	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::CWapBrowserAppUi"));
 }
@@ -135,19 +135,20 @@ void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 {
 	switch( aCommand )
 	{
-		case EEikCmdExit:
-		case EAknSoftkeyExit:
-			//Exit();
-			RequestConfig();
-			break;
+	case EWapBrowserCommand1:
+		RequestPage();
+		//Parse();
+		break;
 
-		case EWapBrowserCommand1:
-			RequestPage();
-			//Parse();
-			break;
-		default:
-			//Panic( EWapBrowserUi );
-			break;
+	case EEikCmdExit:
+	case EAknSoftkeyExit:
+		//Exit();
+		//RequestConfig();
+		break;
+
+	default:
+		//Panic( EWapBrowserUi );
+		break;
 	}
 }
 
@@ -155,24 +156,6 @@ void CWapBrowserAppUi::HandleStatusPaneSizeChange()
 {
 	iAppView->SetRect( ClientRect() );	
 } 
-
-//////////////////////////////////////////////////////////////////////////
-//From MWebClientObserver
-//////////////////////////////////////////////////////////////////////////
-void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription)
-{
-
-}
-
-void CWapBrowserAppUi::ClientHeaderReceived(const TDesC& aHeaderData)
-{
-
-}
-
-void CWapBrowserAppUi::ClientBodyReceived(const TDesC8& aBodyData,const TBool& isLast)
-{
-
-}
 //////////////////////////////////////////////////////////////////////////
 //From MClientObserver
 //////////////////////////////////////////////////////////////////////////
@@ -180,7 +163,7 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 {
 	//User::InfoPrint(aEventDescription);
 	UtilityTools::WriteLogsL(aEventDescription);
-/*
+	/*
 	HBufC* buf = HBufC::NewLC(aEventDescription.Length());
 	buf->Des().Copy(aEventDescription,aEventDescription.Length());
 	RDebug::Print(*buf);
@@ -236,12 +219,12 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 
 void CWapBrowserAppUi::ClientBodyReceived(const TDesC8& aBodyData,TInt aIndex)
 {
-/*
+	/*
 	HBufC* buf = HBufC::NewLC(aBodyData.Length());
 	buf->Des().Copy(aBodyData);
 	RDebug::Print(*buf);
 	CleanupStack::PopAndDestroy();
-*/
+	*/
 
 	//UtilityTools::WriteLogsL(aBodyData);
 
@@ -260,10 +243,10 @@ void CWapBrowserAppUi::ClientBodyReceived(const TDesC8& aBodyData,TInt aIndex)
 
 void CWapBrowserAppUi::IssueHTTPGetL(const TDesC8& aUri)
 {
-/*
+	/*
 	if(NULL == iWebClientEngine)
 	{
-		iWebClientEngine = CWebClientEngine::NewL(*this);
+	iWebClientEngine = CWebClientEngine::NewL(*this);
 	}
 	iWebClientEngine->IssueHTTPGetL(aUri);*/
 
@@ -325,7 +308,7 @@ void CWapBrowserAppUi::ParseData(HBufC8* aBuf)
 void CWapBrowserAppUi::ParseFile(const TDesC8& aFileName)
 {
 	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile"));
-//	ASSERT(aBuf);
+	//	ASSERT(aBuf);
 	//UtilityTools::WriteFileL(*aBuf,0,_L("C:\\test.xml"));
 	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile pageBuilder"));
 	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
@@ -353,18 +336,18 @@ void CWapBrowserAppUi::ParseFile(const TDesC8& aFileName)
 
 void CWapBrowserAppUi::RequestPage()
 {
-/*
+	/*
 	Parse();
 	//parser->ParseFile("C:\\default_.xml");
-/*/	
-	//RequestPage(_L8("http://music.i139.cn/"));
+	/*/	
+	RequestPage(_L8("http://music.i139.cn/"));
 	//RequestPage(_L8("http://wap.cocobox.cn/index.do"));
 	//RequestPage(_L8("index.do"));
 	//RequestPage(_L8("portal/wap/menu.do?menuid=212134"));
 	//RequestPage(_L8(""));
 	//RequestPage(_L8("http://wap.monternet.com"));
-	RequestPage(_L8("http://218.200.244.92/Order?action=4&SessionID=Jm5XLnV7bQ!1999436728!1235646807091&SPID=900636&ServiceID=03205590&SPURL=http://218.206.76.18:8080/dlWap/countDownload.do?	channelId=732&columnId=11769&colResId=265240&resourceFileId=711778&ws=7248343&ctype=100"));
-//*/
+	//RequestPage(_L8("http://218.200.244.92/Order?action=4&SessionID=Jm5XLnV7bQ!1999436728!1235646807091&SPID=900636&ServiceID=03205590&SPURL=http://218.206.76.18:8080/dlWap/countDownload.do?	channelId=732&columnId=11769&colResId=265240&resourceFileId=711778&ws=7248343&ctype=100"));
+	//*/
 }
 
 
@@ -407,9 +390,9 @@ void CWapBrowserAppUi::ParserConfig(HBufC8* aBuf)
 	firstPos = ptr.Find(_L8("="));
 	lastPos = ptr.Find(_L8("\n"));	
 	TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
-// 	if(lastPos > firstPos && lastPos > 0 && firstPos > 0)
-// 	{
-// 	}
+	// 	if(lastPos > firstPos && lastPos > 0 && firstPos > 0)
+	// 	{
+	// 	}
 	TRACE(mobile_url);
 
 	ptr.Set(ptr.Mid(lastPos + 1));

@@ -106,11 +106,13 @@ RESOURCE MENU_PANE r_wapbrowser_menu
                 {
                 command = EWapBrowserCommand1;
                 txt = qtn_hewb_command1;
+                //txt = "发起测试请求";
                 },
         MENU_ITEM
                 {
                 command = EAknSoftkeyExit;
                 txt = qtn_hewb_exit;
+                //txt = "退出";
                 }
 
         };
