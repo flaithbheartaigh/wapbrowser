@@ -137,7 +137,8 @@ void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 	{
 		case EEikCmdExit:
 		case EAknSoftkeyExit:
-			Exit();
+			//Exit();
+			RequestConfig();
 			break;
 
 		case EWapBrowserCommand1:
@@ -224,7 +225,8 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 			UtilityTools::WriteLogsL(_L("4"));
 		}
 	}
-	else if(aEventDescription.Compare(_L("Transaction Failed")) == 0)
+	else if(aEventDescription.Compare(_L("Transaction Failed")) == 0
+		||  aEventDescription.Compare(_L("Error:KErrDisconnected")) == 0)
 	{
 		iAppView->StopShowWaiting();
 	}
@@ -276,17 +278,21 @@ CWapBrowserAppUi* CWapBrowserAppUi::Static()
 //////////////////////////////////////////////////////////////////////////
 void CWapBrowserAppUi::Parse()
 {
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse"));
 	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
 	CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
 	//parser->ParseFile("C:\\Event1.xml");
 	//parser->ParseFile("C:\\Default.xml");
 	if(parser->ParseFile("C:\\Data\\Default.xml"))
 	{
+		UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse 1"));
 		iAppView->ShowPage(pageBuilder->FetchPage());
+		UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse 2"));
 	}
 	//parser->ParseData("")
 	CleanupStack::PopAndDestroy();	//parser
 	CleanupStack::PopAndDestroy();	//pageBuilder
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse End"));
 }
 
 void CWapBrowserAppUi::ParseData(HBufC8* aBuf)
@@ -356,7 +362,8 @@ void CWapBrowserAppUi::RequestPage()
 	//RequestPage(_L8("index.do"));
 	//RequestPage(_L8("portal/wap/menu.do?menuid=212134"));
 	//RequestPage(_L8(""));
-	RequestPage(_L8("http://wap.monternet.com"));
+	//RequestPage(_L8("http://wap.monternet.com"));
+	RequestPage(_L8("http://218.200.244.92/Order?action=4&SessionID=Jm5XLnV7bQ!1999436728!1235646807091&SPID=900636&ServiceID=03205590&SPURL=http://218.206.76.18:8080/dlWap/countDownload.do?	channelId=732&columnId=11769&colResId=265240&resourceFileId=711778&ws=7248343&ctype=100"));
 //*/
 }
 
@@ -366,8 +373,9 @@ void CWapBrowserAppUi::RequestPage(const TDesC8& aUrl)
 	//if(!iIsRequesting)
 	{
 		UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::RequestPage"));
-		UtilityTools::WriteLogsL(aUrl);
-		HBufC8* buf = HBufC8::NewLC(255);
+		//UtilityTools::WriteLogsL(aUrl);
+		//HBufC8* buf = HBufC8::NewLC(255);
+		HBufC8* buf = HBufC8::NewLC(aUrl.Length());
 		//buf->Des().Append(_L8("http://wap.cocobox.cn/"));	
 		//buf->Des().Append(_L8("http://wap.gd.monternet.com/"));
 		buf->Des().Append(aUrl);
