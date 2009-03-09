@@ -160,9 +160,10 @@ TBool CWmlParser::Parse(TiXmlDocument& doc)
 							if(const char* href = go->Attribute("href"))
 							{
 								UtilityTools::WriteLogsL(_L("href:"));
-								TPtrC8 link;
-								link.Set((const unsigned char*)href);
-								UtilityTools::WriteLogsL(link);
+								TPtrC8 link((const TUint8*)href);
+// 								TPtrC8 link;
+// 								link.Set((const unsigned char*)href);
+								UtilityTools::WriteLogsL(link.Left(127));
 								CWapBrowserAppUi::Static()->RequestPage(link);
 							}
 						}
