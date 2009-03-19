@@ -12,6 +12,7 @@
 // INCLUDES
 #include "Define.h"
 #include "HttpObserver.h"
+#include "ConfigData.h"
 
 class CWapBrowserAppView;
 class CWebClientEngine;
@@ -67,6 +68,8 @@ class CWapBrowserAppUi
 		int iRequestType;
 
 		TBool iIsRequesting;
+
+		CConfigData iConfigData;
 	};
 
 #endif // __WAPBROWSERAPPUI_H__

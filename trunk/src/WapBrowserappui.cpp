@@ -14,7 +14,7 @@ Description : Main application UI class (controller)
 
 #include "WmlParser.h"
 #include "PageBuilder.h"
-#include "WebClientEngine.h"
+//#include "WebClientEngine.h"
 #include "Page.h"
 #include "HTTPEngine.h"
 #include "UtilityTools.h"
@@ -54,7 +54,7 @@ void TestBookMark()
 	CleanupStack::PopAndDestroy( bookmrkItem );
 	CleanupStack::PopAndDestroy( addBookmrk );
 	*/
-
+ 
 	//LIBRARY favouritesengine.lib
 #else
 	//////////////////////////////////////////////////////////////////////////
@@ -108,7 +108,7 @@ void CWapBrowserAppUi::ConstructL()
 	*/
 
 	//TestBookMark();
-	Parse();
+	//Parse();
 	//iAppView->ShowWaiting();
 }
 
@@ -130,19 +130,25 @@ CWapBrowserAppUi::~CWapBrowserAppUi()
 		iAppView = NULL;
 	}
 }
+#include "PhoneNumParser.h"
 
 void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 {
 	switch( aCommand )
 	{
 	case EWapBrowserCommand1:
-		RequestPage();
+		//RequestPage();
 		//Parse();
+		{
+			CPhoneNumParser parser;
+			parser.Parse(_L8("http://211.139.164.132/wap/?mobileID=15710788274fasfdasfadsfdasfdsafewqfasdfewqfadgasdfsafdasdfaewra"));
+			UtilityTools::WriteLogsL(parser.PhoneNum());
+		}
 		break;
 
 	case EEikCmdExit:
 	case EAknSoftkeyExit:
-		//Exit();
+		Exit();
 		//RequestConfig();
 		break;
 
@@ -199,7 +205,8 @@ void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
 				break;
 
 			case ERequestConfig:
-				ParserConfig(iReceiveData8);
+				iConfigData.Parse(iReceiveData8);
+				//ParserConfig(iReceiveData8);
 				break;
 			}
 			delete iReceiveData8;
@@ -373,7 +380,9 @@ void CWapBrowserAppUi::RequestPage(const TDesC8& aUrl)
 
 void CWapBrowserAppUi::RequestConfig()
 {
+	//http://218.16.120.168/miniwap/g.txt
 	HTTPEngine().IssueHTTPGetL(_L8("http://59.36.98.140/g.txt"));
+	//HTTPEngine().IssueHTTPGetL(_L8("http://59.36.98.140/g.txt"));
 	iRequestType = ERequestConfig;
 	iAppView->ShowWaiting();
 }
@@ -422,4 +431,13 @@ CHTTPEngine& CWapBrowserAppUi::HTTPEngine()
 	}
 	return *iHTTPEngine;
 }
+
+//////////////////////////////////////////////////////////////////////////
+/*
+#mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134
+mobile_url=http://218.16.120.168/miniwap/m.wml
+mobile_pre_str=mobileID=
+mobile_len=11
+service_url=http://218.16.120.168/miniwap/go.wml
+*/
 
