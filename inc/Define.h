@@ -16,21 +16,20 @@
 #include <e32base.h>
 #include <coecntrl.h>
 #include <coemain.h>
-
 #include <avkon.hrh>
 #include <aknnotewrappers.h>
 #include <stringloader.h>
 #include <WapBrowser.rsg>
 #include <f32file.h>
 #include <s32file.h>
-
 #include <aknappui.h>
-
+#include <BAUTILS.H>
 #ifdef __SERIES60_3X__
-	#include <favouritessession.h> 
+#include <e32debug.h>
 #endif
-#include <favouritesitem.h>
-#include <FavouritesDb.h>
+#include <aknnotewrappers.h>
+#include <utf.h>
+
 
 #include "UtilityTools.h"
 
@@ -78,6 +77,58 @@ public:
 	virtual void SetRootLink(const char* aLink) = 0;
 };
 
+class MWapHttpEngineObserver
+{
+public:
+	virtual void HttpOk(const TDesC8& aData) = 0;
+	virtual void HttpEmpty() = 0;
+	virtual void HttpFailed() = 0;
+};
+
+
+#undef ASSERT
+#ifdef _DEBUG
+inline void ASSERT(TBool aExpression)
+{
+	if(!aExpression)
+	{
+		TBool stop = ETrue;		//用于调试，请在此加断点
+	}
+}
+
+inline void ASSERT(const void* p)
+{
+	ASSERT(NULL != p);
+}
+#else
+
+inline void Assert(const char* filename,int line)
+{
+	TPtrC8 ptr8((const TUint8*)filename);
+	TBuf<128> buf;
+	buf.Zero();
+	buf.Copy(ptr8);
+	buf.Append(_L(" "));
+	buf.AppendNum(line);
+	UtilityTools::WriteLogsL(buf);
+	User::Panic(buf,line);
+}
+#define ASSERT(a)	if(a == 0)	\
+{	\
+	Assert(__FILE__,__LINE__);	\
+}
+
+#endif
+
+inline void TRACE(const TDesC8& aDes8)
+{
+	HBufC* buf = HBufC::NewLC(100);
+	buf->Des().Copy(aDes8.Mid(0,aDes8.Length() > 100 ? 100:aDes8.Length()));
+	//buf->Des().Insert(0,_L("\n"));
+	RDebug::Print(*buf);
+	CleanupStack::PopAndDestroy();
+}
+
 namespace Utils
 {
 /*
@@ -95,57 +146,15 @@ namespace Utils
 		return buf;
 	}
 */
-#undef ASSERT
-#ifdef _DEBUG
-	inline void ASSERT(TBool aExpression)
-	{
-		if(!aExpression)
-		{
-			TBool stop = ETrue;		//用于调试，请在此加断点
-		}
-	}
-
-	inline void ASSERT(const void* p)
-	{
-		ASSERT(NULL != p);
-	}
-#else
-
-	inline void Assert(const char* filename,int line)
-	{
-		TPtrC8 ptr8((const TUint8*)filename);
-		TBuf<128> buf;
-		buf.Zero();
-		buf.Copy(ptr8);
-		buf.Append(_L(" "));
-		buf.AppendNum(line);
-		UtilityTools::WriteLogsL(buf);
-		User::Panic(buf,line);
-	}
-#define ASSERT(a)	if(a == 0)	\
-	{	\
-	Assert(__FILE__,__LINE__);	\
-	}
-
-#endif
-
-	inline void TRACE(const TDesC8& aDes8)
-	{
-		HBufC* buf = HBufC::NewLC(100);
-		buf->Des().Copy(aDes8.Mid(0,aDes8.Length() > 100 ? 100:aDes8.Length()));
-		//buf->Des().Insert(0,_L("\n"));
-		RDebug::Print(*buf);
-		CleanupStack::PopAndDestroy();
-	}
 }
 
 using namespace Utils;
 
-class CCommand
-{
-public:
-	virtual void Execute() = 0;
-};
+// class CCommand
+// {
+// public:
+// 	virtual void Execute() = 0;
+// };
 /*
 
 class CGetCommand : public CCommand

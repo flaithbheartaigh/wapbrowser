@@ -13,6 +13,7 @@
 enum TWapBrowserIds
     {
     EWapBrowserCommand1 = 1, // start value must not be 0
-    EWapBrowserCommand2
+	EWapBrowserCommand2,
+	ELastMenuCmd
     };
 #endif // __WAPBROWSER_HRH__

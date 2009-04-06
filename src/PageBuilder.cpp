@@ -13,9 +13,12 @@
 
 #include "PageBuilder.h"
 #include "Page.h"
+#include "WapEngine.h"
+#include "ImageEngine.h"
 
-CPageBuilder::CPageBuilder(const TRect& aRect)
+CPageBuilder::CPageBuilder(CWapEngine& aWapEngine,const TRect& aRect)
 	: iRect(aRect)
+	, iWapEngine(aWapEngine)
 {
 	// No implementation required
 }
@@ -28,17 +31,17 @@ CPageBuilder::~CPageBuilder()
 	iElementArray.ResetAndDestroy();
 }
 
-CPageBuilder* CPageBuilder::NewLC(const TRect& aRect)
+CPageBuilder* CPageBuilder::NewLC(CWapEngine& aWapEngine,const TRect& aRect)
 {
-	CPageBuilder* self = new (ELeave)CPageBuilder(aRect);
+	CPageBuilder* self = new (ELeave)CPageBuilder(aWapEngine,aRect);
 	CleanupStack::PushL(self);
 	self->ConstructL();
 	return self;
 }
 
-CPageBuilder* CPageBuilder::NewL(const TRect& aRect)
+CPageBuilder* CPageBuilder::NewL(CWapEngine& aWapEngine,const TRect& aRect)
 {
-	CPageBuilder* self=CPageBuilder::NewLC(aRect);
+	CPageBuilder* self=CPageBuilder::NewLC(aWapEngine,aRect);
 	CleanupStack::Pop(); // self;
 	return self;
 }
@@ -70,6 +73,9 @@ void CPageBuilder::AddPicture(const char* aName,const char* aAlt,const char* aLi
 	HBufC* name = HBufC::NewLC(strlen(aName) + 1);
 	name->Des().Copy(TPtrC8((const TUint8*)aName));
 	w->SetPictureName(*name);
+
+	iWapEngine.ImageEngine().AddPicUrl(TPtrC8((const TUint8*)aName),w);
+
 	CleanupStack::PopAndDestroy();
 
 // 	HBufC* alt = HBufC::NewLC(strlen(aAlt) + 1);
@@ -133,9 +139,12 @@ void CPageBuilder::SetRootLink(const char* aLink)
 	ASSERT(aLink);
 	ASSERT(NULL == iRootLink);
 	//TPtrC8 ptr((const TUint8*)aLink);
-
  	iRootLink = HBufC::NewLC(strlen(aLink) + 1);
- 	iRootLink->Des().Copy(TPtrC8((const TUint8*)aLink));
+	iRootLink->Des().Copy(TPtrC8((const TUint8*)aLink));
+
+	RDebug::Print(_L("RootLink:"));
+	RDebug::Print(*iRootLink);
+
 	CleanupStack::PopAndDestroy();
 }
 //////////////////////////////////////////////////////////////////////////

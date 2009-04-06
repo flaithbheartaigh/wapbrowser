@@ -1,76 +1,67 @@
 /*
 ============================================================================
- Name		: WapBrowserAppUi.h
- Author	  : 浮生若茶
- Version	 :
- Copyright   : Your copyright notice
- Description : Main application UI class (controller)
+Name		: WapBrowserAppUi.h
+Author	  : 浮生若茶
+Version	 :
+Copyright   : Your copyright notice
+Description : Main application UI class (controller)
 ============================================================================
 */
 #ifndef __WAPBROWSERAPPUI_H__
 #define __WAPBROWSERAPPUI_H__
-// INCLUDES
+
 #include "Define.h"
-#include "HttpObserver.h"
-#include "ConfigData.h"
 
 class CWapBrowserAppView;
-class CWebClientEngine;
-class CHTTPEngine;
+class CPhoneNumEngine;
+class CConfigEngine;
+class CWapEngine;
 
-// CLASS DECLARATION
 class CWapBrowserAppUi 
 	: public CAknAppUi
-	, public MClientObserver
-	{
-	public: // Constructors and destructor
-		void ConstructL();
-		CWapBrowserAppUi();
-		virtual ~CWapBrowserAppUi();
-	private:  // Functions from base classes
-		void HandleCommandL( TInt aCommand );
-		void HandleStatusPaneSizeChange();
+{
+public: 
+	void ConstructL();
+	CWapBrowserAppUi();
+	virtual ~CWapBrowserAppUi();
 
-	public://From MClientObserver
-		virtual void ClientEvent(const TDesC& aEventDescription,TInt aIndex);
-		virtual void ClientBodyReceived(const TDesC8& aBodyData,TInt aIndex);
+private: // Functions from base classes
+	void HandleCommandL( TInt aCommand );
+	void HandleStatusPaneSizeChange();
+	void DynInitMenuPaneL(TInt aResourceId, CEikMenuPane* aMenuPane);
 
-	public:
-		void IssueHTTPGetL(const TDesC8& aUri);
+public:
+	void Start();
+	void RequestConfig();
+	void GetPhoneNumL();
+	HBufC8* CombineUrlL();
+	void RequestPageL();
+	void RequestPageL(const TDesC8& aUrl);
+	void UpdateWindow();
 
-		static CWapBrowserAppUi* Static();
-		void RequestPage(const TDesC8& aUrl);
+public://static
+	static CWapBrowserAppUi* Static();
 
-	private:
-		void Parse();
-		void ParseData(HBufC8* aBuf);
-		void ParseFile(const TDesC8& aFileName);
-		void RequestPage();
-		void RequestConfig();
-		void ParserConfig(HBufC8* aBuf);
+private:
+	CPhoneNumEngine& PhoneNumEngineL();
+	CConfigEngine& ConfigEngineL();
+	CWapEngine& WapEngineL();
 
-		CHTTPEngine& HTTPEngine();
+private://Test
+	void TestReqeuestPage();
+	void TestParseConfig();
+	void TestGetPhoneNum();
+	void TestCombinUrl();
+	void TestOrderWml();
+	void TestServiceWml();
+	void TestMusicWml();
 
-	private:
-		enum TRequestType
-		{
-			ERequestNull,
-			ERequestPage,
-			ERequestConfig
-		};
-
-	private: // Data
-		CWapBrowserAppView* iAppView;
-		CWebClientEngine* iWebClientEngine;
-		CHTTPEngine* iHTTPEngine;
-		HBufC8* iReceiveData8;
-
-		int iRequestType;
-
-		TBool iIsRequesting;
-
-		CConfigData iConfigData;
-	};
+private:
+	CWapBrowserAppView* iAppView;
+	CPhoneNumEngine* iPhoneNumEngine;
+	CConfigEngine* iConfigEngine;
+	CWapEngine* iWapEngine;
+};
 
 #endif // __WAPBROWSERAPPUI_H__
 // End of File

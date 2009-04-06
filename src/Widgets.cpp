@@ -10,6 +10,8 @@
 #include "Define.h"
 #include "Widgets.h"
 
+#include "WapBrowserappui.h"
+
 /*
 //////////////////////////////////////////////////////////////////////////
 CWidget
@@ -89,11 +91,11 @@ CTextWidget::~CTextWidget()
 
 const TDesC& CTextWidget::Text() const
 {
-	RDebug::Print(_L("Text"));
+//	//RDebug::Print(_L("Text"));
 	if(iText)
 	{
 		ASSERT(iText);
-		RDebug::Print(*iText);
+//		RDebug::Print(*iText);
 		return *iText;
 	}
 	return KNullDesC;
@@ -183,6 +185,7 @@ CPictureWidget::~CPictureWidget()
 	delete iPictureLink;
 	delete iFileName;
 }
+
 void CPictureWidget::SetPictureLink(const TDesC& aParentLink)
 {
 	iParentLink = aParentLink.Alloc();
@@ -195,27 +198,36 @@ void CPictureWidget::SetPictureName(const TDesC& aName)
 	MakePictureLink();
 }
 
+void CPictureWidget::SetImage(const TDesC& aName)
+{
+	ASSERT(NULL == iBitmap);
+	ASSERT(NULL == iImageReader);
+	ASSERT(NULL == iImageName);
+
+	CImage_Reader* imageReader = new (ELeave)CImage_Reader(*this);
+	CleanupStack::PushL(imageReader);
+	iImageName = aName.AllocLC();
+	imageReader->ConstructL(*iImageName);
+	CleanupStack::Pop(2);
+	iImageReader = imageReader;
+}
+
 void CPictureWidget::SetAlt(const TDesC& aAlt)
 {
 	iAlt = aAlt.Alloc();
-	width = KDefaultFont->MeasureText(*iAlt);
-
-
-	ASSERT(NULL == iBitmap);
-	ASSERT(NULL == iImageReader);
-	iImageReader = new (ELeave)CImage_Reader(*this);
-	CleanupStack::PushL(iImageReader);
-	iImageReader->ConstructL(_L("C:\\coco.jpg"));
-	CleanupStack::Pop(iImageReader);
+	//width = KDefaultFont->MeasureText(*iAlt);
+	iSize.iHeight = KDefaultFont->HeightInPixels();
+	iSize.iWidth = KDefaultFont->MeasureText(*iAlt);
+	//SetImage(_L("C:\\coco.jpg"));
 }
 
 const TDesC& CPictureWidget::Alt() const
 {
-	RDebug::Print(_L("Alt"));
+//	RDebug::Print(_L("Alt"));
 	if(iAlt)
 	{
 		ASSERT(iAlt);
-		RDebug::Print(*iAlt);
+//		RDebug::Print(*iAlt);
 		return *iAlt;
 	}
 	return KNullDesC;
@@ -248,16 +260,13 @@ const CFbsBitmap* CPictureWidget::Bitmap() const
 //////////////////////////////////////////////////////////////////////////
 void CPictureWidget::Draw(CGraphicsContext &aGc) const
 {
-	const TDesC& text = /*((CPictureWidget&)element).*/Alt();
-
-	int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
-
-	TRect rect(point,TSize(width,iTextHeight));
-	rect.Move(TPoint(0,-iTextHeight));
-
 	if(iActive)
 	{
 		aGc.SetBrushStyle(CGraphicsContext::ENullBrush);
+		aGc.SetPenStyle(CGraphicsContext::ESolidPen);
+		aGc.SetPenColor(KRgbBlack);
+		TRect rect(point,iSize);
+		rect.Move(TPoint(0,-iTextHeight));
 		rect.Shrink(-1,-1);
 		aGc.DrawRect(rect);
 	}
@@ -268,6 +277,10 @@ void CPictureWidget::Draw(CGraphicsContext &aGc) const
 	}
 	else
 	{
+		const TDesC& text = /*((CPictureWidget&)element).*/Alt();
+		int width = CCoeEnv::Static()->NormalFont()->MeasureText(text);
+		TRect rect(point,TSize(width,iTextHeight));
+		rect.Move(TPoint(0,-iTextHeight));
 		aGc.SetPenStyle(CGraphicsContext::ESolidPen);
 		aGc.SetPenColor(KRgbYellow);
 		aGc.DrawRect(rect);
@@ -279,7 +292,7 @@ void CPictureWidget::Draw(CGraphicsContext &aGc) const
 
 void CPictureWidget::Move(TPoint& aPoint)
 {
-	aPoint.iX += width;
+	aPoint.iX += iSize.iWidth;
 }
 
 TSize CPictureWidget::Size() const
@@ -303,8 +316,14 @@ void CPictureWidget::ImageReadyL(const TInt& aError)
 	if(KErrNone == aError)
 	{
 		ASSERT(NULL == iBitmap);
+		ASSERT(iImageName);
 		iBitmap = iImageReader->Bitmap();
 		iSize = iBitmap->SizeInPixels();
+		UtilityTools::DeleteFile(*iImageName);
+		delete iImageName;
+		iImageName = NULL;
+
+		CWapBrowserAppUi::Static()->UpdateWindow();
 	}
 }
 

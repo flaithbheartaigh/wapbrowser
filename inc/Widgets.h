@@ -18,6 +18,19 @@
 
 /*
 //////////////////////////////////////////////////////////////////////////
+CCommand
+//////////////////////////////////////////////////////////////////////////
+*/
+class CCommand
+{
+public:
+	virtual ~CCommand(){};
+
+public:
+	virtual void Execute() = 0;
+};
+/*
+//////////////////////////////////////////////////////////////////////////
 CWidget
 //////////////////////////////////////////////////////////////////////////
 */
@@ -50,6 +63,16 @@ public:
 		return iWidgetName.Compare(aWidgetName) == 0;
 	}
 
+	void SetCommand(CCommand* aCommand)
+	{
+		iCommand = aCommand;
+	}
+
+	CCommand* Command() const
+	{
+		return iCommand;
+	}
+
 public:
 	//virtual void Draw() {};
 
@@ -78,6 +101,7 @@ public:
 	TSize iSize;
 	TBool iActive;
 	TBuf<20> iWidgetName;
+	CCommand* iCommand;
 };
 
 /*
@@ -126,7 +150,8 @@ CPictureWidget
 */
 #include "Image_Reader.h"
 
-class CPictureWidget : public CWidget
+class CPictureWidget 
+	: public CWidget
 	, public MImageReadyCallBack
 {
 public:
@@ -134,6 +159,7 @@ public:
 	~CPictureWidget();
 	void SetPictureLink(const TDesC& aParentLink);
 	void SetPictureName(const TDesC& aName);
+	void SetImage(const TDesC& aName);
 	void SetAlt(const TDesC& aAlt);
 	const TDesC& Alt() const;
 	const TDesC& Link() const;
@@ -153,11 +179,12 @@ private:
 	HBufC* iPictureLink;
 	HBufC* iParentLink;
 	HBufC* iFileName;
+	HBufC* iImageName;	
 	HBufC* iAlt;
 	CFbsBitmap* iBitmap;
 	CImage_Reader* iImageReader;
 	TSize iSize;
-	int width;
+	//int width;
 };
 
 #endif // WIDGETS_H

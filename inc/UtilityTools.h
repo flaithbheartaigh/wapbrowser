@@ -30,6 +30,9 @@ public:
 
 	static void		ReadFileL(TDes8& aDes,TInt aLength,TInt aOffset,  const TDesC& aFileName);
 
+	static HBufC8*	ReadFileLC(const TDesC& aFileName);
+	static HBufC8*	ReadFileL(const TDesC& aFileName);
+
 	static void		CreateFile(const TDesC& aFileName,TUint aFileMode);
 
 	static void		WriteFileL(const TDesC8& aDes, TInt aOffset,  const TDesC& aFileName);

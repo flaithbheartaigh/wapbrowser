@@ -44,17 +44,18 @@ public:
 
 	}
 	*/
-	void Parse(HBufC8* aBuf)
+	//void Parse(const HBufC8* aBuf)
+	void Parse(const TDesC8& aDes)
 	{
 		int firstPos = 0;
 		int lastPos = 0;
 
 		TPtrC8 ptr;
-		ptr.Set(*aBuf);
+		ptr.Set(aDes);
 
 		firstPos = ptr.Find(_L8("="));
 		lastPos = ptr.Find(_L8("\n"));	
-		TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
+		TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 2);
 		TRACE(mobile_url);
 		ASSERT(this->mobile_url);
 		this->mobile_url = mobile_url.AllocL();
@@ -63,7 +64,7 @@ public:
 		ptr.Set(ptr.Mid(lastPos + 1));
 		firstPos = ptr.Find(_L8("="));
 		lastPos = ptr.Find(_L8("\n"));		
-		TPtrC8 mobile_pre_str = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
+		TPtrC8 mobile_pre_str = ptr.Mid(firstPos + 1,lastPos - firstPos - 2);
 		TRACE(mobile_pre_str);
 		ASSERT(this->mobile_pre_str);
 		this->mobile_pre_str = mobile_pre_str.AllocL();
@@ -71,16 +72,14 @@ public:
 		ptr.Set(ptr.Mid(lastPos + 1));
 		firstPos = ptr.Find(_L8("="));
 		lastPos = ptr.Find(_L8("\n"));		
-		TPtrC8 mobile_len = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
+		TPtrC8 mobile_len = ptr.Mid(firstPos + 1,lastPos - firstPos - 2);
 		TRACE(mobile_len);
-		//this->mobile_len = mobile_len;
-		TLex8 lex(mobile_len);
-		lex.Val((TUint&)this->mobile_len);
+		this->mobile_len = mobile_len.AllocL();
 
 		ptr.Set(ptr.Mid(lastPos + 1));
 		firstPos = ptr.Find(_L8("="));
 		//lastPos = ptr.Find(_L8("0X0A"));	
-		TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 1);
+		TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 3);
 		TRACE(service_url);
 		ASSERT(this->service_url);
 		this->service_url = service_url.AllocL();
@@ -122,15 +121,34 @@ public:
 		}
 	}
 
-	int MobileLen() const
+	const TDesC8&  MobileLen() const
 	{
-		return mobile_len;
+		if(mobile_len)
+		{
+			return *mobile_len;
+		}
+		else
+		{
+			return KNullDesC8;
+		}
+	}
+
+	int MobileLenInInt() const
+	{
+		int len;
+		if(mobile_len)
+		{
+			TLex8 lex(*mobile_len);
+			lex.Val((TUint&)len);
+		}
+		return len;
 	}
 
 private:
 	HBufC8* mobile_url;
 	HBufC8* mobile_pre_str;
-	int mobile_len;
+	HBufC8* mobile_len;
+	//int mobile_len;
 	HBufC8* service_url;
 };
 

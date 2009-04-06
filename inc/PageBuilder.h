@@ -20,6 +20,7 @@
 // CLASS DECLARATION
 
 class CPage;
+class CWapEngine;
 
 //////////////////////////////////////////////////////////////////////////
 //CPageBuilder
@@ -30,11 +31,11 @@ class CPageBuilder
 {
 public: // Constructors and destructor
 	~CPageBuilder();
-	static CPageBuilder* NewL(const TRect& aRect);
-	static CPageBuilder* NewLC(const TRect& aRect);
+	static CPageBuilder* NewL(CWapEngine& aWapEngine,const TRect& aRect);
+	static CPageBuilder* NewLC(CWapEngine& aWapEngine,const TRect& aRect);
 
 private:
-	CPageBuilder(const TRect& aRect);
+	CPageBuilder(CWapEngine& aWapEngine,const TRect& aRect);
 	void ConstructL();
 
 public://From MPageBuilder
@@ -85,6 +86,7 @@ private:
 	CPage* Page();
 
 private:
+	CWapEngine& iWapEngine;
 	RPointerArray<CWidget> iElementArray;
 	HBufC* iRootLink;
 	CPage* iPage;

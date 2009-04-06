@@ -13,20 +13,6 @@ Description : Application entry point
 	#include <eikstart.h>
 #endif
 #include "WapBrowserApplication.h"
-/*
-
-LOCAL_C CApaApplication* NewApplication()
-{
-	return new CWapBrowserApplication;
-}
-
-GLDEF_C TInt E32Main()
-{
-	return EikStart::RunApplication( NewApplication );
-}
-
-*/
-
 
 #ifdef __SERIES60_3X__
 	LOCAL_C CApaApplication* NewApplication()
@@ -47,3 +33,17 @@ GLDEF_C TInt E32Main()
 		return KErrNone;
 	}
 #endif
+	/*
+
+	LOCAL_C CApaApplication* NewApplication()
+	{
+	return new CWapBrowserApplication;
+	}
+
+	GLDEF_C TInt E32Main()
+	{
+	return EikStart::RunApplication( NewApplication );
+	}
+
+	*/
+

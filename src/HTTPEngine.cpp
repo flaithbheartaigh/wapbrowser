@@ -241,6 +241,10 @@ void CHTTPEngine::IssueHTTPGetL(const TDesC8& aUri)
 	SetHeaderL(hdr, HTTP::EProxyAddress, KProxy);
 #endif
 
+
+	//SetHeaderL(hdr, HTTP::EReferer, KProxy);
+
+
 	/*if (aUri.Find(KXOnlineIP2)>0)
 	{
 		AddHeaderL(hdr,KXOnline,KXOnlineIP2);
@@ -777,7 +781,7 @@ void CHTTPEngine::SetupConnectionL()
 	}
 }
 
-TInt CHTTPEngine::SetupConnectionL(TRequestStatus* aStatus,TInt aIap)
+TInt CHTTPEngine::SetupConnectionL(TRequestStatus* /*aStatus*/,TInt aIap)
 {
 
 	if( iConnectionSetupDone )

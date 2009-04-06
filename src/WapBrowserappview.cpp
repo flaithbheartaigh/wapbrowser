@@ -149,3 +149,11 @@ void CWapBrowserAppView::DrawWaiting(CGraphicsContext& aGc) const
 		}
 	}
 }
+
+void CWapBrowserAppView::Layout()
+{
+	if(iPage)
+	{
+		iPage->Layout();
+	}
+}
