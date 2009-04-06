@@ -7,16 +7,12 @@
  Description : CWmlParser implementation
 ============================================================================
 */
-#ifdef __SERIES60_3X__
-	#include <e32debug.h>
-#endif
-#include <aknnotewrappers.h>
-#include <utf.h>
-
+#include "Define.h"
 #include "WmlParser.h"
 #include "WapBrowserappui.h"
+#include "WapEngine.h"
+#include "ImageEngine.h"
 //#include "PageBuilder.h"
-#include "Define.h"
 
 
 #include "UtilityTools.h"
@@ -51,16 +47,15 @@ void TRACE(const char* str)
 
 }
 
-
-CWmlParser::CWmlParser(MPageBuilder& aPageBuilder)
-	: iPageBuilder(aPageBuilder)
+CWmlParser::CWmlParser(CWapEngine& aWapEngine,MPageBuilder& aPageBuilder)
+	: iWapEngine(aWapEngine)
+	, iPageBuilder(aPageBuilder)
 {
 	// No implementation required
 
 	UtilityTools::WriteLogsL(_L("CWmlParser::CWmlParser"));
 	RDebug::Print(_L("CWmlParser::CWmlParser"));
 }
-
 
 CWmlParser::~CWmlParser()
 {
@@ -76,17 +71,17 @@ CWmlParser::~CWmlParser()
 	//BufArray.ResetAndDestroy();
 }
 
-CWmlParser* CWmlParser::NewLC(MPageBuilder& aPageBuilder)
+CWmlParser* CWmlParser::NewLC(CWapEngine& aWapEngine,MPageBuilder& aPageBuilder)
 {
-	CWmlParser* self = new (ELeave)CWmlParser(aPageBuilder);
+	CWmlParser* self = new (ELeave)CWmlParser(aWapEngine,aPageBuilder);
 	CleanupStack::PushL(self);
 	self->ConstructL();
 	return self;
 }
 
-CWmlParser* CWmlParser::NewL(MPageBuilder& aPageBuilder)
+CWmlParser* CWmlParser::NewL(CWapEngine& aWapEngine,MPageBuilder& aPageBuilder)
 {
-	CWmlParser* self=CWmlParser::NewLC(aPageBuilder);
+	CWmlParser* self=CWmlParser::NewLC(aWapEngine,aPageBuilder);
 	CleanupStack::Pop(); // self;
 	return self;
 }
@@ -140,14 +135,13 @@ TBool CWmlParser::Parse(TiXmlDocument& doc)
 			{
 				TPtrC8 link;
 				link.Set((const unsigned char*)ontimer);
-				CWapBrowserAppUi::Static()->RequestPage(link);
-
+				CWapBrowserAppUi::Static()->RequestPageL(link);
 			}
 			else if(const char* onenterforward  = card->Attribute("onenterforward "))
 			{
 				TPtrC8 link;
 				link.Set((const unsigned char*)onenterforward);
-				CWapBrowserAppUi::Static()->RequestPage(link);
+				CWapBrowserAppUi::Static()->RequestPageL(link);
 			}
 			else if(TiXmlElement* onevent = card->FirstChildElement("onevent"))
 			{
@@ -164,7 +158,7 @@ TBool CWmlParser::Parse(TiXmlDocument& doc)
 // 								TPtrC8 link;
 // 								link.Set((const unsigned char*)href);
 								UtilityTools::WriteLogsL(link.Left(127));
-								CWapBrowserAppUi::Static()->RequestPage(link);
+								CWapBrowserAppUi::Static()->RequestPageL(link);
 							}
 						}
 					}
@@ -187,6 +181,7 @@ TBool CWmlParser::Parse(TiXmlDocument& doc)
 					p = p->NextSiblingElement("p");
 					//delete p;
 				}//while(p = p->NextSiblingElement("p"));//TiXmlElement* p = card->FirstChildElement("p")
+				//iWapEngine.ImageEngine().StartPicSession();
 				return ETrue;
 			}
 			//delete card;
@@ -194,6 +189,7 @@ TBool CWmlParser::Parse(TiXmlDocument& doc)
 		}
 		//delete root;
 		UtilityTools::WriteLogsL(_L("CWmlParser::Parse9"));
+		//return ETrue;
 	}
 	UtilityTools::WriteLogsL(_L("CWmlParser::Parse10"));
 	return EFalse;
@@ -271,6 +267,10 @@ void CWmlParser::ParseChild(TiXmlNode* childNode)
 		{
 			//ParseInput(child);
 		}
+		else if(strcmp(value,"anchor") == 0)
+		{
+			ParseAnchor(child);
+		}
 		//archor在这里被忽略
 	}
 }
@@ -303,6 +303,51 @@ void CWmlParser::ParseAnchor(TiXmlElement* element)
 {
 	ASSERT(strcmp(element->Value(),"anchor") == 0);
 
+	TiXmlNode* node = element->FirstChild();
+	const char* text = NULL;
+	const char* link = NULL;
+	while (node)
+	{
+		switch(node->Type())
+		{
+		case TiXmlNode::TEXT:
+			text = node->Value();
+			break;
+
+		case TiXmlNode::ELEMENT:
+			if(TiXmlElement* goElement = element->FirstChildElement("go"))
+			{
+				const char* href	= goElement->Attribute("href");
+				const char* method	= goElement->Attribute("method");
+
+				link = href;
+
+				if(TiXmlElement*postfieldElement = goElement->FirstChildElement("postfield"))
+				{
+					const char* name	= postfieldElement->Attribute("name");
+					const char* value	= postfieldElement->Attribute("value");
+
+/*
+					if(postfieldElement = postfieldElement->NextSiblingElement())
+					{
+						const char* name	= postfieldElement->Attribute("name");
+						const char* value	= postfieldElement->Attribute("value");
+					}
+		*/
+
+				}
+			}
+			break;
+
+		default:
+			break;
+		}
+		node = node->NextSibling();
+	}
+
+	iPageBuilder.AddText(text,link);
+
+/*
 	if(TiXmlElement* goElement = element->FirstChildElement("go"))
 	{
 		const char* href	= goElement->Attribute("href");
@@ -321,11 +366,13 @@ void CWmlParser::ParseAnchor(TiXmlElement* element)
 		}
 
 		TiXmlNode* node = goElement->NextSibling();
-		if(node->Type() == TiXmlNode::TEXT)
+		if(node && node->Type() == TiXmlNode::TEXT)
 		{
 			const char* text = node->Value();
 			TRACE(text);
-			iPageBuilder.AddText(text);
+			iPageBuilder.AddText(text,href);
 		}
 	}
+*/
+
 }

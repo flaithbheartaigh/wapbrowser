@@ -17,6 +17,7 @@
 
 #include "tinyxml.h"
 
+class CWapEngine;
 class MPageBuilder;
 
 // class TiXmlDocument;
@@ -26,11 +27,11 @@ class CWmlParser : public CBase
 {
 public: // Constructors and destructor
 	~CWmlParser();
-	static CWmlParser* NewL(MPageBuilder& aPageBuilder);
-	static CWmlParser* NewLC(MPageBuilder& aPageBuilder);
+	static CWmlParser* NewL(CWapEngine& aWapEngine,MPageBuilder& aPageBuilder);
+	static CWmlParser* NewLC(CWapEngine& aWapEngine,MPageBuilder& aPageBuilder);
 
 private:
-	CWmlParser(MPageBuilder& aPageBuilder);
+	CWmlParser(CWapEngine& aWapEngine,MPageBuilder& aPageBuilder);
 	void ConstructL();
 
 public:
@@ -43,9 +44,12 @@ public:
 	void ParseInput(TiXmlElement* element);
 	void ParseAnchor(TiXmlElement* element);
 
+	//MPageBuilder& iPageBuilder;
+
 private:
-	MPageBuilder& iPageBuilder;
-	const char* iFileName;
+	CWapEngine&		iWapEngine;
+	MPageBuilder&	iPageBuilder;
+	const char*		iFileName;
 };
 
 #endif // WMLPARSER_H

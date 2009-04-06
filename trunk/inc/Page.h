@@ -13,7 +13,6 @@
 #include <e32std.h>
 #include <e32base.h>
 
-class CPageBuilder;
 class CWidget;
 class CWidgetGroup;
 class CScrollBar;

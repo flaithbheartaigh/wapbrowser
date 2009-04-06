@@ -7,122 +7,60 @@ Copyright   : Your copyright notice
 Description : Main application UI class (controller)
 ============================================================================
 */
-#include "WapBrowser.pan"
+#include "Define.h"
+
 #include "WapBrowserAppUi.h"
 #include "WapBrowserAppView.h"
-#include "WapBrowser.hrh"
+
+#include "PhoneNumEngine.h"
+#include "ConfigEngine.h"
+#include "WapEngine.h"
+
+
 
 #include "WmlParser.h"
 #include "PageBuilder.h"
-//#include "WebClientEngine.h"
 #include "Page.h"
 #include "HTTPEngine.h"
 #include "UtilityTools.h"
 
 
+#include "WapBrowser.h"
+#include "WapBrowser.rsg"
 
-void TestBookMark()
+enum TMenuCmd
 {
-	//////////////////////////////////////////////////////////////////////////
-	//2nd
-	//////////////////////////////////////////////////////////////////////////
-
-#ifndef __SERIES60_3X__
-
-	/*
-	_LIT( KBookmarkDbPath, "c:\\system\\data\\" );
-	_LIT( KBookmarkDbFile, "Bookmarks1.db" );
-
-	CAddFavouritesDb* CAddFavouritesDb::NewL()
-	{
-	CAddFavouritesDb* favdb = new (ELeave) CAddFavouritesDb();
-	CleanupStack::PushL( favdb );
-	favdb->ConstructL( KBookmarkDbPath, KBookmarkDbFile );
-	CleanupStack::Pop();    
-	return favdb;
-	}
-
-	CAddFavouritesDb * addBookmrk = CAddFavouritesDb::NewL();
-	CleanupStack::PushL( addBookmrk );
-	User::LeaveIfError(addBookmrk->OpenL());
-	CFavouritesItem* bookmrkItem = CFavouritesItem::NewLC();
-	bookmrkItem->SetType( CFavouritesItem::EItem );
-	bookmrkItem->SetNameL( _L("AddBookmark") );
-	bookmrkItem->SetUrlL( _L("http://www.forum.nokia.com") );
-	addBookmrk->AddL(*bookmrkItem , ETrue);
-	addBookmrk->Close();
-	CleanupStack::PopAndDestroy( bookmrkItem );
-	CleanupStack::PopAndDestroy( addBookmrk );
-	*/
- 
-	//LIBRARY favouritesengine.lib
-#else
-	//////////////////////////////////////////////////////////////////////////
-	//3nd
-	//////////////////////////////////////////////////////////////////////////
-	// Link against: favouritesengine.lib 
-
-	RFavouritesSession iSession;
-	User::LeaveIfError(iSession.Connect());
-	CleanupClosePushL(iSession);
-
-	RFavouritesDb db;
-	// KBrowserBookmarks is picked up from the header
-	User::LeaveIfError(db.Open(iSession, KBrowserBookmarks)); 
-	CleanupClosePushL(db);
-
-	CFavouritesItem* item =  CFavouritesItem::NewLC();
-	item->SetNameL(_L("Google UK"));
-	item->SetParentFolder(KFavouritesRootUid);
-	item->SetType(CFavouritesItem::EItem);
-	item->SetUrlL(_L("http://www.google.co.uk/"));
-
-	User::LeaveIfError(db.Add(*item, ETrue));
-
-	CleanupStack::PopAndDestroy(3, &iSession); // db, itemThe equivalent to add the same bookmark to the OSS browser in S60 3rd edition would be: 
-
-#endif
-}
+	EAddCommand = ELastMenuCmd + 1,
+	EAddCommand2,
+	ETestMusicWml,
+	ETestServiceWml,
+	ETestOrderWml,
+	EMenuRequestPage,
+	ETestParse,
+	ERequestConfig
+};
 
 void CWapBrowserAppUi::ConstructL()
 {
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ConstructL"));
 	BaseConstructL();
 	iAppView = CWapBrowserAppView::NewL( ClientRect() );
 	AddToStackL(iAppView);
-	//RequestConfig();
 
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ConstructL"));
-	/*
-	//以下代码移至SymbianOsUnit
-	HBufC8* buf = HBufC8::NewLC(1000);
-	buf->Des().Append(_L8("mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134"));
-	buf->Des().Append(_L8("0X0A"));
-	buf->Des().Append(_L8("mobile_pre_str=mobileID="));
-	buf->Des().Append(_L8("0X0A"));
-	buf->Des().Append(_L8("mobile_len=11"));
-	buf->Des().Append(_L8("0X0A"));
-	buf->Des().Append(_L8("service_url=http://wap.monternet.com/"));
-
-	ParserConfig(buf);
-	CleanupStack::PopAndDestroy(buf);
-	*/
-
-	//TestBookMark();
-	//Parse();
-	//iAppView->ShowWaiting();
+	Start();
 }
 
 CWapBrowserAppUi::CWapBrowserAppUi()
-: iHTTPEngine(NULL)
 {
 	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::CWapBrowserAppUi"));
 }
 
 CWapBrowserAppUi::~CWapBrowserAppUi()
 {
-	//iAppView->StopShowWaiting();
+	delete iPhoneNumEngine;
+	delete iConfigEngine;
+	delete iWapEngine;
 
-	delete iHTTPEngine;
 	RemoveFromStack(iAppView);
 	if ( iAppView )
 	{
@@ -130,20 +68,43 @@ CWapBrowserAppUi::~CWapBrowserAppUi()
 		iAppView = NULL;
 	}
 }
-#include "PhoneNumParser.h"
-
 void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 {
 	switch( aCommand )
 	{
 	case EWapBrowserCommand1:
-		//RequestPage();
-		//Parse();
-		{
-			CPhoneNumParser parser;
-			parser.Parse(_L8("http://211.139.164.132/wap/?mobileID=15710788274fasfdasfadsfdasfdsafewqfasdfewqfadgasdfsafdasdfaewra"));
-			UtilityTools::WriteLogsL(parser.PhoneNum());
-		}
+		//		Test();
+		TestReqeuestPage();
+		break;
+
+	case ETestMusicWml:
+		TestMusicWml();
+		break;
+
+	case ETestServiceWml:
+		TestServiceWml();
+		break;
+
+	case ETestOrderWml:
+		TestOrderWml();
+		break;
+
+	case EMenuRequestPage:
+		//RequestPageL();
+		TestReqeuestPage();
+		break;
+
+	case ETestParse:
+		WapEngineL().TestParse();
+		//TestParse();
+		break;
+
+	case ETestGetPhoneNum:
+		TestGetPhoneNum();
+		break;
+
+	case ERequestConfig:
+		RequestConfig();
 		break;
 
 	case EEikCmdExit:
@@ -162,282 +123,320 @@ void CWapBrowserAppUi::HandleStatusPaneSizeChange()
 {
 	iAppView->SetRect( ClientRect() );	
 } 
-//////////////////////////////////////////////////////////////////////////
-//From MClientObserver
-//////////////////////////////////////////////////////////////////////////
-void CWapBrowserAppUi::ClientEvent(const TDesC& aEventDescription,TInt aIndex)
+
+void CWapBrowserAppUi::DynInitMenuPaneL(TInt aResourceId, CEikMenuPane* aMenuPane)
 {
-	//User::InfoPrint(aEventDescription);
-	UtilityTools::WriteLogsL(aEventDescription);
-	/*
-	HBufC* buf = HBufC::NewLC(aEventDescription.Length());
-	buf->Des().Copy(aEventDescription,aEventDescription.Length());
-	RDebug::Print(*buf);
-	CleanupStack::PopAndDestroy();*/
-	RDebug::Print(aEventDescription);
-
-	if(aEventDescription.Compare(_L("Transaction Successful")) == 0)
-		//|| aEventDescription.Compare(_L("Transaction Complete")) == 0)
+	if(R_WAPBROWSER_MENU == aResourceId)
 	{
-		//UtilityTools::WriteTestFileL(_L("C:\\default_.xml"),)
-
-		UtilityTools::WriteLogsL(_L("1"));
-		if(iReceiveData8)
 		{
-			iIsRequesting = FALSE;
-			iAppView->StopShowWaiting();
-			UtilityTools::WriteLogsL(_L("2"));
-			//TRAPD(err,UtilityTools::WriteFileL(*iReceiveData8,0,_L("C:\\data\\default_.txt")));
-			_LIT(KTempFileName,		"C:\\data\\temp.xml");
-			_LIT8(KTempFileName8,		"C:\\data\\temp.xml");
-			TRAPD(err,UtilityTools::WriteFileL(*iReceiveData8,0,KTempFileName));
-			if(KErrNone != err)
-			{
-				//UtilityTools::ShowDialog();
-				UtilityTools::WriteLogsL(_L("err = %d"),err);
-			}
-			UtilityTools::WriteLogsL(_L("3"));
-			switch(iRequestType)
-			{
-			case ERequestPage:
-				ParseFile(KTempFileName8);
-				//ParseData(iReceiveData8);
-				break;
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"TestMusicWml");
+			data.iCommandId = ETestMusicWml;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
 
-			case ERequestConfig:
-				iConfigData.Parse(iReceiveData8);
-				//ParserConfig(iReceiveData8);
-				break;
-			}
-			delete iReceiveData8;
-			iReceiveData8 = NULL;
-			//Parse();
-			UtilityTools::WriteLogsL(_L("4"));
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
 		}
-	}
-	else if(aEventDescription.Compare(_L("Transaction Failed")) == 0
-		||  aEventDescription.Compare(_L("Error:KErrDisconnected")) == 0)
-	{
-		iAppView->StopShowWaiting();
-	}
-}
+		{
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"TestServiceWml");
+			data.iCommandId = ETestServiceWml;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
 
-#include "UtilityTools.h"
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
+		{
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"TestOrderWml");
+			data.iCommandId = ETestOrderWml;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
 
-void CWapBrowserAppUi::ClientBodyReceived(const TDesC8& aBodyData,TInt aIndex)
-{
-	/*
-	HBufC* buf = HBufC::NewLC(aBodyData.Length());
-	buf->Des().Copy(aBodyData);
-	RDebug::Print(*buf);
-	CleanupStack::PopAndDestroy();
-	*/
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
+		{
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"RequestPageL");
+			data.iCommandId = EMenuRequestPage;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
 
-	//UtilityTools::WriteLogsL(aBodyData);
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
+		{
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"Parse");
+			data.iCommandId = ETestParse;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
 
-	if (iReceiveData8)
-	{
-		iReceiveData8 = iReceiveData8->ReAllocL(iReceiveData8->Length() + aBodyData.Length());
-		iReceiveData8->Des().Append(aBodyData);
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
+		{
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"TestGetPhoneNum");
+			data.iCommandId = ETestGetPhoneNum;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
+
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
+		{
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"RequestConfig");
+			data.iCommandId = ERequestConfig;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
+
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
+		{
+			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"RequestConfig");
+			data.iCommandId = ERequestConfig;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
+
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
 	}
 	else
 	{
-		iReceiveData8 = HBufC8::NewL(aBodyData.Length());
-		iReceiveData8->Des().Copy(aBodyData);
+		ASSERT(FALSE);
 	}
-
 }
-
-void CWapBrowserAppUi::IssueHTTPGetL(const TDesC8& aUri)
+//////////////////////////////////////////////////////////////////////////
+//public:
+//////////////////////////////////////////////////////////////////////////
+void CWapBrowserAppUi::Start()
 {
-	/*
-	if(NULL == iWebClientEngine)
-	{
-	iWebClientEngine = CWebClientEngine::NewL(*this);
-	}
-	iWebClientEngine->IssueHTTPGetL(aUri);*/
-
+	//RequestConfig();
 }
 
+void CWapBrowserAppUi::RequestConfig()
+{
+	ConfigEngineL().RequestL();
+}
+
+void CWapBrowserAppUi::GetPhoneNumL()
+{
+	PhoneNumEngineL().RequestL(ConfigEngineL().MobileUrl());
+}
+
+HBufC8* CWapBrowserAppUi::CombineUrlL()
+{
+	const TDesC8& des(_L8("?mobile="));
+	const TDesC8& serviceUrl = ConfigEngineL().ServiceUrl();
+	const TDesC8& phoneNum = PhoneNumEngineL().PhoneNum();
+	int length = 0;
+	length += serviceUrl.Length();
+	length += des.Length();
+	length += phoneNum.Length();
+	if(length > 0)
+	{
+		HBufC8* url = HBufC8::NewLC(length);
+		url->Des().Append(serviceUrl);
+		url->Des().Append(des);
+		url->Des().Append(phoneNum);
+		CleanupStack::Pop(url);
+		return url;
+	}
+	return NULL;
+}
+
+void CWapBrowserAppUi::RequestPageL()
+{
+	HBufC8* url = CombineUrlL();
+	if(url)
+	{
+		CleanupStack::PushL(url);
+		RequestPageL(*url);
+		CleanupStack::PopAndDestroy();
+	}
+	else
+	{
+		CAknConfirmationNote* note = new (ELeave) CAknConfirmationNote;
+		note->ExecuteLD(_L("Request Err"));
+	}
+}
+
+void CWapBrowserAppUi::RequestPageL(const TDesC8& aUrl)
+{
+	WapEngineL().RequestPageL(aUrl);
+}
+
+void CWapBrowserAppUi::UpdateWindow()
+{
+	if(iAppView)
+	{
+		iAppView->Layout();
+		iAppView->DrawNow();
+	}
+}
+//////////////////////////////////////////////////////////////////////////
+//public static:
+//////////////////////////////////////////////////////////////////////////
 CWapBrowserAppUi* CWapBrowserAppUi::Static()
 {
 	return (CWapBrowserAppUi*)CCoeEnv::Static()->AppUi();
 }
 //////////////////////////////////////////////////////////////////////////
-//private
+//private:
 //////////////////////////////////////////////////////////////////////////
-void CWapBrowserAppUi::Parse()
+CPhoneNumEngine& CWapBrowserAppUi::PhoneNumEngineL()
 {
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse"));
-	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
-	CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
-	//parser->ParseFile("C:\\Event1.xml");
-	//parser->ParseFile("C:\\Default.xml");
-	if(parser->ParseFile("C:\\Data\\Default.xml"))
+	if(NULL == iPhoneNumEngine)
 	{
-		UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse 1"));
-		iAppView->ShowPage(pageBuilder->FetchPage());
-		UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse 2"));
+		iPhoneNumEngine = CPhoneNumEngine::NewL();
+		iPhoneNumEngine->SetAppUi(this);
 	}
-	//parser->ParseData("")
-	CleanupStack::PopAndDestroy();	//parser
-	CleanupStack::PopAndDestroy();	//pageBuilder
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::Parse End"));
+	return *iPhoneNumEngine;
 }
 
-void CWapBrowserAppUi::ParseData(HBufC8* aBuf)
+CConfigEngine& CWapBrowserAppUi::ConfigEngineL()
 {
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData"));
-	ASSERT(aBuf);
-	//UtilityTools::WriteFileL(*aBuf,0,_L("C:\\test.xml"));
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData pageBuilder"));
-	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser"));
-	CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser->ParseData"));
-	TPtr8 ptr(aBuf->Des());
-	UtilityTools::WriteLogsL(ptr.Left(128));
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser->ParseData"));
-	const char* data = (const char*)ptr.PtrZ();
-	//TRAPD(err,(const char* data = (const char*)aBuf->Des().PtrZ()));
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData parser->ParseData err = %d"));
-	if(parser->ParseData(data))
+	if(NULL == iConfigEngine)
 	{
-		UtilityTools::WriteLogsL(_L("ShowPage"));
-		iAppView->ShowPage(pageBuilder->FetchPage());
-		UtilityTools::WriteLogsL(_L("ShowPage End"));
+		iConfigEngine = CConfigEngine::NewL();
+		iConfigEngine->SetAppUi(this);
 	}
-	CleanupStack::PopAndDestroy();	//parser
-	CleanupStack::PopAndDestroy();	//pageBuilder
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseData End"));
+	return *iConfigEngine;
 }
 
-void CWapBrowserAppUi::ParseFile(const TDesC8& aFileName)
+CWapEngine& CWapBrowserAppUi::WapEngineL()
 {
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile"));
-	//	ASSERT(aBuf);
-	//UtilityTools::WriteFileL(*aBuf,0,_L("C:\\test.xml"));
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile pageBuilder"));
-	CPageBuilder* pageBuilder = CPageBuilder::NewLC(iAppView->Rect());
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser"));
-	CWmlParser* parser = CWmlParser::NewLC(*pageBuilder);
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser->ParseFile"));
-	//TPtr8 ptr(aBuf->Des());
-	//UtilityTools::WriteLogsL(ptr.Left(128));
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser->ParseFile"));
-	//const char* data = (const char*)ptr.PtrZ();
-	//TRAPD(err,(const char* data = (const char*)aBuf->Des().PtrZ()));
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile parser->ParseFile err = %d"));
-	//TPtr8 fileName(aFileName);
-	TBuf8<100> fileName = aFileName;
-	if(parser->ParseFile((const char*)fileName.PtrZ()))
+	if(NULL == iWapEngine)
 	{
-		UtilityTools::WriteLogsL(_L("ShowPage"));
-		iAppView->ShowPage(pageBuilder->FetchPage());
-		UtilityTools::WriteLogsL(_L("ShowPage End"));
+		iWapEngine = CWapEngine::NewL();
+		iWapEngine->SetAppUi(this);
+		iWapEngine->SetAppView(iAppView);
 	}
-	CleanupStack::PopAndDestroy();	//parser
-	CleanupStack::PopAndDestroy();	//pageBuilder
-	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::ParseFile End"));
+	return *iWapEngine;
 }
-
-void CWapBrowserAppUi::RequestPage()
+//////////////////////////////////////////////////////////////////////////
+//private:test:
+//////////////////////////////////////////////////////////////////////////
+void CWapBrowserAppUi::TestReqeuestPage()
 {
+	RequestPageL(_L8("http://music.i139.cn/"));
 	/*
 	Parse();
 	//parser->ParseFile("C:\\default_.xml");
 	/*/	
-	RequestPage(_L8("http://music.i139.cn/"));
-	//RequestPage(_L8("http://wap.cocobox.cn/index.do"));
-	//RequestPage(_L8("index.do"));
-	//RequestPage(_L8("portal/wap/menu.do?menuid=212134"));
-	//RequestPage(_L8(""));
-	//RequestPage(_L8("http://wap.monternet.com"));
-	//RequestPage(_L8("http://218.200.244.92/Order?action=4&SessionID=Jm5XLnV7bQ!1999436728!1235646807091&SPID=900636&ServiceID=03205590&SPURL=http://218.206.76.18:8080/dlWap/countDownload.do?	channelId=732&columnId=11769&colResId=265240&resourceFileId=711778&ws=7248343&ctype=100"));
+	//RequestPageL(_L8("http://music.i139.cn/"));
+	//RequestPageL(_L8("http://wap.cocobox.cn/index.do"));
+	//RequestPageL(_L8("index.do"));
+	//RequestPageL(_L8("portal/wap/menu.do?menuid=212134"));
+	//RequestPageL(_L8(""));
+	//RequestPageL(_L8("http://wap.monternet.com"));
+	//RequestPageL(_L8("http://218.200.244.92/Order?action=4&SessionID=Jm5XLnV7bQ!1999436728!1235646807091&SPID=900636&ServiceID=03205590&SPURL=http://218.206.76.18:8080/dlWap/countDownload.do?	channelId=732&columnId=11769&colResId=265240&resourceFileId=711778&ws=7248343&ctype=100"));
 	//*/
-}
 
 
-void CWapBrowserAppUi::RequestPage(const TDesC8& aUrl)
-{
-	//if(!iIsRequesting)
+/*
+	if(!iIsRequesting)
 	{
-		UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::RequestPage"));
+		UtilityTools::WriteLogsL(_L("CWapEngine::RequestPageL"));
 		//UtilityTools::WriteLogsL(aUrl);
 		//HBufC8* buf = HBufC8::NewLC(255);
 		HBufC8* buf = HBufC8::NewLC(aUrl.Length());
 		//buf->Des().Append(_L8("http://wap.cocobox.cn/"));	
 		//buf->Des().Append(_L8("http://wap.gd.monternet.com/"));
 		buf->Des().Append(aUrl);
-		HTTPEngine().IssueHTTPGetL(*buf);
+		//HTTPEngine().IssueHTTPGetL(*buf);
 		CleanupStack::PopAndDestroy();
 		//HTTPEngine().IssueHTTPGetL(aUrl);
-		iRequestType = ERequestPage;
-		iAppView->ShowWaiting();
+
+		// 		iRequestType = ERequestPage;
+		// 		iAppView->ShowWaiting();
+
 		iIsRequesting = ETrue;
 	}
+*/
 }
 
-void CWapBrowserAppUi::RequestConfig()
+void CWapBrowserAppUi::TestParseConfig()
 {
-	//http://218.16.120.168/miniwap/g.txt
-	HTTPEngine().IssueHTTPGetL(_L8("http://59.36.98.140/g.txt"));
-	//HTTPEngine().IssueHTTPGetL(_L8("http://59.36.98.140/g.txt"));
-	iRequestType = ERequestConfig;
-	iAppView->ShowWaiting();
-}
+	/*
+	//以下代码移至SymbianOsUnit
+	HBufC8* buf = HBufC8::NewLC(1000);
+	buf->Des().Append(_L8("mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134"));
+	buf->Des().Append(_L8("0X0A"));
+	buf->Des().Append(_L8("mobile_pre_str=mobileID="));
+	buf->Des().Append(_L8("0X0A"));
+	buf->Des().Append(_L8("mobile_len=11"));
+	buf->Des().Append(_L8("0X0A"));
+	buf->Des().Append(_L8("service_url=http://wap.monternet.com/"));
 
-void CWapBrowserAppUi::ParserConfig(HBufC8* aBuf)
-{
+	ParserConfig(buf);
+	CleanupStack::PopAndDestroy(buf);
+	*/
 
-	int firstPos = 0;
-	int lastPos = 0;
-
-	TPtrC8 ptr;
-	ptr.Set(*aBuf);
-
-	firstPos = ptr.Find(_L8("="));
-	lastPos = ptr.Find(_L8("\n"));	
-	TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
-	// 	if(lastPos > firstPos && lastPos > 0 && firstPos > 0)
-	// 	{
-	// 	}
-	TRACE(mobile_url);
-
-	ptr.Set(ptr.Mid(lastPos + 1));
-	firstPos = ptr.Find(_L8("="));
-	lastPos = ptr.Find(_L8("\n"));		
-	TPtrC8 mobile_pre_str = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
-	TRACE(mobile_pre_str);
-
-	ptr.Set(ptr.Mid(lastPos + 1));
-	firstPos = ptr.Find(_L8("="));
-	lastPos = ptr.Find(_L8("\n"));		
-	TPtrC8 mobile_len = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
-	TRACE(mobile_len);
-
-	ptr.Set(ptr.Mid(lastPos + 1));
-	firstPos = ptr.Find(_L8("="));
-	//lastPos = ptr.Find(_L8("0X0A"));	
-	TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 1);
-	TRACE(service_url);
-}
-
-CHTTPEngine& CWapBrowserAppUi::HTTPEngine()
-{
-	if(NULL == iHTTPEngine)
-	{
-		iHTTPEngine = CHTTPEngine::NewL(*this);
-	}
-	return *iHTTPEngine;
-}
-
-//////////////////////////////////////////////////////////////////////////
 /*
-#mobile_url=http://wap.gd.monternet.com/portal/wap/menu.do?menuid=212134
-mobile_url=http://218.16.120.168/miniwap/m.wml
-mobile_pre_str=mobileID=
-mobile_len=11
-service_url=http://218.16.120.168/miniwap/go.wml
+	HBufC8* fileData = UtilityTools::ReadFileLC(_L("C:\\Data\\g.txt"));
+	//ParserConfig(fileData);
+	CConfigData configData;
+	configData.Parse(*fileData);
+	UtilityTools::WriteLogsL(configData.MobileUrl());
+	UtilityTools::WriteLogsL(configData.ServiceUrl());
+	UtilityTools::WriteLogsL(configData.MobileLen());
+	UtilityTools::WriteLogsL(configData.MobilePreStr());
+	CleanupStack::PopAndDestroy(fileData);
 */
 
+}
+
+void CWapBrowserAppUi::TestGetPhoneNum()
+{
+	PhoneNumEngineL().TestParse();
+}
+
+void CWapBrowserAppUi::TestCombinUrl()
+{
+/*
+	HBufC8* fileData = UtilityTools::ReadFileLC(_L("C:\\Data\\g.txt"));
+	//ParserConfig(fileData);
+	iConfigData.Parse(*fileData);
+	CleanupStack::PopAndDestroy(fileData);
+
+	fileData = UtilityTools::ReadFileLC(_L("C:\\Data\\m.xml"));
+	//ParserConfig(fileData);
+	iPhoneNumParser.Parse(*fileData);
+	CleanupStack::PopAndDestroy(fileData);
+
+	HBufC8* url = CombineUrl();
+	if(url)
+	{
+		UtilityTools::WriteLogsL(*url);
+	}
+	else
+	{
+		UtilityTools::WriteLogsL(_L("no valid url"));
+	}
+	delete url;
+*/
+}
+
+void CWapBrowserAppUi::TestOrderWml()
+{
+	WapEngineL().ParseFile(_L8("C:\\Data\\order.wml"));
+}
+
+void CWapBrowserAppUi::TestServiceWml()
+{
+	WapEngineL().ParseFile(_L8("C:\\Data\\service.wml"));
+}
+
+void CWapBrowserAppUi::TestMusicWml()
+{
+	WapEngineL().ParseFile(_L8("C:\\Data\\music.wml"));
+}

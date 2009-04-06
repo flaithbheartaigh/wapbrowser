@@ -76,7 +76,7 @@ void CWidgetGroup::Execute()
 	const TDesC8& link = FocusWidget()->Link();
 	if(link.Length())
 	{
-		CWapBrowserAppUi::Static()->RequestPage(link);
+		CWapBrowserAppUi::Static()->RequestPageL(link);
 	}
 }
 

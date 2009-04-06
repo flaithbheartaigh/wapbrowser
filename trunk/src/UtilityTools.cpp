@@ -59,6 +59,28 @@ void UtilityTools::ReadFileL(TDes8& aDes,TInt aLength,TInt aOffset,  const TDesC
 	file.Read(aDes,aLength);
 	CleanupStack::PopAndDestroy(2);
 }
+
+HBufC8* UtilityTools::ReadFileLC(const TDesC& aFileName)
+{
+	//代码中需要补全异常处理
+	RFs& fs = CCoeEnv::Static()->FsSession();
+	RFile file;
+	file.Open(fs,aFileName,EFileRead);
+	int size = 0;
+	file.Size(size);
+	HBufC8* fileData = HBufC8::NewLC(size);
+	TPtr8 ptr(fileData->Des());
+	file.Read(ptr);
+	file.Close();
+	return fileData;
+}
+
+HBufC8* UtilityTools::ReadFileL(const TDesC& aFileName)
+{
+	HBufC8* fileData= ReadFileLC(aFileName);
+	CleanupStack::Pop(fileData);
+	return fileData;
+}
 //////////////////////////////////////////////////////////////////////////
 //向文件中写入数据
 //////////////////////////////////////////////////////////////////////////
@@ -612,4 +634,73 @@ TFileName UtilityTools::ParseParentPath(const TDesC& aPath)
 	CleanupStack::PopAndDestroy();
 
 	return newPath;
+}
+
+#ifdef __SERIES60_3X__
+#include <favouritessession.h> 
+#endif
+#include <favouritesitem.h>
+#include <FavouritesDb.h>
+
+void TestBookMark()
+{
+	//////////////////////////////////////////////////////////////////////////
+	//2nd
+	//////////////////////////////////////////////////////////////////////////
+
+#ifndef __SERIES60_3X__
+
+	/*
+	_LIT( KBookmarkDbPath, "c:\\system\\data\\" );
+	_LIT( KBookmarkDbFile, "Bookmarks1.db" );
+
+	CAddFavouritesDb* CAddFavouritesDb::NewL()
+	{
+	CAddFavouritesDb* favdb = new (ELeave) CAddFavouritesDb();
+	CleanupStack::PushL( favdb );
+	favdb->ConstructL( KBookmarkDbPath, KBookmarkDbFile );
+	CleanupStack::Pop();    
+	return favdb;
+	}
+
+	CAddFavouritesDb * addBookmrk = CAddFavouritesDb::NewL();
+	CleanupStack::PushL( addBookmrk );
+	User::LeaveIfError(addBookmrk->OpenL());
+	CFavouritesItem* bookmrkItem = CFavouritesItem::NewLC();
+	bookmrkItem->SetType( CFavouritesItem::EItem );
+	bookmrkItem->SetNameL( _L("AddBookmark") );
+	bookmrkItem->SetUrlL( _L("http://www.forum.nokia.com") );
+	addBookmrk->AddL(*bookmrkItem , ETrue);
+	addBookmrk->Close();
+	CleanupStack::PopAndDestroy( bookmrkItem );
+	CleanupStack::PopAndDestroy( addBookmrk );
+	*/
+
+	//LIBRARY favouritesengine.lib
+#else
+	//////////////////////////////////////////////////////////////////////////
+	//3nd
+	//////////////////////////////////////////////////////////////////////////
+	// Link against: favouritesengine.lib 
+
+	RFavouritesSession iSession;
+	User::LeaveIfError(iSession.Connect());
+	CleanupClosePushL(iSession);
+
+	RFavouritesDb db;
+	// KBrowserBookmarks is picked up from the header
+	User::LeaveIfError(db.Open(iSession, KBrowserBookmarks)); 
+	CleanupClosePushL(db);
+
+	CFavouritesItem* item =  CFavouritesItem::NewLC();
+	item->SetNameL(_L("Google UK"));
+	item->SetParentFolder(KFavouritesRootUid);
+	item->SetType(CFavouritesItem::EItem);
+	item->SetUrlL(_L("http://www.google.co.uk/"));
+
+	User::LeaveIfError(db.Add(*item, ETrue));
+
+	CleanupStack::PopAndDestroy(3, &iSession); // db, itemThe equivalent to add the same bookmark to the OSS browser in S60 3rd edition would be: 
+
+#endif
 }

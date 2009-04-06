@@ -42,6 +42,8 @@ public:
 	void StopShowWaiting();
 	void DrawWaiting(CGraphicsContext& aGc) const;
 
+	void Layout();
+
 private:
 	CPage* iPage;
 	
