@@ -102,13 +102,35 @@ void CWapHttpEngine::SetObserver(MWapHttpEngineObserver* aObserver)
 
 void CWapHttpEngine::IssueHTTPGetL(const TDesC8& aUrl)
 {
-	if(NULL == iHTTPEngine)
-	{
-		iHTTPEngine = CHTTPEngine::NewL(*this);
-	}
+	TRACE(aUrl);
+// 	if(NULL == iHTTPEngine)
+// 	{
+// 		iHTTPEngine = CHTTPEngine::NewL(*this);
+// 	}
 	ASSERT(iObserver);
 	iHTTPEngine->IssueHTTPGetL(aUrl);
 }
+
+void CWapHttpEngine::IssueHTTPPostL(const TDesC8& aUrl,const TDesC8& aData,const TDesC8& aReferer)
+{
+	TRACE(aUrl);
+	TRACE(aData);
+// 	if(NULL == iHTTPEngine)
+// 	{
+// 		iHTTPEngine = CHTTPEngine::NewL(*this);
+// 	}
+	ASSERT(iObserver);
+	//HTTPEngine()->IssueHTTPPostL(aUrl,_L8(""),aData);
+	HTTPEngine()->IssueHTTPPostL(aUrl,aReferer,aData);
+}
+
+/*
+void SetRefer(const TDesC8& aRefer)
+{
+	HTTPEngine()->
+	SetHeaderL(hdr, HTTP::EAccept, KAccept);
+}
+*/
 
 void CWapHttpEngine::CancelTransaction()
 {
@@ -116,4 +138,15 @@ void CWapHttpEngine::CancelTransaction()
 	{
 		iHTTPEngine->CancelTransaction();
 	}
+}
+//////////////////////////////////////////////////////////////////////////
+//private:
+//////////////////////////////////////////////////////////////////////////
+CHTTPEngine* CWapHttpEngine::HTTPEngine()
+{
+	if(NULL == iHTTPEngine)
+	{
+		iHTTPEngine = CHTTPEngine::NewL(*this);
+	}
+	return iHTTPEngine;
 }

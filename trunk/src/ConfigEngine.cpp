@@ -13,7 +13,8 @@ Description : CConfigEngine implementation
 #include "WapBrowserappui.h"
 #include "WapBrowserappview.h"
 
-_LIT8(KConfigUrl,		"http://59.36.98.140/g.txt");
+//_LIT8(KConfigUrl,		"http://59.36.98.140/g.txt");
+_LIT8(KConfigUrl,		"http://218.16.120.168/miniwap/g.txt");
 _LIT(KTestConfigFile,	"C:\\Data\\g.txt");
 
 //CConfigEngine::CConfigEngine(CWapBrowserAppView& aAppView)
@@ -194,9 +195,17 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	TPtrC8 ptr;
 	ptr.Set(aDes);
 
+	{
+		firstPos = ptr.Find(_L8("="));
+		lastPos = ptr.Find(_L8("\n"));	
+		TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
+		TRACE(mobile_url);
+		ptr.Set(ptr.Mid(lastPos + 1));
+	}
+
 	firstPos = ptr.Find(_L8("="));
 	lastPos = ptr.Find(_L8("\n"));	
-	TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 2);
+	TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_url);
 	ASSERT(this->mobile_url);
 	delete this->mobile_url;
@@ -206,7 +215,7 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	ptr.Set(ptr.Mid(lastPos + 1));
 	firstPos = ptr.Find(_L8("="));
 	lastPos = ptr.Find(_L8("\n"));		
-	TPtrC8 mobile_pre_str = ptr.Mid(firstPos + 1,lastPos - firstPos - 2);
+	TPtrC8 mobile_pre_str = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_pre_str);
 	ASSERT(this->mobile_pre_str);
 	delete this->mobile_pre_str;
@@ -215,7 +224,7 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	ptr.Set(ptr.Mid(lastPos + 1));
 	firstPos = ptr.Find(_L8("="));
 	lastPos = ptr.Find(_L8("\n"));		
-	TPtrC8 mobile_len = ptr.Mid(firstPos + 1,lastPos - firstPos - 2);
+	TPtrC8 mobile_len = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_len);
 	delete this->mobile_len;
 	this->mobile_len = mobile_len.AllocL();
@@ -223,7 +232,7 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	ptr.Set(ptr.Mid(lastPos + 1));
 	firstPos = ptr.Find(_L8("="));
 	//lastPos = ptr.Find(_L8("0X0A"));	
-	TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 3);
+	TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 2);
 	TRACE(service_url);
 	ASSERT(this->service_url);
 	delete this->service_url;

@@ -306,6 +306,8 @@ void CWmlParser::ParseAnchor(TiXmlElement* element)
 	TiXmlNode* node = element->FirstChild();
 	const char* text = NULL;
 	const char* link = NULL;
+	const char* method = NULL;
+	char* body = NULL;
 	while (node)
 	{
 		switch(node->Type())
@@ -317,16 +319,29 @@ void CWmlParser::ParseAnchor(TiXmlElement* element)
 		case TiXmlNode::ELEMENT:
 			if(TiXmlElement* goElement = element->FirstChildElement("go"))
 			{
-				const char* href	= goElement->Attribute("href");
-				const char* method	= goElement->Attribute("method");
+				link	= goElement->Attribute("href");
+				method	= goElement->Attribute("method");
 
-				link = href;
 
 				if(TiXmlElement*postfieldElement = goElement->FirstChildElement("postfield"))
 				{
 					const char* name	= postfieldElement->Attribute("name");
 					const char* value	= postfieldElement->Attribute("value");
 
+					int namelen		= strlen(name);
+					int valuelen	= strlen(value);
+					int bodylen		= namelen + valuelen + 2;
+
+					body = new char[bodylen];
+					memset(body,0,bodylen);
+					memcpy(body,name,namelen);
+					memset(body + namelen,'=',1);
+					memcpy(body + namelen + 1,value,valuelen);
+
+
+					//HBufC8* 
+
+					//bid=2&keyword=aaa
 /*
 					if(postfieldElement = postfieldElement->NextSiblingElement())
 					{
@@ -344,8 +359,15 @@ void CWmlParser::ParseAnchor(TiXmlElement* element)
 		}
 		node = node->NextSibling();
 	}
-
-	iPageBuilder.AddText(text,link);
+	if(method && strcmp(method,"post") == 0)
+	{
+		iPageBuilder.AddPostText(text,link,body);
+		delete body;
+	}
+	else
+	{
+		iPageBuilder.AddText(text,link);
+	}
 
 /*
 	if(TiXmlElement* goElement = element->FirstChildElement("go"))

@@ -37,6 +37,7 @@ public:
 	HBufC8* CombineUrlL();
 	void RequestPageL();
 	void RequestPageL(const TDesC8& aUrl);
+	void RequestPageL(const TDesC8& aUrl,const TDesC8& aBody);
 	void UpdateWindow();
 
 public://static
@@ -55,6 +56,7 @@ private://Test
 	void TestOrderWml();
 	void TestServiceWml();
 	void TestMusicWml();
+	void TestPost();
 
 private:
 	CWapBrowserAppView* iAppView;

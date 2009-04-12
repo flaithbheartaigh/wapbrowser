@@ -99,6 +99,30 @@ void CWapEngine::RequestPageL(const TDesC8& aUrl)
 	}
 }
 
+void CWapEngine::RequestPageL(const TDesC8& aUrl,const TDesC8& aBody)
+{
+	if(NULL == iWapHttpEngine)
+	{
+		iWapHttpEngine = CWapHttpEngine::NewL();
+		iWapHttpEngine->SetObserver(this);
+	}
+	if(!iIsRequesting)
+	{
+		HBufC8* referer = iReferer;
+		iReferer = NULL;
+		CleanupStack::PushL(referer);
+		SetReferer(aUrl);
+		Reset();
+		if(iAppView)
+		{
+			iAppView->ShowWaiting();
+		}
+		iIsRequesting = TRUE;
+		iWapHttpEngine->IssueHTTPPostL(aUrl,aBody,referer?*referer:_L8(""));
+		CleanupStack::PopAndDestroy(referer);
+	}
+}
+
 void CWapEngine::SetReferer(const TDesC8& aReferer)
 {
 	HBufC8* referer = aReferer.AllocL();	

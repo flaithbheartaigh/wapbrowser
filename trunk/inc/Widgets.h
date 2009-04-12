@@ -50,7 +50,9 @@ public:
 // 	void SetLink(const TDesC& aLink);
 // 	const TDesC& Link() const;
 	void SetLink(const TDesC8& aLink);
+	void SetBody(const TDesC8& aBody);
 	const TDesC8& Link() const;
+	const TDesC8& Body() const;
 //	TType Type() const;
 	TBool SetActive(TBool aActive);
 
@@ -98,6 +100,7 @@ public:
 public:
 	//HBufC* iLink;
 	HBufC8* iLink;
+	HBufC8* iBody;
 	TSize iSize;
 	TBool iActive;
 	TBuf<20> iWidgetName;

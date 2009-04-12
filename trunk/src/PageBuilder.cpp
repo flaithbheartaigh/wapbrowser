@@ -106,32 +106,43 @@ void CPageBuilder::AddPicture(const char* aName,const char* aAlt,const char* aLi
 
 void CPageBuilder::AddText(const char* aText,const char* aLink)
 {
-	//return;
 	ASSERT(aText);
-	//HBufC* text = HBufC::NewLC(strlen(aText) + 1);
-	//text->Des().Copy(TPtrC8((const TUint8*)aText));
 	TPtrC8 ptr((const TUint8*)aText);
 	HBufC* text = CnvUtfConverter::ConvertToUnicodeFromUtf8L(ptr);
 	CleanupStack::PushL(text);
 	CTextWidget* w = new CTextWidget(*text);
-	//w->SetSize(TSize(KDefaultFont->MeasureText(*text),KDefaultFont->HeightInPixels()));
 	CleanupStack::PopAndDestroy();	//text
 
 	if(aLink)
 	{
-/*
-		HBufC* link = HBufC::NewLC(strlen(aLink) + 1);
-		link->Des().Copy(TPtrC8((const TUint8*)aLink));
-		w->SetLink(*link);
-		CleanupStack::PopAndDestroy();
-*/
 		TPtrC8 ptr((const TUint8*)aLink);
 		w->SetLink(ptr);
-
 	}
 
 	AddWidget(w);
-	//iElementArray.Append(element);
+}
+
+void CPageBuilder::AddPostText(const char* aText,const char* aLink,const char* aBody)
+{
+	ASSERT(aText);
+	TPtrC8 ptr((const TUint8*)aText);
+	HBufC* text = CnvUtfConverter::ConvertToUnicodeFromUtf8L(ptr);
+	CleanupStack::PushL(text);
+	CTextWidget* w = new CTextWidget(*text);
+	CleanupStack::PopAndDestroy();	//text
+
+	if(aLink)
+	{
+		TPtrC8 ptr((const TUint8*)aLink);
+		w->SetLink(ptr);
+	}
+
+	if(aBody)
+	{
+		TPtrC8 ptr((const TUint8*)aBody);
+		w->SetBody(ptr);
+	}
+	AddWidget(w);
 }
 
 void CPageBuilder::SetRootLink(const char* aLink)

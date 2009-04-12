@@ -432,7 +432,8 @@ void CHTTPEngine::IssueHTTPHeadL(const TDesC8& aUri)
 
 }
 
-void CHTTPEngine::IssueHTTPPostL(const TDesC8& aUri,const TDesC8& aContentType,const TDesC8& aBody)
+//void CHTTPEngine::IssueHTTPPostL(const TDesC8& aUri,const TDesC8& aContentType,const TDesC8& aBody)
+void CHTTPEngine::IssueHTTPPostL(const TDesC8& aUri,const TDesC8& aReferer,const TDesC8& aBody)
 {
 	/*HBufC8* tempUrl=HBufC8::NewL(aUri.Length());
 	tempUrl->Des().Append(_L8("http:
@@ -455,51 +456,13 @@ void CHTTPEngine::IssueHTTPPostL(const TDesC8& aUri,const TDesC8& aContentType,c
 	RHTTPHeaders hdr = iTransaction.Request().GetHeaderCollection();
 
 	SetHeaderL(hdr, HTTP::EAccept, KAccept);
-	SetHeaderL(hdr, HTTP::EContentType, aContentType);
+	SetHeaderL(hdr, HTTP::EContentType, _L8("application/x-www-form-urlencoded"));
+	SetHeaderL(hdr, HTTP::EReferer, aReferer);
 	SetHeaderL(hdr, HTTP::EUserAgent, KUserAgent);
-
-	/*华为产品应用
-	if (iCookie)
-	{
-		RStringF cookieField = iSession.StringPool().StringF(HTTP::ECookie,RHTTPSession::GetTable());
-
-		TBuf8<100> cookieInfo;
-		cookieInfo.Zero ();
-		cookieInfo.Append(iCookie->Des());
-
-		hdr.SetRawFieldL(cookieField, (const TDesC8&)cookieInfo, _L8(""));
-	}
-
-	if(iUserAgent)
-	{
-		SetHeaderL(hdr, HTTP::EUserAgent, iUserAgent->Des());
-	}
-	else
-	{
-		SetHeaderL(hdr, HTTP::EUserAgent, KUserAgent);
-	}
-	if (iXAgentType)
-	{
-		AddHeaderL(hdr,KXAgentType,iXAgentType->Des());
-	}
-	else
-	{
-		AddHeaderL(hdr,KXAgentType,KXAgentTypeValue);
-	}
-	AddHeaderL(hdr,KAcceptEnCoding,KAcceptEnCodingValue);*/
 
 #ifndef __SERIES60_3X__
 	SetHeaderL(hdr, HTTP::EProxyAddress, KProxy);
 #endif
-
-	/*if (aUri.Find(KXOnlineIP2)>0)
-	{
-		AddHeaderL(hdr,KXOnline,KXOnlineIP2);
-	}
-	else if (aUri.Find(KXOnlineIP1)>0)
-	{
-		AddHeaderL(hdr,KXOnline,KXOnlineIP1);
-	}*/
 
 	iTransaction.Request().SetBody(*this);
 

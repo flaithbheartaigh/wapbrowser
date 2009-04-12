@@ -37,7 +37,9 @@ enum TMenuCmd
 	ETestOrderWml,
 	EMenuRequestPage,
 	ETestParse,
-	ERequestConfig
+	ETestGetPhoneNum,
+	ERequestConfig,
+	ETestPost,
 };
 
 void CWapBrowserAppUi::ConstructL()
@@ -105,6 +107,10 @@ void CWapBrowserAppUi::HandleCommandL( TInt aCommand )
 
 	case ERequestConfig:
 		RequestConfig();
+		break;
+
+	case ETestPost:
+		TestPost();
 		break;
 
 	case EEikCmdExit:
@@ -200,6 +206,18 @@ void CWapBrowserAppUi::DynInitMenuPaneL(TInt aResourceId, CEikMenuPane* aMenuPan
 		}
 		{
 			CEikMenuPaneItem::SData data;
+			data.iText.Copy(L"TestPost");
+			data.iCommandId = ETestPost;
+			data.iCascadeId=0;
+			data.iFlags=0;
+			data.iExtraText=KNullDesC;
+
+			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+		}
+		
+/*
+		{
+			CEikMenuPaneItem::SData data;
 			data.iText.Copy(L"RequestConfig");
 			data.iCommandId = ERequestConfig;
 			data.iCascadeId=0;
@@ -207,7 +225,8 @@ void CWapBrowserAppUi::DynInitMenuPaneL(TInt aResourceId, CEikMenuPane* aMenuPan
 			data.iExtraText=KNullDesC;
 
 			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
-		}
+		}*/
+
 	}
 	else
 	{
@@ -256,22 +275,28 @@ HBufC8* CWapBrowserAppUi::CombineUrlL()
 void CWapBrowserAppUi::RequestPageL()
 {
 	HBufC8* url = CombineUrlL();
+	CleanupStack::PushL(url);
 	if(url)
 	{
-		CleanupStack::PushL(url);
-		RequestPageL(*url);
-		CleanupStack::PopAndDestroy();
+		//RequestPageL(*url);
+		WapEngineL().RequestPageL(*url);
 	}
 	else
 	{
 		CAknConfirmationNote* note = new (ELeave) CAknConfirmationNote;
 		note->ExecuteLD(_L("Request Err"));
 	}
+	CleanupStack::PopAndDestroy();
 }
 
 void CWapBrowserAppUi::RequestPageL(const TDesC8& aUrl)
 {
 	WapEngineL().RequestPageL(aUrl);
+}
+
+void CWapBrowserAppUi::RequestPageL(const TDesC8& aUrl,const TDesC8& aBody)
+{
+	WapEngineL().RequestPageL(aUrl,aBody);
 }
 
 void CWapBrowserAppUi::UpdateWindow()
@@ -439,4 +464,12 @@ void CWapBrowserAppUi::TestServiceWml()
 void CWapBrowserAppUi::TestMusicWml()
 {
 	WapEngineL().ParseFile(_L8("C:\\Data\\music.wml"));
+}
+
+#include "PostTester.h"
+
+void CWapBrowserAppUi::TestPost()
+{
+	CPostTester* postTest = CPostTester::NewL();
+	postTest->Test();
 }
