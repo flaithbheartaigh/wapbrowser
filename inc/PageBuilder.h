@@ -42,6 +42,7 @@ public://From MPageBuilder
 	virtual void AddBr();
 	virtual void AddPicture(const char* aName,const char* alt,const char* aLink);
 	virtual void AddText(const char* aText,const char* aLink);
+	virtual void AddPostText(const char* aText,const char* aLink,const char* aBody);
 	virtual void SetRootLink(const char* aLink);
 
 public:

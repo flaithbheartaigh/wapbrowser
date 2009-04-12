@@ -74,9 +74,17 @@ void CWidgetGroup::Draw(CGraphicsContext& aGc) const
 void CWidgetGroup::Execute()
 {
 	const TDesC8& link = FocusWidget()->Link();
+	const TDesC8& body = FocusWidget()->Body();
 	if(link.Length())
 	{
-		CWapBrowserAppUi::Static()->RequestPageL(link);
+		if(body.Length())
+		{
+			CWapBrowserAppUi::Static()->RequestPageL(link,body);
+		}
+		else
+		{
+			CWapBrowserAppUi::Static()->RequestPageL(link);
+		}
 	}
 }
 

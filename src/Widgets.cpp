@@ -20,6 +20,7 @@ CWidget
 CWidget::~CWidget()
 {
 	delete iLink;
+	delete iBody;
 }
 
 
@@ -49,12 +50,27 @@ void CWidget::SetLink(const TDesC8& aLink)
 	iLink = aLink.Alloc();
 }
 
+void CWidget::SetBody(const TDesC8& aBody)
+{
+	iBody = aBody.Alloc();
+}
+
 const TDesC8& CWidget::Link() const
 {
 	//ASSERT(iLink);		//TODO：断言不起作用，待查
 	if(iLink)
 	{
 		return *iLink;
+	}
+	return KNullDesC8;
+}
+
+const TDesC8& CWidget::Body() const
+{
+	//ASSERT(iLink);		//TODO：断言不起作用，待查
+	if(iBody)
+	{
+		return *iBody;
 	}
 	return KNullDesC8;
 }

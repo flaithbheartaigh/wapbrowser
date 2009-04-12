@@ -73,7 +73,8 @@ public:
 	void IssueHTTPGetL(const TDesC8& aUri);	
 	void IssueHTTPGetL(const TDesC8& aUri,const TDesC8& aRange);
 	void IssueHTTPHeadL(const TDesC8& aUri);
-	void IssueHTTPPostL(const TDesC8& aUri,const TDesC8& aContentType,const TDesC8& aBody);
+	//void IssueHTTPPostL(const TDesC8& aUri,const TDesC8& aContentType,const TDesC8& aBody);
+	void IssueHTTPPostL(const TDesC8& aUri,const TDesC8& aReferer,const TDesC8& aBody);
 	void CancelTransaction();
 
 	TBool IsRunning();
@@ -92,6 +93,8 @@ public:
 	void GetCookie(TDes8& aCookie);
 
 	void SetObserver(MClientObserver* aClientObserver);
+
+	//void SetHeaderL(RHTTPHeaders aHeaders, TInt aHdrField,const TDesC8& aHdrValue);
 
 private:
 	void SetHeaderL(RHTTPHeaders aHeaders, TInt aHdrField,const TDesC8& aHdrValue);

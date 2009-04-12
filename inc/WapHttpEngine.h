@@ -35,8 +35,13 @@ public://From MClientObserver
 public:
 	void SetObserver(MWapHttpEngineObserver* aObserver);
 	void IssueHTTPGetL(const TDesC8& aUrl);
+	void IssueHTTPPostL(const TDesC8& aUrl,const TDesC8& aData,const TDesC8& aReferer);
+	//void SetRefer(const TDesC8& aRefer);
 	void CancelTransaction();
 
+private:
+	CHTTPEngine* HTTPEngine();
+	
 private:
 	CHTTPEngine* iHTTPEngine;
 	HBufC8* iReceiveData8;

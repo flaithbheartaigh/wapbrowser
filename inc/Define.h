@@ -74,6 +74,7 @@ public:
 	virtual void AddBr() = 0;
 	virtual void AddPicture(const char* aName,const char* alt,const char* aLink = NULL) = 0;
 	virtual void AddText(const char* aText,const char* aLink = NULL) = 0;
+	virtual void AddPostText(const char* aText,const char* aLink,const char* aBody) = 0;
 	virtual void SetRootLink(const char* aLink) = 0;
 };
 

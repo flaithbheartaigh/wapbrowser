@@ -37,6 +37,7 @@ public://MWapHttpEngineObserver
 
 public:
 	void RequestPageL(const TDesC8& aUrl);
+	void RequestPageL(const TDesC8& aUrl,const TDesC8& aBody);
 	void SetReferer(const TDesC8& aReferer);
 	const TDesC8& Referer() const;
 	void Reset();	//TODO:有可能合并上两个
