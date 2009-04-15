@@ -25,16 +25,25 @@ END
 
 
 SOURCEPATH                              ..\src 
+<<<<<<< .mine
+/* [+] */ SOURCE                        PostTester.cpp 
+SOURCE                                  PhoneNumEngine.cpp 
+SOURCE                                  WapHttpEngine.cpp 
+SOURCE                                  ConfigEngine.cpp 
+SOURCE                                  ImageEngine.cpp 
+SOURCE                                  WapEngine.cpp 
+SOURCE                                  Image_Reader.cpp 
+SOURCE                                  WidgetGroup.cpp 
+=======
 /* [+] */ SOURCE                        WidgetGroup.cpp 
+>>>>>>> .r35
 SOURCE                                  NotifyTimer.cpp 
-SOURCE                                  HttpTransaction.cpp 
 SOURCE                                  UtilityTools.cpp 
 SOURCE                                  TimeOut.cpp 
 SOURCE                                  HTTPEngine.cpp 
 SOURCE                                  ScrollBar.cpp 
 SOURCE                                  Page.cpp 
 SOURCE                                  Widgets.cpp 
-SOURCE                                  WebClientEngine.cpp 
 SOURCE                                  PageBuilder.cpp 
 SOURCE                                  WmlParser.cpp 
 SOURCE                                  tinyxmlerror.cpp 
@@ -51,7 +60,16 @@ USERINCLUDE                             ..\inc
 SYSTEMINCLUDE                           \epoc32\include\ecom 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
+<<<<<<<                                 .mine 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 ImageConversion.lib 
+LIBRARY                                 apmime.lib 
+LIBRARY                                 apgrfx.lib 
+LIBRARY                                 fbscli.lib 
 LIBRARY                                 commdb.lib 
+=======                                  
+LIBRARY                                 commdb.lib 
+>>>>>>>                                 .r18 
 LIBRARY                                 ecom.lib 
 LIBRARY                                 bafl.lib 
 LIBRARY                                 http.lib 
