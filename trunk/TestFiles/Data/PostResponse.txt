@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml"> 
+
+
+<wml>
+<card id="card" title="搜索结果页面">
+
+<p>
+    <a href="getTypeList.do?bigtypeid=5&amp;name=软件">软件</a>
+    <a href="getTypeList.do?bigtypeid=3&amp;name=游戏">游戏</a>
+    <a href="getTypeList.do?bigtypeid=2&amp;name=音乐">音乐</a><br/>
+    <a href="getTypeList.do?bigtypeid=7&amp;name=主题">主题</a>
+    <a href="getTypeList.do?bigtypeid=1&amp;name=图片">图片</a>
+    <a href="getTypeList.do?bigtypeid=4&amp;name=视频">视频</a>
+    <br/>
+    <br/>
+    当前是您搜索aaa的搜索结果：
+     <br/>
+     <anchor><go href="cocoDownload.do" method="post"><postfield name="fileid" value="188807"/><postfield name="bigtypeid" value="2"/><postfield name="typeid" value="0"/><postfield name="keyword" value="aaa"/><postfield name="nowPage" value="1"/></go>17.单车冒险记 (be my king 演奏版)(高音质版)</anchor>&nbsp;<br/><anchor><go href="cocoDownload.do" method="post"><postfield name="fileid" value="188803"/><postfield name="bigtypeid" value="2"/><postfield name="typeid" value="0"/><postfield name="keyword" value="aaa"/><postfield name="nowPage" value="1"/></go>13.习惯你的背影 (想你的习惯 演奏版)(高音质版)</anchor>&nbsp;<br/><anchor><go href="cocoDownload.do" method="post"><postfield name="fileid" value="188794"/><postfield name="bigtypeid" value="2"/><postfield name="typeid" value="0"/><postfield name="keyword" value="aaa"/><postfield name="nowPage" value="1"/></go>04.be my king(插曲)-李国毅</anchor>&nbsp;<br/><anchor><go href="cocoDownload.do" method="post"><postfield name="fileid" value="188800"/><postfield name="bigtypeid" value="2"/><postfield name="typeid" value="0"/><postfield name="keyword" value="aaa"/><postfield name="nowPage" value="1"/></go>11.青涩岁月的爱情 (不能说的爱你 演奏版)(高音质版)</anchor>&nbsp;<br/><anchor><go href="cocoDownload.do" method="post"><postfield name="fileid" value="188805"/><postfield name="bigtypeid" value="2"/><postfield name="typeid" value="0"/><postfield name="keyword" value="aaa"/><postfield name="nowPage" value="1"/></go>15.爱的功课 (不能說的爱你 演奏版)(高音质版)</anchor>&nbsp;<br/>第1页 共4页<br/><anchor><go href="cocosearch.do" method="post"><postfield name="bid" value="2"/><postfield name="sid" value="0"/><postfield name="keyword" value="aaa"/><postfield name="pageindex" value="2"/></go>[下页]</anchor><br/><input name="pageindex" type="text" tabindex="1" value="" size="5"/><anchor>转到该页<go href="cocosearch.do" method="post"><postfield name="bid" value="2"/><postfield name="sid" value="0"/><postfield name="keyword" value="aaa"/><postfield name="pageindex" value="$pageindex"/></go></anchor><br/>
+    <br/>
+    <br/>
+	<input name="keyword" type="text" tabindex="1" value="" size="20"/>
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="2"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>搜音乐</anchor> 
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="5"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>软件</anchor> 
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="3"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>游戏</anchor> 
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="1"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>图片</anchor>
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="7"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>主题</anchor>
+	<anchor>
+	<go href="cocosearch.do" method="post">
+	<postfield name="bid" value="4"/>
+	<postfield name="keyword" value="$keyword"/>
+	</go>视频</anchor>
+	<br/>
+    <br/>
+	<a href="index.jsp">返回首页</a>
+</p>	
+    
+	</card>
+</wml>

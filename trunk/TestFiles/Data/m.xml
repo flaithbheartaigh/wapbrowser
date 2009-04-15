@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<head>
+<meta http-equiv="Cache-Control" content="max-age=0" forua="true"/>
+</head>
+<card title="移动梦网">
+
+<p align="left"><img src="http://211.136.253.113/69000002.ic" alt="."/><a href="http://211.136.253.114/PullServlet?SessionID=JQH2gRBL9V!-397596614&amp;SPID=850520&amp;ServiceID=02040049&amp;f=1!0!212134&amp;ts=4601">建行手机银行</a></p>
+<p align="left"><img src="http://211.136.253.113/2.ic" alt="."/><a href="http://211.139.164.132/wap/?mobileID=15710788274&amp;ts=4601">深圳农行手机银行</a></p>
+<p align="left">
+<br/>
+<!-- add Bottom Link   xiaoliang REG WAP Portal 2.0.11.0   2006-10-18-->
+<a href="/portal/wap/menu.do?menuid=2&amp;cp=1&amp;ts=4600">首页</a>>手机银行<br/>
+<!--  end add Bottom Link   xiaoliang REG WAP Portal 2.0.11.0   2006-10-18-->
+ <anchor>梦网首页<go href="http://wap.gd.monternet.com?ts=4601"></go></anchor><br/>
+<anchor>返回中央梦网<go href="http://wap.monternet.com/"></go></anchor>
+</p>
+</card>
+</wml>
