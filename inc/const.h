@@ -18,7 +18,7 @@
 #define CLEAR(p) {p=NULL;}
 
 //#define __WRITE_LOG__ _DEBUG
-#define __WRITE_LOG__
+//#define __WRITE_LOG__
 
 #define	__SERIES60_2X__
 

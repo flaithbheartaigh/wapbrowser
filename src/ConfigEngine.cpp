@@ -7,7 +7,6 @@ Copyright   : Your copyright notice
 Description : CConfigEngine implementation
 ============================================================================
 */
-#include "Define.h"
 #include "ConfigEngine.h"
 #include "WapHttpEngine.h"
 #include "WapBrowserappui.h"
@@ -207,8 +206,9 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	lastPos = ptr.Find(_L8("\n"));	
 	TPtrC8 mobile_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_url);
-	ASSERT(this->mobile_url);
+	//ASSERT(this->mobile_url);
 	delete this->mobile_url;
+	this->mobile_url = NULL;
 	this->mobile_url = mobile_url.AllocL();
 
 
@@ -217,8 +217,9 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	lastPos = ptr.Find(_L8("\n"));		
 	TPtrC8 mobile_pre_str = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_pre_str);
-	ASSERT(this->mobile_pre_str);
+	//ASSERT(this->mobile_pre_str);
 	delete this->mobile_pre_str;
+	this->mobile_pre_str = NULL;
 	this->mobile_pre_str = mobile_pre_str.AllocL();
 
 	ptr.Set(ptr.Mid(lastPos + 1));
@@ -227,6 +228,7 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	TPtrC8 mobile_len = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(mobile_len);
 	delete this->mobile_len;
+	this->mobile_len = NULL;
 	this->mobile_len = mobile_len.AllocL();
 
 	ptr.Set(ptr.Mid(lastPos + 1));
@@ -234,7 +236,8 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 	//lastPos = ptr.Find(_L8("0X0A"));	
 	TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 2);
 	TRACE(service_url);
-	ASSERT(this->service_url);
+	//ASSERT(this->service_url);
 	delete this->service_url;
+	this->service_url = NULL;
 	this->service_url = service_url.AllocL();
 }

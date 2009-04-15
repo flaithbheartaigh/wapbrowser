@@ -7,8 +7,6 @@ Copyright   : Your copyright notice
 Description : Main application UI class (controller)
 ============================================================================
 */
-#include "Define.h"
-
 #include "WapBrowserAppUi.h"
 #include "WapBrowserAppView.h"
 
@@ -25,7 +23,7 @@ Description : Main application UI class (controller)
 #include "UtilityTools.h"
 
 
-#include "WapBrowser.h"
+#include "WapBrowser.hrh"
 #include "WapBrowser.rsg"
 
 enum TMenuCmd
@@ -132,106 +130,115 @@ void CWapBrowserAppUi::HandleStatusPaneSizeChange()
 
 void CWapBrowserAppUi::DynInitMenuPaneL(TInt aResourceId, CEikMenuPane* aMenuPane)
 {
-	if(R_WAPBROWSER_MENU == aResourceId)
+	//return;
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::DynInitMenuPaneL aResourceId = %x aMenuPane = %x"),aResourceId,aMenuPane);
+	if(aMenuPane && R_WAPBROWSER_MENU == aResourceId)
+	//if(aMenuPane)
 	{
 		{
+			UtilityTools::WriteLogsL(_L("1"));
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"TestMusicWml");
+			UtilityTools::WriteLogsL(_L("2"));
+			data.iText.Append(_L("TestMusicWml"));
+			UtilityTools::WriteLogsL(_L("3"));
 			data.iCommandId = ETestMusicWml;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			UtilityTools::WriteLogsL(_L("4"));
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
+			UtilityTools::WriteLogsL(_L("5"));
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"TestServiceWml");
+			data.iText.Append(_L("TestServiceWml"));
 			data.iCommandId = ETestServiceWml;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"TestOrderWml");
+			data.iText.Append(_L("TestOrderWml"));
 			data.iCommandId = ETestOrderWml;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"RequestPageL");
+			data.iText.Append(_L("RequestPageL"));
 			data.iCommandId = EMenuRequestPage;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"Parse");
+			data.iText.Append(_L("Parse"));
 			data.iCommandId = ETestParse;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"TestGetPhoneNum");
+			data.iText.Append(_L("TestGetPhoneNum"));
 			data.iCommandId = ETestGetPhoneNum;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"RequestConfig");
+			data.iText.Append(_L("Start a test session"));
 			data.iCommandId = ERequestConfig;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"TestPost");
+			data.iText.Append(_L("TestPost"));
 			data.iCommandId = ETestPost;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}
 		
 /*
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Copy(L"RequestConfig");
+			data.iText.Append(_L("RequestConfig"));
 			data.iCommandId = ERequestConfig;
 			data.iCascadeId=0;
 			data.iFlags=0;
 			data.iExtraText=KNullDesC;
 
-			aMenuPane->AddMenuItemL(data,EWapBrowserCommand1);
+			aMenuPane->AddMenuItemL(data);  //EWapBrowserCommand1);
 		}*/
 
 	}
-	else
+	//else
 	{
-		ASSERT(FALSE);
+		//ASSERT(FALSE);
 	}
+	UtilityTools::WriteLogsL(_L("CWapBrowserAppUi::DynInitMenuPaneL End"));
 }
 //////////////////////////////////////////////////////////////////////////
 //public:

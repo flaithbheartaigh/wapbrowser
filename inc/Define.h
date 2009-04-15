@@ -29,7 +29,7 @@
 #endif
 #include <aknnotewrappers.h>
 #include <utf.h>
-
+#include <eikmenup.h> 
 
 #include "UtilityTools.h"
 
@@ -86,9 +86,11 @@ public:
 	virtual void HttpFailed() = 0;
 };
 
-
+namespace Utils
+{
 #undef ASSERT
-#ifdef _DEBUG
+//#ifdef _DEBUG
+#ifdef XXX
 inline void ASSERT(TBool aExpression)
 {
 	if(!aExpression)
@@ -130,8 +132,6 @@ inline void TRACE(const TDesC8& aDes8)
 	CleanupStack::PopAndDestroy();
 }
 
-namespace Utils
-{
 /*
 	HBufC* CreateHBufCFromCharL(const char* str)
 	{

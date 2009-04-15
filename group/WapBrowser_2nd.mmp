@@ -1,12 +1,12 @@
-/*
-============================================================================
- Name        : WapBrowser.rss
- Author      : 浮生若茶
- Version     :
- Copyright   : Your copyright notice
- Description : Project specification file for WapBrowser
-============================================================================
-*/
+/*                                      
+============================================================================ 
+Name                                    : WapBrowser.rss 
+Author                                  : 浮生若茶 
+Version                                 : 
+Copyright                               : Your copyright notice 
+Description                             : Project specification file for WapBrowser 
+============================================================================ 
+*/                                       
 TARGET                                  WapBrowser.app 
 TARGETTYPE                              app 
 UID                                     0x100039CE 0x04bd3744 
@@ -16,31 +16,37 @@ RESOURCE                                WapBrowser.rss
 RESOURCE                                WapBrowser_caption.rss 
 
 SOURCEPATH                              ..\src 
+/* [+] */ SOURCE                        WapEngine.cpp 
+/* [+] */ SOURCE                        ImageEngine.cpp 
+/* [+] */ SOURCE                        ConfigEngine.cpp 
+/* [+] */ SOURCE                        WapHttpEngine.cpp 
+/* [+] */ SOURCE                        PhoneNumEngine.cpp 
+/* [+] */ SOURCE                        PostTester.cpp 
 SOURCE                                  Image_Reader.cpp 
 SOURCE                                  WidgetGroup.cpp 
-SOURCE                                  WapBrowserappui.cpp 
-SOURCE                                  WapBrowserdocument.cpp 
-SOURCE                                  WapBrowserapplication.cpp 
-SOURCE                                  WapBrowserappview.cpp 
-SOURCE                                  WapBrowser.cpp 
-SOURCE                                  WmlParser.cpp 
-SOURCE                                  PageBuilder.cpp 
+SOURCE                                  NotifyTimer.cpp 
+SOURCE                                  UtilityTools.cpp 
+SOURCE                                  TimeOut.cpp 
+SOURCE                                  HTTPEngine.cpp 
+SOURCE                                  ScrollBar.cpp 
 SOURCE                                  Page.cpp 
+SOURCE                                  Widgets.cpp 
+SOURCE                                  PageBuilder.cpp 
+SOURCE                                  WmlParser.cpp 
 SOURCE                                  tinyxmlerror.cpp 
 SOURCE                                  tinyxml.cpp 
 SOURCE                                  tinystr.cpp 
 SOURCE                                  tinyxmlparser.cpp 
-SOURCE                                  UtilityTools.cpp 
-SOURCE                                  NotifyTimer.cpp 
-SOURCE                                  TimeOut.cpp 
-SOURCE                                  HTTPEngine.cpp 
-SOURCE                                  ScrollBar.cpp 
-SOURCE                                  Widgets.cpp 
+SOURCE                                  WapBrowser.cpp 
+SOURCE                                  WapBrowserApplication.cpp 
+SOURCE                                  WapBrowserAppView.cpp 
+SOURCE                                  WapBrowserAppUi.cpp 
+SOURCE                                  WapBrowserDocument.cpp 
 
 USERINCLUDE                             ..\inc 
 SYSTEMINCLUDE                           \epoc32\include\libc 
 SYSTEMINCLUDE                           \epoc32\include 
-/* [+] */ LIBRARY                       apmime.lib 
+LIBRARY                                 apmime.lib 
 LIBRARY                                 ImageConversion.lib 
 LIBRARY                                 eikcoctl.lib 
 LIBRARY                                 ws32.lib 

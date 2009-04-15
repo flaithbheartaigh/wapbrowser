@@ -13,6 +13,7 @@
 
 #include <e32std.h>
 #include <e32base.h>
+#include "Define.h"
 
 class CWapEngine;
 class CWapHttpEngine;

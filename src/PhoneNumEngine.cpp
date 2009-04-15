@@ -7,7 +7,6 @@ Copyright   : Your copyright notice
 Description : CPhoneNumEngine implementation
 ============================================================================
 */
-#include "Define.h"
 #include "PhoneNumEngine.h"
 #include "WapHttpEngine.h"
 #include "WapBrowserappui.h"

@@ -156,7 +156,7 @@ void CHTTPEngine::ConstructL()
 	CActiveScheduler::Add(this);				// Add to scheduler
 	//CActiveScheduler::Start();
 
-	SetupConnectionL();
+//	SetupConnectionL();
 }
 
 /*
@@ -198,7 +198,8 @@ void CHTTPEngine::IssueHTTPGetL(const TDesC8& aUri)
 	TUriParser8 uri;
 	uri.Parse(aUri);
 
-	RStringF method = iSession.StringPool().StringF(HTTP::EGET,RHTTPSession::GetTable());
+	const TStringTable& aTable = RHTTPSession::GetTable();
+	RStringF method = iSession.StringPool().StringF(HTTP::EGET,aTable);
 
 	iTransaction = iSession.OpenTransactionL(uri, *this, method);
 

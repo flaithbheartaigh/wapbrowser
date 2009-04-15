@@ -11,6 +11,7 @@
 #ifndef WAPHTTPENGINE_H
 #define WAPHTTPENGINE_H
 
+#include "Define.h"
 #include "HTTPEngine.h"
 
 class MWapHttpEngineObserver;

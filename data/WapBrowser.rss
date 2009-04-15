@@ -19,7 +19,7 @@ NAME HEWB    // 4 letter ID
 	#include "WapBrowser.rls"
 #endif
 
-#include "WapBrowser.h"
+#include "WapBrowser.hrh"
 //  RESOURCE DEFINITIONS
 // -----------------------------------------------------------------------------
 //

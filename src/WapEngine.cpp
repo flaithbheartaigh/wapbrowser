@@ -7,7 +7,6 @@
  Description : CWapEngine implementation
 ============================================================================
 */
-#include "Define.h"
 #include "WapEngine.h"
 #include "ImageEngine.h"
 #include "PageBuilder.h"
@@ -58,9 +57,13 @@ void CWapEngine::HttpOk(const TDesC8& aData)
 	ASSERT(iAppView);
 	iIsRequesting = FALSE;
 	iAppView->StopShowWaiting();
+
+	//TODO:test
+	UtilityTools::DeleteFile(KTempFileName);
+
 	UtilityTools::WriteFileL(aData,0,KTempFileName);
 	ParseFile(KTempFileName8);
-	UtilityTools::DeleteFile(KTempFileName);
+	//UtilityTools::DeleteFile(KTempFileName);
 }
 
 void CWapEngine::HttpEmpty()
