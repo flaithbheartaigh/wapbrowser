@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<head>
+<meta http-equiv="Cache-Control" content="max-age=0" forua="true"/>
+<meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+<meta http-equiv="Cache-Control" content="must-revalidate" forua="true"/>
+</head>
+<card id='card1' title='service'>
+<p>
+<img src='http://3g.cn/images/Banner090215.gif' alt='.'/><br/>
+<a href='http://211.136.253.114/PullServlet?SessionID=0&amp;SPID=850899&amp;ServiceID=03020877&amp;MISC_U=hhttp://wap.zhbar.cn/gdzh_mlsp_t/gdl.jsp'>订购测试1</a>
+<a href='http://211.136.253.114/PullServlet?SessionID=0&amp;SPID=850899&amp;ServiceID=03020877&amp;MISC_U=hhttp://wap.zhbar.cn/gdzh_mlsp_t/gdl.jsp'>订购测试2</a><br/>
+testtest
+<a href='http://211.136.253.114/PullServlet?SessionID=0&amp;SPID=850899&amp;ServiceID=03020877&amp;MISC_U=hhttp://wap.zhbar.cn/gdzh_mlsp_t/gdl.jsp'>订购测试3</a><br/>
+hihihihahah
+<a href='http://211.136.253.114/PullServlet?SessionID=0&amp;SPID=850899&amp;ServiceID=03020877&amp;MISC_U=hhttp://wap.zhbar.cn/gdzh_mlsp_t/gdl.jsp'>订购测试4</a><br/>
+<a href='http://211.136.253.114/PullServlet?SPID=850899&amp;ServiceID=03020877'>公司业务首页</a><br/>
+<a href='http://wap.gd.monternet.com/'>广东梦网首页</a><br/>
+<a href='http://wap.monternet.com/'>中央梦网首页</a><br/>
+</p>
+</card>
+</wml>

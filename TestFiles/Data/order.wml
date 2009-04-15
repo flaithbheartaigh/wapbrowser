@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<!--order-->
+<head>
+<meta http-equiv="Cache-Control" content="max-age=0" forua="true" />
+<meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+<meta http-equiv="Cache-Control" content="must-revalidate" forua="true" />
+</head>
+<card id="card_2" title="订购服务"  onenterbackward="http://218.200.244.92/PullServlet;xid=Jm520Jvn!632497720!189098910?MISC_U=http://218.206.76.18:8080/dlWap/countDownload.do?channelId=732&amp;columnId=11769&amp;colResId=265240&amp;resourceFileId=711778&amp;ws=7248343&amp;ctype=100">
+<p>
+--服务介绍--<br/>
+名称: <br/>
+极致纯美*高清闪图<br/>
+服务提供商：<br/>
+广州易诚(900636)<br/>
+收费方式:<br/>
+本次点播收取信息费2.0元.由中国移动代收，不点播不收费<br/>
+<anchor>
+我要点播		 	
+<go sendreferer="true" href="http://218.200.244.92/Order;xid=Jm520Jvn!632497720!189098910?action=1&amp;MISC_TYPE=2"  method="post" >            				
+<postfield name="rcode" value="1235646839205"/>		 	
+</go>		 
+</anchor>		 
+<br/>
+
+<anchor>
+返回继续浏览
+<go sendreferer="true" href="http://218.200.244.92/PullServlet?SessionID=Jm5XLnV7bQ!1999436728!1235646807091&amp;SPID=900636&amp;ServiceID=03205590">	
+</go> 
+</anchor>
+<br/>
+
+<anchor>
+梦网首页
+<go href="http://wap.monternet.com">
+</go>
+</anchor>
+<br/>
+
+温馨提示：尊敬的客户，请勿重复点击或反复刷新页面，否则将可能导致系统无法正常提供服务或重复计费等问题，如有疑问请咨询10086。
+</p>
+</card>
+</wml>
+
