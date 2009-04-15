@@ -7,7 +7,6 @@
  Description : CImageEngine implementation
 ============================================================================
 */
-#include "Define.h"
 #include "ImageEngine.h"
 #include "WapEngine.h"
 #include "WapHttpEngine.h"

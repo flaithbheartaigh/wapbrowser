@@ -7,7 +7,6 @@
  Description : CWapHttpEngine implementation
 ============================================================================
 */
-#include "Define.h"
 #include "WapHttpEngine.h"
 #include "UtilityTools.h"
 
@@ -108,7 +107,7 @@ void CWapHttpEngine::IssueHTTPGetL(const TDesC8& aUrl)
 // 		iHTTPEngine = CHTTPEngine::NewL(*this);
 // 	}
 	ASSERT(iObserver);
-	iHTTPEngine->IssueHTTPGetL(aUrl);
+	HTTPEngine()->IssueHTTPGetL(aUrl);
 }
 
 void CWapHttpEngine::IssueHTTPPostL(const TDesC8& aUrl,const TDesC8& aData,const TDesC8& aReferer)

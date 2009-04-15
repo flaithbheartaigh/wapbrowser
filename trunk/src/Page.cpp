@@ -260,7 +260,7 @@ void CPage::Br()
 
 void CPage::Layout()
 {
-	ASSERT(!iLayout);
+	//ASSERT(!iLayout);
 	AddGroup();
 
 	//TODO:计算布局
@@ -340,7 +340,7 @@ void CPage::Up()
 	//TODO:目录无法适应多种控制方式
 	{
 		TBool focusChanged = EFalse;
-		ASSERT(iEndIndex <= iWidgetGroupArray.Count());
+		//ASSERT(iEndIndex <= iWidgetGroupArray.Count());
 		if(iFocusIndex > iStartIndex)
 		{
 			//TODO:查找算法应该换成更快捷的库算法
@@ -382,7 +382,7 @@ void CPage::Down()
 		if(iFocusIndex < iEndIndex - 1)
 		{
 			UtilityTools::WriteLogsL(_L("1"));
-			ASSERT(iEndIndex <= iWidgetGroupArray.Count());
+			//ASSERT(iEndIndex <= iWidgetGroupArray.Count());
 			//TODO:查找算法应该换成更快捷的库算法
 			for (int i = iFocusIndex + 1 ; i < iEndIndex && i < iWidgetGroupArray.Count() ; i++)
 			{

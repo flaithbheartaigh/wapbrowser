@@ -11,6 +11,8 @@
 #ifndef WAPENGINE_H
 #define WAPENGINE_H
 
+#include "Define.h"
+
 class CImageEngine;
 //class CWmlParser;
 class CWapHttpEngine;
