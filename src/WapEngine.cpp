@@ -132,6 +132,7 @@ void CWapEngine::SetReferer(const TDesC8& aReferer)
 	if(iReferer)
 	{
 		delete iReferer;
+		iReferer = NULL;
 	}
 	iReferer = referer;
 }
