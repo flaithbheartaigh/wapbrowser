@@ -103,8 +103,6 @@ void CWapBrowserAppView::ShowPage(CPage* aPage)
 		iPage->SetRect(Rect());
 		DrawNow();
 	}
-
-
 }
 
 void CWapBrowserAppView::ShowWaiting()
