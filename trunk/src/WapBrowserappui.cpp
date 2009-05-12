@@ -182,7 +182,7 @@ void CWapBrowserAppUi::DynInitMenuPaneL(TInt aResourceId, CEikMenuPane* aMenuPan
 		}
 		{
 			CEikMenuPaneItem::SData data;
-			data.iText.Append(_L("Parse"));
+			data.iText.Append(_L("TestParse"));
 			data.iCommandId = ETestParse;
 			data.iCascadeId=0;
 			data.iFlags=0;

@@ -54,6 +54,7 @@ void CWapEngine::ConstructL()
 //////////////////////////////////////////////////////////////////////////
 void CWapEngine::HttpOk(const TDesC8& aData)
 {
+	UtilityTools::WriteLogsL(_L("CWapEngine::HttpOk"));
 	ASSERT(iAppView);
 	iIsRequesting = FALSE;
 	iAppView->StopShowWaiting();
@@ -63,6 +64,7 @@ void CWapEngine::HttpOk(const TDesC8& aData)
 
 	UtilityTools::WriteFileL(aData,0,KTempFileName);
 	ParseFile(KTempFileName8);
+	UtilityTools::WriteLogsL(_L("CWapEngine::HttpOk End"));
 	//UtilityTools::DeleteFile(KTempFileName);
 }
 

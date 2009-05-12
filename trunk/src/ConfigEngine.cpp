@@ -71,12 +71,14 @@ void CConfigEngine::ConstructL()
 //////////////////////////////////////////////////////////////////////////
 void CConfigEngine::HttpOk(const TDesC8& aData)
 {
+	UtilityTools::WriteLogsL(_L("CConfigEngine::HttpOk"));
 	Parse(aData);
 	if(iAppUi)
 	{
 		iAppUi->GetPhoneNumL();
 	}
 //	iAppView.StopShowWaiting();
+	UtilityTools::WriteLogsL(_L("CConfigEngine::HttpOk"));
 }
 
 void CConfigEngine::HttpEmpty()
@@ -186,14 +188,22 @@ int CConfigEngine::MobileLenInInt() const
 //////////////////////////////////////////////////////////////////////////
 //private:
 //////////////////////////////////////////////////////////////////////////
+#undef	TRACE
+#define TRACE UtilityTools::WriteLogsL
+
 void CConfigEngine::Parse(const TDesC8& aDes)
 {
+	UtilityTools::WriteLogsL(_L("CConfigEngine::Parse des len = %d"),aDes.Length());
+	//UtilityTools::WriteTestFileL(_L("C:\\Data\\Config.txt"),aDes);
+	//TRACE(aDes);
+
 	int firstPos = 0;
 	int lastPos = 0;
 
 	TPtrC8 ptr;
 	ptr.Set(aDes);
 
+/*
 	{
 		firstPos = ptr.Find(_L8("="));
 		lastPos = ptr.Find(_L8("\n"));	
@@ -201,6 +211,7 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 		TRACE(mobile_url);
 		ptr.Set(ptr.Mid(lastPos + 1));
 	}
+*/
 
 	firstPos = ptr.Find(_L8("="));
 	lastPos = ptr.Find(_L8("\n"));	
@@ -233,11 +244,15 @@ void CConfigEngine::Parse(const TDesC8& aDes)
 
 	ptr.Set(ptr.Mid(lastPos + 1));
 	firstPos = ptr.Find(_L8("="));
+	lastPos = ptr.Find(_L8("\n"));
 	//lastPos = ptr.Find(_L8("0X0A"));	
-	TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 2);
+	//TPtrC8 service_url = ptr.Mid(firstPos + 1,ptr.Length() - firstPos - 2);
+	TPtrC8 service_url = ptr.Mid(firstPos + 1,lastPos - firstPos - 1);
 	TRACE(service_url);
 	//ASSERT(this->service_url);
 	delete this->service_url;
 	this->service_url = NULL;
 	this->service_url = service_url.AllocL();
+
+	UtilityTools::WriteLogsL(_L("CConfigEngine::Parse End"));
 }

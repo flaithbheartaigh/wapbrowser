@@ -89,8 +89,8 @@ public:
 namespace Utils
 {
 #undef ASSERT
-//#ifdef _DEBUG
-#ifdef XXX
+#ifdef _DEBUG
+//#ifdef XXX
 inline void ASSERT(TBool aExpression)
 {
 	if(!aExpression)

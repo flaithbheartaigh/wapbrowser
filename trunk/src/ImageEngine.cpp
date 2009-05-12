@@ -51,6 +51,7 @@ void CImageEngine::ConstructL()
 //////////////////////////////////////////////////////////////////////////
 void CImageEngine::HttpOk(const TDesC8& aData)
 {
+	UtilityTools::WriteLogsL(_L("CImageEngine::HttpOk"));
 	iIsRequesting = FALSE;
 	UpdatePic(aData);
 //	RequestNextPic();
@@ -58,7 +59,8 @@ void CImageEngine::HttpOk(const TDesC8& aData)
 // 	UtilityTools::WriteFileL(aData,0,KTempFileName);
 // 
 // 
-// 	UtilityTools::DeleteFile(KTempFileName);
+	// 	UtilityTools::DeleteFile(KTempFileName);
+	UtilityTools::WriteLogsL(_L("CImageEngine::HttpOk End"));
 }
 
 void CImageEngine::HttpEmpty()
@@ -77,37 +79,74 @@ void CImageEngine::HttpFailed()
 void CImageEngine::AddPicUrl(const TDesC8& aPicUrl,CPictureWidget* aPictureWidget)
 {
 	_LIT8(KHttpPrefix8,		"http://");
-	const TDesC8& httpPrefix8(KHttpPrefix8);
 	HBufC8* url = NULL;
-	int pos = aPicUrl.Find(httpPrefix8);	//大小写敏感,
+	int pos = aPicUrl.Find(KHttpPrefix8);	//大小写敏感,
+	TBool urlValid = TRUE;
 	if(-1 == pos)
 	{
+		const TDesC8& httpPrefix8(KHttpPrefix8);
 		const TDesC8& referer =  iWapEngine.Referer();
+		int httpPrefixLength = httpPrefix8.Length();
 
-		TPtrC8 location;
-		location.Set(referer.Mid(httpPrefix8.Length()));
-		int pos = location.LocateReverse(L'/');
-		if(-1 != pos)
+		if(referer.Length() <= httpPrefixLength)
 		{
-			int len = httpPrefix8.Length() + pos;
-			location.Set(referer.Left(len));
+			urlValid = FALSE;
 		}
-
-		int len = aPicUrl.Length() + location.Length() + 1;
-		url = HBufC8::NewL(len);
-		url->Des().Append(location);
-		url->Des().Append(_L("/"));
-		url->Des().Append(aPicUrl);
+		else
+		{
+			TPtrC8 location;
+			location.Set(referer.Mid(httpPrefixLength));
+			int pos = location.LocateReverse(L'/');
+			if(-1 != pos)
+			{
+				int len = httpPrefix8.Length() + pos;
+				location.Set(referer.Left(len));
+			}
+			int len = aPicUrl.Length() + location.Length() + 1;
+			url = HBufC8::NewL(len);
+			url->Des().Append(location);
+			url->Des().Append(_L("/"));
+			url->Des().Append(aPicUrl);
+		}
 	}
 	else
 	{
 		url = aPicUrl.Alloc();
 	}
+	if(urlValid)
+	{
+		CPicUrlPair* pair = new CPicUrlPair;
+		pair->iUrl = url;
+		pair->iWidget = aPictureWidget;
+		iPicUrlPairs.Append(pair);
+	}
 	//iPictureUrls.Append(url);
-	CPicUrlPair* pair = new CPicUrlPair;
-	pair->iUrl = url;
-	pair->iWidget = aPictureWidget;
-	iPicUrlPairs.Append(pair);
+}
+
+#undef TRACE
+#define TRACE	UtilityTools::WriteLogsL
+
+void CImageEngine::Remove(CPictureWidget* aPictureWidget)
+{
+	TRACE(_L("CImageEngine::Remove aPictureWidget:%d"),aPictureWidget);
+	if(iCurPicUrlPair && aPictureWidget == iCurPicUrlPair->iWidget)
+	{
+		iCurPicUrlPair->iWidget = NULL;
+	}
+	else
+	{
+		for (int i = 0 ; i < iPicUrlPairs.Count() ; ++i)
+		{
+			CPicUrlPair* pair = iPicUrlPairs[i];
+			if(aPictureWidget == pair->iWidget)
+			{
+				TRACE(_L("CImageEngine::Remove pair->iWidget:%d"),pair->iWidget);
+				pair->iWidget = NULL;
+				//iPicUrlPairs.Remove(i);
+				break;
+			}
+		}		
+	}
 }
 
 void CImageEngine::CancelAllSession()
@@ -135,7 +174,7 @@ void CImageEngine::RequestNextPic()
 	//if(!iIsRequesting && iPictureUrls.Count())
 	if(!iIsRequesting && iPicUrlPairs.Count())
 	{
-		ASSERT(NULL == iCurPicUrlPair);
+		//ASSERT(NULL == iCurPicUrlPair);		//TODO:不应该屏蔽
 		iCurPicUrlPair = iPicUrlPairs[0];	
 		iPicUrlPairs.Remove(0);	
 		//HBufC8* url = iCurPicUrlPair->iUrl;
@@ -158,7 +197,8 @@ void CImageEngine::RequestPic(const TDesC8& aPicUrl)
 
 void CImageEngine::UpdatePic(const TDesC8& aData)
 {
-	ASSERT(iCurPicUrlPair && iCurPicUrlPair->iWidget);
+	//ASSERT(iCurPicUrlPair && iCurPicUrlPair->iWidget);
+	ASSERT(iCurPicUrlPair);
 	const TDesC8& url = *iCurPicUrlPair->iUrl;
 	int pos = url.LocateReverse(L'/');
 	TPtrC8 fileName;
@@ -173,7 +213,11 @@ void CImageEngine::UpdatePic(const TDesC8& aData)
 	{
 		SavePic(aData,*fileFullName);
 	}
-	iCurPicUrlPair->iWidget->SetImage(*fileFullName);
+	if(iCurPicUrlPair->iWidget)
+	{
+		TRACE(_L("CImageEngine::UpdatePic iCurPicUrlPair:%d iWidget:%d"),iCurPicUrlPair,iCurPicUrlPair->iWidget);
+		iCurPicUrlPair->iWidget->SetImage(*fileFullName);
+	}
 
 	CleanupStack::PopAndDestroy(fileFullName);
 	delete iCurPicUrlPair;

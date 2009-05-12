@@ -56,6 +56,7 @@ public://MWapHttpEngineObserver
 
 public:
 	void AddPicUrl(const TDesC8& aPicUrl,CPictureWidget* aPictureWidget);
+	void Remove(CPictureWidget* aPictureWidget);
 	void CancelAllSession();
 	void StartPicSession();
 
