@@ -46,6 +46,8 @@ public://static
 private:
 	CPhoneNumEngine& PhoneNumEngineL();
 	CConfigEngine& ConfigEngineL();
+
+public:
 	CWapEngine& WapEngineL();
 
 private://Test

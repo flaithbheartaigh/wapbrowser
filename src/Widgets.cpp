@@ -183,7 +183,9 @@ TSize CTextWidget::Size() const
 CPictureWidget
 //////////////////////////////////////////////////////////////////////////
 */
-
+#include "WapBrowserappui.h"
+#include "WapEngine.h"
+#include "ImageEngine.h"
 
 //public:
 	//CPictureWidget(const TDesC& aDes,const TDesC& aLink)
@@ -195,6 +197,7 @@ CPictureWidget::CPictureWidget()
 
 CPictureWidget::~CPictureWidget()
 {
+	CWapBrowserAppUi::Static()->WapEngineL().ImageEngine().Remove(this);
 	delete iImageReader;
 	delete iAlt;
 	delete iParentLink;
@@ -216,16 +219,19 @@ void CPictureWidget::SetPictureName(const TDesC& aName)
 
 void CPictureWidget::SetImage(const TDesC& aName)
 {
-	ASSERT(NULL == iBitmap);
-	ASSERT(NULL == iImageReader);
-	ASSERT(NULL == iImageName);
+	//if(NULL == iBitmap)
+	{
+		ASSERT(NULL == iBitmap);
+		ASSERT(NULL == iImageReader);
+		ASSERT(NULL == iImageName);
 
-	CImage_Reader* imageReader = new (ELeave)CImage_Reader(*this);
-	CleanupStack::PushL(imageReader);
-	iImageName = aName.AllocLC();
-	imageReader->ConstructL(*iImageName);
-	CleanupStack::Pop(2);
-	iImageReader = imageReader;
+		CImage_Reader* imageReader = new (ELeave)CImage_Reader(*this);
+		CleanupStack::PushL(imageReader);
+		iImageName = aName.AllocLC();
+		imageReader->ConstructL(*iImageName);
+		CleanupStack::Pop(2);
+		iImageReader = imageReader;
+	}
 }
 
 void CPictureWidget::SetAlt(const TDesC& aAlt)

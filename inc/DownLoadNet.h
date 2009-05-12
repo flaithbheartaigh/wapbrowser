@@ -8,7 +8,7 @@
 #include <S32FILE.H>
 #include <apgcli.h>
 #include "HTTPEngine.h"
-#include <HttpObserver.h>
+#include "HttpObserver.h"
 
 class CMainEngine;
 class MDownLoadServer;

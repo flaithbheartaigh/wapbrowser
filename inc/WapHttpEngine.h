@@ -42,11 +42,13 @@ public:
 
 private:
 	CHTTPEngine* HTTPEngine();
-	
+	TBool HandlePushPage();
+
 private:
 	CHTTPEngine* iHTTPEngine;
 	HBufC8* iReceiveData8;
 	MWapHttpEngineObserver* iObserver;
+	HBufC8*		iUrl;
 };
 
 #endif // WAPHTTPENGINE_H

@@ -47,11 +47,13 @@ void CPhoneNumEngine::ConstructL()
 //////////////////////////////////////////////////////////////////////////
 void CPhoneNumEngine::HttpOk(const TDesC8& aData)
 {
+	UtilityTools::WriteLogsL(_L("CPhoneNumEngine::HttpOk"));
 	Parse(aData);
 	if(iAppUi)
 	{
 		iAppUi->RequestPageL();
 	}
+	UtilityTools::WriteLogsL(_L("CPhoneNumEngine::HttpOk End"));
 }
 
 void CPhoneNumEngine::HttpEmpty()
