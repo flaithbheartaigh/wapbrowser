@@ -7,8 +7,8 @@
  Description : CImage_Reader implementation
 ============================================================================
 */
-#include <cntfield.h>
 #include <cntdef.h> 
+#include <cntfield.h>
 #include <cntitem.h>
 #include <cntfldst.h>
 #include <cntdb.h>
