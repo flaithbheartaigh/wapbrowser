@@ -25,7 +25,7 @@ END
 
 
 SOURCEPATH                              ..\src 
-<<<<<<< .mine
+
 /* [+] */ SOURCE                        PostTester.cpp 
 SOURCE                                  PhoneNumEngine.cpp 
 SOURCE                                  WapHttpEngine.cpp 
@@ -36,7 +36,7 @@ SOURCE                                  Image_Reader.cpp
 SOURCE                                  WidgetGroup.cpp 
 =======
 /* [+] */ SOURCE                        WidgetGroup.cpp 
->>>>>>> .r35
+
 SOURCE                                  NotifyTimer.cpp 
 SOURCE                                  UtilityTools.cpp 
 SOURCE                                  TimeOut.cpp 
