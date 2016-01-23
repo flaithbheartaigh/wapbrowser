@@ -1,0 +1,1 @@
+A simple wap browser for s60.
